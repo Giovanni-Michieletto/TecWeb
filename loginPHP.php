@@ -24,7 +24,7 @@
 
             if($Login['Username']==$Username && $Login['Password']==$Password) {
                 //$page = file_get_contents('Amministration_home.html'); 
-                header('Location: Amministration_home.php?session=true',TRUE);
+                header('Location: admin.php?session=true',TRUE);
             }
             else {
                 $message = '<div><p style="color:red;">Username o password non corretti</p></div>';

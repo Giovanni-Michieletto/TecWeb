@@ -34,26 +34,15 @@
             }
             else {
                 $list = array();
-                if($table=="VideoConvento"){                       //caso video
-                    while($row = mysqli_fetch_assoc($queryResult)) {
-                        $cell = array(
-                            "Titolo" => $row["Titolo"],
-                            "Link" => $row["Link"],
-                        );
-                        array_push($list,$cell);
+                while($row = mysqli_fetch_assoc($queryResult)) {
+                    $cell = array(
+                        "Titolo" => $row["Titolo"],
+                        "Immagine" => $row["Immagine"],
+                        "AltImmagine" => $row["AltImmagine"],
+                        "Testo" => $row["Testo"],
+                    );
+                    array_push($list,$cell);
                     }
-                }
-                else {                                                  //caso notizie e commenti e articoli
-                    while($row = mysqli_fetch_assoc($queryResult)) {
-                        $cell = array(
-                            "Titolo" => $row["Titolo"],
-                            "Immagine" => $row["Immagine"],
-                            "AltImmagine" => $row["AltImmagine"],
-                            "Testo" => $row["Testo"],
-                        );
-                        array_push($list,$cell);
-                    }
-                }
                 return $list;
             }
         }
@@ -70,16 +59,28 @@
             }
         }
 
+        //Funzione modifica dati
+        private function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
+            $queryInsert = "UPDATE $table SET Titolo=$Titolo, Immagine=$Immagine, AltImmagine=$AltImmagine, Testo=$Testo WHERE $table . ID=$ID";
+            $queryResult = mysqli_query($this->connection,$queryInsert);
+            if(mysqli_affected_rows($this->connection) > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
 
         //
         //ARTICOLI
         //
         public function getArticles() {
-            $table = "ArticoliSentiero";
+            $table = "Articoli";
             return $this->getFile($table);
         }
         public function insertArticle($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table = "ArticoliSentiero(Titolo,Immagine,AltImmagine,Testo)";
+            $table = "Articoli(Titolo,Immagine,AltImmagine,Testo)";
             $value = "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
             return $this->insertFile($table,$value);
         }
@@ -89,11 +90,11 @@
         // NOTIZIE
         //
         public function getNews() {
-            $table = "NotizieConvento";
+            $table = "Notizie";
             return $this->getFile($table);
         }
         public function insertNews($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="NotizieConvento(Titolo,Immagine,AltImmagine,Testo)";
+            $table ="Notizie(Titolo,Immagine,AltImmagine,Testo)";
             $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
             return $this->insertFile($table,$value);
         }
@@ -103,26 +104,12 @@
         // COMMENTI
         //
         public function getComments() {
-            $table = "CommentiConvento";
+            $table = "Commenti";
             return $this->getFile($table);
         }
         public function insertComments($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="CommentiConvento(Titolo,Immagine,AltImmagine,Testo)";
+            $table ="Commenti(Titolo,Immagine,AltImmagine,Testo)";
             $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-        //
-        // VIDEO
-        //
-        public function getVideos() {
-            $table = "VideoConvento";
-            return $this->getFile($table);
-        }
-        public function insertVideo($Titolo,$Link) {
-            $table ="VideoConvento(Titolo,Link)";
-            $value ="(\"$Titolo\",\"$Link\")";
             return $this->insertFile($table,$value);
         }
 
@@ -134,7 +121,6 @@
             $table = "Associazioni";
             return $this->getFile($table);
         }
-
         public function insertAssociation($Titolo,$Immagine,$AltImmagine,$Testo){
             $table = "Associazioni(Titolo,Immagine,AltImmagine,Testo)";
             $value= "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";

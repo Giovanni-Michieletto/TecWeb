@@ -1,5 +1,7 @@
 <?php
 
+    $session = $_GET['session'];
+
     require_once "dbConnection.php";
 
     $page = file_get_contents('Notizie.html');
@@ -17,7 +19,12 @@
             foreach ($listNews as $news) {
      			$Anteprima = substr($news['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
-                    $definition .= '<a href="singoloNotizia.php? Titolo=' . $news['Titolo'] .'">';
+                        if($session=="elimina") {
+                            //opzione di eliminare
+                        }
+                        else{
+                            $definition .= '<a href="update.php? ID=' . $news['ID'] .' & session=' . $session . '>';
+                        }
                         $definition .= '<div class="t-cont">';
                             $definition .= '<h3>' . $news['Titolo'] . '</h3>';
                         $definition .= '</div>';

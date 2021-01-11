@@ -45,7 +45,11 @@
          <div class="container-home-amministratore">
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
-               <h2><a href="./nuovoNotiziaForm.html">Aggiungi Notizia</a></h2>
+               <h2>Notizie</h2>
+               <ul>
+                  <li><a href="./nuovoNotiziaForm.html">Nuova</a></li>
+                  <li><a href="./notiziePHP.php?session=modifica">Modifica</a></li>
+                  <li><a href="./notiziePHP.php?session=elimina">Elimina</a></li>
             </div>
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
@@ -54,14 +58,6 @@
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
                <h2><a href="./nuovoArticoloForm.html">Aggiungi Articolo</a></h2>
-            </div>
-            <div class="title-a">
-               <img src="./db/img/deco.svg" alt="">
-               <h2><a href="./nuovoVideoForm.html">Aggiungi Video</a></h2>
-            </div>
-            <div class="title-a">
-               <img src="./db/img/deco.svg" alt="">
-               <h2><a href="./nuovoAssociazioniForm.html">Aggiungi Associazione</a></h2>
             </div>
          </div>
       </div>
