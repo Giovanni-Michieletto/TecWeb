@@ -62,9 +62,9 @@ CREATE TABLE Associazioni(
 
 
 CREATE TABLE Login (
-    Username VARCHAR(15) NOT NULL,
-    Pass_word VARCHAR(15) NOT NULL,
-    PRIMARY KEY (Username, Pass_word)
+    Username VARCHAR(150) NOT NULL,
+    Password VARCHAR(150) NOT NULL,
+    PRIMARY KEY (Username, Password)
 );
-INSERT INTO Login (Username, Pass_word) VALUES 
-("SIMONE","CIAO");
+INSERT INTO Login (Username, Password) VALUES 
+("21232f297a57a5a743894a0e4a801fc3","21232f297a57a5a743894a0e4a801fc3");

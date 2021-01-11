@@ -1,5 +1,10 @@
+<?php
+   $session = $_GET['session'];
+   if ($session!=true) {
+      header('Location: login.html',TRUE);
+   }
+?>
 <!DOCTYPE html>
-
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -14,12 +19,12 @@
       <link rel="stylesheet" href="./css/hamburger.css">
       <!-- my css -->
       <link rel="stylesheet" href="./css/style.css">
-        
+      
       <title>Convento S. Maria del Cengio</title>
    </head>
 
    <body>
-    
+   
       <!-- === HEADER === -->
 
       <header id="primary-header" class="header-class">
@@ -66,7 +71,7 @@
 
       <footer>
          <h2>footer</h2>
-     </footer>
+      </footer>
 
    </body>
 </html>

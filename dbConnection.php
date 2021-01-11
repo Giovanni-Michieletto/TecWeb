@@ -148,7 +148,7 @@
         // LOGIN
         //
         public function getLogin() {
-            $querySelect = 'SELECT * FROM "Login"';
+            $querySelect = 'SELECT * FROM Login';
             $queryResult = mysqli_query($this->connection, $querySelect);
             if (!$queryResult || mysqli_num_rows($queryResult)==0) {
                 return null;
