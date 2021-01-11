@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Hamburger CSS -->
+    <link rel="stylesheet" href="./css/hamburger.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>NewVideoForm</title>
+</head>
+
+<body>
+    <header id="primary-header" class="header-class">
+        <span id="logo" class="margin-10"><a href="/"><img src="./db/img/logo-small.svg" alt=""></a></span>
+        <span id="hamburger" class="margin-10 hamburger hamburger--collapse">
+            <span class="hamburger-box">
+                <span class="hamburger-inner">
+                </span>
+            </span>
+        </span>
+    </header>
+    <!-- === OVERLAY MENU === -->
+
+    <div id="overlay-menu">
+        <header id="secondary-header" class="header-class">
+            <span id="logo" class="margin-10"><a href="./Amministration_home.html"><img src="./db/img/logo-small.svg" alt=""></a></span>
+            <span id="hamburger2" class="margin-10 hamburger hamburger--collapse">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner">
+                    </span>
+                </span>
+            </span>
+    </header>
+    <!-- CONTENT -->
+
+    <div class="container overlay">
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="./nuovoNotiziaForm.html">Aggiungi Notizia</a></li>
+                <li><a href="./nuovoCommentoForm.html">Aggiungi Commento</a></li>
+                <li><a href="./nuovoArticoloForm.html">Aggiungi Articolo Sentieri</a></li>
+                <li><a href="./nuovoAssociazioniForm.html">Aggiungi Associazione</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <div id="spacer-top"></div>
+    <div class="Titolo-aggiungi align">
+        <img src="./db/img/deco.svg" alt="">
+        <h1>Aggiungi Video</h1>
+    </div>
+    <div class="container-amministration margin-10">
+        <form enctype="multipart/form-data" method="post" action="nuovoVideo.php">
+            <message />
+            <fieldset class="align">
+                <div class="title-amministration">
+                    <img src="./db/img/deco.svg" alt="">
+                    <label for="Titolo">Titolo: </label>                                                <!-- TITOLO --> 
+                </div>
+                <div class="text-box">
+                    <span>
+                        <input type="text" id="Titolo" name="Titolo" placeholder="Titolo del video"/>
+                        <errorTitle />
+                    </span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="title-amministration">
+                    <img src="./db/img/deco.svg" alt="">
+                    <label for="Link">Link Video </label>
+                </div>
+                <div class="text-box">
+                <span>
+                    <errorLink />
+                    <textarea id="Link" rows="5" cols="200" placeholder="Link" name="Link"></textarea>
+                </span>   
+                </div>
+            </fieldset>
+            <fieldset class="button-aggiungi">
+                <button class="aggiungi" type="submit" name="submit">Inserisci</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./public/app.js"></script>
+
+    <footer>
+        <h2>footer</h2>
+      </footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Hamburger CSS -->
+    <link rel="stylesheet" href="./css/hamburger.css">
+    <link rel="stylesheet" href="./css/sentieri.css">
+    <link rel="stylesheet" href="./css/singolo.css">
+    <title>Sentieri</title>
+</head>
+<body>
+
+    <!--  === HEADER === -->
+
+    <header id="primary-header" class="class-header1">
+            <span id="logo" class="margin-10"><a href="./articoliPHP.php"><h1><i class="fas fa-arrow-left"></i></h1></a></span>
+            <span id="sentieri-logo"><img src="./db/img/logo-casa-sentieri.svg" alt="" srcset=""></span>
+            <span id="hamburger" class="margin-10 hamburger hamburger--collapse">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner">       
+                    </span>
+                </span>
+            </span>   
+    </header>
+
+    <!-- === OVERLAY MENU === -->
+
+    <div id="overlay-menu">
+        <header id="secondary-header" class="class-header2">
+                <span id="logo" class="margin-10"></span>
+                <span id="hamburger2" class="margin-10 hamburger hamburger--collapse">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner">     
+                        </span>
+                    </span>
+                </span>   
+        </header>
+
+    <!-- CONTENT -->
+
+        <div class="container overlay">
+            <nav id="primary-nav">
+                <ul>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div> 
+   <div id="starter" class="container-singolo margin-10">
+      <div class="title align">
+         <img src="./db/img/deco.svg" alt="">
+         <h2> <Titolo /> </h2>
+      </div>
+      <div class="immagine-singolo"> <Immagine /> </div>
+      <div class="testo-singolo"> <Testo /> </div>
+   </div>
+
+  <div id="sentieri-button-scroll" class="d-none">
+      <i class="fas fa-angle-double-up"></i>
+  </div>
+
+  <footer>
+      <h2>footer</h2>
+  </footer>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./public/app.js"></script>
+
+<script>
+   $(function () {
+       $(document).scroll(function () {
+           var $nav = $("#primary-header");
+           $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+           $('#sentieri-button-scroll').toggleClass("d-none", $('html').scrollTop() == 0 );
+       });
+   });
+
+   $('#sentieri-button-scroll').click(function(){
+       $("html, body").animate({ scrollTop: 0 }, "slow");
+   })
+
+   $('.iscrizione-titolo-cont').click(function(){
+       $('.iscrizione-form-cont').slideToggle();
+   })
+</script>
+
+</body>
+</html>

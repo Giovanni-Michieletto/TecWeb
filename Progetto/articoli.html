@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+        <!-- Hamburger CSS -->
+        <link rel="stylesheet" href="./css/hamburger.css">
+        <link rel="stylesheet" href="./css/articoli.css">
+        <title>Articoli</title>
+    </head>
+
+    <body>
+
+        <!--  === HEADER === -->
+
+        <header id="primary-header" class="class-header1">
+            <span id="logo" class="margin-10"><a href="./sentieriPHP.php"><h1><i class="fas fa-arrow-left"></i></h1></a></span>
+            <span id="sentieri-logo"><img src="./db/img/logo-casa-sentieri.svg" alt="" srcset=""></span>   
+        </header>
+        
+        <!--  === MAIN AREA === -->
+
+        <div id="spacer-top"></div>
+
+        <div class="container margin-10">
+            <div class="titolo-cont">
+                <img src="./db/img/deco.svg" alt="">
+                <h1>Articoli</h1>
+            </div>
+            <div class="articoli-cont">
+                <listArticles />
+            </div>
+        </div>
+
+        <div id="sentieri-button-scroll" class="d-none">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+
+        <!--  === FOOTER === -->
+
+        <footer>
+            <h2>footer</h2>
+        </footer>    
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./public/app.js"></script>
+
+        <script>
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $("#primary-header");
+                    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                    $('#sentieri-button-scroll').toggleClass("d-none", $('html').scrollTop() == 0 );
+                });
+            });
+
+            $('#sentieri-button-scroll').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            })
+        </script>
+    </body>
+</html>

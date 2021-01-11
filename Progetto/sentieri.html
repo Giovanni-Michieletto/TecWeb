@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Hamburger CSS -->
+    <link rel="stylesheet" href="./css/hamburger.css">
+    <link rel="stylesheet" href="./css/sentieri.css">
+    <title>Sentieri</title>
+</head>
+<body>
+
+    <!--  === HEADER === -->
+
+    <header id="primary-header" class="class-header1">
+            <span id="logo" class="margin-10"><a href="./conventoPHP.php"><h1><i class="fas fa-arrow-left"></i></h1></a></span>
+            <span id="sentieri-logo"><img src="./db/img/logo-casa-sentieri.svg" alt="" srcset=""></span>
+    </header>
+
+    <!-- MAIN AREA -->
+
+        <section id="sentieri-first">
+            <div id="sentieri-cit-cont">
+                <div>
+                    <h1>
+                        
+                        «Bisogna unire insieme le mani callose e i sogni, l’operatività, 
+                        la capacità di lavorare e un cuore acceso, immettendo nelle cose un progetto più alto dell’oggi, del presente»
+                        
+                    </h1>
+                    <blockquote><em>Fra Ermes Ronchi, Presidente dell’Associazione</em></blockquote>
+                </div>
+            </div>
+            <div id="sentieri-scroll-cont">
+                <p>SCROLLA</p>
+                <p><i class="fas fa-arrow-down"></i></p>
+            </div>
+        </section>
+
+
+    <section id="sentieri-second">
+        <div class="container">
+            <div id="sentieri-mission-cont">
+                <div class="titolo-cont">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>Missione</h2>
+                </div>
+                <div class="p-cont">
+                    <p>
+                        La <span class="primary-color"><strong>Casa dei Sentieri e dell’Ecologia integrale</strong></span> è un’associazione nata nel Convento dei Servi di Maria di “Santa Maria del Cengio”, a Isola Vicentina. Vi collaborano insieme laici e frati e chiunque voglia incamminarsi sulle orme dell’enciclica di papa Francesco Laudato si’, in armonia con la spiritualità dei Servi di Maria.
+                    </p>
+                    <p>
+                        È un luogo d’incontri ed esperienze, un cantiere aperto d’idee e progetti.
+                    </p>
+                    <p>
+                        Nella <span class="primary-color"><strong>Casa</strong></span> si lavora insieme, nella solidarietà e nella condivisione, per promuovere la conversione ecologica attraverso l’amore per la Terra, l’adozione di nuovi stili di vita e la crescita di una spiritualità che inviti a godere la bellezza del creato e sia fonte di gioia.
+                    </p>
+                </div>
+            </div>
+            <div id="sentieri-obbiettivi-cont">
+                <div id="flex-cont">
+                    <div class="titolo-cont">
+                        <h2>Obbiettivi</h2>
+                        <img src="./db/img/deco.svg" alt="">
+                    </div>
+                    <div class="p-cont">
+                        <p>La Casa dei Sentieri e dell’Ecologia integrale ha gli obiettivi di:</p>
+                        <ul class="list-one">
+                            <li>promuovere iniziative di formazione, studio, sperimentazione pratica e diffusione delle piste indicate dall’enciclica Laudato Si’ per l’ecologia integrale;</li>
+                            <li>orientare verso nuovi stili di vita, improntati alla generosità, alla sobrietà, all’accoglienza, alla gioia e all’amore per la bellezza;</li>
+                            <li>favorire la conoscenza e la valorizzazione del pensiero delle donne quale importante strumento di cambiamento. Vuole quindi costituirsi come polo di attività spirituali, culturali e sociali orientate:</li>
+                                <ul class="list-two">
+                                    <li><span class="primary-color"><strong>-</strong></span> allo studio dei testi biblici e delle radici etiche e spirituali dei problemi ambientali;</li>
+                                    <li><span class="primary-color"><strong>-</strong></span> ai temi della salvaguardia del creato, del rispetto e dell’amore per madre terra;</li>
+                                    <li><span class="primary-color"><strong>-</strong></span> alla promozione di buone pratiche economiche sui temi dell’agricoltura sostenibile, della valorizzazione del territorio e dell’integrazione sociale.</li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICOLI -->
+    <section id="sentieri-third">
+        <div class="container">
+            <div class="titolo-cont">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2><a href="articoliPHP.php">Articoli</a></h2>
+            </div>
+            <div class="articoli-cont">
+                <listArticles />
+            </div>
+        </div>
+    </section>
+
+    <div id="sentieri-button-scroll" class="d-none">
+        <i class="fas fa-angle-double-up"></i>
+    </div>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./public/app.js"></script>
+
+<script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#primary-header");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                $('#sentieri-button-scroll').toggleClass("d-none", $('html').scrollTop() == 0 );
+            });
+        });
+
+        $('#sentieri-button-scroll').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        })
+</script>
+
+</body>
+</html>
