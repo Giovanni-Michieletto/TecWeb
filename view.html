@@ -18,8 +18,8 @@
 
     </head>
 
-<body>
-    
+<body> 
+
     <!-- === HEADER === -->
 
     <header id="primary-header" class="header-class">
@@ -37,7 +37,7 @@
 
     <div id="overlay-menu">
         <header id="secondary-header" class="header-class">
-            <span id="logo" class="margin-10"><a href="./conventoPHP.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
+            <span id="logo" class="margin-10"><a href="/"><img src="./db/img/logo-small.svg" alt=""></a></span>
             <span id="hamburger2" class="margin-10 hamburger hamburger--collapse">
                 <span class="hamburger-box">
                     <span class="hamburger-inner">
@@ -52,12 +52,11 @@
     <div class="container overlay">
         <nav id="primary-nav">
             <ul>
-              <li><a href="./conventoPHP.php">Home</a></li>
-              <li><a href="/associazioniPHP.php">Associazioni</a></li>
+              <li><a href="conventoPHP.php">Home</a></li>
               <li><a href="storia.html">Storia</a></li>
-              <li><a href="./notiziePHP.php">Notizie</a></li>
-              <li><a href="./videoPHP.php">Video</a></li>
-              <li><a href="./sentieriPHP.php">Sentieri</a></li>
+              <li><a href="view.php?table=Associazioni">Associazioni</a></li>
+              <li><a href="view.php?table=Commenti"">Commenti</a></li>
+              <li><a href="view.php?table=Articoli"">Articoli</a></li>
             </ul>
         </nav>
       </div>
@@ -76,10 +75,10 @@
    <div id="starter" class="container-col margin-10">
       <div class="title">
          <img src="./db/img/deco.svg" alt="">
-         <h2>Commenti</h2>
+         <h2 />
       </div>
       <div class="container-associazioni">
-         <listComments />
+         <list />
       </div>
    </div>
 
@@ -99,5 +98,6 @@
 
 
 
+   </div>
 </body>
 </html>

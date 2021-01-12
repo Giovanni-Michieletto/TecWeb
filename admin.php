@@ -47,9 +47,9 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Notizie</h2>
                <ul>
-                  <li><a href="./nuovoNotiziaForm.html">Nuova</a></li>
-                  <li><a href="./notiziePHP.php?session=modifica">Modifica</a></li>
-                  <li><a href="./notiziePHP.php?session=elimina">Elimina</a></li>
+                  <li><a href="./nuovoForm.php?table=Notizie">Nuova</a></li>
+                  <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
+                  <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
             </div>
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
