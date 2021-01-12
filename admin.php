@@ -47,7 +47,7 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Notizie</h2>
                <ul>
-                  <li><a href="./nuovoForm.php?table=Notizie">Nuova</a></li>
+                  <li><a href="./new.php?table=Notizie&session=TRUE">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
                </ul>
@@ -56,7 +56,7 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Commenti</h2>
                <ul>
-                  <li><a href="./nuovoForm.php?table=Commenti">Nuovo</a></li>
+                  <li><a href="./new.php?table=Commenti">Nuovo</a></li>
                   <li><a href="./view.php?session=modifica&table=Commenti">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Commenti">Elimina</a></li>
                </ul>
@@ -65,7 +65,7 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Articoli</h2>
                <ul>
-                  <li><a href="./nuovoForm.php?table=Articoli">Nuovo</a></li>
+                  <li><a href="./new.php?table=Articoli">Nuovo</a></li>
                   <li><a href="./view.php?session=modifica&table=Articoli">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Articoli">Elimina</a></li>
                </ul>
@@ -74,7 +74,7 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Associazioni</h2>
                <ul>
-                  <li><a href="./nuovoForm.php?table=Associazioni">Nuova</a></li>
+                  <li><a href="./new.php?table=Associazioni">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Associazioni">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Associazioni">Elimina</a></li>
                </ul>

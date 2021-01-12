@@ -21,13 +21,13 @@
      		    $Anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
                         if($session=="elimina") {
-                            //opzione di eliminare
+                            $definition .= '<a href="delete.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
                         }
                         else if($session=="modifica"){
                             $definition .= '<a href="update.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
                         }
                         else {
-                            $definition .= '<a href="singoloNotizia.php? Titolo=' . $cell['Titolo'] . '">';
+                            $definition .= '<a href="singolo.php? ID=' . $cell['ID']. '&table=' . $table . '">';
                         }
                         $definition .= '<div class="t-cont">';
                             $definition .= '<h3>' . $cell['Titolo'] . '</h3>';

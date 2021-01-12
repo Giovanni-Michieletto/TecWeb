@@ -1,7 +1,7 @@
 <?php
     
-    $Titolo = $_GET['Titolo'];
-    $session = $_GET['session'];
+    $table = $_GET['table'];
+    $ID = $_GET['ID'];
 
     $page = file_get_contents('singolo.html');
 
@@ -21,7 +21,8 @@
         $list = $dbAccess->getFile($table);
 
         foreach ($list as $cell) {
-            if($Titolo == $cell['Titolo']) {
+            if($ID == $cell['ID']) {
+                $Titolo = $cell['Titolo'];
                 $Immagine .= '<img src="data:charset=utf-8;base64, ' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '" />';
                 $Testo = $cell['Testo'];
             }
@@ -29,7 +30,7 @@
     }
 
     if($session=="modifica") {
-        header('Location: nuovoForm.php?',TRUE);
+        header('Location: new.php?',TRUE);
     }
     else {
     $page = str_replace("<Titolo />", $Titolo, $page);

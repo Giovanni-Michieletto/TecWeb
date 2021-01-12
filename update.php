@@ -4,7 +4,7 @@
         header('Location: login.html',TRUE);
     }
 
-    $page = file_get_contents('nuovoForm.html');
+    $page = file_get_contents('blankForm.html');
 
     $ID = $_GET['ID'];
     $table = $_GET['table'];
@@ -32,8 +32,9 @@
         $page = str_replace('name="AltImmagine"', 'name="AltImmagine" value="'.$AltImmagine.'"', $page);
         $page = str_replace('name="Testo">', 'name="Testo">' .$Testo, $page);
 
-        $page = str_replace('action="nuovoNotizia.php"','action="nuovoForm.php?Img='.$Immagine.'&table='.$table.'$ID='.$ID.'&session=modifica"',$page);
-        $page = str_replace('>Inserisci<','>Modifica<',$page);
+        $page = str_replace('action=""','action="new.php?table='.$table.'&ID='.$ID.'&session=modifica"',$page);
+
+        $page = str_replace('name="submit">','name="submit">Modifica',$page);
 
     }
 

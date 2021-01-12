@@ -66,7 +66,7 @@
 
         //Funzione modifica dati
         public function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
-            $queryInsert = "UPDATE $table SET Titolo=$Titolo, Immagine=$Immagine, AltImmagine=$AltImmagine, Testo=$Testo WHERE $table . ID=$ID";
+            $queryInsert = "UPDATE $table SET Titolo=\"$Titolo\", Immagine=\"$Immagine\", AltImmagine=\"$AltImmagine\", Testo=\"$Testo\" WHERE $table . ID=\"$ID\"";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {
                 return true;
@@ -76,6 +76,18 @@
             }
         }
 
+
+        //Funzione elimina dati
+        public function deleteFile($table,$ID) {
+            $queryInsert = "DELETE FROM $table WHERE $table . ID=\"$ID\"";
+            $queryResult = mysqli_query($this->connection,$queryInsert);
+            if(mysqli_affected_rows($this->connection) > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 
         //
         // LOGIN
