@@ -50,14 +50,34 @@
                   <li><a href="./nuovoForm.php?table=Notizie">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
+               </ul>
             </div>
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
-               <h2><a href="./nuovoCommentoForm.html">Aggiungi Commento</a></h2>
+               <h2>Commenti</h2>
+               <ul>
+                  <li><a href="./nuovoForm.php?table=Commenti">Nuovo</a></li>
+                  <li><a href="./view.php?session=modifica&table=Commenti">Modifica</a></li>
+                  <li><a href="./view.php?session=elimina&table=Commenti">Elimina</a></li>
+               </ul>
             </div>
             <div class="title-a">
                <img src="./db/img/deco.svg" alt="">
-               <h2><a href="./nuovoArticoloForm.html">Aggiungi Articolo</a></h2>
+               <h2>Articoli</h2>
+               <ul>
+                  <li><a href="./nuovoForm.php?table=Articoli">Nuovo</a></li>
+                  <li><a href="./view.php?session=modifica&table=Articoli">Modifica</a></li>
+                  <li><a href="./view.php?session=elimina&table=Articoli">Elimina</a></li>
+               </ul>
+            </div>
+            <div class="title-a">
+               <img src="./db/img/deco.svg" alt="">
+               <h2>Associazioni</h2>
+               <ul>
+                  <li><a href="./nuovoForm.php?table=Associazioni">Nuova</a></li>
+                  <li><a href="./view.php?session=modifica&table=Associazioni">Modifica</a></li>
+                  <li><a href="./view.php?session=elimina&table=Associazioni">Elimina</a></li>
+               </ul>
             </div>
          </div>
       </div>

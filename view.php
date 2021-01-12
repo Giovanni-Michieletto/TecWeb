@@ -24,7 +24,7 @@
                             //opzione di eliminare
                         }
                         else if($session=="modifica"){
-                            $definition .= '<a href="update.php? Titolo=' . $cell['Titolo'] .' & session=' . $session . '& table=' . $table . '">';
+                            $definition .= '<a href="update.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
                         }
                         else {
                             $definition .= '<a href="singoloNotizia.php? Titolo=' . $cell['Titolo'] . '">';

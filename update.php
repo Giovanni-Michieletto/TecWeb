@@ -6,7 +6,7 @@
 
     $page = file_get_contents('nuovoForm.html');
 
-    $Titolo = $_GET['Titolo'];
+    $ID = $_GET['ID'];
     $table = $_GET['table'];
     
     require_once "dbConnection.php"; 
@@ -19,12 +19,11 @@
         $list = $dbAccess->getFile($table); 
 
         foreach ($list as $cell) {
-            if($Titolo == $cell['Titolo']) {
+            if($ID == $cell['ID']) {
+                $Titolo = $cell['Titolo'];
                 $Immagine = $cell['Immagine'];
                 $AltImmagine = $cell['AltImmagine'];
-                echo $AltImmagine . '<br>';
                 $Testo = $cell['Testo'];
-                echo $Testo . '<br>';
             }
         }
         
@@ -33,7 +32,7 @@
         $page = str_replace('name="AltImmagine"', 'name="AltImmagine" value="'.$AltImmagine.'"', $page);
         $page = str_replace('name="Testo">', 'name="Testo">' .$Testo, $page);
 
-        $page = str_replace('action="nuovoNotizia.php"','action="nuovoForm.php?Img='.$Immagine.'&table='.$table.'"',$page);
+        $page = str_replace('action="nuovoNotizia.php"','action="nuovoForm.php?Img='.$Immagine.'&table='.$table.'$ID='.$ID.'&session=modifica"',$page);
         $page = str_replace('>Inserisci<','>Modifica<',$page);
 
     }

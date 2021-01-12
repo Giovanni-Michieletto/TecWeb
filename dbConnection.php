@@ -27,24 +27,21 @@
 
         //Funzione generale di estrazione dati
         public function getFile($table) {
-            echo 'getFile ' . $table . '<br>';
-            $querySelect = 'SELECT * FROM "'.$table.'" ORDER BY ID DESC';
-            echo $querySelect . '<br>';
+            $querySelect = "SELECT * FROM $table ORDER BY ID DESC";
             $queryResult = mysqli_query($this->connection, $querySelect);
             if (!$queryResult || mysqli_num_rows($queryResult)==0) {
-                echo 'null <br>';
                 return null;
             }
             else {
                 $list = array();
                 while($row = mysqli_fetch_assoc($queryResult)) {
                     $cell = array(
+                        "ID" => $row["ID"],
                         "Titolo" => $row["Titolo"],
                         "Immagine" => $row["Immagine"],
                         "AltImmagine" => $row["AltImmagine"],
                         "Testo" => $row["Testo"],
                     );
-                    echo $cell[0] . ' ' . $cell[1] . ' ' . $cell[2] . ' ' . $cell[3] . '<br>';
                     array_push($list,$cell);
                     }
                 return $list;
@@ -68,7 +65,7 @@
 
 
         //Funzione modifica dati
-        private function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
+        public function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
             $queryInsert = "UPDATE $table SET Titolo=$Titolo, Immagine=$Immagine, AltImmagine=$AltImmagine, Testo=$Testo WHERE $table . ID=$ID";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {

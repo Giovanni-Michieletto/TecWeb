@@ -4,7 +4,9 @@
 
     $Img = $_GET['Img'];
     $table = $_GET['table'];
-
+    $ID = $_GET['ID'];
+    $session = $_GET['session'];
+    
     $message = '';
     $Titolo = '';
     $Immagine = '';
@@ -45,24 +47,30 @@
                 $list = $dbAccess->getFile($table);
 
                 foreach ($list as $cell) {
-                    if($Titolo == $cell['Titolo']) {
-                        $errorTitle = 'Titolo gia esistente';
-                    }
-                    if($imgContent == $cell['Immagine']) {
-                        $errorImage = 'Immagine gia esistente';
-                    }
-                    if($AltImmagine == $cell['AltImmagine']) {
-                        $errorAlt = 'AltImmagine gia esistente';
-                    }
-                    if($Testo == $cell['Testo']) {
-                        $errorText = 'Testo gia esistente';
+                    if($ID != $cell['ID']) {
+                        if($Titolo == $cell['Titolo']) {
+                            $errorTitle = 'Titolo gia esistente';
+                        }
+                        if($imgContent == $cell['Immagine']) {
+                            $errorImage = 'Immagine gia esistente';
+                        }
+                        if($AltImmagine == $cell['AltImmagine']) {
+                            $errorAlt = 'AltImmagine gia esistente';
+                        }
+                        if($Testo == $cell['Testo']) {
+                            $errorText = 'Testo gia esistente';
+                        }
                     }
                 }
 
                 if( strlen($errorTitle)==0 && strlen($errorImage)==0 && strlen($errorAlt)==0 && strlen($errorText)==0 ) {
                     
-                    $insertion = $dbAccess->insertFile($table,$Titolo,$imgContent,$AltImmagine,$Testo);
-                
+                    if($session=="modifica") {
+                        $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
+                    }
+                    else {
+                        $insertion = $dbAccess->insertFile($table,$Titolo,$imgContent,$AltImmagine,$Testo);
+                    }
                     if($insertion == true) {
                         $message = '<div id="conferma"><h1>Notizia inserita correttamente</h1></div>';
                         $end = 'readonly';
