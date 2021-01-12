@@ -4,7 +4,7 @@
 *{
 	box-sizing: border-box;
 	 margin:0 0;
-	/*padding: 0; */
+	padding: 0; 
 	
 }
 body {
@@ -119,28 +119,53 @@ header.fixed#primary-header {
 #logo {
 	height: 75%;
 }
-
-/* ==================== */
-/* === OVERLAY MENU === */
-/* ==================== */
-
-#overlay-menu {
-	background-color: #009b9f;
-	width: 100%;
-	height: 100%;
+/* === MENU === */
+nav {
 	position: fixed;
-	z-index: 100;
-	padding-top: 0;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
-}
-
-#overlay-menu.active {
-	opacity: 1;
-	visibility: visible;
-	transition: opacity 0.8s;
-}
+	top: 20%;
+	width: 100%;
+	display: flex;
+	
+	align-items: center;
+	min-height: 3em;
+	font-family: 'Roboto Condensed', sans-serif;
+	z-index: 1;
+	}
+	
+	.nav-links {
+	float: right;
+	display: flex;
+	width: 50%;
+	}
+	
+	.nav-links li {
+	list-style: none;
+	}
+	
+	.notlink{
+	color: rgb(9, 49, 226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 2em;
+	margin-left: 2em;
+	}
+	.nav-links a {
+	padding: 1.5em;
+	color: rgb(226, 226, 226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+	}
+	.nav-links li a:hover{
+	background-color:#6e000d;
+	}
+	
+	.burger{
+	display: non
+	
 
 /* === LOGO AND BUTTON === */
 
