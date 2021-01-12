@@ -1,7 +1,7 @@
 --
--- Struttura tabella 'ArticoliSentiero'
+-- Struttura tabella Articoli
 --
-CREATE TABLE ArticoliSentiero (
+CREATE TABLE  (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
     Immagine longblob NOT NULL,
@@ -11,12 +11,10 @@ CREATE TABLE ArticoliSentiero (
 );
 
 
-
-
 --
--- Struttura tabella 'NotizieConvento'
+-- Struttura tabella Notizie
 --
-CREATE TABLE NotizieConvento (
+CREATE TABLE Notizie (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
     Immagine longblob NOT NULL,
@@ -28,9 +26,9 @@ CREATE TABLE NotizieConvento (
 
 
 --
--- Struttura tabella 'CommentiConvento'
+-- Struttura tabella Commenti
 --
-CREATE TABLE CommentiConvento (
+CREATE TABLE Commenti (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
     Immagine longblob NOT NULL,
@@ -41,16 +39,8 @@ CREATE TABLE CommentiConvento (
 
 
 --
--- Struttura tabella 'VideoConvento'
+-- Struttura tabella Associazioni
 --
-CREATE TABLE VideoConvento (
-    ID int NOT NULL AUTO_INCREMENT,
-    Titolo text NOT NULL,
-    Link text NOT NULL,
-    PRIMARY KEY (ID)
-);
-
-
 CREATE TABLE Associazioni(
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
@@ -62,9 +52,9 @@ CREATE TABLE Associazioni(
 
 
 CREATE TABLE Login (
-    Username VARCHAR(15) NOT NULL,
-    Pass_word VARCHAR(15) NOT NULL,
-    PRIMARY KEY (Username, Pass_word)
+    Username VARCHAR(150) NOT NULL,
+    Password VARCHAR(150) NOT NULL,
+    PRIMARY KEY (Username, Password)
 );
-INSERT INTO Login (Username, Pass_word) VALUES 
-("SIMONE","CIAO");
+INSERT INTO Login (Username, Password) VALUES 
+("21232f297a57a5a743894a0e4a801fc3","21232f297a57a5a743894a0e4a801fc3");

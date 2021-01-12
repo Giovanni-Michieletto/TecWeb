@@ -26,7 +26,7 @@
         }
 
         //Funzione generale di estrazione dati
-        private function getFile($table) {
+        public function getFile($table) {
             $querySelect = "SELECT * FROM $table ORDER BY ID DESC";
             $queryResult = mysqli_query($this->connection, $querySelect);
             if (!$queryResult || mysqli_num_rows($queryResult)==0) {
@@ -34,32 +34,24 @@
             }
             else {
                 $list = array();
-                if($table=="VideoConvento"){                       //caso video
-                    while($row = mysqli_fetch_assoc($queryResult)) {
-                        $cell = array(
-                            "Titolo" => $row["Titolo"],
-                            "Link" => $row["Link"],
-                        );
-                        array_push($list,$cell);
+                while($row = mysqli_fetch_assoc($queryResult)) {
+                    $cell = array(
+                        "ID" => $row["ID"],
+                        "Titolo" => $row["Titolo"],
+                        "Immagine" => $row["Immagine"],
+                        "AltImmagine" => $row["AltImmagine"],
+                        "Testo" => $row["Testo"],
+                    );
+                    array_push($list,$cell);
                     }
-                }
-                else {                                                  //caso notizie e commenti e articoli
-                    while($row = mysqli_fetch_assoc($queryResult)) {
-                        $cell = array(
-                            "Titolo" => $row["Titolo"],
-                            "Immagine" => $row["Immagine"],
-                            "AltImmagine" => $row["AltImmagine"],
-                            "Testo" => $row["Testo"],
-                        );
-                        array_push($list,$cell);
-                    }
-                }
                 return $list;
             }
         }
 
         //Funzione per l'inserimento dei dati
-        private function insertFile($table,$value) {
+        public function insertFile($table,$Titolo,$Immagine,$AltImmagine,$Testo) {
+            $table .= "(Titolo,Immagine,AltImmagine,Testo)";
+            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
             $queryInsert = "INSERT INTO $table VALUES $value";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {
@@ -71,84 +63,37 @@
         }
 
 
-        //
-        //ARTICOLI
-        //
-        public function getArticles() {
-            $table = "ArticoliSentiero";
-            return $this->getFile($table);
-        }
-        public function insertArticle($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table = "ArticoliSentiero(Titolo,Immagine,AltImmagine,Testo)";
-            $value = "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-        
-        
-        //
-        // NOTIZIE
-        //
-        public function getNews() {
-            $table = "NotizieConvento";
-            return $this->getFile($table);
-        }
-        public function insertNews($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="NotizieConvento(Titolo,Immagine,AltImmagine,Testo)";
-            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
+
+        //Funzione modifica dati
+        public function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
+            $queryInsert = "UPDATE $table SET Titolo=\"$Titolo\", Immagine=\"$Immagine\", AltImmagine=\"$AltImmagine\", Testo=\"$Testo\" WHERE $table . ID=\"$ID\"";
+            $queryResult = mysqli_query($this->connection,$queryInsert);
+            if(mysqli_affected_rows($this->connection) > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
 
-        //
-        // COMMENTI
-        //
-        public function getComments() {
-            $table = "CommentiConvento";
-            return $this->getFile($table);
+        //Funzione elimina dati
+        public function deleteFile($table,$ID) {
+            $queryInsert = "DELETE FROM $table WHERE $table . ID=\"$ID\"";
+            $queryResult = mysqli_query($this->connection,$queryInsert);
+            if(mysqli_affected_rows($this->connection) > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
-        public function insertComments($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="CommentiConvento(Titolo,Immagine,AltImmagine,Testo)";
-            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-        //
-        // VIDEO
-        //
-        public function getVideos() {
-            $table = "VideoConvento";
-            return $this->getFile($table);
-        }
-        public function insertVideo($Titolo,$Link) {
-            $table ="VideoConvento(Titolo,Link)";
-            $value ="(\"$Titolo\",\"$Link\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-        //=====================
-        //=====ASSOCIAZIONI====
-        //=====================
-        public function getAssociation(){
-            $table = "Associazioni";
-            return $this->getFile($table);
-        }
-
-        public function insertAssociation($Titolo,$Immagine,$AltImmagine,$Testo){
-            $table = "Associazioni(Titolo,Immagine,AltImmagine,Testo)";
-            $value= "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-
 
         //
         // LOGIN
         //
         public function getLogin() {
-            $querySelect = 'SELECT * FROM "Login"';
+            $querySelect = 'SELECT * FROM Login';
             $queryResult = mysqli_query($this->connection, $querySelect);
             if (!$queryResult || mysqli_num_rows($queryResult)==0) {
                 return null;
@@ -163,6 +108,70 @@
                 return $cell;
             }
         }
+
+
+
+
+        /*
+        //
+        //ARTICOLI
+        //
+        public function getArticles() {
+            $table = "Articoli";
+            return $this->getFile($table);
+        }
+        public function insertArticle($Titolo,$Immagine,$AltImmagine,$Testo) {
+            $table = "Articoli(Titolo,Immagine,AltImmagine,Testo)";
+            $value = "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
+            return $this->insertFile($table,$value);
+        }
+        
+        
+        //
+        // NOTIZIE
+        //
+        public function getNews() {
+            $table = "Notizie";
+            return $this->getFile($table);
+        }
+        public function insertNews($Titolo,$Immagine,$AltImmagine,$Testo) {
+            $table ="Notizie(Titolo,Immagine,AltImmagine,Testo)";
+            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
+            return $this->insertFile($table,$value);
+        }
+
+
+        //
+        // COMMENTI
+        //
+        public function getComments() {
+            $table = "Commenti";
+            return $this->getFile($table);
+        }
+        public function insertComments($Titolo,$Immagine,$AltImmagine,$Testo) {
+            $table ="Commenti(Titolo,Immagine,AltImmagine,Testo)";
+            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
+            return $this->insertFile($table,$value);
+        }
+
+
+        //=====================
+        //=====ASSOCIAZIONI====
+        //=====================
+        public function getAssociation(){
+            $table = "Associazioni";
+            return $this->getFile($table);
+        }
+        public function insertAssociation($Titolo,$Immagine,$AltImmagine,$Testo){
+            $table = "Associazioni(Titolo,Immagine,AltImmagine,Testo)";
+            $value= "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
+            return $this->insertFile($table,$value);
+        }
+        */
+
+
+
+        
     }
 
 ?>
