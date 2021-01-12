@@ -47,7 +47,7 @@
                <img src="./db/img/deco.svg" alt="">
                <h2>Notizie</h2>
                <ul>
-                  <li><a href="./new.php?table=Notizie&session=TRUE">Nuova</a></li>
+                  <li><a href="./new.php?table=Notizie&session=true">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
                </ul>
