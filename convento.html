@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
         <!-- Google font -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-        
+       
         <link rel="stylesheet" href="./css/hamburger.css">
         <!-- my css -->
         <link rel="stylesheet" href="./css/style.css">
@@ -34,8 +34,8 @@
         <ul class="nav-links">
             <li class="notlink">Home</li>
             <li><a href="view.php?table=Articoli">Articoli</a></li> 
-            <li><a href="view.php?table=Associazioni">Associazioni</a></li> <!--personaggi storici, animali ,statue -->
-            <li><a href="view.php?table=Commenti">Commenti</a></li> <!-- mappa con percorso e dove trovare le varie esposizioni-->
+            <li><a href="view.php?table=Articoli">Associazioni</a></li> <!--personaggi storici, animali ,statue -->
+            <li><a href="view.php?table=Articoli">Commenti</a></li> <!-- mappa con percorso e dove trovare le varie esposizioni-->
             <li><a href="view.php?table=Notizie">Notizie</a></li>
         </ul>
         <div class="burger">
@@ -44,7 +44,7 @@
             <div class="line3"></div>
         </div>
     </nav>
-
+  
     
     
     <!-- CONTENT -->
@@ -56,6 +56,47 @@
 
 <div id="spacer-top"></div>
 
+
+<!-- ====NOTIZIE CONVENTO==== -->
+
+<div id="starter" class="container margin-10">
+
+    <div class="container-notizie">
+        <div class="title">
+            <img src="./db/img/deco.svg" alt="">
+            <h2><a href="./notiziePHP.php">Notizie</a></h2>
+        </div>
+        <div id="first-slider" class="notizie">
+            <listNews />
+        </div>
+    </div>
+
+        <!-- =====  COMMENTI ===== -->
+
+    <div class="container-commenti">
+        <div class="title">
+            <img src="./db/img/deco.svg" alt="">
+            <h2><a href="./commentiPHP.php">Commenti</a></h2>
+        </div>
+        <div id="second-slider" class="commenti">
+            <listComments />
+        </div>
+    </div>
+
+</div>
+
+    <div id="index-banner-cont" class="banner-container">
+        <div id="banner-text-cont">
+            <h2 class="title-sentieri">Casa dei Sentieri e dell' Ecologia Integrale</h2>
+            <div class="link-sentieri">
+                <a href="sentieriPHP.php">Vai alla pagina... <span class="arrow">></span></a>
+            </div>
+            <div class="button-iscriviti">
+                <a href="./sentieriPHP.php" target="_blank">Iscriviti</a>
+            </div>
+            
+        </div>
+    </div>
 
     <!-- BOTTONE -->
 
