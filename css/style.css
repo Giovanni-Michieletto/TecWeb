@@ -16,6 +16,7 @@ body {
 
 .margin-10 {
 	margin: 0 5% 0 5%;
+	
 }
 
 ul {
@@ -31,71 +32,15 @@ a {
 	display: none;
 }
 
-#convento-button-scroll.d-none {
-	display: none;
-}
 
-#convento-button-scroll {
-	background-color: rgb(0, 155, 159);
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5rem;
-	color: white;
-	line-height: 1.5rem;
-	cursor: pointer;
-}
-
-/* === SCROLLBAR === */
-
-/* width */
-body::-webkit-scrollbar {
-	width: 0;
-}
-
-#first-slider::-webkit-scrollbar,
-#second-slider::-webkit-scrollbar,
-#video-cont::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
-}
-
-/* Track */
-#first-slider::-webkit-scrollbar-track,
-#second-slider::-webkit-scrollbar-track,
-#video-cont::-webkit-scrollbar-track {
-	background: none;
-}
-
-/* Handle */
-#first-slider::-webkit-scrollbar-thumb,
-#second-slider::-webkit-scrollbar-thumb,
-#video-cont::-webkit-scrollbar-thumb {
-	background: rgb(0, 155, 159);
-}
 
 /* ============== */
 /* === HEADER === */
 /* ============== */
 
-.header-class{
-   /* d-flex justify-content-between align-items-center */
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
 
-header#primary-header {
+
+#primary-header {
 	background-image: url("../db/img/header.png");
 	background-position: center top;
 	height: 20%;
@@ -108,42 +53,40 @@ header#primary-header {
 }
 
 header#primary-header img {
+	margin-top: 10%;
 	width: auto;
-	height: 100%;
+	height: 80%;
 }
 
-header.fixed#primary-header {
-	position: fixed;
-}
 
-#logo {
-	height: 75%;
-}
+
+
 /* === MENU === */
-nav {
+#menu{
 	position: fixed;
-	top: 20%;
+
 	width: 100%;
 	display: flex;
-	
 	align-items: center;
 	min-height: 3em;
 	font-family: 'Roboto Condensed', sans-serif;
 	z-index: 1;
+	background-color: rgb(104, 5, 5);
 	}
 	
-	.nav-links {
+	.links {
 	float: right;
 	display: flex;
 	width: 50%;
 	}
 	
-	.nav-links li {
+	.links li {
 	list-style: none;
 	}
 	
 	.notlink{
-	color: rgb(9, 49, 226);
+		padding: 1.5em;
+		color: rgb(226, 226, 226);
 	text-decoration: none;
 	letter-spacing: 3px;
 	font-weight: bold;
@@ -151,59 +94,35 @@ nav {
 	margin-right: 2em;
 	margin-left: 2em;
 	}
-	.nav-links a {
+	.links a {
 	padding: 1.5em;
 	color: rgb(226, 226, 226);
-	text-decoration: none;
+	text-decoration: underline;
 	letter-spacing: 3px;
 	font-weight: bold;
 	font-size: 14px;
 	}
-	.nav-links li a:hover{
+	.links li a:hover{
 	background-color:#6e000d;
 	}
-	
-	.burger{
-	display: non
-	
 
-/* === LOGO AND BUTTON === */
-
-#secondary-header {
-	background: none;
-	height: 20%;
-	min-height: 70px;
-	background-size: cover;
-	position: static;
+#percorso{
+	
+	
 	width: 100%;
-	z-index: 99;
+	display: flex;
+	align-items: center;
+	min-height: 3em;
+	font-family: 'Roboto Condensed', sans-serif;
+	
+	background-color: rgb(104, 5, 5);
 }
 
-#secondary-header img {
-	width: auto;
-	height: 100%;
-}
 
-/* === NAV === */
 
-#primary-nav a,
-#primary-nav a:hover {
-	font-weight: 600;
-	color: white;
-	text-decoration: none;
-	font-size: 40px;
-	margin-bottom: 15px;
-	display: inline-block;
-	padding: 10px 10px 15px 15px;
-}
 
-#primary-nav a:hover {
-	background-color: #aed6d6;
-}
 
-.container.overlay {
-	padding-top: 10px;
-}
+
 
 /* === GENERICSTUFF === */
 
@@ -213,33 +132,7 @@ nav {
 	max-height: 150px;
 }
 
-/* ================== */
-/* === HAMBURGERG === */
-/* ================== */
 
-.hamburger {
-	float: right;
-}
-
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner:after,
-.hamburger.is-active .hamburger-inner:before {
-	background-color: white;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-	background-color: #009b9f;
-}
-
-@media screen and (max-width: 645px) {
-	.hamburger-inner,
-	.hamburger-inner::before,
-	.hamburger-inner::after {
-		background-color: rgba(148, 8, 11, .8);
-	}
-}
 
 /* ================= */
 /* === MAIN AREA === */
@@ -366,45 +259,7 @@ nav {
 	padding-right: 0;
 }
 
-.container{
-   display: flex;
-	flex-direction: column;
-	margin-bottom: 10%;
-	margin-top: 13vh;
-}
-.container-notizie{
-   display: flex;
-   flex-direction: column;
-}
-.notizie{
-   display: flex;
-   justify-content: start;
-   min-width: 200px;
-   flex-wrap: wrap;
-}
-.container-commenti{
-   display: flex;
-	flex-direction: column;
-}
-.container-col{
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 5%;
-	/* padding: 0% 10% 0% 10%; */
-}
 
-.container-associazioni{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 95%;
-	min-width: 350px;
-	flex-wrap: wrap;
-}
-.container-video{
-	display: flex;
-	flex-direction: column;
-}
 
 /* ====MOBILE===== */
 @media screen and (min-width: 300px){
