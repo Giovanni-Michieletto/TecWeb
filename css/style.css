@@ -167,23 +167,6 @@ nav {
 	display: non
 	
 
-/* === LOGO AND BUTTON === */
-
-#secondary-header {
-	background: none;
-	height: 20%;
-	min-height: 70px;
-	background-size: cover;
-	position: static;
-	width: 100%;
-	z-index: 99;
-}
-
-#secondary-header img {
-	width: auto;
-	height: 100%;
-}
-
 /* === NAV === */
 
 #primary-nav a,
@@ -213,33 +196,6 @@ nav {
 	max-height: 150px;
 }
 
-/* ================== */
-/* === HAMBURGERG === */
-/* ================== */
-
-.hamburger {
-	float: right;
-}
-
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner:after,
-.hamburger.is-active .hamburger-inner:before {
-	background-color: white;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-	background-color: #009b9f;
-}
-
-@media screen and (max-width: 645px) {
-	.hamburger-inner,
-	.hamburger-inner::before,
-	.hamburger-inner::after {
-		background-color: rgba(148, 8, 11, .8);
-	}
-}
 
 /* ================= */
 /* === MAIN AREA === */

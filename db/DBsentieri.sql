@@ -1,7 +1,7 @@
 --
 -- Struttura tabella Articoli
 --
-CREATE TABLE  (
+CREATE TABLE Articoli (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
     Immagine longblob NOT NULL,
@@ -49,7 +49,6 @@ CREATE TABLE Associazioni(
     Testo text NOT NULL,
     PRIMARY KEY (ID)
 );
-
 
 CREATE TABLE Login (
     Username VARCHAR(150) NOT NULL,

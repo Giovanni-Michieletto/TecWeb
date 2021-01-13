@@ -1,53 +1,49 @@
 /*function valida() {
 	// Variabili associate ai campi del modulo
-	var Titolo = document.invio.Titolo.value;
-	var Immagine = document.invio.Immagine.value;
-	var AltImmagine = document.invio.AltImmagine.value;
-	var Testo = document.invio.Testo.value;
+	var Titolo = document.getElementById("Titolo");
+	var Immagine = document.getElementById("Immagine");
+	var AltImmagine = document.getElementById("AltImmagine");
+	var Testo = document.getElementById("Testo");
 
-	if((Titolo == "") || (Titolo == "undefined")) {
-		document.getElementById('errorTitle').innerHTML='Titolo non valido!';
-		document.invio.Titolo.focus();
+	if(Titolo.value == "") {
+        alert("Titolo non valido!");    
 		return false;
 	}
 
-	if((Immagine == "") || (Immagine == "undefined")) {
+	if(!Immagine.value) {
 		alert("Reinserire l'immagine");
-		document.invio.Immagine.focus();
 		return false;
 	}
 
-	if((AltImmagine == "") || (AltImmagine == "undefined")) {
-		document.getElementById('errorAltImmage').innerHTML='Alt Immagine non valido!';
-		document.invio.AltImmagine.focus();
+	if(AltImmagine.value == "") {
+		alert("ALT non valido!");
 		return false;
 	}
 
-	if((Testo == "") || (Testo == "undefined")) {
-		document.getElementById('errorText').innerHTML='Testo non valido!';
-		document.invio.Testo.focus();
+	if(Testo.value == "") {
+		alert("Testo non valido!");
 		return false;
-	}
+    }
+    
+	else {
+		document.form.action = "new.php";
+		document.form.submit();
+	} 
+} */
 
-	/*else {
-		document.invio.action = "NuovoCommento.php";
-		document.invio.submit();
-	} */
+/*var dettagli_form = {
+    "Titolo" : new Array("Titolooooo", /\w{2,20}$/, "Titolo non valido!"),
+    "Immagine" : new Array("Immagineeeeee", /?????/, "Immagine non valida!"),
+    "AltImmagine" : new Array("AltImmagineeeee", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "AltImmagine non valido!"),
+    "Testo" : new Array("Testooooooo", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "Testo non valido")
+};*/
 
-	/*if(document.getElementById('Titolo').value=="") {
-		document.getElementById('errorTitle').innerHTML='Titolo non valido!';
-		document.getElementById('Titolo').focus();
-		return false;
-	}
-}*/
+var Titolo = new Array("Titolooooo", /\w{2,20}$/, "Titolo non valido!");
+var Immagine = new Array("Immagineeeeee", /?????/, "Immagine non valida!");
+var AltImmagine = new Array("AltImmagineeeee", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "AltImmagine non valido!");
+var Testo = new Array("Testooooooo", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "Testo non valido");
 
-var dettagli_form = {
-
-    "Titolo" : ["Titolo", /\w{2,20}$/, "Titolo non valido!"],
-    "Immagine" : ["Immagine", /?????/, "Immagine non valida!"],
-    "AltImmagine" : ["AltImmagine", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "AltImmagine non valido!"],
-    "Testo" : ["Testo", /([a-zA-Z])(\ )([a-zA-Z]){2,20}$/, "Testo non valido"]
-};
+var dettagli_form = new Array(Titolo, Immagine, AltImmagine, Testo);
 
 function campoDefault(input) {
     input.className = "default-text";
@@ -96,11 +92,14 @@ function validazioneCampo(input) {
 }
 
 function validateForm() {
-    var corretto = true;
+    var corretto = true; 
+    
+    var prova = ["o","i","dsf"];
     for (var key in dettagli_form) {
+        alert("Titolo non valido!"); 
         var input = document.getElementById(key);
         var risultato = validazioneCampo(input);
         corretto = corretto && risultato;
     }
-    return corrretto;
+    return corretto;
 }

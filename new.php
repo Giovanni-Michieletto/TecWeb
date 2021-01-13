@@ -1,6 +1,6 @@
 <?php
     $session = $_GET['session'];
-    if ($session!="modifica") {
+    if ($session!="modifica" && $session!=true) {
         header('Location: login.html',TRUE);
     }
 
@@ -16,11 +16,6 @@
     $Testo = '';
 
     $end = '';
-
-    $errorTitle = '';
-    $errorImage = '';
-    $errorAlt = '';
-    $errorText = '';
 
     if(isset($_POST['submit'])) {
 
@@ -39,11 +34,14 @@
                 
             $list = $dbAccess->getFile($table);
 
-            foreach ($list as $cell) {
-                if($ID == $cell['ID']) {
-                    $Img = $cell['Immagine'];
+            if($list) {
+                foreach ($list as $cell) {
+                    if($ID == $cell['ID']) {
+                        $Img = $cell['Immagine'];
+                    }
                 }
             }
+            
             if( strlen($Titolo)!=0 && (strlen($Immagine)!=0 || strlen($Img)!=0) && strlen($AltImmagine)!=0 && strlen($Testo)!=0 ) {
 
                 if(strlen($Immagine)==0) {
@@ -54,25 +52,29 @@
                 }
 
                 //$list = $dbAccess->getFile($table);
-
+                $error = true;
                 foreach ($list as $cell) {
                     if($ID != $cell['ID']) {
                         if($Titolo == $cell['Titolo']) {
-                            $errorTitle = 'Titolo gia esistente';
+                            $page = str_replace('<errorTitle />','<p style="color:red;">Titolo gia esistente</p>', $page);
+                            $error = false;
                         }
                         if($imgContent == $cell['Immagine']) {
-                            $errorImage = 'Immagine gia esistente';
+                            $page = str_replace('<errorImage />', '<p style="color:red;">Immagine gia esistente</p>', $page);
+                            $error = false;
                         }
                         if($AltImmagine == $cell['AltImmagine']) {
-                            $errorAlt = 'AltImmagine gia esistente';
+                            $page = str_replace('<errorAlt />','<p style="color:red;">AltImmagine gia esistente</p>', $page);
+                            $error = false;
                         }
                         if($Testo == $cell['Testo']) {
-                            $errorText = 'Testo gia esistente';
+                            $page = str_replace('<errorText />','<p style="color:red;">Testo gia esistente</p>', $page);
+                            $error = false;
                         }
                     }
                 }
 
-                if( strlen($errorTitle)==0 && strlen($errorImage)==0 && strlen($errorAlt)==0 && strlen($errorText)==0 ) {
+                if($error == true) {
                     
                     if($session=="modifica") {
                         $insertion = $dbAccess->updateFile($table,$Titolo,$imgContent,$AltImmagine,$Testo,$ID);
@@ -95,37 +97,21 @@
                 }
             }
         }
-        else {
-            if(strlen($Titolo)==0) {
-                $errorTitle = 'Titolo troppo corto';
-            }
-            if(strlen($errorImage)==0){
-                $errorImage  = 'Reinserire immagine';
-            }
-            if(strlen($AltImmagine) == 0) {
-                $errorAlt = 'Alt Immagine troppo corto';
-            }
-            if(strlen($Testo)==0) {
-                $errorText = 'Testo troppo corto';
-            }
-        }
     }
 
-    $page = str_replace('action=""','action="new.php?table='.$table.'"',$page);
+    $page = str_replace('action=""','action="new.php?session=true&table='.$table.'"',$page);
 
     $page = str_replace('<h1 />', '<h1>Inserimento '.$table.'</h1>', $page);
 
     if($session=="modifica") {
-        $page = str_replace('name="submit">','name="submit">Modifica',$page);
+        $page = str_replace('onsubmit="valida()">','onsubmit="valida()">Modifica',$page);
     }
     else {
-        $page = str_replace('name="submit">','name="submit">Inserisci',$page);
-
+        $page = str_replace('onsubmit="valida()">','onsubmit="valida()">Inserisci',$page);
     }
-    $page = str_replace('<errorTitle />','<p style="color:red;">' . $errorTitle . '</p>', $page);
-    $page = str_replace('<errorImage />', '<p style="color:red;">' . $errorImage . '</p>', $page);
-    $page = str_replace('<errorAlt />','<p style="color:red;">' . $errorAlt . '</p>', $page);
-    $page = str_replace('<errorText />','<p style="color:red;">' . $errorText . '</p>', $page);
+    
+    
+    
     
     $page = str_replace('<message />', $message, $page);
 
