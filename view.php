@@ -3,9 +3,17 @@
     $session = $_GET['session'];
     $table = $_GET['table'];
 
-    require_once "dbConnection.php";
-
     $page = file_get_contents('view.html');
+
+    if($_GET['ID']) {
+        echo '<script> window.alert("Eliminazione riuscita"); </script>';
+        echo "hey";
+
+        $string = '<script> window.alert(Eliminazione riuscita); </script>';
+        $page = str_replace('<myScript />',$string,$page);
+    }
+
+    require_once "dbConnection.php";
 
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection(); 
@@ -18,7 +26,7 @@
 
         if ($list) {        
             foreach ($list as $cell) {
-     		    $Anteprima = substr($cell['Testo'],0,150) . " ...";
+     	        $Anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
                         if($session=="elimina") {
                             $definition .= '<a href="delete.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
