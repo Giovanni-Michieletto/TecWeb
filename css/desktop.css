@@ -5,10 +5,8 @@ html, body{
 	height: 100%;
 }
 #container {
-	min-height: 100%;
 	height: auto;
-	height: 100%;
-	margin: 0 auto 20%;
+	margin: 0 auto 20% 0;
 }
 footer {
 	height: 20%;
@@ -31,9 +29,8 @@ header {
 	width: 100%;
 }
 header img {
-	margin: 20px 0 0 50px;
-	width: auto;
-	height: 70%;
+	margin: 1.5% 0 1.5% 4%;
+	width: 13%;
 }
 
 
@@ -43,7 +40,7 @@ header img {
 	display: flex;
 	align-items: center;
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: rgb(104, 5, 5);
+	background-color: #94080b;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -100,15 +97,7 @@ header img {
 
 
 
-
-
-
-
-
-
-
-
-/* =====DESKTOP====== */
+/*
 @media screen and (min-width: 950px){
 	.container{
 		flex-direction: row;
@@ -128,15 +117,8 @@ header img {
 	.commenti{
 		width: 100%;
 	}
-	/* .card{
-		width: 13rem;
-	}
-	.card:hover{
-		width: 14rem;
-	} */
 	#index-banner-cont{
 		flex-direction: row;
-		/* align-items: bottom; */
 		align-items:center;
 		height: 25rem;
 	}
@@ -177,16 +159,13 @@ header img {
 		padding: 0% 10% 0% 10%;
 	}
 }
+*/
 
 
-
-/* storia */
-
-.contenutostoria{
-	margin-left: 5%;
-	margin-right:5%
+/* === STORIA === */
+.contenutostoria {
+	margin:0 5% 20% 5%;
 } 
-
 .contenutostoria h1{
 	text-align: center;
 	padding: 1em;
@@ -203,29 +182,25 @@ header img {
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-top: 5px;
-	text-align: center;
-	
+	text-align: center;	
 }
 .contenutostoria p{ 
 	text-align: left;
 	padding-top: 1em;
 	padding-bottom: 1em;
-	
-
 } 
 .contenutostoria img {
 	width: auto;
 	height: 40px;
-	
-
-
 } 
 .immagine{
 	display: flex;
-
 }
 
+
+
 /* ==== AMMINISTRATORE ======== */
+/*
 .container-home-amministratore{
 	display: flex;
 	flex-direction: column;
@@ -295,13 +270,6 @@ header img {
 	margin-left: 10px;
 	margin-right: 10px;
 }
-/* .img-amministration{
-	width: 30%;
-}
-.img-amministration img{
-	width: auto;
-    height: 40px;
-} */
 fieldset{
 	display: flex;
 	flex-direction: row;
@@ -369,7 +337,6 @@ textarea#Link{
 }
 .button-aggiungi{
 	width: 100%;
-	/* text-align: center; */
 	justify-content: center;
 }
 .aggiungi{
@@ -382,6 +349,6 @@ textarea#Link{
 	font-size: 1.5em;
 	border: none;
 }
-
+*/
 
 

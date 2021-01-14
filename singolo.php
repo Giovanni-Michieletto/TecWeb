@@ -33,9 +33,9 @@
         header('Location: new.php?',TRUE);
     }
     else {
-    $page = str_replace("<Titolo />", $Titolo, $page);
-    $page = str_replace("<Immagine />", $Immagine, $page);
-    $page = str_replace("<Testo />", $Testo, $page);
+    $page = str_replace("<titolo />", $Titolo, $page);
+    $page = str_replace("<immagine />", $Immagine, $page);
+    $page = str_replace("<testo />", $Testo, $page);
     echo $page;
     }
 ?>
