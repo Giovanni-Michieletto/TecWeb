@@ -1,6 +1,6 @@
 <?php
 
-    require_once "dbConnection.php";    //chiama file dbConnection.php per la connessione al database
+    require_once "dbConnection.php";    //chiama file dbConnection.php per la connessione al database          
 
     $page = file_get_contents('convento.html');  //nome pagina del sentiero
 
