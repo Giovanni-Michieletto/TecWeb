@@ -9,8 +9,21 @@
     $Testo = '';
     $Immagine = '';
 
-    
+    /*______CREAZIONE MENU______*/
+    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    foreach($tabelle as $li) {
+        if($li == $table) {
+            $menu .= '<li class="notlink">'.$li.'</li>';
+        }
+        else if($li == 'Home' || $li == 'Storia') {
+            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
+        }
+        else {
+            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
+        }
+    }
 
+    /*______CREAZIONE CONTENUTO______*/
     require_once "dbConnection.php";
 
     $dbAccess = new DBAccess();
@@ -28,14 +41,16 @@
             }
         }
     }
-
-    if($session=="modifica") {
-        header('Location: new.php?',TRUE);
-    }
     else {
+        $Titolo = "<h2>Errore di collegamento al database</h2>";
+    }
+
+    $page =  str_replace("<menu />",$menu,$page);
+    $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);
     $page = str_replace("<testo />", $Testo, $page);
+
     echo $page;
-    }
+
 ?>

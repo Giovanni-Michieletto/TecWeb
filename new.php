@@ -1,6 +1,6 @@
 <?php
     $session = $_GET['session'];
-    if ($session!="modifica") {
+    if ($session!="modifica" && $session!=true) {
         header('Location: login.html',TRUE);
     }
 
@@ -111,7 +111,7 @@
         }   
     }
 
-    $page = str_replace('action=""','action="new.php?&session=TRUE&table='.$table.'"',$page);
+    $page = str_replace('action=""','action="new.php?session=true&table='.$table.'"',$page);
 
     $page = str_replace('<h1 />', '<h1>Inserimento '.$table.'</h1>', $page);
 

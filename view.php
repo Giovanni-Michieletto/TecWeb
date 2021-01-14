@@ -5,7 +5,7 @@
 
     $page = file_get_contents('view.html');
 
-    /*______CREAZIONE MENU, PERCORSO E TITOLO______*/
+    /*______CREAZIONE MENU______*/
     $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
@@ -64,7 +64,6 @@
     }
     else {
         $definition = "<h3>Errore di collegamento al database</h3>";
-        
     }
 
     $page =  str_replace("<menu />",$menu,$page);
