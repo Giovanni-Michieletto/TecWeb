@@ -1,7 +1,7 @@
-function input() {
+function validate() {
 
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
-    var result = true;
+    var validation = true;
 
     for(var i = 0; i < Id.length; i++) {
 
@@ -13,45 +13,45 @@ function input() {
         } 
 
         if(Id[i] == "Titolo") {
-            if(input.value.search(/\w{2,20}$/) != 0) {
-                var errore = "Titolo errato!";
-                mostraErrore(input, errore);
-                result = false;
+            if(input.value.search(/\w{1,50}$/) != 0) {
+                var errormsg = "Inserire un titolo!";
+                showError(input, errormsg);
+                validation = false;
             }
         }
-/*
+
         if(Id[i] == "Immagine") {
-            if(input.value.search(/\w{2,20}$/) != 0) {
-                var errore = "Immagine errata!";
-                mostraErrore(input, errore);
-                result = false;
+            if(input.files.length == 0) {
+                var errormsg = "Inserire un'immagine!";
+                showError(input, errormsg);
+                validation = false;
             }
         }
-*/
+
         if(Id[i] == "AltImmagine") {
-            if(input.value.search(/\w{2,20}$/) != 0) {
-                var errore = "AltImmagine errato!";
-                mostraErrore(input, errore);
-                result = false;
+            if(input.value.search(/\w{2,50}$/) != 0) {
+                var errormsg = "Inserire un AltImmagine!";
+                showError(input, errormsg);
+                validation = false;
             }
         }
 
         if(Id[i] == "Testo") {
-            if(input.value.search(/\w{2,20}$/) != 0) {
-                var errore = "Testo errato!";
-                mostraErrore(input, errore);
-                result =  false;
+            if(input.value.search(/\w{2,50}$/) != 0) {
+                var errormsg = "Inserire un testo!";
+                showError(input, errormsg);
+                validation =  false;
             }
         }
     }
 
-    return result;
+    return validation;
 }
 
-function mostraErrore(input, errore) {
+function showError(input, errormsg) {
     var p = input.parentNode; //lo span che contiene l'input
     var elemento = document.createElement("strong"); //è la sezione errore
     elemento.className = "errori"; // per il css
-    elemento.appendChild(document.createTextNode(errore)); //contenuto sezione errore
+    elemento.appendChild(document.createTextNode(errormsg)); //contenuto sezione errore
     p.appendChild(elemento); //aggiungi un nuovo figlio allo span, collegato subito dopo input
 }
