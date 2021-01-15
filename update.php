@@ -1,15 +1,16 @@
 <?php
     $session = $_GET['session'];
+    $ID = $_GET['ID'];
+    $table = $_GET['table'];
+
     if ($session!="modifica") {
         header('Location: login.html',TRUE);
     }
 
     $page = file_get_contents('blankForm.html');
 
-    $ID = $_GET['ID'];
-    $table = $_GET['table'];
-    
     require_once "dbConnection.php"; 
+    require_once "scrapping.php";
 
     $dbAccess = new DBAccess();
 
@@ -27,18 +28,11 @@
             }
         }
         
-        $page = str_replace('name="Titolo"', 'name="Titolo" value="'.$Titolo.'"', $page);
-        $page = str_replace('<errorImage />', '<img style="width:80%; height:80%;" src="data:charset=utf-8;base64, ' . $Immagine . '"/>',$page);
-        $page = str_replace('name="AltImmagine"', 'name="AltImmagine" value="'.$AltImmagine.'"', $page);
-        $page = str_replace('name="Testo">', 'name="Testo">' .$Testo, $page);
+        $page = updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
 
-        $page = str_replace('action=""','action="new.php?table='.$table.'&ID='.$ID.'&session=modifica"',$page);
-
-        $page = str_replace('name="submit">','name="submit">Modifica',$page);
+        $page = buildHTML($page,$table,$session);
 
     }
-
-    $page = str_replace('<h1 />', '<h1>Modifica '.$table.'</h1>', $page);
-
+    
     echo $page;
 ?>
