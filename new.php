@@ -1,6 +1,6 @@
 <?php
     $session = $_GET['session'];
-    if ($session!="modifica") {
+    if ($session!="modifica" && $session!=true) {
         header('Location: login.html',TRUE);
     }
 
@@ -91,27 +91,27 @@
                     }
                     else {
                         $message = '<div id="conferma"><p>Errore nell\'inserimento</p></div>';
+                    }
                 }
+            }
+            else {
+                if(strlen($Titolo)==0) {
+                    $errorTitle = 'Titolo troppo corto';
+                }
+                if(strlen($errorImage)==0){
+                    $errorImage  = 'Reinserire immagine';
+                }
+                if(strlen($AltImmagine) == 0) {
+                    $errorAlt = 'Alt Immagine troppo corto';
+                }
+                if(strlen($Testo)==0) {
+                    $errorText = 'Testo troppo corto';
                 }
             }
-        }
-        else {
-            if(strlen($Titolo)==0) {
-                $errorTitle = 'Titolo troppo corto';
-            }
-            if(strlen($errorImage)==0){
-                $errorImage  = 'Reinserire immagine';
-            }
-            if(strlen($AltImmagine) == 0) {
-                $errorAlt = 'Alt Immagine troppo corto';
-            }
-            if(strlen($Testo)==0) {
-                $errorText = 'Testo troppo corto';
-            }
-        }
+        }   
     }
 
-    $page = str_replace('action=""','action="new.php?table='.$table.'"',$page);
+    $page = str_replace('action=""','action="new.php?session=true&table='.$table.'"',$page);
 
     $page = str_replace('<h1 />', '<h1>Inserimento '.$table.'</h1>', $page);
 

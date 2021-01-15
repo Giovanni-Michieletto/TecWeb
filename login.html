@@ -2,68 +2,80 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- fontawesome -->
-      <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
-      <!-- Google font -->
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-      <!-- bootstrap -->
-      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-      <!-- Hamburger CSS -->
-      <link rel="stylesheet" href="./css/hamburger.css">
       <!-- my css -->
-      <link rel="stylesheet" href="./css/style.css">
-        
+      <link rel="stylesheet" href="./css/desktop.css">
       <title>Convento S. Maria del Cengio</title>
-
    </head>
+
    <body>
-      <!-- === HEADER === -->
-      <header id="primary-header" class="header-class">
-         <span id="logo" class="margin-10"><img src="./db/img/logo-small.svg"></span>
-     </header>
-     
-      <!-- ================= -->
-      <!-- === MAIN AREA === -->
-      <!-- ================= -->
+      <div id="container">
+         <!-- === HEADER === -->
+         <header>
+            <a href="./conventoPHP.php">
+               <img src="./db/img/logo-small.svg" alt="">
+            </a>
+         </header>
+         
+         <!-- === MENU === -->
+         <div id="menu"> 
+            <ul class="links">
+               <li class="notlink">Home</li>
+               <li><a href="view.php?table=Articoli">Articoli</a></li> 
+               <li><a href="view.php?table=Associazioni">Associazioni</a></li>
+               <li><a href="view.php?table=Commenti">Commenti</a></li>
+               <li><a href="view.php?table=Notizie">Notizie</a></li>
+            </ul> 
+         </div>
 
-      <div id="spacer-top"></div>
-
-      <div id="container-login" class="container-amministration margin-10">
-         <form enctype="multipart/form-data" method="POST" action="login.php">
-            <fieldset class="align">
-               <div class="title-amministration">
-                  <img src="./db/img/deco.svg" alt="">
-                  <label for="Username">Username: </label>
-               </div>
-               <div class="text-box">
-                  <span>
-                     <input type="text" id="Username" name="Username" placeholder="inserisci Username... ">
-                     <errorUser />
-                  </span>
-               </div>
-            </fieldset>
-            <fieldset class="align">
-               <div class="title-amministration">
-                  <img src="./db/img/deco.svg" alt="">
-                  <label for="Password">Password: </label>
-               </div>
-               <div class="text-box">
-                  <span>
-                     <input type="password" name="Password" id="Password" placeholder="inserisci Password... ">
-                     <errorPass />
-                  </span>
-               </div>
-            </fieldset>
-            <message />
-            <fieldset class="button-aggiungi">
-               <button class="aggiungi" type="submit" name="submit">Invia</button>
-            </fieldset>
-         </form>
+         <!-- === PERCORSO === -->
+         <div id="percorso">
+            <span id="space">
+               <p>Ti trovi in: <span xml:lang="en">Login</span></p>
+            </span>
+         </div>
+      
+         <!-- ================= -->
+         <!-- === MAIN AREA === -->
+         <!-- ================= -->
+         <div id="container-login" class="container-amministration margin-10">
+            <form enctype="multipart/form-data" method="POST" action="login.php">
+               <fieldset class="align">
+                  <div class="title-amministration">
+                     
+                     <label for="Username">Username: </label>
+                  </div>
+                  <div class="text-box">
+                     <span>
+                        <input type="text" id="Username" name="Username" placeholder="inserisci Username... ">
+                        <errorUser />
+                     </span>
+                  </div>
+               </fieldset>
+               <fieldset class="align">
+                  <div class="title-amministration">
+                     
+                     <label for="Password">Password: </label>
+                  </div>
+                  <div class="text-box">
+                     <span>
+                        <input type="password" name="Password" id="Password" placeholder="inserisci Password... ">
+                        <errorPass />
+                     </span>
+                  </div>
+               </fieldset>
+               <message />
+               <fieldset class="button-aggiungi">
+                  <button class="aggiungi" type="submit" name="submit">Invia</button>
+               </fieldset>
+            </form>
+         </div>
+   
       </div>
    
-   
-   
+      <!-- === FOOTER === -->
+      <footer>
+         <h2>footer</h2>
+      </footer>
    </body>
 
 

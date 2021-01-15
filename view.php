@@ -3,9 +3,25 @@
     $session = $_GET['session'];
     $table = $_GET['table'];
 
-    require_once "dbConnection.php";
-
     $page = file_get_contents('view.html');
+
+    /*______CREAZIONE MENU______*/
+    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    foreach($tabelle as $li) {
+        if($li == $table) {
+            $menu .= '<li class="notlink">'.$li.'</li>';
+        }
+        else if($li == 'Home' || $li == 'Storia') {
+            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
+        }
+        else {
+            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
+        }
+    }
+
+
+    /*______CREAZIONE CARD______*/
+    require_once "dbConnection.php";
 
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection(); 
@@ -18,7 +34,7 @@
 
         if ($list) {        
             foreach ($list as $cell) {
-     		    $Anteprima = substr($cell['Testo'],0,150) . " ...";
+                $Anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
                         if($session=="elimina") {
                             $definition .= '<a href="delete.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
@@ -43,11 +59,18 @@
             }
         }
         else {
-            $definition = "<p>Nessuna file presente</p>";  
-        }
-        $page = str_replace("<h2 />",'<h2>'.$table.'</h2>',$page); 
-        $page =  str_replace("<list />",$definition,$page); 
-        echo $page;
+            $definition = "<h3>Nessuna file presente</h3>";  
+        } 
     }
+    else {
+        $definition = "<h3>Errore di collegamento al database</h3>";
+    }
+
+    $page =  str_replace("<menu />",$menu,$page);
+    $page =  str_replace("<percorso />",$table,$page);
+    $page =  str_replace("<titolo />",$table,$page); 
+    $page =  str_replace("<list />",$definition,$page);
+
+    echo $page;
     
 ?>

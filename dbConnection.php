@@ -13,7 +13,7 @@
         public function openDBConnection() {
             $this->connection = mysqli_connect(DBAccess::HOST, DBAccess::USERNAME, DBAccess::PASSWORD, DBAccess::NAME);
             if (mysqli_error($this->connection)) {
-                die("Connessione non riuscita. Errore: " . mysqli_errno($this->connection));
+                return false;
             }
             else {
                 return true;
