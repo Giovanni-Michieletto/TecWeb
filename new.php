@@ -1,19 +1,18 @@
 <?php
+    require_once "dbConnection.php"; 
+    require_once "scrapping.php";
+
+    //PRENDO VARIABILI PASSATE
+    $table = $_GET['table'];
+    $ID = $_GET['ID'];
     $session = $_GET['session'];
+
     if ($session!="modifica" && $session!=true) {
         header('Location: login.html',TRUE);
     }
 
     $page = file_get_contents('blankForm.html');
 
-    require_once "scrapping.php";
-
-    $page = build($page,$table,$session);
-
-    //PRENDO VARIABILI PASSATE
-    $table = $_GET['table'];
-    $ID = $_GET['ID'];
-    
     //DEFINISCO VARIABILI INTERNE
     $Titolo = '';
     $Immagine = '';
@@ -29,7 +28,7 @@
         $file = $_FILES['Immagine']['name'];
         $Testo = $_POST['Testo'];
 
-        require_once "dbConnection.php"; 
+        
 
         $dbAccess = new DBAccess();
 
@@ -68,11 +67,11 @@
                     $insertion = $dbAccess->updateFile($table,$Titolo,$imgContent,$AltImmagine,$Testo,$ID);
                 }
                 else {
-                    $insertion = $dbAccess->insertFile($table,$Titolo,$imgContent,$AltImmagine,$Testo);
+                    $insertion = $dbAccess->insertFile($table,$Titolo,$Immagine,$AltImmagine,$Testo);
                 }
                 
                 if($insertion == true) {
-                    $page = insert($page,$Titolo,$imgContent,$AltImmagine,$Testo);
+                    $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
                     }
                 else {
                     $message = 'Errore nell\'inserimento';
@@ -81,6 +80,8 @@
         }
     }
     
+    $page = buildHTML($page,$table,$session);
+
     $page = sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 
     echo $page;

@@ -31,7 +31,7 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     return $error;
 }
 
-function insert($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
+function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     $message = 'Inserimento andato a buon fine';
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
@@ -43,14 +43,21 @@ function insert($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     return sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 }
 
-function build($page,$table,$session) {
-    $page = str_replace('<titlePage />', '<h1>Inserimento '.$table.'</h1>', $page);
-    $page = str_replace('<action />','new.php?session=true&table='.$table,$page);
-    if($session=="modifica") {
+function updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
+    $page = str_replace('<errorImage />', '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>',$page);
+    return sostitute($page,'','',$Titolo,$AltImmagine,$Testo);
+}
+
+function buildHTML($page,$table,$session) {
+    if($session =="modifica") {
         $page = str_replace('<buttonName />','Modifica',$page);
+        $page = str_replace('<buttonName />', 'Modifica '.$table, $page);
+        $page = str_replace('<action />','action="new.php?table='.$table.'&ID='.$ID.'&session=modifica"',$page);
     }
     else {
+        $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
         $page = str_replace('<buttonName />','Inserisci',$page);
+        $page = str_replace('<action />','new.php?session=true&table='.$table,$page);
     }
     return $page;
 }
