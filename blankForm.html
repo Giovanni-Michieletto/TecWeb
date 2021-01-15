@@ -57,9 +57,9 @@
 </div>
 <div class="container-amministration margin-10">
     <!-- id="starter"  -->
-    <form enctype="multipart/form-data" name="form" method="post" action="blankForm.html" onsubmit="validateForm()" >
+    <form enctype="multipart/form-data" name="form" method="post" action="blankForm.html" onsubmit=" return input();">
         <message />
-        <fieldset class="align">
+        <fieldset class="align" >
             <div class="title-amministration">
                 <!-- <img src="./db/img/deco.svg" alt=""> -->
                 <label for="Titolo">Titolo: </label>
@@ -102,7 +102,7 @@
             </div>
         </fieldset>
         <fieldset class="button-aggiungi">
-            <button class="aggiungi" type="submit" name="submit" ></button>
+            <button class="aggiungi" type="submit" name="submit" >Inserisci</button>
         </fieldset>
     </form>
     
