@@ -97,8 +97,25 @@ header img {
 #space {
 	padding-left: 2em;
 }
+ /* === RICERCA === */
+#s {
+	width: 150px;
+	height: 28px;
+	padding: 0 28px;
+	
+	
+	} 
+#s img{
+	margin: 1px 0 0 1px;
+	width: auto;
+	height: 70%;
+}
 
-
+	.hide {
+		position:absolute;
+		left:-9999px;
+		}
+ 
 
 
 
@@ -140,19 +157,6 @@ header img {
 		align-items:center;
 		height: 25rem;
 	}
-	#index-banner-cont::before{
-		content: "";
-		background-image: url("../db/img/logo-casa-sentieriBANNER.svg");
-		background-repeat: no-repeat;
-		background-size: contain;
-		height: 120%;
-		width: 45%;
-		transform: translate(-25em,-6em);
-		-webkit-transform: translate(-25em,-6em);
-		-moz-transform: translate(-25em,-6em);
-		-ms-transform: translate(-25em,-6em);
-		-o-transform: translate(-25em,-6em);
-}
 
 	#banner-text-cont{
 		left: 45%;
