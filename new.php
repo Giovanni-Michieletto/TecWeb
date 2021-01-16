@@ -14,19 +14,17 @@
     echo "page" . '<br>';
 
     //DEFINISCO VARIABILI INTERNE
-    $Titolo = '';
-    $Immagine = '';
-    $AltImmagine = '';
-    $Testo = '';
+
+    $Titolo = $_POST['Titolo'];
+    $AltImmagine = $_POST['AltImmagine'];
+    $file = $_FILES['Immagine']['name'];
+    $Testo = $_POST['Testo'];
 
     //SE VIENE CLICCATO IL BOTTONE
     if($_POST['submit']==true) {
 
         echo 'submit <br>';
-        $Titolo = $_POST['Titolo'];
-        $AltImmagine = $_POST['AltImmagine'];
-        $file = $_FILES['Immagine']['name'];
-        $Testo = $_POST['Testo'];
+        
 
         require_once "dbConnection.php"; 
 
@@ -82,9 +80,9 @@
     
     echo 'non submit <br>';
 
-    include "scrapping.php";
+    include "scraping.php";
 
-    $page = buildHTML($page,$table,$session);
+    $page = buildHTML($page,$table,$session,'');
 
     $page = sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 
