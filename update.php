@@ -1,13 +1,6 @@
 <?php
-    $session = $_GET['session'];
-    $ID = $_GET['ID'];
-    $table = $_GET['table'];
 
-    if ($session!="modifica") {
-        header('Location: login.html',TRUE);
-    }
-
-    $page = file_get_contents('blankForm.html');
+function update($page,$table,$ID) {
 
     require_once "dbConnection.php"; 
     require_once "scrapping.php";
@@ -30,9 +23,9 @@
         
         $page = updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
 
-        $page = buildHTML($page,$table,$session);
-
     }
     
-    echo $page;
+    return $page;
+
+}   
 ?>

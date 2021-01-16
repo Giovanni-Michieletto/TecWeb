@@ -29,13 +29,14 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
         $page = str_replace('<errorText />','<p style="color:red;">Testo gia esistente</p>', $page);
         $error = false;
     }
-    return $error;
+    echo "error=".$error. '<br>';
+    return array($error,$page);
 }
 
 
-//INSERISCE IMMAGINEIN CASO DI NUOVO INSERIEMNTO E POI CHIAMA SOSTITUTE()
+//INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMeNTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
-    echo 'InsertForm <br>';
+    echo "inertForm <br>";
     $message = 'Inserimento andato a buon fine';
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
@@ -51,23 +52,6 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
 function updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     $page = str_replace('<errorImage />', '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>',$page);
     return sostitute($page,'','',$Titolo,$AltImmagine,$Testo);
-}
-
-
-//CREA PARTI HTML SPECIFICHE DELLA PAGINA
-function buildHTML($page,$table,$session,$ID) {
-    echo 'build <br>';
-    if($session =="modifica") {
-        $page = str_replace('<buttonName />','Modifica',$page);
-        $page = str_replace('<buttonName />', 'Modifica '.$table, $page);
-        $page = str_replace('<action />','new.php?table='.$table.'&ID='.$ID.'&session=modifica',$page);
-    }
-    else {
-        $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
-        $page = str_replace('<buttonName />','Inserisci',$page);
-        $page = str_replace('<action />','new.php?session=true&table='.$table,$page);
-    }
-    return $page;
 }
 
 ?>
