@@ -1,10 +1,8 @@
 <?php
-    require_once "dbConnection.php"; 
-    require_once "scrapping.php";
 
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
-    $ID = $_GET['ID'];
+    //$ID = $_GET['ID'];
     $session = $_GET['session'];
 
     if ($session!="modifica" && $session!=true) {
@@ -13,6 +11,8 @@
 
     $page = file_get_contents('blankForm.html');
 
+    echo "page" . '<br>';
+
     //DEFINISCO VARIABILI INTERNE
     $Titolo = '';
     $Immagine = '';
@@ -20,15 +20,15 @@
     $Testo = '';
 
     //SE VIENE CLICCATO IL BOTTONE
-    if(isset($_POST['submit'])) {
+    if($_POST['submit']==true) {
 
-
+        echo 'submit <br>';
         $Titolo = $_POST['Titolo'];
         $AltImmagine = $_POST['AltImmagine'];
         $file = $_FILES['Immagine']['name'];
         $Testo = $_POST['Testo'];
 
-        
+        require_once "dbConnection.php"; 
 
         $dbAccess = new DBAccess();
 
@@ -80,6 +80,10 @@
         }
     }
     
+    echo 'non submit <br>';
+
+    include "scrapping.php";
+
     $page = buildHTML($page,$table,$session);
 
     $page = sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
