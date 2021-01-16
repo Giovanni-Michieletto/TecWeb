@@ -34,43 +34,30 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
-        $directory = ".../upload/";
+        $directory = "/opt/lampp/htdocs/TecWeb/testupload/";
+        $dir = "/TecWeb/testupload/";
         $path = pathinfo($file);
         $filename = $path['filename'];
         $ext = $path['extension'];
-        $Immagine = $directory . $filename . "." . $ext;
+        $ImmagineUpload = $directory . $filename . "." . $ext;
+        $Immagine = $dir . $filename . "." . $ext;
 
         //VERIFICA DOPPIONI
         $error = true;
-        echo $error . '<br>';
         foreach ($list as $cell) {
             if($ID != $cell['ID']) {
                 $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
                 $error = $array[0];
-                if($error==false) {
-                    echo 'false <br>';
-                }
-                else {
-                    echo 'true <br>';
-                }
                 $page = $array[1];    
             }
         }
             
         if($error == true) {
-            
-            $up = move_uploaded_file($_FILES['Immagine']['tmp_name'],$Immagine);
-            if($up==false) {
-                echo " up false";
-            }
-            else {
-                echo "up true";
-            }
+            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
             if($session=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
             else {
-                echo $Immagine . '<br>';
                 $insertion = $dbAccess->insertFile($table,$Titolo,$Immagine,$AltImmagine,$Testo);
             }
             
@@ -82,10 +69,15 @@
             }
         }
         else {
-            $page = sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
+            $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
         }
     }
 
+    $session = true;
+    
+    $page = build($page,$table,$ID,$session);
+
+    
     echo $page;
 
 ?>
