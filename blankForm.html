@@ -56,7 +56,7 @@
     </h1>
 </div>
 <div class="container-amministration margin-10">
-    <form enctype="multipart/form-data" name="form" method="post" action="<action />">
+    <form enctype="multipart/form-data" name="form" method="post" action="<action />" onsubmit="return validate();">
         <div id="conferma">
             <p>
                 <message />
@@ -70,7 +70,7 @@
             </div>
             <div class="text-box">
                 <span>
-                    <input type="text" id="Titolo" name="Titolo"/>
+                    <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
                     <errorTitle />
                 </span>
             </div>
@@ -113,7 +113,7 @@
 
         <!-- BOTTONE -->
         <fieldset class="button-aggiungi">
-            <button class="aggiungi" type="submit" name="submit" onsubmit="return validate();"><buttonName /></button>
+            <button class="aggiungi" type="submit" name="submit" ><buttonName />Inserisci</button>
         </fieldset>
     </form>
     
