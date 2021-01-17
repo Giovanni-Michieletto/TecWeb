@@ -1,0 +1,189 @@
+/* ========================== */
+/* ========TITOLO-HOME======= */
+/* ========================== */
+
+.title-convento{
+   /* margin: 70px 0 20px 0; */
+	display: flex;
+   vertical-align: middle;
+   text-align: center;
+   justify-content: center;
+   margin-bottom: 1em;
+    margin-top: 3em;
+}
+.title-convento h1 {
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+   margin-right: 10px;
+   font-size: 2.2rem;
+}
+
+
+.ultimo-container-lista p {
+	font-size: 1.1em;
+	padding: 1em;
+}
+
+.ultimo-container-lista{
+	width: 100%;
+}
+
+/* ========================== */
+/* =======BANNER-HOME======== */
+/* ========================== */
+/* .banner-cont{
+   display: flex;
+   flex-direction: row;
+   background-color: #aed6d6;
+   overflow: hidden;
+}
+#testo-banner-cont{
+   position: absolute;
+
+    width: 50%;
+
+    
+    text-align: center;
+}
+
+#testo-banner-cont p{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.1em;
+   color: #c65852;
+
+}
+
+.banner-cont::before{
+   content: "";
+   background-image: url(../db/img/logo-casa-sentieriBANNER.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center bottom;
+   width: 30em;
+   height: 53vh;
+   background-size: cover;
+   
+   
+} */
+
+/* ============================ */
+/* =========MOBILE============= */
+/* ============================ */
+
+@media screen and (min-width: 300px){
+   .contenitore-body{
+      flex-direction: column;
+      width: 100%;
+   }
+   .container-lista{
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .convento{
+      display: none;
+   }
+   .title-convento img{
+      display: none;
+   }
+}
+
+/* ============================ */
+/* =========TABLET============= */
+/* ============================ */
+
+@media screen and (min-width:670px){
+
+   #presentazione-convento{
+      background-color: #ccc;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 95%;
+     border: 1px solid #ccc;
+     border-radius:  30px ;
+     -webkit-border-radius:  30px ;
+     -moz-border-radius:  30px ;
+     -ms-border-radius:  30px ;
+     -o-border-radius:  30px ;
+}
+
+   .convento{
+      /* display: block; */
+      display: flex;
+      /* position: absolute; */
+      justify-content: left;
+      width: 50%;
+   }
+   .convento img{
+      width: 100%;
+      height: 100%;
+      border-radius: 30px 0 0 30px;
+      -webkit-border-radius: 30px 0 0 30px;
+      -moz-border-radius: 30px 0 0 30px;
+      -ms-border-radius: 30px 0 0 30px;
+      -o-border-radius: 30px 0 0 30px;
+}
+   .title-convento{
+      align-items: end;
+      width: 40%;
+   }
+   .title-convento img {
+      display: inline;
+      width: auto;
+      width: 20%;
+   }
+   .title-convento h1{
+      color:  #c65852;
+   }
+}
+
+/* ============================ */
+/* =========DESKTOP============= */
+/* ============================ */
+
+@media screen and (min-width:900px){
+   
+   /* === PERCORSO === */
+
+ /* === RICERCA === */
+#s {
+	width: 150px;
+	height: 28px;
+	padding: 0 28px;
+	
+	
+	} 
+#s img{
+	margin: 1px 0 0 1px;
+	width: auto;
+	height: 70%;
+}
+
+
+	.hide {
+		position:absolute;
+		left:-9999px;
+	}
+   
+   
+
+   /* #presentazione-convento{
+      height: 34vh;
+   } */
+   .contenitore-body{
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   .container-lista{
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+   }
+	
+}
