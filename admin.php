@@ -33,34 +33,31 @@
             <div class="title-a">
                <h2>Notizie</h2>
                <ul>
-                  <li><a href="./new.php?table=Notizie&session=true">Nuova</a></li>
+                  <li><a href="./buildForm.php?session=true&table=Notizie">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
                </ul>
             </div>
             <div class="title-a">
-               
                <h2>Commenti</h2>
                <ul>
-                  <li><a href="./new.php?table=Commenti&session=true">Nuovo</a></li>
+                  <li><a href="./buildForm.php?session=true&table=Commenti">Nuovo</a></li>
                   <li><a href="./view.php?session=modifica&table=Commenti">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Commenti">Elimina</a></li>
                </ul>
             </div>
             <div class="title-a">
-               
                <h2>Articoli</h2>
                <ul>
-                  <li><a href="./new.php?table=Articoli&session=true">Nuovo</a></li>
+                  <li><a href="./buildForm.php?session=true&table=Articoli">Nuovo</a></li>
                   <li><a href="./view.php?session=modifica&table=Articoli">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Articoli">Elimina</a></li>
                </ul>
             </div>
             <div class="title-a">
-               
                <h2>Associazioni</h2>
                <ul>
-                  <li><a href="./new.php?table=Associazioni&session=true">Nuova</a></li>
+                  <li><a href="./buildForm.php?session=true&table=Associazioni">Nuova</a></li>
                   <li><a href="./view.php?session=modifica&table=Associazioni">Modifica</a></li>
                   <li><a href="./view.php?session=elimina&table=Associazioni">Elimina</a></li>
                </ul>

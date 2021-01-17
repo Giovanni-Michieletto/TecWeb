@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<!-- <head>
-    <title>NewArticleForm</title>
-</head> -->
 <head>
+
+    <script type="text/javascript" src="myScript.js"></script>
+
     <!-- my css -->
     <link rel="stylesheet" href="./css/desktop.css">
+
     
     <title>Convento S. Maria del Cengio</title>
 
@@ -23,24 +24,32 @@
 
 <div id="spacer-top"></div>
 <div class="Titolo-aggiungi align">
-    <h1 />
+    <h1>
+        <titlePage />
+    </h1>
 </div>
 <div class="container-amministration margin-10">
-    <!-- id="starter"  -->
-    <form enctype="multipart/form-data" method="post" action="" >
-        <message />
+    <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
+        <div id="conferma">
+            <p>
+                <message />
+            </p>
+        </div>
+
+        <!-- TITOLO -->
         <fieldset class="align">
             <div class="title-amministration">
                 <label for="Titolo">Titolo: </label>
             </div>
             <div class="text-box">
                 <span>
-                    <input type="text" id="Titolo" name="Titolo" placeholder="Titolo"/>
+                    <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
                     <errorTitle />
                 </span>
             </div>
         </fieldset>
-        <!-- ricominciare da qui!!!! modificare immagine!!! -->
+
+        <!-- ALTIMMAGINE E IMMAGINE -->
         <fieldset class="align"> 
             <div class="title-amministration">
                 <label for="Immagine">Immagine: </label>
@@ -62,27 +71,32 @@
             </div>
         </fieldset>
 
+        <!-- TESTO -->
         <fieldset>
             <div class="title-amministration">
                 <label for="Testo">Testo: </label>
             </div>
             <div class="text-box">
                 <span>
-                    <errorText />
                     <textarea id="Testo" rows="30" cols="100" placeholder="Testo" name="Testo"></textarea>
+                    <errorText />
                 </span>
             </div>
         </fieldset>
+
+        <!-- BOTTONE -->
         <fieldset class="button-aggiungi">
-            <button class="aggiungi" type="submit" name="submit"></button>
+            <button type="submit" name="submit" ><buttonName /></button>
         </fieldset>
     </form>
-  
+    
 </div>
 
-    <footer>
-      <h2>footer</h2>
-    </footer>
+
 </body>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
 
 </html>

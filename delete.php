@@ -29,8 +29,8 @@
         
         $page = str_replace('name="Titolo"', 'name="Titolo" readonly value="'.$Titolo.'"', $page);
         $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
-        $newString = '<img style="width:80%; height:80%;" src="data:charset=utf-8;base64, ' . $Immagine . '"/>';
-        $page = str_replace($stringToreplace,$newString,$page);
+        $String = '<img style="width:80%; height:80%;" src="data:charset=utf-8;base64, ' . $Immagine . '"/>';
+        $page = str_replace($stringToreplace,$String,$page);
         $page = str_replace('name="AltImmagine"', 'name="AltImmagine" readonly value="'.$AltImmagine.'"', $page);
         $page = str_replace('name="Testo">', 'name="Testo" readonly>' .$Testo, $page);
 
@@ -39,7 +39,9 @@
 
         if(isset($_POST['submit'])) {
             $insertion = $dbAccess->deleteFile($table,$ID);
-            header('Location: view.php?session='.$session.'&table='.$table, TRUE);
+            if($insertion == true) {
+                header('Location: view.php?session='.$session.'&table='.$table.'&ID='.$ID, TRUE);
+            }
         }
     }
 
