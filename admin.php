@@ -5,7 +5,7 @@
    }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
    <head>
       <link rel="stylesheet" href="./css/desktop.css">
       

@@ -1,4 +1,4 @@
-<?php
+ <?php
     $session = $_GET['session'];
     if ($session!="modifica" && $session!=true) {
         header('Location: login.html',TRUE);
