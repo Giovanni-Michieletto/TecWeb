@@ -10,6 +10,23 @@
         $page = str_replace('<myScript />',$string,$page);
     }
 
+    /*______CREAZIONE MENU______*/
+    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    foreach($tabelle as $li) {
+        if($li == $table) {
+            $menu .= '<li class="notlink">'.$li.'</li>';
+        }
+        else if($li == 'Home' || $li == 'Storia') {
+            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
+        }
+        else {
+            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
+        }
+    }
+
+
+    /*______CREAZIONE CARD______*/
+
     require_once "dbConnection.php";
 
     $dbAccess = new DBAccess();          
@@ -56,5 +73,15 @@
         
         echo $page;
     }
+    else {
+        $definition = "<h3>Errore di collegamento al database</h3>";
+    }
+
+    $page =  str_replace("<menu />",$menu,$page);
+    $page =  str_replace("<percorso />",$table,$page);
+    $page =  str_replace("<titolo />",$table,$page); 
+    $page =  str_replace("<list />",$definition,$page);
+
+    echo $page;
     
 ?>
