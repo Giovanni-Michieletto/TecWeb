@@ -97,38 +97,17 @@ header img {
 #space {
 	padding-left: 2em;
 }
- /* === RICERCA === */
+ 
+
+/* === RICERCA === */
 #s {
 	width: 150px;
 	height: 28px;
 	padding: 0 28px;
-	
-	
 	} 
-#s img{
-	margin: 1px 0 0 1px;
-	width: auto;
-	height: 70%;
-}
 
-
-	.hide {
-		position:absolute;
-		left:-9999px;
-	}
  
-
-
-
-
-
-
-
-
-
-
-
-
+	
 /* === SINGOLO === */
 .content {
 	text-align: center;

@@ -1,9 +1,10 @@
 <?php
 
-    $page = file_get_contents('login.html');            //fare pagina Login.html con i form
+    $page = file_get_contents('login.html');            
 
     $message = '';
 
+    echo "login.php <br>";
     if(isset($_POST['submit'])) {
 
         $Username = $_POST['Username'];
@@ -17,13 +18,13 @@
 
         if($connection) {
 
+            echo "connesso <br>";
             $Username = md5($Username);
             $Password = md5($Password); 
 
             $Login = $dbAccess->getLogin();                 
 
             if($Login['Username']==$Username && $Login['Password']==$Password) {
-                //$page = file_get_contents('Amministration_home.html'); 
                 header('Location: admin.php?session=true',TRUE);
             }
             else {
