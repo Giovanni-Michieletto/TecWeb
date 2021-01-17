@@ -4,7 +4,7 @@
 CREATE TABLE Articoli (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
-    Immagine longblob NOT NULL,
+    Immagine text NOT NULL,
     AltImmagine varchar(150) NOT NULL,
     Testo TEXT NOT NULL,
     PRIMARY KEY (ID)
@@ -17,7 +17,7 @@ CREATE TABLE Articoli (
 CREATE TABLE Notizie (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
-    Immagine longblob NOT NULL,
+    Immagine text NOT NULL,
     AltImmagine varchar(150) DEFAULT NULL,
     Testo text NOT NULL,
     PRIMARY KEY (ID)
@@ -31,7 +31,7 @@ CREATE TABLE Notizie (
 CREATE TABLE Commenti (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
-    Immagine longblob NOT NULL,
+    Immagine text NOT NULL,
     AltImmagine varchar(150) DEFAULT NULL,
     Testo text NOT NULL,
     PRIMARY KEY (ID)
@@ -44,12 +44,11 @@ CREATE TABLE Commenti (
 CREATE TABLE Associazioni(
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
-    Immagine longblob NOT NULL,
+    Immagine text NOT NULL,
     AltImmagine VARCHAR(150) DEFAULT NULL,
     Testo text NOT NULL,
     PRIMARY KEY (ID)
 );
-
 
 CREATE TABLE Login (
     Username VARCHAR(150) NOT NULL,
