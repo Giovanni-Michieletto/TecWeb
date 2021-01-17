@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
    <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- my css -->
-      <link rel="stylesheet" href="./css/desktop.css">
+      <link rel="stylesheet" href="./css/style_comune.css">
+      <link rel="stylesheet" href="./css/Amministratore.css">
+      <link rel="stylesheet" href="./css/login.css">
+
+
       <title>Convento S. Maria del Cengio</title>
    </head>
 
    <body>
-      <div id="container">
          <!-- === HEADER === -->
          <header>
             <a href="./conventoPHP.php">
@@ -16,32 +20,15 @@
             </a>
          </header>
          
-         <!-- === MENU === -->
-         <div id="menu"> 
-            <ul class="links">
-               <li class="notlink">Home</li>
-               <li><a href="view.php?table=Articoli">Articoli</a></li> 
-               <li><a href="view.php?table=Associazioni">Associazioni</a></li>
-               <li><a href="view.php?table=Commenti">Commenti</a></li>
-               <li><a href="view.php?table=Notizie">Notizie</a></li>
-            </ul> 
-         </div>
-
-         <!-- === PERCORSO === -->
-         <div id="percorso">
-            <span id="space">
-               <p>Ti trovi in: <span xml:lang="en">Login</span></p>
-            </span>
-         </div>
-      
+         
          <!-- ================= -->
          <!-- === MAIN AREA === -->
          <!-- ================= -->
-         <div id="container-login" class="container-amministration margin-10">
+         <div id="container-login" class="container-amministration margin-5">
             <form enctype="multipart/form-data" method="POST" action="login.php">
                <fieldset class="align">
                   <div class="title-amministration">
-                     
+                     <img src="./db/img/deco.svg" alt="">
                      <label for="Username">Username: </label>
                   </div>
                   <div class="text-box">
@@ -53,7 +40,7 @@
                </fieldset>
                <fieldset class="align">
                   <div class="title-amministration">
-                     
+                     <img src="./db/img/deco.svg" alt="">
                      <label for="Password">Password: </label>
                   </div>
                   <div class="text-box">
@@ -70,7 +57,6 @@
             </form>
          </div>
    
-      </div>
    
       <!-- === FOOTER === -->
       <footer>
