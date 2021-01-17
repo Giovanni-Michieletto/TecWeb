@@ -325,8 +325,8 @@ ul li{
 
 
 
-footer {
-	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
+/* footer {
+	posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti)
 	width: 100%;
 	margin-top: 3rem;
 	height: 20vh;
@@ -336,7 +336,7 @@ footer {
 	justify-content: center;
 	color: white;
 	float: inline-end;
-}
+} */
 
 /* ==================== */
 /* =======MOBILE======= */
