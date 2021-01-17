@@ -12,19 +12,40 @@
       <title>Convento S. Maria del Cengio</title>
    </head>
 
-   <body>
+<body>
    
+   <div id="container">
+
       <!-- === HEADER === -->
-
-
-
-
-      <!-- ================= -->
-      <!-- === MAIN AREA === -->
-      <!-- ================= -->
-
+      <header>
+         <a href="./conventoPHP.php">
+               <img src="./db/img/logo-small.png" alt="">
+         </a>
+      </header>
       
+      <!-- === MENU === -->
+      <div id="menu"> 
+         <ul class="links">
+            <li class="notlink">Home</li>
+            <li><a href="view.php?session=true&table=Articoli">Articoli</a></li> 
+            <li><a href="view.php?session=true&table=Associazioni">Associazioni</a></li>
+            <li><a href="view.php?session=true&table=Commenti">Commenti</a></li>
+            <li><a href="view.php?session=true&table=Notizie">Notizie</a></li>
+            <li><a href="Storia.html">Storia</a></li>
+         </ul> 
+      </div>
 
+      <!-- === PERCORSO === -->
+      <div id="percorso">
+         <span id="space">
+            <p>Ti trovi in: <span xml:lang="en">Home</span></p>
+         </span>
+      </div>
+      <div id="cerca">
+         <label for="s" class="hide" >Cerca sul sito</label>
+         <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
+         <input type="submit" id="sub" name="sub" value="Cerca">      
+      </div>
 
       <!-- ====ADMIN==== -->
 
@@ -64,8 +85,7 @@
             </div>
          </div>
       </div>
-
-
+   </div>
       <!--  === FOOTER === -->
 
       <footer>
