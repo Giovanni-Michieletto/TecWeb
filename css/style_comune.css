@@ -143,6 +143,16 @@ header img {
 	/* z-index: 1; */
 /* } */
 
+.bordo{
+	border: 1px solid #ccc;
+	padding: 1em;
+	border-radius: 15px;
+	margin-bottom: 1em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
 .links {
 	/* float: right; */
 	display: flex;

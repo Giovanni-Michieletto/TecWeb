@@ -5,16 +5,17 @@
 }
 .title-a{
    display: flex;
-	vertical-align: middle;
-	margin: 15px 0 15px 0;
-   padding: 12px 0 12px 0;
+	align-items: center;
+	/* margin: 15px 0 15px 0; */
+	padding: 12px 0 12px 0;
+	margin-bottom: 1.5em;
 }
 .title-a h2 {
 	font-weight: 700;
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 10px;
-	
+	font-size: 1.7em;
 }
 
 .title-a h2 a{
@@ -26,10 +27,26 @@
 	width: auto;
 	height: 40px;
 }
-.title-a:hover{
-	background-color: #ccc;
+.scelta-azione ul li a{
+	text-decoration: none;
+	color: #ccc;
+	font-size: 1.1em;
+	background-color: #c65852;
+	padding: 0.3em 2em;
+    width: 10em;
+    text-align: center;
 }
-.title-a:hover h2 a{
+.scelta-azione ul{
+	list-style: none;
+	display: flex;
+}
+.scelta-azione ul li{
+	padding: 1.3em;
+}
+/* .scelta-azione ul li:hover{
+	background-color: #ccc;
+} */
+.scelta-azione li:hover a{
 	color: rgb(0, 155, 159);
 }
 .Titolo-aggiungi{
@@ -86,14 +103,11 @@
 } */
 fieldset{
 	display: flex;
-	flex-direction: row;
+	
 	margin-bottom: 5vh;
 	border: none;
 }
-.align{
-	vertical-align: middle;
-	align-items: center;
-}
+
 .text-box{
 	width: 70%;
 	vertical-align: middle;
@@ -116,10 +130,14 @@ fieldset{
 .altimmagine-box{
 	width: 25%;
 }
+input[type=file]{
+	font-family: sans-serif;
+}
 input[type=text], input[type=blob], input[type=password] {
 	width: 100%;
+	font-family: sans-serif;
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 0.8em 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -128,7 +146,8 @@ input[type=text], input[type=blob], input[type=password] {
 }
 
 textarea#Testo {
-	height: 75vh;
+	font-family: sans-serif;
+	
 	width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -180,3 +199,50 @@ footer {
 /* ========================================== */
 /* ============da fare media query=========== */
 /* ========================================== */
+
+@media screen and (min-width:300px){
+	.scelta-azione ul{
+		flex-direction: column;
+	}
+	fieldset{
+		flex-direction: column;
+	}
+	.align{
+		justify-content: start;
+		align-items: flex-start;
+	}
+	.text-box{
+		width: 70%;
+	}
+	.immagini-box{
+		width: 70%;
+		margin-bottom: 1em;
+		margin: 2em;
+	}
+	.altimmagine-box{
+		width: 70%;
+		margin-left: 2em;
+	}
+	textarea#Testo{
+		width: 13em;
+	 	height: 18em;
+	}
+}
+
+@media screen and (min-width:900px){
+	.scelta-azione ul{
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	fieldset{
+		flex-direction: row;
+	}
+	.align{
+		vertical-align: middle;
+		align-items: center;
+	}
+	textarea#Testo{
+		height: 75vh;
+		width: 35em;
+	}
+}
