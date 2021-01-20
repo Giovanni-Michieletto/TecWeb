@@ -9,6 +9,10 @@
     $ID = $_GET['ID'];
     $table = $_GET['table'];
     
+    include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
+
     require_once "dbConnection.php"; 
 
     $dbAccess = new DBAccess();

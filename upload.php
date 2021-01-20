@@ -4,7 +4,9 @@
         header('Location: login.html',TRUE);
     }
 
-    include "scraping.php";
+    include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
 
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];

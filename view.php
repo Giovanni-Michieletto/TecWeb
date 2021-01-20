@@ -6,7 +6,7 @@
     
     include 'scraping.php';
 
-    $page = footer($page);
+    $page = footer($page,$_SESSION['logged']);
 
     if($_GET['ID']) {
         $string = '<script> window.alert(Eliminazione riuscita); </script>';

@@ -95,9 +95,8 @@ function build($page,$table,$ID,$session) {
     return $page;
 }
 
-function footer($page) {
-    session_start();
-    if($_SESSION['logged']==true) {
+function footer($page,$session) {
+    if($session==true) {
         $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
     }
     else {

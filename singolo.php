@@ -5,6 +5,10 @@
 
     $page = file_get_contents('singolo.html');
 
+    include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
+
     $Titolo = '';
     $Testo = '';
     $Immagine = '';

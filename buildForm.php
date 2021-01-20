@@ -8,6 +8,9 @@
     $page = file_get_contents('blankForm.html');
 
     include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
+    
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
     if($_GET['ID']) {
