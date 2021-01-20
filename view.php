@@ -1,9 +1,12 @@
 <?php
-
-    $session = $_GET['session'];
+    session_start();
     $table = $_GET['table'];
 
     $page = file_get_contents('view.html');
+    
+    include 'scraping.php';
+
+    $page = footer($page);
 
     if($_GET['ID']) {
         $string = '<script> window.alert(Eliminazione riuscita); </script>';
@@ -42,11 +45,13 @@
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
-                        if($session=="elimina") {
-                            $definition .= '<a href="delete.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
-                        }
-                        else if($session=="modifica"){
-                            $definition .= '<a href="buildForm.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
+                        if($_SESSION['logged']!=true) {
+                            if($_SESSION['action']=="Elimina") {
+                                $definition .= '<a href="delete.php?table=' . $table . '&ID=' . $cell['ID'] . '">';
+                            }
+                            else if($_SESSION['action']=="Modifica"){
+                                $definition .= '<a href="buildForm.php?table=' . $table . '&ID=' . $cell['ID'] . '">';
+                            }
                         }
                         else {
                             $definition .= '<a href="singolo.php? ID=' . $cell['ID']. '&table=' . $table . '">';
@@ -71,7 +76,6 @@
         $page = str_replace("<titlePage />",$table,$page); 
         $page =  str_replace("<list />",$definition,$page); 
         
-        echo $page;
     }
     else {
         $definition = "<h3>Errore di collegamento al database</h3>";

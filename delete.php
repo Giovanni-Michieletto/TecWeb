@@ -1,6 +1,6 @@
 <?php
-    $session = $_GET['session'];
-    if ($session!="elimina") {
+    session_start();
+    if($_SESSION['logged']!=true) {
         header('Location: login.html',TRUE);
     }
 
@@ -40,7 +40,7 @@
         if(isset($_POST['submit'])) {
             $insertion = $dbAccess->deleteFile($table,$ID);
             if($insertion == true) {
-                header('Location: view.php?session='.$session.'&table='.$table.'&ID='.$ID, TRUE);
+                header('Location: view.php?table='.$table.'&ID='.$ID, TRUE);
             }
         }
     }

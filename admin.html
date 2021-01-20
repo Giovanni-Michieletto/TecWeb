@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+   <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./css/style_comune.css">
+      <link rel="stylesheet" href="./css/Amministratore.css">
+      
+      <title>Convento S. Maria del Cengio</title>
+   </head>
+
+<body>
+   
+   <div id="container">
+
+      <!-- === HEADER === -->
+      <header id="primary-header" class="header-class">
+         <span id="logo" class="margin-5"><a href="./conventoPHP.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
+      </header>
+      
+      <!-- === MENU === -->
+      <div id="menu"> 
+         <ul class="links">
+            <li class="notlink">Home</li>
+            <li><a href="view.php?table=Articoli">Articoli</a></li> 
+            <li><a href="view.php?table=Associazioni">Associazioni</a></li>
+            <li><a href="view.php?table=Commenti">Commenti</a></li>
+            <li><a href="view.php?table=Notizie">Notizie</a></li>
+            <li><a href="Storia.html">Storia</a></li>
+         </ul> 
+      </div>
+
+      <!-- === PERCORSO === -->
+      <div id="percorso">
+         <span id="space">
+            <p>Ti trovi in: <span xml:lang="en">Home</span></p>
+         </span>
+      </div>
+      <div id="cerca">
+         <label for="s" class="hide" >Cerca sul sito</label>
+         <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
+         <input type="submit" id="sub" name="sub" value="Cerca">      
+      </div>
+
+      <!-- ====ADMIN==== -->
+
+      <div id="starter" class="container margin-5">
+         <div class="container-home-amministratore">
+
+            <div class="bordo">
+               <form name="form" id="form" method="post" action="">
+                  <fieldset>
+                     <div class="title-amministration">
+                        <img src="./db/img/deco.svg" alt="">
+                        <label for="Titolo">Scegli la sezione: </label>
+                     </div>
+                     <div>
+                        <span>
+                        <input type="radio" id="Notizie" name="table" value="Notizie">
+                           <label for="Notizie">Notizie</label><br>
+                        <input type="radio" id="Commenti" name="table" value="Commenti">
+                           <label for="Commenti">Commenti</label><br>
+                        <input type="radio" id="Articoli" name="table" value="Articoli">
+                           <label for="Articoli">Articoli</label><br>
+                        <input type="radio" id="Associazioni" name="table" value="Associazioni">
+                           <label for="Associazioni">Associazioni</label><br>
+                        <errorTitle />
+                        </span>
+                     </div>
+                  </fieldset> 
+                  <fieldset>
+                     <div class="title-amministration">
+                        <img src="./db/img/deco.svg" alt="">
+                        <label for="Titolo">Cosa vuoi fare: </label>
+                     </div>
+                     <div>
+                        <span>
+                           <input type="radio" id="Nuovo" name="action" value="Nuovo">
+                              <label for="Nuovo">Nuovo</label><br>
+                           <input type="radio" id="Modifica" name="action" value="Modifica">
+                              <label for="Modifica">Modifica</label><br>
+                           <input type="radio" id="Elimina" name="action" value="Elimina">
+                              <label for="Elimina">Elimina</label><br>
+                        </span>
+                     </div>
+                  </fieldset> 
+                  <fieldset class="button-aggiungi">
+                     <button type="submit" name="submit" onsubmit="admin.php">Vai</button>
+                  </fieldset>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+      <!--  === FOOTER === -->
+
+      <footer>
+         <h2>footer</h2>
+         <p> <a href="logout.php">Logout</a> </p>
+      </footer>
+
+   </body>
+</html>

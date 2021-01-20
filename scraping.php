@@ -83,17 +83,27 @@ function build($page,$table,$ID,$session) {
         $page = str_replace('<buttonName />','Modifica',$page);
         $page = str_replace('<buttonName />', 'Modifica '.$table, $page);
         $page = compile($page,$table,$ID);
-        $page = str_replace('<action />','upload.php?session='.$session.'&table='.$table.'&ID='.$ID,$page);
+        $page = str_replace('<action />','upload.php?table='.$table.'&ID='.$ID,$page);
     }
     else {
         echo "nuovo <br>";
         $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
         $page = str_replace('<buttonName />','Inserisci',$page);
-        $page = str_replace('<action />','upload.php?session=true&table='.$table.'&ID='.$ID,$page);
+        $page = str_replace('<action />','upload.php?table='.$table.'&ID='.$ID,$page);
     }
     
     return $page;
 }
 
+function footer($page) {
+    session_start();
+    if($_SESSION['logged']==true) {
+        $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
+    }
+    else {
+        $page = str_replace('<admin />','<a href="login.html">Login</a>',$page);
+    }
+    return $page;
+}
 
 ?>

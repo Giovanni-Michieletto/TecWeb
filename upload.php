@@ -1,15 +1,14 @@
 <?php
+    session_start();
+    if($_SESSION['logged']!=true) {
+        header('Location: login.html',TRUE);
+    }
 
     include "scraping.php";
 
     //PRENDO VARIABILI PASSATE
-    $session = $_GET['session'];
     $table = $_GET['table'];
     $ID = $_GET['ID'];
-
-    if ($session!="modifica" && $session!=true) {
-        header('Location: login.html',TRUE);
-    }
 
     $page = file_get_contents('blankForm.html');
 
@@ -54,7 +53,7 @@
             
         if($error == true) {
             move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
-            if($session=="modifica") {
+            if($_SESSION['action']=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
             else {
@@ -73,9 +72,7 @@
         }
     }
 
-    $session = true;
-    
-    $page = build($page,$table,$ID,$session);
+    $page = build($page,$table,$ID,'');
 
     
     echo $page;
