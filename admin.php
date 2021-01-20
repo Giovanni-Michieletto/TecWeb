@@ -15,21 +15,38 @@
       <title>Convento S. Maria del Cengio</title>
    </head>
 
-   <body>
+<body>
    
-      <!-- === HEADER === -->
+   <div id="container">
 
+      <!-- === HEADER === -->
       <header id="primary-header" class="header-class">
          <span id="logo" class="margin-5"><a href="./conventoPHP.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
       </header>
-
-
-      <!-- ================= -->
-      <!-- === MAIN AREA === -->
-      <!-- ================= -->
-
       
+      <!-- === MENU === -->
+      <div id="menu"> 
+         <ul class="links">
+            <li class="notlink">Home</li>
+            <li><a href="view.php?session=true&table=Articoli">Articoli</a></li> 
+            <li><a href="view.php?session=true&table=Associazioni">Associazioni</a></li>
+            <li><a href="view.php?session=true&table=Commenti">Commenti</a></li>
+            <li><a href="view.php?session=true&table=Notizie">Notizie</a></li>
+            <li><a href="Storia.html">Storia</a></li>
+         </ul> 
+      </div>
 
+      <!-- === PERCORSO === -->
+      <div id="percorso">
+         <span id="space">
+            <p>Ti trovi in: <span xml:lang="en">Home</span></p>
+         </span>
+      </div>
+      <div id="cerca">
+         <label for="s" class="hide" >Cerca sul sito</label>
+         <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
+         <input type="submit" id="sub" name="sub" value="Cerca">      
+      </div>
 
       <!-- ====ADMIN==== -->
 
@@ -43,7 +60,7 @@
                </div>
                <div class="scelta-azione">
                   <ul>
-                     <li><a href="./new.php?table=Notizie&session=true">Nuova</a></li>
+                     <li><a href="./buildForm.php?session=true&table=Notizie">Nuova</a></li>
                      <li><a href="./view.php?session=modifica&table=Notizie">Modifica</a></li>
                      <li><a href="./view.php?session=elimina&table=Notizie">Elimina</a></li>
                   </ul>
@@ -56,7 +73,7 @@
                </div>
                <div class="scelta-azione">
                   <ul>
-                     <li><a href="./new.php?table=Commenti&session=true">Nuovo</a></li>
+                     <li><a href="./buildForm.php?session=true&table=Commenti">Nuovo</a></li>
                      <li><a href="./view.php?session=modifica&table=Commenti">Modifica</a></li>
                      <li><a href="./view.php?session=elimina&table=Commenti">Elimina</a></li>
                   </ul>
@@ -69,7 +86,7 @@
                </div>
                <div class="scelta-azione">
                   <ul>
-                     <li><a href="./new.php?table=Articoli&session=true">Nuovo</a></li>
+                     <li><a href="./buildForm.php?session=true&table=Articoli">Nuovo</a></li>
                      <li><a href="./view.php?session=modifica&table=Articoli">Modifica</a></li>
                      <li><a href="./view.php?session=elimina&table=Articoli">Elimina</a></li>
                   </ul>
@@ -82,16 +99,16 @@
                </div>
                <div class="scelta-azione">
                   <ul>
-                     <li><a href="./new.php?table=Associazioni&session=true">Nuova</a></li>
+                     <li><a href="./buildForm.php?session=true&table=Associazioni">Nuova</a></li>
                      <li><a href="./view.php?session=modifica&table=Associazioni">Modifica</a></li>
                      <li><a href="./view.php?session=elimina&table=Associazioni">Elimina</a></li>
                   </ul>
                </div>
+
             </div>
          </div>
       </div>
-
-
+   </div>
       <!--  === FOOTER === -->
 
       <footer>

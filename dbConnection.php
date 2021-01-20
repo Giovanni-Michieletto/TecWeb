@@ -5,7 +5,7 @@
         private const HOST = "localhost";
         private const USERNAME = "root";
         private const PASSWORD = "";
-        private const NAME = "DBsentieri";
+        private const NAME = "convento";
 
         private $connection;
 
