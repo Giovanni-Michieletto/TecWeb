@@ -15,20 +15,25 @@
 
       <!-- === HEADER === -->
       <header id="primary-header" class="header-class">
-         <span id="logo" class="margin-5"><a href="./conventoPHP.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
+         <span id="logo" class="margin-5"><a href="./Home.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
       </header>
       
       <!-- === MENU === -->
       <div id="menu"> 
          <ul class="links">
-            <menu />
+            <li class="notlink">Home</li>
+            <li><a href="view.php?table=Articoli">Articoli</a></li> 
+            <li><a href="view.php?table=Associazioni">Associazioni</a></li>
+            <li><a href="view.php?table=Commenti">Commenti</a></li>
+            <li><a href="view.php?table=Notizie">Notizie</a></li>
+            <li><a href="Storia.php">Storia</a></li>
          </ul> 
       </div>
 
       <!-- === PERCORSO === -->
       <div id="percorso">
          <span id="space">
-            <p>Ti trovi in: <span xml:lang="en">Admin</span></p>
+            <p>Ti trovi in: <span xml:lang="en">Home</span></p>
          </span>
       </div>
       <div id="cerca">
@@ -93,7 +98,7 @@
       <footer>
          <h2>footer</h2>
          <br>
-         <p> <admin /> </p>
+         <p> <a href="logout.php">Logout</a> </p>
       </footer>
 
    </body>
