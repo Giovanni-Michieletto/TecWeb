@@ -33,8 +33,9 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 
 
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
-function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
+function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $message = 'Inserimento andato a buon fine';
+    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
     $newString = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
@@ -102,7 +103,7 @@ function buildForm($page,$table,$ID,$session) {
     else {
         $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
         $page = str_replace('<buttonName />','Inserisci',$page);
-        $page = str_replace('<action />','upload.php?table='.$table.'&ID='.$ID,$page);
+        $page = str_replace('<action />','upload.php?table='.$table,$page);
     }
     
     return $page;

@@ -25,7 +25,7 @@
             if($Login['Username']==$Username && $Login['Password']==$Password) {
                 session_start();
                 $_SESSION['logged'] = true;
-                header('Location: admin.php',TRUE);
+                header('Location: Admin.php',TRUE);
             }
             else {
                 $message = '<div><p style="color:red;">Username o password non corretti</p></div>';

@@ -8,10 +8,14 @@
 
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
-    $ID = $_GET['ID'];
+    if($_GET['ID']) {
+        $ID = $_GET['ID'];
+    }
 
     $page = file_get_contents('blankForm.html');
 
+    $page = buildHTML($page,'',$_SESSION['logged']);
+    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
 
     //DEFINISCO VARIABILI INTERNE
 
@@ -64,22 +68,19 @@
             }
             
             if($insertion == true) {
-                $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
+                $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table);
                 }
             else {
                 $message = 'Errore nell\'inserimento';
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+                $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
         }
         else {
             $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+            $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
     }
-
-    //$page = buildForm($page,$table,$ID,'');
-
-    $page = buildHTML($page,'',$_SESSION['logged']);
-    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
 
     echo $page;
 
