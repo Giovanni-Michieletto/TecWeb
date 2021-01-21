@@ -7,6 +7,10 @@
     $home= file_get_contents('Home.html'); 
     $storia=file_get_contents('storia.html'); 
 
+    include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
+
     // CREAZIONE MENU 
     $tab=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
     foreach($tab as $li) {

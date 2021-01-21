@@ -4,7 +4,6 @@
 
     $message = '';
 
-    echo "login.php <br>";
     if(isset($_POST['submit'])) {
 
         $Username = $_POST['Username'];
@@ -18,14 +17,15 @@
 
         if($connection) {
 
-            echo "connesso <br>";
             $Username = md5($Username);
             $Password = md5($Password); 
 
             $Login = $dbAccess->getLogin();                 
 
             if($Login['Username']==$Username && $Login['Password']==$Password) {
-                header('Location: admin.php?session=true',TRUE);
+                session_start();
+                $_SESSION['logged'] = true;
+                header('Location: Admin.php',TRUE);
             }
             else {
                 $message = '<div><p style="color:red;">Username o password non corretti</p></div>';

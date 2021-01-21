@@ -29,21 +29,24 @@
                 <p>Ti trovi in: <span xml:lang="en">Home</span></p>
             </span>
         </div>
-        <div id="cerca">
-            <label for="s" class="hide" >Cerca sul sito</label>
-            <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
-            <input type="submit" id="sub" name="sub" value="Cerca">
-        </div>
+
+        <div id="search">
+            <form name=”ricerca” method="POST" action="search.php" >
+                <fieldset class="form">
+                    <div class="textbutton">
+                            <input type="text" id="cerca" name="cerca" value="Cosa cerchi?"> 
+                            <input type="submit" class="cerca" name="submit" value="Cerca">
+                        
+                    </div>
+                </fieldset>
+            </form>
+        </div>   
+
 
         <!-- === MENU === -->
         <div id="menu"> 
             <ul class="links">
-                <li class="notlink"><span xml:lang="en">Home</span></li>
-                <li><a href="view.php?table=Articoli">Articoli</a></li> 
-                <li><a href="view.php?table=Associazioni">Associazioni</a></li>
-                <li><a href="view.php?table=Commenti">Commenti</a></li>
-                <li><a href="view.php?table=Notizie">Notizie</a></li>
-                <li><a href="Storia.html">Storia</a></li>
+                <menu />
             </ul> 
         </div>
 
@@ -116,19 +119,8 @@
 
     </div>
 
-    <!-- ==== NON SO COSA FARE DI QUESTO ===== -->
-    <!-- <div id="search">
-        <form name=”ricerca” method="POST" action="search.php" >
-            <fieldset class="form">
-                <div class="textbutton">
-                    
-                        <input type="text" id="cerca" name="cerca" placeholder="Cosa cerchi?"> 
-                        <button class="cerca" type="submit" name="submit">Cerca</button>
-                    
-                </div>
-            </fieldset>
-        </form>
-    </div>   -->
+  
+    
 
     
     <!-- === FOOTER === -->
@@ -144,6 +136,8 @@
  <!-- === FOOTER === -->
  <div id="footer">
     <h2>footer</h2>
+    <br>
+    <p> <admin /> </p>
 </div>
 
 </html>

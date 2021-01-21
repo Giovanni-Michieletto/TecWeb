@@ -1,16 +1,27 @@
 <?php
-    include 'scraping.php';
-    //PRENDO VARIABILI PASSATE
-    $table = $_GET['table'];
-    $ID = $_GET['ID'];
-    $session = $_GET['session'];
 
-    if ($session!="modifica" && $session!=true) {
+    session_start();
+    if($_SESSION['logged']!=true) {
         header('Location: login.html',TRUE);
     }
 
+    $table = $_GET['table'];
+
     $page = file_get_contents('blankForm.html');
 
-    echo build($page,$table,$ID,$session);
+    include 'scraping.php';
+
+    $page = buildHTML($page,'',$_SESSION['logged']);
+    
+    //PRENDO VARIABILI PASSATE
+    $table = $_GET['table'];
+    if($_GET['ID']) {
+        $page =  buildForm($page,$table,$_GET['ID'],$_SESSION['action']);
+    }
+    else {
+        $page = buildForm($page,$table,'',$_SESSION['action']);
+
+    }
+    echo $page;
     
 ?>
