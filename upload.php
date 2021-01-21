@@ -6,8 +6,6 @@
 
     include 'scraping.php';
 
-    $page = footer($page,$_SESSION['logged']);
-
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
     $ID = $_GET['ID'];
@@ -35,10 +33,13 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
-        $directory = "/opt/lampp/htdocs/TecWeb/testupload/";
-        $dir = "/TecWeb/testupload/";
+        $directory = "/upload/";
+        $dir = "/upload/";
+        //$directory = "./opt/lampp/htdocs/TecWeb/upload/";
+        //$dir = "./TecWeb/upload/";
         $path = pathinfo($file);
         $filename = $path['filename'];
+        $filename = preg_replace("[^A-Za-z0-9 ]","",$filename);
         $ext = $path['extension'];
         $ImmagineUpload = $directory . $filename . "." . $ext;
         $Immagine = $dir . $filename . "." . $ext;
@@ -54,7 +55,7 @@
         }
             
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            move_uploaded_file(preg_replace("[^A-Za-z0-9]","",$_FILES['Immagine']['name']),$ImmagineUpload);
             if($_SESSION['action']=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
@@ -67,6 +68,7 @@
                 }
             else {
                 $message = 'Errore nell\'inserimento';
+                $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
             }
         }
         else {
@@ -74,9 +76,11 @@
         }
     }
 
-    $page = build($page,$table,$ID,'');
+    //$page = buildForm($page,$table,$ID,'');
 
-    
+    $page = buildHTML($page,'',$_SESSION['logged']);
+    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
+
     echo $page;
 
 ?>

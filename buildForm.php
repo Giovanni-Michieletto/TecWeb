@@ -5,19 +5,23 @@
         header('Location: login.html',TRUE);
     }
 
+    $table = $_GET['table'];
+
     $page = file_get_contents('blankForm.html');
 
     include 'scraping.php';
 
-    $page = footer($page,$_SESSION['logged']);
+    $page = buildHTML($page,'',$_SESSION['logged']);
     
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
     if($_GET['ID']) {
-        echo build($page,$table,$_GET['ID'],$_SESSION['action']);
+        $page =  buildForm($page,$table,$_GET['ID'],$_SESSION['action']);
     }
     else {
-        echo build($page,$table,'',$_SESSION['action']);
+        $page = buildForm($page,$table,'',$_SESSION['action']);
+
     }
+    echo $page;
     
 ?>

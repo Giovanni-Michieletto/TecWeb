@@ -31,16 +31,15 @@
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
-                        if($_SESSION['logged']!=true) {
-                            if($_SESSION['action']=="Elimina") {
-                                $definition .= '<a href="delete.php?table=' . $table . '&ID=' . $cell['ID'] . '">';
-                            }
-                            else if($_SESSION['action']=="Modifica"){
+                        if($_SESSION['logged']==true) {
+                            if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
                                 $definition .= '<a href="buildForm.php?table=' . $table . '&ID=' . $cell['ID'] . '">';
+                            }else {
+                                $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
                             }
                         }
                         else {
-                            $definition .= '<a href="singolo.php? ID=' . $cell['ID']. '&table=' . $table . '">';
+                            $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
                         }
                         $definition .= '<div class="t-cont">';
                             $definition .= '<h3>' . $cell['Titolo'] . '</h3>';

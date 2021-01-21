@@ -32,15 +32,14 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 }
 
 
-//INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMeNTO E POI CHIAMA SOSTITUTE()
+//INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
-    echo "insertForm <br>";
     $message = 'Inserimento andato a buon fine';
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
     $newString = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
     $page = str_replace($stringToreplace,$newString,$page);
-    $page = str_replace('<action />','admin.php?session=true',$page);
+    $page = str_replace('<action />','Admin.php',$page);
     $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
     return sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 }
@@ -48,14 +47,21 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
 
 //INSERISCE IMMAGINE IN CASO DI MODIFICA E POI CHIAMA SOSTITUTE()
 function updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
-    echo "updateForm <br>";
     $page = str_replace('<errorImage />', '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>',$page);
     return sostitute($page,'','',$Titolo,$AltImmagine,$Testo);
 }
 
+//INSERISCE IMMAGINE IN CASO DI MODIFICA E POI CHIAMA SOSTITUTE()
+function deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
+    $end = 'readonly';
+    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
+    $String = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
+    $page = str_replace($stringToreplace,$String,$page);
+    return sostitute($page,$end,'',$Titolo,$AltImmagine,$Testo);
+}
 
-function compile($page,$table,$ID) {
-    echo "compile <br>";
+
+function compile($page,$table,$ID,$session) {
     require_once "dbConnection.php"; 
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();            
@@ -69,7 +75,12 @@ function compile($page,$table,$ID) {
                 $Testo = $cell['Testo'];
             }
         }
-        $page = updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
+        if($session=="Modifica") {
+            $page = updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
+        }
+        else {
+            $page = deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
+        }
     }
     return $page;
 }   
@@ -78,9 +89,15 @@ function compile($page,$table,$ID) {
 function buildForm($page,$table,$ID,$session) {
     if($session =="Modifica") {
         $page = str_replace('<buttonName />','Modifica',$page);
-        $page = str_replace('<buttonName />', 'Modifica '.$table, $page);
-        $page = compile($page,$table,$ID);
+        $page = str_replace('<titlePage />', 'Modifica '.$table, $page);
+        $page = compile($page,$table,$ID,$session);
         $page = str_replace('<action />','upload.php?table='.$table.'&ID='.$ID,$page);
+    }
+    else if($session =="Elimina") {
+        $page = str_replace('<buttonName />','Elimina',$page);
+        $page = str_replace('<titlePage />', 'Elimina '.$table, $page);
+        $page = compile($page,$table,$ID,$session);
+        $page = str_replace('<action />','delete.php?table='.$table.'&ID='.$ID,$page);
     }
     else {
         $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);

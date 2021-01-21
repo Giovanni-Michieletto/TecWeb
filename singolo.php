@@ -39,7 +39,7 @@
         foreach ($list as $cell) {
             if($ID == $cell['ID']) {
                 $Titolo = $cell['Titolo'];
-                $Immagine .= '<img src="data:charset=utf-8;base64, ' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '" />';
+                $Immagine .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '" />';
                 $Testo = $cell['Testo'];
             }
         }
