@@ -51,13 +51,13 @@
                         else {
                             $definition .= '<a href="singolo.php? ID=' . $cell['ID']. '&table=' . $table . '">';
                         }
-                        $definition .= '<div class="t-cont">';
+                        $definition .= '<div class="card-title">';
                             $definition .= '<h3>' . $cell['Titolo'] . '</h3>';
                         $definition .= '</div>';
-                        $definition .= '<div class="img-cont">';
+                        $definition .= '<div class="card-img">';
                             $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
                         $definition .= '</div>';
-                        $definition .= '<div class="card-body">';
+                        $definition .= '<div class="card-text">';
                             $definition .= '<p class="card-text">' . $anteprima . '</p>';
                         $definition .= '</div>';
                     $definition .= '</a>'; 
