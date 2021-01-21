@@ -41,6 +41,7 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $newString = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
     $page = str_replace($stringToreplace,$newString,$page);
     $page = str_replace('<action />','Admin.php',$page);
+    $page = str_replace('name="submit"','name="admin"',$page);
     $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
     return sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 }

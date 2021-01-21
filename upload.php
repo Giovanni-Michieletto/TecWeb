@@ -17,6 +17,11 @@
     $page = buildHTML($page,'',$_SESSION['logged']);
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
 
+
+    if(isset($_POST['admin'])){
+        header("Location: Admin.php");
+    }
+
     //DEFINISCO VARIABILI INTERNE
 
     $Titolo = $_POST['Titolo'];
@@ -37,16 +42,12 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
-        $directory = "/upload/";
-        $dir = "/upload/";
-        //$directory = "./opt/lampp/htdocs/TecWeb/upload/";
-        //$dir = "./TecWeb/upload/";
+        $directory = "./upload/";
         $path = pathinfo($file);
         $filename = $path['filename'];
         $filename = preg_replace("[^A-Za-z0-9 ]","",$filename);
         $ext = $path['extension'];
-        $ImmagineUpload = $directory . $filename . "." . $ext;
-        $Immagine = $dir . $filename . "." . $ext;
+        $Immagine = $directory . $filename . "." . $ext;
 
         //VERIFICA DOPPIONI
         $error = true;
@@ -59,7 +60,7 @@
         }
             
         if($error == true) {
-            move_uploaded_file(preg_replace("[^A-Za-z0-9]","",$_FILES['Immagine']['name']),$ImmagineUpload);
+            move_uploaded_file($_FILES['Immagine']['tmp_name'],$Immagine);
             if($_SESSION['action']=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
