@@ -177,18 +177,10 @@ header img {
 	margin-right: 10px;
 }
 
-
-
 .title img {
 	width: auto;
 	height: 40px;
 }
-/* header img {
-	margin: auto;
-	min-margin-left:20px;
-	width: 10%;
-	max-width: 135px;
-} */
 
 .contenitore-body{
    display: flex;
@@ -197,14 +189,9 @@ header img {
    
 }
 
-
-
 .elenco-puntato{
 	padding: 0.5em;
 }
-
-
-
 
 .elenco-puntato ul{
    list-style-image: url(../db/img/logo-casa-sentieriBANNER.svg);
@@ -216,7 +203,6 @@ ul li{
 /* ====================== */
 /* =========HOME======= */
 /* ====================== */
-
 
 .title-convento{
 	display: flex;
@@ -257,7 +243,7 @@ dt{
 }
 
 /* ============================ */
-/* =========ELENCO CARD======== */
+/* =========ELENCO-CARD======== */
 /* ============================ */
 .card {
 	/*margin: 15px 0 0 0;
@@ -346,21 +332,13 @@ dt{
 	margin-top: 2vh;
 }
 .immagine-singolo{
-	/* width: 30%;
-	height: 8rem;
-	min-width: 40px;
-	align-items: center;
-	justify-content: right; */
+	
 	width: 100%;
-    height: auto;
-    /* height: auto; */
-    /* min-width: 40px; */
-    /* align-items: center; */
-    justify-content: center;
-    display: flex;
-    /* flex-direction: row; */
-    margin: 0% 0% 4% 0%;
-    /* width: auto;*/
+	height: auto;
+	justify-content: center;
+	display: flex;
+	margin: 0% 0% 4% 0%;
+  
 }
 .immagine-singolo img{
     height: 100%;
@@ -394,7 +372,7 @@ dt{
 	height: 40px;
 }
 
-header#primary-header {
+/* header#primary-header {
 	background: transparent;
 	padding: 0 5%;
 	display: flex;
@@ -415,7 +393,261 @@ header#primary-header.scrolled {
 	-moz-transition: background 500ms;
 	-ms-transition: background 500ms;
 	-o-transition: background 500ms;
+} */
+/* ============================ */
+/* =========AMMINISTRATORE===== */
+/* ============================ */
+.container-home-amministratore{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
+.title-a{
+   display: flex;
+	align-items: center;
+	/* margin: 15px 0 15px 0; */
+	padding: 12px 0 12px 0;
+	margin-bottom: 1.5em;
+}
+.title-a h2 {
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.7em;
+}
+
+.title-a h2 a{
+	color: black;
+	text-decoration: none;
+}
+
+.title-a img {
+	width: auto;
+	height: 40px;
+}
+.scelta-azione ul li a{
+	text-decoration: none;
+	color: #ccc;
+	font-size: 1.1em;
+	background-color: #c65852;
+	padding: 0.3em 2em;
+    width: 10em;
+    text-align: center;
+}
+.scelta-azione ul{
+	list-style: none;
+	display: flex;
+}
+.scelta-azione ul li{
+	padding: 1.3em;
+}
+/* .scelta-azione ul li:hover{
+	background-color: #ccc;
+} */
+.scelta-azione li:hover a{
+	color: rgb(0, 155, 159);
+}
+.Titolo-aggiungi{
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	flex-direction: row;
+	margin: 5% 5%;
+}
+.Titolo-aggiungi img{
+	width: auto;
+	height: 60px;
+}
+.Titolo-aggiungi h1{
+	font-size: 2em;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 10px;
+}
+.container-amministration{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10%;
+	max-width: 1100px;
+}
+#container-login{
+	margin-top: 20vh;
+	margin-left: 9%;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+.title-amministration{
+	display: flex;
+	width: 35%;
+	max-width: 250px;
+}
+.title-amministration img{
+	width: auto;
+    height: 40px;
+}
+.title-amministration label{
+	font-size: 1.8em;
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* .img-amministration{
+	width: 30%;
+}
+.img-amministration img{
+	width: auto;
+    height: 40px;
+} */
+fieldset{
+	display: flex;
+	
+	margin-bottom: 5vh;
+	border: none;
+}
+
+.text-box{
+	width: 70%;
+	vertical-align: middle;
+	margin-left: 2em;
+}
+.immagini-box{
+	width: 25%;
+	vertical-align: middle;
+	margin-left: 2em;
+}
+.altimmagini-title{
+	width: 17%;
+	font-size: 1.8em;
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 10px;
+	max-width: 200px;
+}
+.altimmagine-box{
+	width: 25%;
+}
+input[type=file]{
+	font-family: sans-serif;
+}
+input[type=text], input[type=blob], input[type=password] {
+	width: 100%;
+	font-family: sans-serif;
+	padding: 12px 20px;
+	margin: 0.8em 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 1.2em;
+}
+
+textarea#Testo {
+	font-family: sans-serif;
+	
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.2em; 
+}
+textarea#Link{
+	height: 40vh;
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.2em; 
+}
+.button-aggiungi{
+	width: 100%;
+	/* text-align: center; */
+	justify-content: center;
+}
+.aggiungi{
+	padding: 0.5rem 5rem;
+   background-color: #c65852;
+   height: auto;
+   margin: 0 auto;
+   text-decoration: none;
+   color: #aed6d6;
+	font-size: 1.5em;
+	border: none;
+}
+footer {
+	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
+	width: 100%;
+	margin-top: 3rem;
+	height: 20vh;
+	background-color: rgb(0, 155, 159);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	float: inline-end;
+}
+
+/* ========================================== */
+/* ============da fare media query=========== */
+/* ========================================== */
+
+@media screen and (min-width:300px){
+	.scelta-azione ul{
+		flex-direction: column;
+	}
+	fieldset{
+		flex-direction: column;
+	}
+	.align{
+		justify-content: start;
+		align-items: flex-start;
+	}
+	.text-box{
+		width: 70%;
+	}
+	.immagini-box{
+		width: 70%;
+		margin-bottom: 1em;
+		margin: 2em;
+	}
+	.altimmagine-box{
+		width: 70%;
+		margin-left: 2em;
+	}
+	textarea#Testo{
+		width: 13em;
+	 	height: 18em;
+	}
+}
+
+@media screen and (min-width:900px){
+	.scelta-azione ul{
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	fieldset{
+		flex-direction: row;
+	}
+	.align{
+		vertical-align: middle;
+		align-items: center;
+	}
+	textarea#Testo{
+		height: 75vh;
+		width: 35em;
+	}
+}
+
+
+
 /* ============================ */
 /* =========LOGIN============= */
 /* ============================ */
@@ -425,36 +657,6 @@ header#primary-header.scrolled {
 	padding: 1em;
    border: 1px solid #ccc;
 }
-
-/* ============================ */
-/* =========DESKTOP============= */
-/* ============================ */
-
-/* @media screen and (min-width:900px){ */
-   
-   /* === PERCORSO === */
-
- /* === RICERCA === */
-	/* #s {
-		width: 150px;
-		height: 28px;
-		padding: 0 28px;
-		
-		
-		} 
-	#s img{
-		margin: 1px 0 0 1px;
-		width: auto;
-		height: 70%;
-	}
-
-	.hide {
-		position:absolute;
-		left:-9999px;
-	}
-   
-	
-} */
 
 
 
@@ -474,6 +676,7 @@ footer {
 	color: white;
 	float: inline-end;
 }
+
 
 /* ============================ */
 /* ============================ */
