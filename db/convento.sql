@@ -82,7 +82,7 @@ Quindi concretamente l’Unità Pastoralepropone a chi vuole completare il cammi
 I sacramenti sono all’interno del percorso dei tre anni e necessitano del cammino completo per essere quello che sono.. cioè tappe e momenti speciali di accompagnamento alla vita della fede. Da soli slegati al percorso non hanno alcun senso. E’, per fare un esempio concreto , come se portassimo un ciclista in macchina a tagliare i traguardi delle tappe  percorrendo solo gli ultimi 100 metri di ogni tappa.. con la pretesa che sia un ciclista!");
  
  INSERT INTO Associazioni(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Grest Santa Maria del Cengio", ".\upload\gest.jpg", "foto del grest", "La parola Grest significa, letteralmente, “GRuppo ESTivo” ed è la “versione” estiva dell’oratorio dedicata ai più piccoli. 
+("Grest Santa Maria del Cengio", ".\upload\grest.jpg", "foto del grest", "La parola Grest significa, letteralmente, “GRuppo ESTivo” ed è la “versione” estiva dell’oratorio dedicata ai più piccoli. 
 Si, perchè il Grest è parte dell’oratorio che durante l’estate non va in vacanza, ma esce all’aperto nelle piazze e nei parchi delle nostre Parrocchie.
 Il Grest si svolge all’inizio dell’estate e coinvolge i bambini delle elementari che per due settimane si ritrovano a giocare, ballare, danzare, ridere, pregare, cantare mangiare… condividendo un’esperienza significativa di vita e amicizia insieme a Gesù.
 Tutto questo però non sarebbe possibile se non ci fossero gli animatori!
