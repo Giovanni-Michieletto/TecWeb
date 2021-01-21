@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"> -->
         <!-- my css -->
-        <link rel="stylesheet" href="./css/style_comune.css">
-        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- <link rel="stylesheet" href="./css/home.css"> -->
         
         <title>Convento S. Maria del Cengio</title>
 
@@ -31,12 +31,18 @@
             </span>
         </div>
 
-        <!-- === CERCA === -->
-        <div id="cerca">
-            <label for="s" class="hide" >Cerca sul sito</label>
-            <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
-            <input type="submit" id="sub" name="sub" value="Cerca">
-        </div>
+        <div id="search">
+            <form name=”ricerca” method="POST" action="search.php" >
+                <fieldset class="form">
+                    <div class="textbutton">
+                            <input type="text" id="cerca" name="cerca" value="Cosa cerchi?"> 
+                            <input type="submit" class="cerca" name="submit" value="Cerca">
+                        
+                    </div>
+                </fieldset>
+            </form>
+        </div>   
+
 
         <!-- === MENU === -->
         <div id="menu"> 
@@ -56,7 +62,7 @@
                     <img src="db/img/FOTOCONVENTO.jpg" alt="">
                 </div>
                 <div class="title-convento">
-                    <h1>Convento Santa Mariia Del Cengio</h1>
+                    <h1>Convento Santa Maria Del Cengio</h1>
                 </div>
             </div>
                 
@@ -114,19 +120,8 @@
 
     </div>
 
-    <!-- ==== NON SO COSA FARE DI QUESTO ===== -->
-    <!-- <div id="search">
-        <form name=”ricerca” method="POST" action="search.php" >
-            <fieldset class="form">
-                <div class="textbutton">
-                    
-                        <input type="text" id="cerca" name="cerca" placeholder="Cosa cerchi?"> 
-                        <button class="cerca" type="submit" name="submit">Cerca</button>
-                    
-                </div>
-            </fieldset>
-        </form>
-    </div>   -->
+  
+    
 
     
     <!-- === FOOTER === -->
