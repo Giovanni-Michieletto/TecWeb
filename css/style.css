@@ -63,7 +63,7 @@ a {
 	cursor: pointer;
 }
 
-header {
+#header {
 	height: 18vh;
 	background-image: url("../db/img/header.png");
 	background-position: center top;
@@ -72,7 +72,7 @@ header {
 	min-height: 5vh;
 }
 
-header img {
+#header img {
 	height: 17vh;
 	/* min-height: 8rem; */
 	margin-left: 1em;
@@ -601,7 +601,7 @@ textarea#Link{
 /* =========FOOTER======= */
 /* ====================== */
 
-footer {
+#footer {
 	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
 	width: 100%;
 	margin-top: 3rem;
