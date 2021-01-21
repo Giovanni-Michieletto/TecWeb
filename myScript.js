@@ -13,7 +13,7 @@ function validate() {
         } 
 
         if(Id[i] == "Titolo") {
-            if(input.value.search(/\w{1,50}$/) != 0) {
+            if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showError(input, errormsg);
                 validation = false;
@@ -29,7 +29,7 @@ function validate() {
         }
 
         if(Id[i] == "AltImmagine") {
-            if(input.value.search(/\w{2,50}$/) != 0) {
+            if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showError(input, errormsg);
                 validation = false;
@@ -37,7 +37,7 @@ function validate() {
         }
 
         if(Id[i] == "Testo") {
-            if(input.value.search(/\w{2,50}$/) != 0) {
+            if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showError(input, errormsg);
                 validation =  false;
