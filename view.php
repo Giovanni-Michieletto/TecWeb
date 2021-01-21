@@ -8,11 +8,6 @@
 
     $page = footer($page,$_SESSION['logged']);
 
-    if($_GET['ID']) {
-        $string = '<script> window.alert(Eliminazione riuscita); </script>';
-        $page = str_replace('<myScript />',$string,$page);
-    }
-
 
     /*______CREAZIONE CARD______*/
 
