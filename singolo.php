@@ -1,13 +1,12 @@
 <?php
-    
+    session_start();
+
     $table = $_GET['table'];
     $ID = $_GET['ID'];
 
     $page = file_get_contents('singolo.html');
 
     include 'scraping.php';
-
-    $page = footer($page,$_SESSION['logged']);
 
     $Titolo = '';
     $Testo = '';
@@ -49,7 +48,7 @@
         $Titolo = "<h2>Errore di collegamento al database</h2>";
     }
 
-    $page =  str_replace("<menu />",$menu,$page);
+    $page = buildHTML($page,$table,$_SESSION['logged']);
     $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);

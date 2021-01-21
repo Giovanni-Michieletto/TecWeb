@@ -11,8 +11,6 @@
     
     include 'scraping.php';
 
-    $page = footer($page,$_SESSION['logged']);
-
     require_once "dbConnection.php"; 
 
     $dbAccess = new DBAccess();
@@ -50,6 +48,7 @@
     }
 
     $page = str_replace('<h1 />', '<h1>Elimina '.$table.'</h1>', $page);
+    $page = buildHTML($page,'Elimina',$_SESSION['logged']);
 
     echo $page;
 ?>

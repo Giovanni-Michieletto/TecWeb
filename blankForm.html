@@ -24,93 +24,102 @@
 
 <body>
 
-    <!-- CONTENT -->
-
-
-<!-- ================= -->
-<!-- === MAIN AREA === -->
-<!-- ================= -->
-
-<!-- === HEADER === -->
-<header>
-    <a href="./admin.php">
-        <img src="./db/img/logo-small.png" alt="">
-    </a>
-</header>
-<div id="spacer-top"></div>
-<div class="Titolo-aggiungi align">
-    <h1>
-        <titlePage />
-    </h1>
-</div>
-<div class="container-amministration margin-10">
-    <form enctype="multipart/form-data" name="form" id="form" method="post" action="upload.php" onsubmit="return validate()">
-        <div id="conferma">
-            <p>
-                <message />
-            </p>
-        </div>
-
-        <!-- TITOLO -->
-        <fieldset class="align">
-            <div class="title-amministration">
-                <img src="./db/img/deco.svg" alt="">
-                <label for="Titolo">Titolo: </label>
-            </div>
-            <div class="text-box">
-                <span>
-                    <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
-                    <errorTitle />
-                </span>
-            </div>
-        </fieldset>
-
-        <!-- ALTIMMAGINE E IMMAGINE -->
-        <fieldset class="align"> 
-            <div class="title-amministration">
-                <img src="./db/img/deco.svg" alt="">
-                <label for="Immagine">Immagine: </label>
-            </div>
-            <div class="immagini-box">
-                <span>
-                    <input type="file" id="Immagine" accept="image/*" name="Immagine"/>
-                    <errorImage />
-                </span>   
-            </div>
-            <div class="altimmagini-title">
-                <label for="AltImmagine"><abbr title="AltImmagine">Alt Immagine:</abbr></label>
-            </div>
-            <div class="altimmagine-box">
-                <span>
-                    <input type="text" name="AltImmagine" id="AltImmagine" placeholder="Descizione Immagine"/>
-                    <errorAlt />
-                </span>
-            </div>
-        </fieldset>
-
-        <!-- TESTO -->
-        <fieldset>
-            <div class="title-amministration">
-                <img src="./db/img/deco.svg" alt="">
-                <label for="Testo">Testo: </label>
-            </div>
-            <div class="text-box">
-                <span>
-                    <textarea id="Testo" rows="30" cols="100" placeholder="Testo" name="Testo"></textarea>
-                    <errorText />
-                </span>
-            </div>
-        </fieldset>
-
-        <!-- BOTTONE -->
-        <fieldset class="button-aggiungi">
-            <button type="submit" name="submit" ><buttonName /></button>
-        </fieldset>
-    </form>
     
-</div>
+    <!-- === HEADER === -->
+    <header>
+        <a href="./admin.php">
+            <img src="./db/img/logo-small.png" alt="">
+        </a>
+    </header>
+
+    <!-- === MENU === -->
+    <div id="menu"> 
+        <ul class="links">
+            <menu />
+        </ul> 
+    </div>
+
+    <!-- === PERCORSO === -->
+    <div id="percorso">
+        <span id="space">
+            <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
+        </span>
+    </div>
 
 
+    <div id="spacer-top">
+    </div>
+    <div class="Titolo-aggiungi align">
+        <h1>
+            <titlePage />
+        </h1>
+    </div>
+    <div class="container-amministration margin-10">
+        <form enctype="multipart/form-data" name="form" id="form" method="post" action="upload.php" onsubmit="return validate()">
+            <div id="conferma">
+                <p>
+                    <message />
+                </p>
+            </div>
+
+            <!-- TITOLO -->
+            <fieldset class="align">
+                <div class="title-amministration">
+                    <img src="./db/img/deco.svg" alt="">
+                    <label for="Titolo">Titolo: </label>
+                </div>
+                <div class="text-box">
+                    <span>
+                        <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
+                        <errorTitle />
+                    </span>
+                </div>
+            </fieldset>
+
+            <!-- ALTIMMAGINE E IMMAGINE -->
+            <fieldset class="align"> 
+                <div class="title-amministration">
+                    <img src="./db/img/deco.svg" alt="">
+                    <label for="Immagine">Immagine: </label>
+                </div>
+                <div class="immagini-box">
+                    <span>
+                        <input type="file" id="Immagine" accept="image/*" name="Immagine"/>
+                        <errorImage />
+                    </span>   
+                </div>
+                <div class="altimmagini-title">
+                    <label for="AltImmagine"><abbr title="AltImmagine">Alt Immagine:</abbr></label>
+                </div>
+                <div class="altimmagine-box">
+                    <span>
+                        <input type="text" name="AltImmagine" id="AltImmagine" placeholder="Descizione Immagine"/>
+                        <errorAlt />
+                    </span>
+                </div>
+            </fieldset>
+
+            <!-- TESTO -->
+            <fieldset>
+                <div class="title-amministration">
+                    <img src="./db/img/deco.svg" alt="">
+                    <label for="Testo">Testo: </label>
+                </div>
+                <div class="text-box">
+                    <span>
+                        <textarea id="Testo" rows="30" cols="100" placeholder="Testo" name="Testo"></textarea>
+                        <errorText />
+                    </span>
+                </div>
+            </fieldset>
+
+            <!-- BOTTONE -->
+            <fieldset class="button-aggiungi">
+                <button type="submit" name="submit" ><buttonName /></button>
+            </fieldset>
+        </form>
+    </div>
+    
 </body>
 
     <footer>

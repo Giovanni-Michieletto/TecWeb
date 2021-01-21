@@ -5,6 +5,7 @@
 
     include 'scraping.php';
 
-    echo footer($page,$_SESSION['logged']);
+    $page = buildHTML($page,'Storia',$_SESSION['logged']);
+    echo $page;
 
 ?>
