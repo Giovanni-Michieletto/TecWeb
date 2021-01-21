@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
    <head>
-   <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="./css/style_comune.css">
       <link rel="stylesheet" href="./css/Amministratore.css">
@@ -14,14 +14,14 @@
    <div id="container">
 
       <!-- === HEADER === -->
-      <header id="primary-header" class="header-class">
+      <div id="primary-header" class="header-class">
          <span id="logo" class="margin-5"><a href="./Home.php"><img src="./db/img/logo-small.svg" alt=""></a></span>
-      </header>
+      </div>
       
       <!-- === MENU === -->
       <div id="menu"> 
          <ul class="links">
-            <li class="notlink">Home</li>
+            <li class="notlink"><span xml:lang="en">Home</span></li>
             <li><a href="view.php?table=Articoli">Articoli</a></li> 
             <li><a href="view.php?table=Associazioni">Associazioni</a></li>
             <li><a href="view.php?table=Commenti">Commenti</a></li>
@@ -95,11 +95,11 @@
 
       <!--  === FOOTER === -->
 
-      <footer>
+      <div id="footer">
          <h2>footer</h2>
          <br>
          <p> <a href="logout.php">Logout</a> </p>
-      </footer>
+      </div>
 
    </body>
 </html>

@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="it">
-   <head>
-
-
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
      
-    <script type="text/javascript" src="myScript.js"></script>
+        <script type="text/javascript" src="myScript.js"></script>
 
-    <!-- my css -->
-    <link rel="stylesheet" href="./css/desktop.css">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/desktop.css">
 
     
-    <title>Convento S. Maria del Cengio</title>
+        <title>Convento S. Maria del Cengio</title>
 
-      <!-- my css -->
-      <link rel="stylesheet" href="./css/style_comune.css">
-      <link rel="stylesheet" href="./css/Amministratore.css">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style_comune.css">
+        <link rel="stylesheet" href="./css/Amministratore.css">
 
-      <title>Convento S. Maria del Cengio</title>
+        <title>Convento S. Maria del Cengio</title>
 
-   </head>
+    </head>
 
-<body>
+    <body>
 
     <!-- CONTENT -->
 
@@ -32,11 +30,11 @@
 <!-- ================= -->
 
 <!-- === HEADER === -->
-<header>
+<div id="header">
     <a href="./admin.php">
         <img src="./db/img/logo-small.png" alt="">
     </a>
-</header>
+</div>
 <div id="spacer-top"></div>
 <div class="Titolo-aggiungi align">
     <h1>
@@ -59,7 +57,7 @@
             </div>
             <div class="text-box">
                 <span>
-                    <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
+                    <input type="text" id="Titolo" name="Titolo" />
                     <errorTitle />
                 </span>
             </div>
@@ -82,7 +80,7 @@
             </div>
             <div class="altimmagine-box">
                 <span>
-                    <input type="text" name="AltImmagine" id="AltImmagine" placeholder="Descizione Immagine"/>
+                    <input type="text" name="AltImmagine" id="AltImmagine" />
                     <errorAlt />
                 </span>
             </div>
@@ -96,7 +94,7 @@
             </div>
             <div class="text-box">
                 <span>
-                    <textarea id="Testo" rows="30" cols="100" placeholder="Testo" name="Testo"></textarea>
+                    <textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>
                     <errorText />
                 </span>
             </div>
@@ -113,8 +111,8 @@
 
 </body>
 
-    <footer>
+    <div id="footer">
         <h2>footer</h2>
-    </footer>
+    </div>
 
 </html>
