@@ -1,9 +1,12 @@
 <?php
-    
+    session_start();
+
     $table = $_GET['table'];
     $ID = $_GET['ID'];
 
     $page = file_get_contents('singolo.html');
+
+    include 'scraping.php';
 
     $Titolo = '';
     $Testo = '';
@@ -36,7 +39,7 @@
         foreach ($list as $cell) {
             if($ID == $cell['ID']) {
                 $Titolo = $cell['Titolo'];
-                $Immagine .= '<img src="data:charset=utf-8;base64, ' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '" />';
+                $Immagine .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '" />';
                 $Testo = $cell['Testo'];
             }
         }
@@ -45,7 +48,7 @@
         $Titolo = "<h2>Errore di collegamento al database</h2>";
     }
 
-    $page =  str_replace("<menu />",$menu,$page);
+    $page = buildHTML($page,$table,$_SESSION['logged']);
     $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);

@@ -1,27 +1,16 @@
 <?php
-
-    $session = $_GET['session'];
+    session_start();
     $table = $_GET['table'];
 
     $page = file_get_contents('view.html');
+    
+    include 'scraping.php';
+
+    $page = footer($page,$_SESSION['logged']);
 
     if($_GET['ID']) {
         $string = '<script> window.alert(Eliminazione riuscita); </script>';
         $page = str_replace('<myScript />',$string,$page);
-    }
-
-    /*______CREAZIONE MENU______*/
-    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
-    foreach($tabelle as $li) {
-        if($li == $table) {
-            $menu .= '<li class="notlink">'.$li.'</li>';
-        }
-        else if($li == 'Home' || $li == 'Storia') {
-            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
-        }
-        else {
-            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
-        }
     }
 
 
@@ -42,14 +31,15 @@
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
                 $definition .= '<div class="card">';
-                        if($session=="elimina") {
-                            $definition .= '<a href="delete.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
-                        }
-                        else if($session=="modifica"){
-                            $definition .= '<a href="buildForm.php?session=' . $session . '&table=' . $table . '&ID=' . $cell['ID'] . '">';
+                        if($_SESSION['logged']==true) {
+                            if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
+                                $definition .= '<a href="buildForm.php?table=' . $table . '&ID=' . $cell['ID'] . '">';
+                            }else {
+                                $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
+                            }
                         }
                         else {
-                            $definition .= '<a href="singolo.php? ID=' . $cell['ID']. '&table=' . $table . '">';
+                            $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
                         }
                         $definition .= '<div class="card-title">';
                             $definition .= '<h3>' . $cell['Titolo'] . '</h3>';
@@ -66,22 +56,17 @@
         }
         else {
             $definition = "<p>Nessuna file presente</p>";  
-        }
-
-        $page = str_replace("<titlePage />",$table,$page); 
-        $page =  str_replace("<list />",$definition,$page); 
-        
-        echo $page;
+        } 
     }
     else {
         $definition = "<h3>Errore di collegamento al database</h3>";
     }
 
-    $page =  str_replace("<menu />",$menu,$page);
-    $page =  str_replace("<percorso />",$table,$page);
-    $page =  str_replace("<titolo />",$table,$page); 
-    $page =  str_replace("<list />",$definition,$page);
 
+    $page = str_replace("<titlePage />",$table,$page);   
+    $page = str_replace("<percorso />",$table,$page);   
+    $page =  str_replace("<list />",$definition,$page);
+    $page = buildHTML($page,$table,$_SESSION['logged']);
     echo $page;
     
 ?>

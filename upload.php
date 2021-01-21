@@ -1,18 +1,26 @@
 <?php
+    session_start();
+    if($_SESSION['logged']!=true) {
+        header('Location: login.html',TRUE);
+    }
 
-    include "scraping.php";
+    include 'scraping.php';
 
     //PRENDO VARIABILI PASSATE
-    $session = $_GET['session'];
     $table = $_GET['table'];
-    $ID = $_GET['ID'];
-
-    if ($session!="modifica" && $session!=true) {
-        header('Location: login.html',TRUE);
+    if($_GET['ID']) {
+        $ID = $_GET['ID'];
     }
 
     $page = file_get_contents('blankForm.html');
 
+    $page = buildHTML($page,'',$_SESSION['logged']);
+    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
+
+
+    if(isset($_POST['admin'])){
+        header("Location: Admin.php");
+    }
 
     //DEFINISCO VARIABILI INTERNE
 
@@ -34,13 +42,12 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
-        $directory = "/opt/lampp/htdocs/TecWeb/testupload/";
-        $dir = "/TecWeb/testupload/";
+        $directory = "./upload/";
         $path = pathinfo($file);
         $filename = $path['filename'];
+        $filename = preg_replace("[^A-Za-z0-9 ]","",$filename);
         $ext = $path['extension'];
-        $ImmagineUpload = $directory . $filename . "." . $ext;
-        $Immagine = $dir . $filename . "." . $ext;
+        $Immagine = $directory . $filename . "." . $ext;
 
         //VERIFICA DOPPIONI
         $error = true;
@@ -53,8 +60,8 @@
         }
             
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
-            if($session=="modifica") {
+            move_uploaded_file($_FILES['Immagine']['tmp_name'],$Immagine);
+            if($_SESSION['action']=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
             else {
@@ -62,22 +69,20 @@
             }
             
             if($insertion == true) {
-                $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo);
+                $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table);
                 }
             else {
                 $message = 'Errore nell\'inserimento';
+                $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+                $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
         }
         else {
             $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+            $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
     }
 
-    $session = true;
-    
-    $page = build($page,$table,$ID,$session);
-
-    
     echo $page;
 
 ?>
