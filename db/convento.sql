@@ -457,6 +457,22 @@ Gloria a Dio nell’alto dei cieli (...pace in terra agli uomini, amati dal Sign
 Padre nostro (...anche noi li rimettiamo... e non abbandonarci alla tentazione)."); 
 
 
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Croci e cimiteri",".\upload\cimitero.jpg", "foto del nostro cimitero","La croce campeggia nei nostri cimiteri, anche se
+non è l’unico simbolo presente. A volte viene usata
+a sproposito, ma noi sappiamo e vogliamo considerarla per quello che ne ha
+fatto il Cristo: segno d’amore, di perdono e misericordia.
+Per i nostri defunti innanzitutto, sulle cui tombe andremo a pregare in tanti. La
+misericordia è per noi e conoscerà in questo anno speciale, nella forma
+dell’indulgenza, una possibilità in più nella durata, che infatti sarà per tutto il
+mese di novembre. È certo parola “difficile”, ma basti tradurla con “misericordia”
+e tutto diventa più facile e chiaro. Dio, nella sua infinita bontà ci da tante vie per
+ricevere la sua misericordia. Questa, come la confessione, ha voluto passasse
+attraverso le fragili modalità della Chiesa: anche se non tutto ci è chiaro,
+fidiamoci della sua saggezza e Tradizione."); 
+
+
+
 
 
 
