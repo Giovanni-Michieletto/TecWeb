@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- my css -->
+      <link rel="stylesheet" href="./css/style_comune.css">
+      <link rel="stylesheet" href="./css/Amministratore.css">
+      <link rel="stylesheet" href="./css/login.css">
+
+
+      <title>Convento S. Maria del Cengio</title>
+   </head>
+
+   <body>
+         <!-- === HEADER === -->
+         <header>
+            <a href="./conventoPHP.php">
+               <img src="./db/img/logo-small.svg" alt="">
+            </a>
+         </header>
+         
+         
+         <!-- ================= -->
+         <!-- === MAIN AREA === -->
+         <!-- ================= -->
+         <div id="container-login" class="container-amministration margin-5">
+            <form enctype="multipart/form-data" method="POST" action="login.php">
+               <fieldset class="align">
+                  <div class="title-amministration">
+                     <img src="./db/img/deco.svg" alt="">
+                     <label for="Username">Username: </label>
+                  </div>
+                  <div class="text-box">
+                     <span>
+                        <input type="text" id="Username" name="Username" placeholder="inserisci Username... ">
+                        <errorUser />
+                     </span>
+                  </div>
+               </fieldset>
+               <fieldset class="align">
+                  <div class="title-amministration">
+                     <img src="./db/img/deco.svg" alt="">
+                     <label for="Password">Password: </label>
+                  </div>
+                  <div class="text-box">
+                     <span>
+                        <input type="password" name="Password" id="Password" placeholder="inserisci Password... ">
+                        <errorPass />
+                     </span>
+                  </div>
+               </fieldset>
+               <message />
+               <fieldset class="button-aggiungi">
+                  <button class="aggiungi" type="submit" name="submit">Invia</button>
+               </fieldset>
+            </form>
+         </div>
+   
+   
+      <!-- === FOOTER === -->
+      <footer>
+         <h2>footer</h2>
+      </footer>
+   </body>
+
+
+</html>

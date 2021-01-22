@@ -1,0 +1,445 @@
+*{
+   box-sizing: border-box;
+	 margin:0 0;
+}
+
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+body::-webkit-scrollbar-thumb{
+	background-color: rgb(0, 155, 159);
+}
+
+.margin-5 {
+	margin: 0 5% 0 5%;
+}
+
+.evidenzia{
+	font-weight: bold;
+}
+
+.contenitore-body ul {
+	list-style: none;
+}
+
+a {
+	display: inline-block;
+	height: 100%;
+}
+
+.spacer-top{
+	height:25%;
+	min-height:10px;
+}
+
+.d-none {
+	display: none;
+}
+
+#convento-button-scroll.d-none {
+	display: none;
+}
+
+#convento-button-scroll {
+	background-color: rgb(0, 155, 159);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: white;
+	line-height: 1.5rem;
+	cursor: pointer;
+}
+
+header {
+	height: 18vh;
+	background-image: url("../db/img/header.png");
+	background-position: center top;
+	background-size: cover;
+	width: 100%;
+	min-height: 5vh;
+}
+
+header img {
+	height: 17vh;
+	/* min-height: 8rem; */
+	margin-left: 1em;
+}
+
+#starter{
+   margin-top: 1em;
+}
+
+/* =================== */
+/* =======MENU======== */
+/* =================== */
+
+
+#menu{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	vertical-align: middle;
+	background-color: #94080b;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.bordo{
+	border: 1px solid #ccc;
+	padding: 1em;
+	border-radius: 15px;
+	margin-bottom: 1em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+.links {
+	display: flex;
+	width: 100%;
+}
+.links li {
+	list-style: none;
+}
+.notlink{
+	background-color:#c65852;
+	color: gainsboro;
+
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	
+}
+.links a {
+	
+	color: #ccc;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+
+}
+.links li:hover{
+	background-color: #c65852;
+} 
+.links a:visited{
+	text-decoration:underline;
+	color:rgb(97, 178, 245);
+}
+
+/* ======================= */
+/* =======PERCORSO======== */
+/* ======================= */
+#percorso{
+	width: 100%;
+	/* height: 6vh; */
+	height: 3em;
+	display: flex;
+	align-items: center;
+	background-color: rgb(226, 226, 226);
+	color: rgb(104, 5, 5);
+}
+#space {
+	padding-left: 2em;
+}
+
+/* =================== */
+/* ======TITOLI======= */
+/* =================== */
+.title {
+	margin: 70px 0 20px 0;
+	display: flex;
+	vertical-align: middle;
+
+}
+
+.title h2 {
+   font-weight: 700;
+   font-size: 2rem;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+.title img {
+	width: auto;
+	height: 40px;
+}
+/* header img {
+	margin: auto;
+	min-margin-left:20px;
+	width: 10%;
+	max-width: 135px;
+} */
+
+.contenitore-body{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   
+}
+
+
+
+.elenco-puntato{
+	padding: 0.5em;
+}
+
+
+
+
+.elenco-puntato ul{
+   list-style-image: url(../db/img/logo-casa-sentieriBANNER.svg);
+   font-size: 1.1rem;
+}
+ul li{
+   padding-bottom: 0.5em;
+}
+/* ====================== */
+/* =========HOME======= */
+/* ====================== */
+
+
+.title-convento{
+	display: flex;
+   vertical-align: middle;
+   text-align: center;
+   justify-content: center;
+   margin-bottom: 1em;
+    margin-top: 3em;
+}
+.title-convento h1 {
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+   margin-right: 10px;
+   font-size: 2.2rem;
+}
+
+
+.ultimo-container-lista p {
+	font-size: 1.1em;
+	padding: 1em;
+}
+
+.ultimo-container-lista{
+	width: 100%;
+}
+
+/* ============================ */
+/* =========STORIA============= */
+/* ============================ */
+dt{
+   width: 100%;
+   height: auto;
+}
+
+.contenutostoria h4{
+   font-size: 3em;
+}
+
+
+/* ============================ */
+/* =========DESKTOP============= */
+/* ============================ */
+
+/* @media screen and (min-width:900px){ */
+   
+   /* === PERCORSO === */
+
+ /* === RICERCA === */
+	/* #s {
+		width: 150px;
+		height: 28px;
+		padding: 0 28px;
+		
+		
+		} 
+	#s img{
+		margin: 1px 0 0 1px;
+		width: auto;
+		height: 70%;
+	}
+
+	.hide {
+		position:absolute;
+		left:-9999px;
+	}
+   
+	
+} */
+
+
+
+/* ====================== */
+/* =========FOOTER======= */
+/* ====================== */
+
+footer {
+	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
+	width: 100%;
+	margin-top: 3rem;
+	height: 20vh;
+	background-color: rgb(0, 155, 159);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	float: inline-end;
+}
+
+/* ============================ */
+/* ============================ */
+/* =========MEDIA-QUERY========*/
+/* ============================ */
+/* ============================ */
+
+
+
+/* ============================ */
+/* =========MOBILE============= */
+/* ============================ */
+
+@media screen and (min-width:300px){
+
+	#menu{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		position: stickys;
+		top: 0;
+	}
+	.links {
+		display: grid;
+		grid-template-columns: auto auto ;
+		padding: 0;
+
+	}
+	.links li{
+		border: 1px solid #ccc;
+   	padding: 0.4em;
+   	font-size: 1.3em;
+   	text-align: center;
+	}
+	.notlink li{
+		padding: 0.5em 1.5em 0.2em 1.5em;
+    /* color: rgb(226, 226, 226); */
+    color: #ccc;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.1em;
+	}
+	/* ================ */
+	/* ======HOME===== */
+	/* ================ */
+	.contenitore-body{
+      flex-direction: column;
+      width: 100%;
+   }
+   .container-lista{
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .convento{
+      display: none;
+   }
+   .title-convento img{
+      display: none;
+   }
+}
+
+/* ============================ */
+/* =========TABLET============= */
+/* ============================ */
+
+@media screen and (min-width:600px){
+
+	/* ================ */
+	/* ======HOME===== */
+	/* ================ */
+	#presentazione-convento{
+      background-color: #ccc;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 95%;
+     border: 1px solid #ccc;
+     border-radius:  30px ;
+     -webkit-border-radius:  30px ;
+     -moz-border-radius:  30px ;
+     -ms-border-radius:  30px ;
+     -o-border-radius:  30px ;
+}
+
+   .convento{
+      /* display: block; */
+      display: flex;
+      /* position: absolute; */
+      justify-content: left;
+      width: 50%;
+   }
+   .convento img{
+      width: 100%;
+      height: 100%;
+      border-radius: 30px 0 0 30px;
+      -webkit-border-radius: 30px 0 0 30px;
+      -moz-border-radius: 30px 0 0 30px;
+      -ms-border-radius: 30px 0 0 30px;
+      -o-border-radius: 30px 0 0 30px;
+}
+   .title-convento{
+      align-items: end;
+      width: 50%;
+   }
+   .title-convento img {
+      display: inline;
+      width: auto;
+      width: 20%;
+   }
+   .title-convento h1{
+      color:  #c65852;
+   }
+}
+
+/* ============================ */
+/* =========DESKTOP============= */
+/* ============================ */
+
+@media screen and (min-width:900px){
+	
+	.links{
+		grid-template-columns: auto auto auto auto auto auto;
+	}
+	.contenitore-body{
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   .container-lista{
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+   }
+	
+}
