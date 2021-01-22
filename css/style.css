@@ -748,6 +748,9 @@ textarea#Link{
 		width: 13em;
 	 	height: 18em;
 	}
+	#footer{
+		flex-direction: column;
+	}
 }
 
 /* ============================ */
@@ -810,6 +813,9 @@ textarea#Link{
 	.card-container{
 		grid-template-columns: auto auto;
 		justify-content: space-evenly;
+	}
+	#footer{
+		flex-direction: row;
 	}
 }
 
