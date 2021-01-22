@@ -19,19 +19,19 @@ function placeholderForm() {
         if(Id[i] == "Titolo") {
             var text = "Titolo"
             campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(input, text);}
+            input.onfocus = function () {campoPerInput(this, text);}
         }
 
         if(Id[i] == "AltImmagine") {
             var text = "Descrizione immagine"
             campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(input, text);}
+            input.onfocus = function () {campoPerInput(this, text);}
         }
 
         if(Id[i] == "Testo") {
             var text = "Testo"
             campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(input, text);}
+            input.onfocus = function () {campoPerInput(this, text);}
         }
     }
 }
@@ -45,17 +45,15 @@ function placeholderLogin() {
         if(Id[i] == "Username") {
             var text = "Inserire username"
             campoDefault(input, text);
-            input.onfocus = function() {campoPerInput(input, text);}
+            input.onfocus = function() {campoPerInput(this, text);}
         }
 
         if(Id[i] == "Password") {
             var text = "Inserire password"
             campoDefault(input, text);
-            input.onfocus = function() {campoPerInput(input, text);}
+            input.onfocus = function() {campoPerInput(this, text);}
         }
     }
-
-    //if(input = .onfocus)
 }
 
 function placeholderSearch() {
@@ -74,9 +72,9 @@ function validate() {
 
         var input = document.getElementById(Id[i]);
 
-        var parent = input.parentNode; //se c'è già il messaggio d'errore lo cancello!!
-        if(parent.children.length == 2) { //se lo span ha due figli (quindi l'errore)
-            parent.removeChild(parent.children[1]); //rimuovo il secondo figlio(l'errore)
+        var parent = input.parentNode; 
+        if(parent.children.length == 2) { 
+            parent.removeChild(parent.children[1]); 
         } 
 
         if(Id[i] == "Titolo") {
@@ -116,11 +114,11 @@ function validate() {
 }
 
 function showError(input, errormsg) {
-    var p = input.parentNode; //lo span che contiene l'input
-    var elemento = document.createElement("strong"); //è la sezione errore
-    elemento.className = "errori"; // per il css
-    elemento.appendChild(document.createTextNode(errormsg)); //contenuto sezione errore
-    p.appendChild(elemento); //aggiungi un nuovo figlio allo span, collegato subito dopo input
+    var p = input.parentNode;
+    var elemento = document.createElement("strong");
+    elemento.className = "errori";
+    elemento.appendChild(document.createTextNode(errormsg));
+    p.appendChild(elemento);
 }
 
 function validateAdmin() {
@@ -129,9 +127,9 @@ function validateAdmin() {
     if(!document.getElementById("Notizie").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
         var input = document.getElementById("js");
 
-        var parent = input.parentNode; //se c'è già il messaggio d'errore lo cancello!!
-        if(parent.children.length == 2) { //se lo span ha due figli (quindi l'errore)
-            parent.removeChild(parent.children[1]); //rimuovo il secondo figlio(l'errore)
+        var parent = input.parentNode; 
+        if(parent.children.length == 2) { 
+            parent.removeChild(parent.children[1]);
         }
 
         var errormsg = "Selezionare un'opzione!";
