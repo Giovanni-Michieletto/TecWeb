@@ -3,7 +3,7 @@
     if($_SESSION['logged']!=true) {
         header('Location: login.html',TRUE);
     }
-
+    
     include 'scraping.php';
 
     //PRENDO VARIABILI PASSATE
@@ -42,12 +42,10 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
-        $directory = "./upload/";
-        $path = pathinfo($file);
-        $filename = $path['filename'];
-        $filename = preg_replace("[^A-Za-z0-9 ]","",$filename);
-        $ext = $path['extension'];
-        $Immagine = $directory . $filename . "." . $ext;
+        $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
+        $dir = './upload/' . $table . '/';
+        $ImmagineUpload = $directory . $file;
+        $Immagine = $dir . $file;
 
         //VERIFICA DOPPIONI
         $error = true;
@@ -60,7 +58,8 @@
         }
             
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$Immagine);
+            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+
             if($_SESSION['action']=="modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }

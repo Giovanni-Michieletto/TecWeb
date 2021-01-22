@@ -8,11 +8,6 @@
 
     $page = footer($page,$_SESSION['logged']);
 
-    if($_GET['ID']) {
-        $string = '<script> window.alert(Eliminazione riuscita); </script>';
-        $page = str_replace('<myScript />',$string,$page);
-    }
-
 
     /*______CREAZIONE CARD______*/
 
@@ -48,7 +43,8 @@
                             $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
                         $definition .= '</div>';
                         $definition .= '<div class="card-text">';
-                            $definition .= '<p class="card-text">' . $anteprima . '</p>';
+                            $definition .= '<p>' . $anteprima . '</p>';
+                            // class="card-text"
                         $definition .= '</div>';
                     $definition .= '</a>'; 
                 $definition .= '</div>';
