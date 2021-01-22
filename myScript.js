@@ -55,3 +55,22 @@ function showError(input, errormsg) {
     elemento.appendChild(document.createTextNode(errormsg)); //contenuto sezione errore
     p.appendChild(elemento); //aggiungi un nuovo figlio allo span, collegato subito dopo input
 }
+
+function validateAdmin() {
+    var validation = true;
+
+    if(!document.getElementById("Notizie").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
+        var input = document.getElementById("js");
+
+        var parent = input.parentNode; //se c'è già il messaggio d'errore lo cancello!!
+        if(parent.children.length == 2) { //se lo span ha due figli (quindi l'errore)
+            parent.removeChild(parent.children[1]); //rimuovo il secondo figlio(l'errore)
+        }
+
+        var errormsg = "Selezionare un'opzione!";
+        showError(input, errormsg);
+        validation = false;
+    }
+
+    return validation;
+}

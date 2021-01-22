@@ -5,6 +5,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="./css/style.css">
       
+      <script type="text/javascript" src="myScript.js"></script>
+
       <title>Convento S. Maria del Cengio</title>
    </head>
 
@@ -42,14 +44,14 @@
          <div class="container-home-amministratore">
 
             <div class="bordo">
-               <form name="form" id="form" method="post" action="">
+               <form name="form" id="form" method="post" action="" onsubmit="return validateAdmin()">
                   <fieldset>
                      <div class="title-amministration">
                         <img src="./db/img/deco.svg" alt="">
                         <label for="Titolo">Scegli la sezione: </label>
                      </div>
                      <div>
-                        <span>
+                        <span id="js">
                         <input type="radio" id="Notizie" name="table" value="Notizie">
                            <label for="Notizie">Notizie</label><br>
                         <input type="radio" id="Commenti" name="table" value="Commenti">
@@ -58,7 +60,6 @@
                            <label for="Articoli">Articoli</label><br>
                         <input type="radio" id="Associazioni" name="table" value="Associazioni">
                            <label for="Associazioni">Associazioni</label><br>
-                        <errorTitle />
                         </span>
                      </div>
                   </fieldset> 
@@ -69,18 +70,18 @@
                      </div>
                      <div>
                         <span>
-                           <input type="radio" id="Nuovo" name="action" value="Nuovo">
-                              <label for="Nuovo">Nuovo</label><br>
-                           <input type="radio" id="Modifica" name="action" value="Modifica">
-                              <label for="Modifica">Modifica</label><br>
-                           <input type="radio" id="Elimina" name="action" value="Elimina">
-                              <label for="Elimina">Elimina</label><br>
+                           <button type="submit" name="submit">Nuovo</button>
+                              
+                           <button type="submit" name="submit">Modifica</button>
+                              
+                           <button type="submit" name="submit">Elimina</button>
+                              
                         </span>
                      </div>
                   </fieldset> 
-                  <fieldset class="button-aggiungi">
+                 <!-- <fieldset class="button-aggiungi">
                      <button type="submit" name="submit" onsubmit="admin.php">Vai</button>
-                  </fieldset>
+                  </fieldset> -->
                </form>
             </div>
          </div>
