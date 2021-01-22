@@ -321,7 +321,7 @@ Oggi, festa della Divina Misericordia, la Chiesa celebra il grande amore del Sig
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Donne protagoniste",".7upload/Articoli/donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
+("Donne protagoniste","./upload/Articoli/donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
 donne e le nostre comunità non fanno eccezione: nel catechismo, nel servizio dei
 lettori, come ministri della Comunione ai malati o durante le Messe, per non
 parlare della partecipazione alle Messe stesse. Qualche scalpore ha quindi
