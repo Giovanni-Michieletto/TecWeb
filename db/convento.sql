@@ -247,7 +247,7 @@ Dopo molto tempo il padrone di quei servi tornò e volle regolare i conti con
 loro. Si presentò colui che aveva ricevuto cinque talenti e ne portò altri cinque,
 dicendo: Signore, mi hai consegnato cinque talenti; ecco, ne ho guadagnati altri
 cinque. Bene, servo buono e fedele - gli disse il suo padrone -, sei stato fedele
-nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone».
+nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone». \n \n 
 
 
 Questa parabola, detta dei talenti, chiude il ciclo delle tre parabole sulla vigilanza.
