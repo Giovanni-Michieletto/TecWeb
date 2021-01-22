@@ -12,20 +12,6 @@
     $Testo = '';
     $Immagine = '';
 
-    /*______CREAZIONE MENU______*/
-    $tabelle=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
-    foreach($tabelle as $li) {
-        if($li == $table) {
-            $menu .= '<li class="notlink">'.$li.'</li>';
-        }
-        else if($li == 'Home' || $li == 'Storia') {
-            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
-        }
-        else {
-            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
-        }
-    }
-
     /*______CREAZIONE CONTENUTO______*/
     require_once "dbConnection.php";
 
@@ -48,11 +34,12 @@
         $Titolo = "<h2>Errore di collegamento al database</h2>";
     }
 
-    $page = buildHTML($page,$table,$_SESSION['logged']);
+    $page = buildHTML($page,'',$_SESSION['logged']);
     $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);
     $page = str_replace("<testo />", $Testo, $page);
+    $page =  str_replace("<tornasu />",'singolo.php?table=' . $table . '&ID=' . $ID,$page);  
 
     echo $page;
 

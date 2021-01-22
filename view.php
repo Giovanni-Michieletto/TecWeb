@@ -57,7 +57,8 @@
 
 
     $page = str_replace("<titlePage />",$table,$page);
-    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);   
+    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);  
+    $page =  str_replace("<tornasu />","view.php?table=$table",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
         $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
