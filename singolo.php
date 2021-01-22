@@ -13,7 +13,7 @@
     $Immagine = '';
 
     /*______CREAZIONE MENU______*/
-    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    $tabelle=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
             $menu .= '<li class="notlink">'.$li.'</li>';
