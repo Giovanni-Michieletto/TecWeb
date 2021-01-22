@@ -79,6 +79,13 @@
 
         //Funzione elimina dati
         public function deleteFile($table,$ID) {
+            $list = $this->getFile($table);
+            foreach ($list as $cell) {
+                if($ID == $cell['ID']) {
+                    $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('.','/TecWeb',$cell['Immagine']);
+                }
+            }
+            unlink($directory);
             $queryInsert = "DELETE FROM $table WHERE $table . ID=\"$ID\"";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {
