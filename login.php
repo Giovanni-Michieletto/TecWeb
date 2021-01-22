@@ -28,7 +28,7 @@
                 header('Location: Admin.php',TRUE);
             }
             else {
-                $message = '<div><strong class="errori">Username o password non corretti</strong></div>';
+                $message = '<div><strong class="errori">Username o password non corretti!</strong></div>';
                 $page = str_replace('<message />', $message, $page);
                 echo $page;
             }
