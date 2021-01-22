@@ -318,3 +318,164 @@ Quelli che credono e gioiscono nella risurrezione del Signore, ricevono lo spiri
 Questo tuttavia è un dono che si riceve, non si distribuisce a domicilio, Cristo non è un venditore ambulante che distribuisce lo Spirito Santo a domicilio. Il dono dello Spirito di Cristo risorto, che ci permette di vincere la morte, ci farà superare tutti i limiti della condizione umana e ci darà la vita eterna, la vita stessa di Dio, si distribuisce gratuitamente ogni domenica nella celebrazione eucaristica. Nessuno può ricevere lo Spirito Santo stando seduto comodamente a casa sua. Nè stando davanti al televisore a vedere la messa. Tommaso ce lo insegna. Lui non era presente quando Gesù è apparso il giorno di Pasqua tra i discepoli, e per questo non ha ricevuto lo Spirito Santo in quella circostanza.
 Come ci insegnano i Padri della Chiesa, nella messa domenicale si distribuisce il farmaco dell’immortalità, perchè mangiando il corpo di Cristo e bevendo il suo sangue, noi riceviamo la vita di Dio in noi, lo Spirito Santo datore di vita. Quando finirà questa quarantena forzata, ognuno di noi corra in chiesa a chiedere il sacramento del perdono e riceva la santa comunione eucaristica, perchè solo cosi potrà sconfiggere il male, ogni male, sia fisico che spirituale.
 Oggi, festa della Divina Misericordia, la Chiesa celebra il grande amore del Signore per noi, il 22 febbraio 1931 suor Faustina, in una visione contemplava Gesù risorto che chiedeva di istituire proprio in questo giorno la festa. Il grande Giovanni Paolo II il 1992 esaudiva questo desiderio e dichiarava la domenica ottava di Pasqua, festa della Divina Misericordia."); 
+
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Donne protagoniste",".\upload\Articoli\donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
+donne e le nostre comunità non fanno eccezione: nel catechismo, nel servizio dei
+lettori, come ministri della Comunione ai malati o durante le Messe, per non
+parlare della partecipazione alle Messe stesse. Qualche scalpore ha quindi
+suscitato un piccolo documento del Papa, che però getta le basi per un
+“processo” davvero innovativo, il titolo è “Spiritus Domini”. Poco più di una
+pagina per modificare addirittura il Codice di Diritto Canonico e ammettere
+“stabilmente mediante il rito liturgico stabilito, ai ministeri di lettori ed accoliti” i
+laici, uomini e donne che abbiano l’età e le doti necessarie. Forse non tutti sanno
+che questi servizi finora sono sempre stati “straordinari”. Quelli “ordinari” erano
+invece solo per i candidati al sacerdozio! Ora invece, ecco la piccola grande
+rivoluzione - che in un sol colpo salta 2 “steccati” -, diventano accessibili
+stabilmente per tutti i laici (primo steccato) e sia a uomini, ma soprattutto a
+donne (secondo e davvero alto steccato). Credo davvero che si sia aperto un
+cammino che porterà tanto bene nella Chiesa, anche se per ora non abbiamo
+ancora la chiara percezione di come esattamente sarà e come e dove avverrà.
+Saranno i Vescovi che dovranno stabilire percorsi formativi e riti per avere questi
+ministeri stabili di lettore e accolito (servizio all’eucaristia). Un mio sogno: che un
+giorno ad eleggere il Papa possa esserci una assemblea di uomini e donne."); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Un nuovo anno: due vaccini",".\upload\Articoli\pandemia.jpg", "foto della Chiesa durante la pandemia", "Riprendiamo il cammino, ogni anno lo facciamo, ma quest’anno c’è un motivo
+particolare che a tutti sta a cuore. È il desiderio e la speranza che la pandemia
+possa essere sconfitta. Come ci ha ricordato il Presidente della Repubblica, nel
+suo discorso di fine anno, e anche il Papa, è dovere morale di tutti (salvo motivi
+gravi) partecipare alla vaccinazione per contribuire ad uscire dalla crisi, per
+salvaguardare la nostra e l’altrui salute (del corpo). Umanamente e
+cristianamente dubbi su questo dovere morale non mi pare proprio debbano
+esserci: siamo in “guerra” e dobbiamo tutti essere disponibili a sacrificarci per un
+bene più grande.
+Per noi cristiani però ci deve essere, anche e prima, un altro motivo importante
+nel riprendere il cammino, anch’esso comporta un “vaccino” necessario: la Fede!
+Nutrire e alimentare la fede, con i Sacramenti, la Parola, la Carità, la vita
+fraterna, è l’altro vaccino che ci permette di non perdere la Salvezza, la “salute
+dell’anima”. Anche qui occorre disponibilità e risposta. Il Signore ci offre la sua
+Misericordia grande, in questi giorni la stiamo celebrando in tanti modi, ma essa
+chiede sempre il nostro “si” convinto e fedele. Il nuovo anno è un’altra possibilità
+che ci viene donata per camminare con il Signore: Non perdiamola!"); 
+
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Grazie",".\upload\Articoli\grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. GRAZIE per l’anno che finisce, certo
+duro, difficile, brutto, ma come cristiani crediamo che in ogni attimo c’è la
+presenza di Dio provvidente dove cercare i suoi segni di bene. GRAZIE per tutti i
+medici, gli infermieri, gli operatori sanitari, le forze dell’ordine, gli amministratori
+e i volontari di tante sigle e realtà che in questi mesi si sono prodigati spesso oltre
+ogni sforzo per aiutare tutti i malati. GRAZIE per i tanti volontari della parrocchia
+che in quest’anno e in questi giorni si sono prodigati nella liturgia, nell’educazione,
+nella carità perché il messaggio di Gesù potesse continuare ad essere annunciato.
+GRAZIE per tutte le famiglie, nel giorno della festa della Santa Famiglia, perché
+siete resistenti e resilienti, accoglienti e generose, sostenete i piccoli e gli anziani
+e finite sui giornali solo quando le cose vanno male. In particolare: GRAZIE per le
+10 famiglie che hanno preparato il pranzo di Natale per 15 persone o situazioni di
+solitudine o altra emarginazione donando un sorriso. GRAZIE alle 26 famiglie che
+hanno battezzato i loro bambini quest’anno. GRAZIE alle 4 nuove famiglie nate dai
+matrimoni celebrati quest’anno. GRAZIE anche ai giovani che convivono, è pur
+sempre amore: spero che presto possano sentire il desiderio di ricevere la Grazia
+del Matrimonio cristiano.");  
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Fraternizzare",".\upload\Articoli\natale.jpg", "foto di una mascherina appesa all'albero di Natale", "In questo strano Natale, vogliamo proporre questa ultima parola come
+sintesi di questa festa così cara, ma anche così bistrattata. Ci
+mancheranno amici e parenti, ma non deve mancarci GESU’ che a noi
+cristiani ricorda come siamo TUTTI FRATELLI suoi e quindi tra di noi. Un
+grande dono, un grande compito. Come credenti facciamo tesoro di
+questo “strano” Natale per mettere Lui al centro senza distrazioni o
+nostalgie di ciò che con il Natale centra poco. Un po’ di preghiera insieme,
+dopo la Messa o della sera o del giorno (non tutti la sera!), dopo esserci
+confessati (ampie le occasioni nonostante le restrizioni), e una telefonata
+a nonni, genitori e/o parenti più o meno lontani, un segno di carità magari
+con un vicino di casa: un dolce condiviso, un biglietto di augri o un
+semplice saluto alla finestra. E sarà comunque Natale, e sarà di più Natale.
+Buon Natale a tutti, dunque, il Signore doni a tutti gioia, pace e speranza."); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Preparare",".\upload\Articoli\preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a PREPARARE la festa sono notevolmente
+rallentate se non interrotte. Preparare i regali, preparare il cenone, le cene
+aziendali, le settimane bianche, ecc… Tutto bloccato, tutto o tanto cancellato. Al
+di là dei problemi economici non certo secondari, soprattutto per chi lavora in
+questi comparti, certo la pandemia ci sta proponendo una brutale battuta
+d’arresto a certe corse sfrenate. E tutto cosa ci dice?
+Forse siamo inviati a scoprire ciò che vale veramente PREPARARE, che è il nostro
+cuore alla venuta-presenza di un Dio-bambino, nascosto, non imposto,
+“impotente” non onnipotente. Un Dio che non sbaraglia eserciti e nemmeno
+pandemie, perché vuole abitare i cuori, renderli sensibili all’unica energia che
+muove il mondo, l’amore, l’unico atteggiamento che ci rende umani, la
+fratellanza universale. PREPARIAMO la sua venuta, prepariamoci ad accoglierlo,
+preparando certo il presepio, anche l’albero, un po’ di festa e qualche regalo, ma
+soprattutto preparando noi stessi, a questa presenza: questo si fa solo facendo
+posto a qualcuno che ha bisogno. Allora avremo davvero preparato il Natale!
+"); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Attendere",".\upload\Articoli\avvento.jpg", " foto della Chiesa in periodo di avvento", "L’AVVENTO che inizia è la grande “ri-partenza” che l’anno liturgico della
+Chiesa - quel modo di ritmare il tempo nel segno del Vangelo di Gesù, la
+Buona Notizia - che siamo invitati, anno dopo anno, a credere e sul cui
+ritmo siamo inviatati a vivere. Anche in questo tempo di coronavirus.
+ATTENDERE è il verbo che descrive bene la prima pagina che ci viene
+proposta. Viene dal Vangelo di MARCO che ci accompagnerà nelle
+domeniche fino a novembre del prossimo anno (con qualche eccezione). Il
+Signore, è come fosse partito, e spesso noi abbiamo la sensazione di
+essere anche soli. Non siamo soli, non siamo abbandonati. Il Signore è
+venuto, viene e verrà sempre. Rimettiamoci in cammino. Con fiducia. Con
+coraggio. Con la bellezza che l’attesa crea nei nostri cuori e nelle nostre
+vite.
+"); 
+
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Quarantena",".\upload\Articoli\quarantena.jpg", "foto di una Famiglia in quarantena","Pensavamo fosse una parola che non ci avrebbe
+mai riguardato, ormai relegata ai libri di storia o
+a casi eccezzionali. Invece è diventata d’uso comune, anche il sottoscritto ne sta
+facendo le spese. Come molti sapranno, nel mio caso come misura preventiva,
+chi è positivo o ha incontrato un positivo al Covid-19 deve sottoporsi anche
+volontariamente a questa pratica di sicurezza, isolandosi dal resto della famiglia
+e della socialità. È certo una condizione di diagio, che aumenta con l’aumentare
+della responsabilità e il diminuire magari dei sostegni familiari o di altro genere.
+Certo è diverso per chi la vive da ammalato. Ma proprio per questo è preziosa.
+Occorre che tutti prendiamo coscienza di quel grande atto d’amore che è il
+rispetto delle regole legate al distanziamento fisico. Siamo entrati in pieno nella
+seconda ondata della pandemia e i più fragili (anziani, ma non solo) e i più
+esposti (medici, personale sanitario, della sicurezza, ecc…) ne fanno le spese. Un
+atto d’amore che tutti, sottolineo tutti, dobbiamo accettare di fare per un bene
+più grande, che è il bene dell’altro. Un grande atto cristiano. Vi scongiuro di farlo,
+molte persone stanno soffrendo tanto. E per tutti prego e preghiamo!"); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Il nuovo Messale",".\upload\Articoli\messale.jpg", "foto del nostro messale","inizieremo noi sacerdoti
+inizieremo a utilizzare il “nuovo Messale”, dovremo
+dire la 3^ edizione italiana del Messale Romano. Nato dalla grande riforma del
+Concilio Vaticano II (da latino si era passati alle lingue volgari, ma soprattutto la
+Messa diventa “cosa” di tutti), questa è la sua seconda edizione dopo quella del
+1983. Ci sono “piccole grandi” modifiche che lo renderanno più vicino alla nostra
+lingua e alla nostra sensibilità, senza modificare il “cuore” fondamentale della
+Messa-Eucarestia che è incontro reale con Gesù tramite la Parola, il Pane e il
+Popolo di Dio, specie i poveri. Si pone in continuità con le precedenti traduzioni,
+alcuni testi sono stati rivisti secondo la nuova traduzione italiana della Bibbia
+(2007), aggiorna l’elenco dei Santi, ha anche formulari rinnovati, un linguaggio
+più inclusivo (es. fratelli e sorelle) e suggerisce di cantare di più. Le risposte fisse
+del popolo sono quasi tutte rimaste inalterate per evitare confusioni. I 3 testi con
+piccoli-grandi cambiamenti sono: Confesso a Dio onnipotente (...fratelli e sorelle),
+Gloria a Dio nell’alto dei cieli (...pace in terra agli uomini, amati dal Signore) e il
+Padre nostro (...anche noi li rimettiamo... e non abbandonarci alla tentazione)."); 
+
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Croci e cimiteri",".\upload\Articoli\cimitero.jpg", "foto del nostro cimitero","La croce campeggia nei nostri cimiteri, anche se
+non è l’unico simbolo presente. A volte viene usata
+a sproposito, ma noi sappiamo e vogliamo considerarla per quello che ne ha
+fatto il Cristo: segno d’amore, di perdono e misericordia.
+Per i nostri defunti innanzitutto, sulle cui tombe andremo a pregare in tanti. La
+misericordia è per noi e conoscerà in questo anno speciale, nella forma
+dell’indulgenza, una possibilità in più nella durata, che infatti sarà per tutto il
+mese di novembre. È certo parola “difficile”, ma basti tradurla con “misericordia”
+e tutto diventa più facile e chiaro. Dio, nella sua infinita bontà ci da tante vie per
+ricevere la sua misericordia. Questa, come la confessione, ha voluto passasse
+attraverso le fragili modalità della Chiesa: anche se non tutto ci è chiaro,
+fidiamoci della sua saggezza e Tradizione."); 
