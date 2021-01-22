@@ -311,6 +311,48 @@ Oggi, festa della Divina Misericordia, la Chiesa celebra il grande amore del Sig
 
 
 
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Donne protagoniste",".\upload\donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
+donne e le nostre comunità non fanno eccezione: nel catechismo, nel servizio dei
+lettori, come ministri della Comunione ai malati o durante le Messe, per non
+parlare della partecipazione alle Messe stesse. Qualche scalpore ha quindi
+suscitato un piccolo documento del Papa, che però getta le basi per un
+“processo” davvero innovativo, il titolo è “Spiritus Domini”. Poco più di una
+pagina per modificare addirittura il Codice di Diritto Canonico e ammettere
+“stabilmente mediante il rito liturgico stabilito, ai ministeri di lettori ed accoliti” i
+laici, uomini e donne che abbiano l’età e le doti necessarie. Forse non tutti sanno
+che questi servizi finora sono sempre stati “straordinari”. Quelli “ordinari” erano
+invece solo per i candidati al sacerdozio! Ora invece, ecco la piccola grande
+rivoluzione - che in un sol colpo salta 2 “steccati” -, diventano accessibili
+stabilmente per tutti i laici (primo steccato) e sia a uomini, ma soprattutto a
+donne (secondo e davvero alto steccato). Credo davvero che si sia aperto un
+cammino che porterà tanto bene nella Chiesa, anche se per ora non abbiamo
+ancora la chiara percezione di come esattamente sarà e come e dove avverrà.
+Saranno i Vescovi che dovranno stabilire percorsi formativi e riti per avere questi
+ministeri stabili di lettore e accolito (servizio all’eucaristia). Un mio sogno: che un
+giorno ad eleggere il Papa possa esserci una assemblea di uomini e donne."); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Un nuovo anno: due vaccini",".\upload\pandemia.jpg", "foto della Chiesa durante la pandemia", "Riprendiamo il cammino, ogni anno lo facciamo, ma quest’anno c’è un motivo
+particolare che a tutti sta a cuore. È il desiderio e la speranza che la pandemia
+possa essere sconfitta. Come ci ha ricordato il Presidente della Repubblica, nel
+suo discorso di fine anno, e anche il Papa, è dovere morale di tutti (salvo motivi
+gravi) partecipare alla vaccinazione per contribuire ad uscire dalla crisi, per
+salvaguardare la nostra e l’altrui salute (del corpo). Umanamente e
+cristianamente dubbi su questo dovere morale non mi pare proprio debbano
+esserci: siamo in “guerra” e dobbiamo tutti essere disponibili a sacrificarci per un
+bene più grande.
+Per noi cristiani però ci deve essere, anche e prima, un altro motivo importante
+nel riprendere il cammino, anch’esso comporta un “vaccino” necessario: la Fede!
+Nutrire e alimentare la fede, con i Sacramenti, la Parola, la Carità, la vita
+fraterna, è l’altro vaccino che ci permette di non perdere la Salvezza, la “salute
+dell’anima”. Anche qui occorre disponibilità e risposta. Il Signore ci offre la sua
+Misericordia grande, in questi giorni la stiamo celebrando in tanti modi, ma essa
+chiede sempre il nostro “si” convinto e fedele. Il nuovo anno è un’altra possibilità
+che ci viene donata per camminare con il Signore: Non perdiamola!"); 
+
+
+
 
 
 
