@@ -198,7 +198,7 @@ tutte quelle vergini si destarono e prepararono le loro lampade. Le stolte disse
 Ora, mentre quelle andavano a comprare l’olio, arrivò lo sposo e le vergini che
 erano pronte entrarono con lui alle nozze, e la porta fu chiusa. Più tardi arrivarono anche le altre vergini e incominciarono a dire: “Signore, signore, aprici!”.
 Ma egli rispose: “In verità io vi dico: non vi conosco”.
-Vegliate dunque, perché non sapete né il giorno né l’ora».
+Vegliate dunque, perché non sapete né il giorno né l’ora». 
 
 
 STOLTEZZA e SAGGEZZA: non c'è alternativa. La differenza consiste nel prepararsi o meno all'incontro con il Signore, prendendo con sé l'olio. Prendere con
@@ -253,7 +253,7 @@ Dopo molto tempo il padrone di quei servi tornò e volle regolare i conti con
 loro. Si presentò colui che aveva ricevuto cinque talenti e ne portò altri cinque,
 dicendo: Signore, mi hai consegnato cinque talenti; ecco, ne ho guadagnati altri
 cinque. Bene, servo buono e fedele - gli disse il suo padrone -, sei stato fedele
-nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone». \n \n 
+nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone». \n \n  </br>
 
 
 Questa parabola, detta dei talenti, chiude il ciclo delle tre parabole sulla vigilanza.
