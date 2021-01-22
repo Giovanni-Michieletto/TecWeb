@@ -11,8 +11,10 @@
 
     include 'scraping.php';
 
-    $page = buildHTML($page,'',$_SESSION['logged']);
-    
+    $page = footer($page,$_SESSION['logged']);
+    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);
+    $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
+
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
     if(!empty($_GET['ID'])) {

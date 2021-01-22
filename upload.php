@@ -19,6 +19,7 @@
 
     $page = buildHTML($page,'',$_SESSION['logged']);
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
+    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);
 
 
     if(isset($_POST['admin'])){
@@ -51,11 +52,6 @@
         $ImmagineUpload = $directory . $file;
         $Immagine = $dir . $file;
 
-        echo $file . '<br>';
-        echo $ImmagineUpload . '<br>';
-        echo $Immagine . '<br>';
-        echo $_FILES['Immagine']['tmp_name'] .'<br>';
-
         //VERIFICA DOPPIONI
         $error = true;
         if($list) {
@@ -69,13 +65,8 @@
         }
             
         if($error == true) {
-            if(move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload)==false) {
-                echo "false";
-            }
-            else {
-                echo ' true <img src="'.$Immagine .'">';
-            }
-
+            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+ 
             if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
@@ -85,6 +76,7 @@
             
             if($insertion == true) {
                 $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table);
+                $_SESSION['action'] = '';
                 }
             else {
                 $message = '<strong class="errori">Errore nell\'inserimento</strong>';

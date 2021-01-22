@@ -5,12 +5,11 @@
         header('Location: login.html',TRUE);
     }
     
+    $_SESSION['action'] = '';
+    
     include 'scraping.php';
 
-    $page = file_get_contents('Admin.html');
-
-    //javascript per controllo bottoni
-    
+    $page = file_get_contents('Admin.html');    
     
     $page = buildHTML($page,'Admin',$_SESSION['logged']);
 

@@ -6,9 +6,6 @@
     
     include 'scraping.php';
 
-    $page = footer($page,$_SESSION['logged']);
-
-
     /*______CREAZIONE CARD______*/
 
     require_once "dbConnection.php";
@@ -59,10 +56,16 @@
     }
 
 
-    $page = str_replace("<titlePage />",$table,$page);   
-    $page = str_replace("<percorso />",$table,$page);   
+    $page = str_replace("<titlePage />",$table,$page);
+    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);   
     $page =  str_replace("<list />",$definition,$page);
-    $page = buildHTML($page,$table,$_SESSION['logged']);
+    if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
+        $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
+        $page = footer($page,$_SESSION['logged']);
+    }
+    else {
+        $page = buildHTML($page,$table,$_SESSION['logged']);
+    }
     echo $page;
     
 ?>
