@@ -369,7 +369,104 @@ solitudine o altra emarginazione donando un sorriso. GRAZIE alle 26 famiglie che
 hanno battezzato i loro bambini quest’anno. GRAZIE alle 4 nuove famiglie nate dai
 matrimoni celebrati quest’anno. GRAZIE anche ai giovani che convivono, è pur
 sempre amore: spero che presto possano sentire il desiderio di ricevere la Grazia
-del Matrimonio cristiano."); 
+del Matrimonio cristiano.");  
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Fraternizzare",".\upload\natale.jpg", "foto di una mascherina appesa all'albero di Natale", "In questo strano Natale, vogliamo proporre questa ultima parola come
+sintesi di questa festa così cara, ma anche così bistrattata. Ci
+mancheranno amici e parenti, ma non deve mancarci GESU’ che a noi
+cristiani ricorda come siamo TUTTI FRATELLI suoi e quindi tra di noi. Un
+grande dono, un grande compito. Come credenti facciamo tesoro di
+questo “strano” Natale per mettere Lui al centro senza distrazioni o
+nostalgie di ciò che con il Natale centra poco. Un po’ di preghiera insieme,
+dopo la Messa o della sera o del giorno (non tutti la sera!), dopo esserci
+confessati (ampie le occasioni nonostante le restrizioni), e una telefonata
+a nonni, genitori e/o parenti più o meno lontani, un segno di carità magari
+con un vicino di casa: un dolce condiviso, un biglietto di augri o un
+semplice saluto alla finestra. E sarà comunque Natale, e sarà di più Natale.
+Buon Natale a tutti, dunque, il Signore doni a tutti gioia, pace e speranza."); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Preparare",".\upload\preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a PREPARARE la festa sono notevolmente
+rallentate se non interrotte. Preparare i regali, preparare il cenone, le cene
+aziendali, le settimane bianche, ecc… Tutto bloccato, tutto o tanto cancellato. Al
+di là dei problemi economici non certo secondari, soprattutto per chi lavora in
+questi comparti, certo la pandemia ci sta proponendo una brutale battuta
+d’arresto a certe corse sfrenate. E tutto cosa ci dice?
+Forse siamo inviati a scoprire ciò che vale veramente PREPARARE, che è il nostro
+cuore alla venuta-presenza di un Dio-bambino, nascosto, non imposto,
+“impotente” non onnipotente. Un Dio che non sbaraglia eserciti e nemmeno
+pandemie, perché vuole abitare i cuori, renderli sensibili all’unica energia che
+muove il mondo, l’amore, l’unico atteggiamento che ci rende umani, la
+fratellanza universale. PREPARIAMO la sua venuta, prepariamoci ad accoglierlo,
+preparando certo il presepio, anche l’albero, un po’ di festa e qualche regalo, ma
+soprattutto preparando noi stessi, a questa presenza: questo si fa solo facendo
+posto a qualcuno che ha bisogno. Allora avremo davvero preparato il Natale!
+"); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Attendere",".\upload\avvento.jpg", " foto della Chiesa in periodo di avvento", "L’AVVENTO che inizia è la grande “ri-partenza” che l’anno liturgico della
+Chiesa - quel modo di ritmare il tempo nel segno del Vangelo di Gesù, la
+Buona Notizia - che siamo invitati, anno dopo anno, a credere e sul cui
+ritmo siamo inviatati a vivere. Anche in questo tempo di coronavirus.
+ATTENDERE è il verbo che descrive bene la prima pagina che ci viene
+proposta. Viene dal Vangelo di MARCO che ci accompagnerà nelle
+domeniche fino a novembre del prossimo anno (con qualche eccezione). Il
+Signore, è come fosse partito, e spesso noi abbiamo la sensazione di
+essere anche soli. Non siamo soli, non siamo abbandonati. Il Signore è
+venuto, viene e verrà sempre. Rimettiamoci in cammino. Con fiducia. Con
+coraggio. Con la bellezza che l’attesa crea nei nostri cuori e nelle nostre
+vite.
+"); 
+
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Quarantena",".\upload\avvento.jpg", "foto di una Famiglia in quarantena","Pensavamo fosse una parola che non ci avrebbe
+mai riguardato, ormai relegata ai libri di storia o
+a casi eccezzionali. Invece è diventata d’uso comune, anche il sottoscritto ne sta
+facendo le spese. Come molti sapranno, nel mio caso come misura preventiva,
+chi è positivo o ha incontrato un positivo al Covid-19 deve sottoporsi anche
+volontariamente a questa pratica di sicurezza, isolandosi dal resto della famiglia
+e della socialità. È certo una condizione di diagio, che aumenta con l’aumentare
+della responsabilità e il diminuire magari dei sostegni familiari o di altro genere.
+Certo è diverso per chi la vive da ammalato. Ma proprio per questo è preziosa.
+Occorre che tutti prendiamo coscienza di quel grande atto d’amore che è il
+rispetto delle regole legate al distanziamento fisico. Siamo entrati in pieno nella
+seconda ondata della pandemia e i più fragili (anziani, ma non solo) e i più
+esposti (medici, personale sanitario, della sicurezza, ecc…) ne fanno le spese. Un
+atto d’amore che tutti, sottolineo tutti, dobbiamo accettare di fare per un bene
+più grande, che è il bene dell’altro. Un grande atto cristiano. Vi scongiuro di farlo,
+molte persone stanno soffrendo tanto. E per tutti prego e preghiamo!"); 
+
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Il nuovo Messale",".\upload\messale.jpg", "foto del nostro messale","inizieremo noi sacerdoti
+inizieremo a utilizzare il “nuovo Messale”, dovremo
+dire la 3^ edizione italiana del Messale Romano. Nato dalla grande riforma del
+Concilio Vaticano II (da latino si era passati alle lingue volgari, ma soprattutto la
+Messa diventa “cosa” di tutti), questa è la sua seconda edizione dopo quella del
+1983. Ci sono “piccole grandi” modifiche che lo renderanno più vicino alla nostra
+lingua e alla nostra sensibilità, senza modificare il “cuore” fondamentale della
+Messa-Eucarestia che è incontro reale con Gesù tramite la Parola, il Pane e il
+Popolo di Dio, specie i poveri. Si pone in continuità con le precedenti traduzioni,
+alcuni testi sono stati rivisti secondo la nuova traduzione italiana della Bibbia
+(2007), aggiorna l’elenco dei Santi, ha anche formulari rinnovati, un linguaggio
+più inclusivo (es. fratelli e sorelle) e suggerisce di cantare di più. Le risposte fisse
+del popolo sono quasi tutte rimaste inalterate per evitare confusioni. I 3 testi con
+piccoli-grandi cambiamenti sono: Confesso a Dio onnipotente (...fratelli e sorelle),
+Gloria a Dio nell’alto dei cieli (...pace in terra agli uomini, amati dal Signore) e il
+Padre nostro (...anche noi li rimettiamo... e non abbandonarci alla tentazione)."); 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
