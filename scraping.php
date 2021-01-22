@@ -13,19 +13,19 @@ function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
 //CONTROLLA DOPPIONI
 function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     if($Titolo == $cell['Titolo']) {
-        $page = str_replace('<errorTitle />','<p style="color:red;">Titolo gia esistente</p>', $page);
+        $page = str_replace('<errorTitle />','<strong class="errori">Titolo gia esistente</strong>', $page);
         $error = false;
     }
     if($imgContent == $cell['Immagine']) {
-        $page = str_replace('<errorImage />', '<p style="color:red;">Immagine gia esistente</p>', $page);
+        $page = str_replace('<errorImage />', '<strong class="errori">Immagine gia esistente</strong>', $page);
         $error = false;
     }
     if($AltImmagine == $cell['AltImmagine']) {
-        $page = str_replace('<errorAlt />','<p style="color:red;">AltImmagine gia esistente</p>', $page);
+        $page = str_replace('<errorAlt />','<strong class="errori">AltImmagine gia esistente</strong>', $page);
         $error = false;
     }
     if($Testo == $cell['Testo']) {
-        $page = str_replace('<errorText />','<p style="color:red;">Testo gia esistente</p>', $page);
+        $page = str_replace('<errorText />','<strong class="errori">Testo gia esistente</strong>', $page);
         $error = false;
     }
     return array($error,$page);

@@ -8,8 +8,11 @@
 
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
-    if($_GET['ID']) {
+    if(!empty($_GET['ID'])) {
         $ID = $_GET['ID'];
+    }
+    else {
+        $ID = "";
     }
 
     $page = file_get_contents('blankForm.html');
@@ -49,11 +52,13 @@
 
         //VERIFICA DOPPIONI
         $error = true;
-        foreach ($list as $cell) {
-            if($ID != $cell['ID']) {
-                $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
-                $error = $array[0];
-                $page = $array[1];    
+        if($list) {
+            foreach ($list as $cell) {
+                if($ID != $cell['ID']) {
+                    $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
+                    $error = $array[0];
+                    $page = $array[1];    
+                }
             }
         }
             
@@ -71,13 +76,13 @@
                 $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table);
                 }
             else {
-                $message = 'Errore nell\'inserimento';
+                $message = '<strong class="errori">Errore nell\'inserimento</strong>';
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
         }
         else {
-            $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+            $page = sostitute($page,'', '',$Titolo,$AltImmagine,$Testo);
             $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
     }

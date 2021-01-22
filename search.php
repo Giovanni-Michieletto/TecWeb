@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     
     $cerca = $_POST['cerca'];
 
@@ -10,17 +10,6 @@
     include 'scraping.php';
 
     $page = footer($page,$_SESSION['logged']);
-
-    // CREAZIONE MENU 
-    $tab=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
-    foreach($tab as $li) {
-        if($li == 'Home' || $li == 'Storia') {
-            $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
-        }
-        else {
-            $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
-        }
-    }
 
     /*______CREAZIONE CARD______*/
 
@@ -38,15 +27,17 @@
             $find=false;
             $definition .= '<h3>'.$table.'</h3>';
             $list = $dbAccess->getFile($table); 
-            foreach($list as $cell){
-                if(strpos($cell['Titolo'],$cerca)!=false){
-                    $find=true; 
-                    $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl>';
+            if($list) {
+                foreach($list as $cell){
+                    if(strpos($cell['Titolo'],$cerca)!=false){
+                        $find=true; 
+                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl>';
+                    } 
+                    else if(strpos($cell['Testo'],$cerca)!=false){
+                        $find=true;
+                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl>';
+                    }
                 } 
-                else if(strpos($cell['Testo'],$cerca)!=false){
-                    $find=true;
-                    $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl>';
-                }
             }
             if($find==false){
                 $definition .= '<p>Nessuna ricorrenza trovata</p>'; 
@@ -72,7 +63,7 @@
 
     $page=str_replace('<list />',$definition,$page);
 
-    $page =  str_replace("<menu />",$menu,$page);
+    $page=buildHTML($page, "", $_SESSION['logged']);
     $page =  str_replace("<percorso />",'Pagina di ricerca',$page);
     $page =  str_replace("<titolo />",'Risultati ricerca',$page); 
 

@@ -47,7 +47,7 @@
          <div class="container-home-amministratore">
 
             <div class="bordo">
-               <form name="form" id="form" method="post" action="" onsubmit="return validateAdmin()">
+               <form name="form" id="form" method="post" action="redirect.php" onsubmit="return validateAdmin()">
                   <fieldset>
                      <div class="title-amministration">
                         <img src="./db/img/deco.svg" alt="">
@@ -65,7 +65,6 @@
                            <label for="Associazioni">Associazioni</label><br>
                         </span>
                      </div>
-                     <errorpage />
                   </fieldset> 
                   <fieldset>
                      <div class="title-amministration">
@@ -74,19 +73,15 @@
                      </div>
                      <div>
                         <span>
-                           <button type="submit" name="submit">Nuovo</button>
+                           <button type="submit" name="Nuovo">Nuovo</button>
                               
-                           <button type="submit" name="submit">Modifica</button>
+                           <button type="submit" name="Modifica">Modifica</button>
                               
-                           <button type="submit" name="submit">Elimina</button>
+                           <button type="submit" name="Elimina">Elimina</button>
                               
                         </span>
                      </div>
-                     <erroraction />
                   </fieldset> 
-                  <fieldset class="button-aggiungi">
-                     <button type="submit" name="submit">Vai</button>
-
                </form>
             </div>
          </div>

@@ -19,7 +19,7 @@
     if($connection)  {
 
         $list = $dbAccess->getFile($table);  
-
+        
         $definition = "";
 
         if ($list) {        
@@ -55,7 +55,7 @@
         } 
     }
     else {
-        $definition = "<h3>Errore di collegamento al database</h3>";
+        $definition = '<strong class="errori">Errore di collegamento al database</strong>';
     }
 
 

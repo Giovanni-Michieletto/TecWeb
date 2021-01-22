@@ -15,7 +15,7 @@
     
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
-    if($_GET['ID']) {
+    if(!empty($_GET['ID'])) {
         $page =  buildForm($page,$table,$_GET['ID'],$_SESSION['action']);
     }
     else {

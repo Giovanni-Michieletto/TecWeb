@@ -1,41 +1,3 @@
-var login = {
-    "Username" : ["Inserire username"],
-    "Password" : ["Inserire password"]   
-};
-
-var form = {
-    "Titolo" : ["Titolo"],
-    "AltImmagine" : ["Descrizione immagine"],
-    "Testo" : ["Testo"]
-};
-
-function placeholderForm() {
-    for(var key in form) {
-        var input = document.getElementById(key);
-        input.className = "default-text";
-        input.value = form[input.id][0];
-        input.onfocus = function() { 
-            if(this.value == form[this.id][0]) {
-            this.value = "";
-            this.className = "";
-            }
-        };
-    }  
-}
-
-function placeholderLogin() {
-    for(var key in login) {
-        var input = document.getElementById(key);
-        input.className = "default-text";
-        input.value = login[input.id][0];
-        input.onfocus = function() { 
-            if(this.value == login[this.id][0]) {
-            this.value = "";
-            this.className = "";
-            }
-        };
-    }
-}
 
 function placeholderSearch() {
    var input = document.getElementById("cerca");
@@ -110,7 +72,7 @@ function showError(input, errormsg) {
 function validateAdmin() {
     var validation = true;
 
-    if(!document.getElementById("Notizie").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
+    if(!document.getElementById("Eventi").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
         var input = document.getElementById("js");
 
         var parent = input.parentNode; 
