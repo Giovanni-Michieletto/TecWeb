@@ -45,10 +45,16 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
+        $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
         $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
         $dir = './upload/' . $table . '/';
         $ImmagineUpload = $directory . $file;
         $Immagine = $dir . $file;
+
+        echo $file . '<br>';
+        echo $ImmagineUpload . '<br>';
+        echo $Immagine . '<br>';
+        echo $_FILES['Immagine']['tmp_name'] .'<br>';
 
         //VERIFICA DOPPIONI
         $error = true;
@@ -63,9 +69,14 @@
         }
             
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            if(move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload)==false) {
+                echo "false";
+            }
+            else {
+                echo ' true <img src="'.$Immagine .'">';
+            }
 
-            if($_SESSION['action']=="modifica") {
+            if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
             else {

@@ -17,5 +17,5 @@
         $insertion = $dbAccess->deleteFile($table,$ID);
     }
 
-    header('Location: view.php?table='.$table.'&ID='.$ID, TRUE);
+    header('Location: Admin.php', TRUE);
 ?>

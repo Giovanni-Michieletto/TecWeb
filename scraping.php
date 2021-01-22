@@ -69,12 +69,14 @@ function compile($page,$table,$ID,$session) {
     $connection = $dbAccess->openDBConnection();            
     if($connection) {
         $list = $dbAccess->getFile($table); 
-        foreach ($list as $cell) {
-            if($ID == $cell['ID']) {
-                $Titolo = $cell['Titolo'];
-                $Immagine = $cell['Immagine'];
-                $AltImmagine = $cell['AltImmagine'];
-                $Testo = $cell['Testo'];
+        if($list) {
+            foreach ($list as $cell) {
+                if($ID == $cell['ID']) {
+                    $Titolo = $cell['Titolo'];
+                    $Immagine = $cell['Immagine'];
+                    $AltImmagine = $cell['AltImmagine'];
+                    $Testo = $cell['Testo'];
+                }
             }
         }
         if($session=="Modifica") {
