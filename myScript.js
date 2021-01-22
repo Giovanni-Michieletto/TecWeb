@@ -1,3 +1,61 @@
+function campoDefault(input, text) {
+    input.className = "default-text";
+    input.value = text;
+}
+
+function campoPerInput(input, text) {
+    if(input.value == text) {
+        alert("deu");
+        input.value = "";
+        input.className = "";
+    }
+}
+
+function caricamento() {
+    var Id = ["Titolo", "AltImmagine", "Testo", "Username", "Password", "cerca"];
+
+    for(var i = 0; i < Id.length; i++) {
+        var input = document.getElementById(Id[i]);
+
+        if(Id[i] == "Titolo") {
+            var text = "Scrivere il titolo qui..."
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(input, text);};
+        }
+
+        if(Id[i] == "AltImmagine") {
+            var text = "Scrivere la descrizione dell'immagine qui..."
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(this, text);};
+        }
+
+        if(Id[i] == "Testo") {
+            var text = "Scrivere il testo qui..."
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(this, text);};
+        }
+
+        if(Id[i] == "Username") {
+            var text = "Inserire username..."
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(this, text);};
+        }
+
+        if(Id[i] == "Password") {
+            var text = "Inserire password..."
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(this, text);};
+        }
+
+        if(Id[i] == "cerca") {
+            var text = "Cosa cerchi?"
+            campoDefault(input, text);
+            input.onfocus = function() {campoPerInput(this, text);};
+        }
+
+    }
+}
+
 function validate() {
 
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
