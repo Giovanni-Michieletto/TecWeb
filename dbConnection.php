@@ -128,14 +128,14 @@
         
         
         //
-        // NOTIZIE
+        // Eventi
         //
         public function getNews() {
-            $table = "Notizie";
+            $table = "Eventi";
             return $this->getFile($table);
         }
         public function insertNews($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="Notizie(Titolo,Immagine,AltImmagine,Testo)";
+            $table ="Eventi(Titolo,Immagine,AltImmagine,Testo)";
             $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
             return $this->insertFile($table,$value);
         }

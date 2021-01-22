@@ -12,7 +12,7 @@
     $page = footer($page,$_SESSION['logged']);
 
     // CREAZIONE MENU 
-    $tab=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    $tab=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
     foreach($tab as $li) {
         if($li == 'Home' || $li == 'Storia') {
             $menu .= '<li><a href="'.$li.'.html">'.$li.'</a></li>';
@@ -29,7 +29,7 @@
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection();
 
-    $tabelle=['Articoli','Associazioni','Commenti','Notizie'];
+    $tabelle=['Articoli','Associazioni','Commenti','Eventi'];
 
     if($connection)  {
 
