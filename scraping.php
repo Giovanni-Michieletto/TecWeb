@@ -116,7 +116,7 @@ function footer($page,$session) {
         $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
     }
     else {
-        $page = str_replace('<admin />','<a href="login.html">Login</a>',$page);
+        $page = str_replace('<admin />','<a href="login.html">Login Amministratore</a>',$page);
     }
     return $page;
 }
