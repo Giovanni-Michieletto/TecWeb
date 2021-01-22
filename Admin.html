@@ -52,8 +52,8 @@
                      </div>
                      <div>
                         <span id="js">
-                        <input type="radio" id="Notizie" name="table" value="Notizie">
-                           <label for="Notizie">Notizie</label><br>
+                        <input type="radio" id="Eventi" name="table" value="Eventi">
+                           <label for="Eventi">Eventi</label><br>
                         <input type="radio" id="Commenti" name="table" value="Commenti">
                            <label for="Commenti">Commenti</label><br>
                         <input type="radio" id="Articoli" name="table" value="Articoli">
@@ -62,6 +62,7 @@
                            <label for="Associazioni">Associazioni</label><br>
                         </span>
                      </div>
+                     <errorpage />
                   </fieldset> 
                   <fieldset>
                      <div class="title-amministration">
@@ -78,10 +79,11 @@
                               
                         </span>
                      </div>
+                     <erroraction />
                   </fieldset> 
-                 <!-- <fieldset class="button-aggiungi">
-                     <button type="submit" name="submit" onsubmit="admin.php">Vai</button>
-                  </fieldset> -->
+                  <fieldset class="button-aggiungi">
+                     <button type="submit" name="submit">Vai</button>
+
                </form>
             </div>
          </div>
@@ -91,10 +93,19 @@
       <!--  === FOOTER === -->
 
       <div id="footer">
-         <h2>footer</h2>
-         <br>
-         <p> <a href="logout.php">Logout</a> </p>
-      </div>
+    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
+    <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
+    <p>Contatti utili
+        <ul>
+            <li>Telefono: +79394390273</li>
+            <li>E-mail: smariadelcengio@mail.com</li>
+        </ul>
+
+        <admin />
+
+        S.Maria del Cengio - Comunità dei Servi di Maria
+    </p>
+</div>
 
    </body>
 </html>

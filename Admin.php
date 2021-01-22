@@ -8,16 +8,19 @@
 
     $page = file_get_contents('Admin.html');
 
+    
     $table = $_POST['table'];
     $_SESSION['action'] = $_POST['action'];
 
     //javascript per controllo bottoni
     if(isset($_POST['submit'])) {
-        if($_SESSION['action']=="Nuovo") {
-            header('Location: buildForm.php?table='.$table,TRUE);
-        }
-        else {
-            header('Location: view.php?table='.$table,TRUE);
+        if($error) {
+            if($_SESSION['action']=="Nuovo") {
+                header('Location: buildForm.php?table='.$table,TRUE);
+            }
+            else {
+                header('Location: view.php?table='.$table,TRUE);
+            }
         }
     }
     

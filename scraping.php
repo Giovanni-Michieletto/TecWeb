@@ -124,7 +124,7 @@ function footer($page,$session) {
 
 function menu($page,$table,$session) {
     $menu='';
-    $tabelle=['Home','Articoli','Associazioni','Commenti','Notizie','Storia'];
+    $tabelle=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
             $menu .= '<li class="notlink">'.$li.'</li>';
