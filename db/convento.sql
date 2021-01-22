@@ -352,7 +352,24 @@ chiede sempre il nostro “si” convinto e fedele. Il nuovo anno è un’altra 
 che ci viene donata per camminare con il Signore: Non perdiamola!"); 
 
 
-
+INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Grazie",".\upload\grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. GRAZIE per l’anno che finisce, certo
+duro, difficile, brutto, ma come cristiani crediamo che in ogni attimo c’è la
+presenza di Dio provvidente dove cercare i suoi segni di bene. GRAZIE per tutti i
+medici, gli infermieri, gli operatori sanitari, le forze dell’ordine, gli amministratori
+e i volontari di tante sigle e realtà che in questi mesi si sono prodigati spesso oltre
+ogni sforzo per aiutare tutti i malati. GRAZIE per i tanti volontari della parrocchia
+che in quest’anno e in questi giorni si sono prodigati nella liturgia, nell’educazione,
+nella carità perché il messaggio di Gesù potesse continuare ad essere annunciato.
+GRAZIE per tutte le famiglie, nel giorno della festa della Santa Famiglia, perché
+siete resistenti e resilienti, accoglienti e generose, sostenete i piccoli e gli anziani
+e finite sui giornali solo quando le cose vanno male. In particolare: GRAZIE per le
+10 famiglie che hanno preparato il pranzo di Natale per 15 persone o situazioni di
+solitudine o altra emarginazione donando un sorriso. GRAZIE alle 26 famiglie che
+hanno battezzato i loro bambini quest’anno. GRAZIE alle 4 nuove famiglie nate dai
+matrimoni celebrati quest’anno. GRAZIE anche ai giovani che convivono, è pur
+sempre amore: spero che presto possano sentire il desiderio di ricevere la Grazia
+del Matrimonio cristiano."); 
 
 
 
