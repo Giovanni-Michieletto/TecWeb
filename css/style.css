@@ -781,7 +781,8 @@ textarea#Link{
 @media screen and (min-width:900px){
 	
 	.links{
-		grid-template-columns: auto auto auto auto auto auto;
+		/* grid-template-columns: auto auto auto auto auto auto; */
+		grid-template-columns: 7em 8em 13em 10em 8em 8em;
 	}
 	.contenitore-body{
       flex-direction: row;
