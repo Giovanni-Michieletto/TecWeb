@@ -139,7 +139,7 @@ fratelli. È un cammino che richiede libertà interiore, forza, costanza, che du
 vita, ma che parte da una chiamata, dall’iniziativa di Dio"); 
 
 INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Marco (1,7-11) ","./upload/Commenti/gesu2.jpg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
+("Dal Vangelo secondo Marco (1,7-11) ","./upload/Commenti/gesu2.jpeg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
 più forte di me: io non sono degno di chinarmi per slegare i lacci dei suoi sandali. Io vi ho battezzato con acqua, ma egli vi battezzerà in
 Spirito Santo». Ed ecco, in quei giorni, Gesù venne da Nazareth di Galilea e fu battezzato nel Giordano da Giovanni. E, subito, uscendo dall’acqua, vide squarciarsi i cieli e lo Spirito discendere verso di lui come una colomba.
 E venne una voce dal cielo: «Tu sei il Figlio mio, l’amato: in te ho posto il mio compiacimento».
@@ -307,7 +307,7 @@ Alla meditazione omiletica don Nuccio attacca sottolineando che “San Giorgio �
 Nella prima lettura, “tratta dagli Atti degli Apostoli, gli Apostoli affermano: noi siamo testimoni, insieme allo Spirito Santo, primo testimone, siamo testimoni della Risurrezione del Cristo… Noi, testimoni, cioè martiri… Poiché, in greco, testimone è martire: San Giorgio, dunque, venerato come Megalomartire, s’inserisce a pieno titolo nel tempo pasquale… E la festa di San Giorgio è una festa pasquale. E Reggio, avendolo elevato a suo Patrono, è una Città pasquale.” "); 
 
 INSERT INTO Eventi(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Domenica della Divina Misericordia.","./upload/Eventi/misericordia.jpg","foto della messa della domenica di mesericordia", "Oggi celebriamo la domenica della fede, il frutto della risurrezione di Cristo è la nascita della Chiesa. I fondamenti su cui poggia questa costruzione spirituale sono: l’insegnamento degli Apostoli, ossia la Didachè, la Comunione, l’Agape, l’Eucaristia, la Fractio Panis. Il tutto centrato sul dono dello Spirito Santo.
+("Domenica della Divina Misericordia.","./upload/Eventi/misericordia.jpeg","foto della messa della domenica di mesericordia", "Oggi celebriamo la domenica della fede, il frutto della risurrezione di Cristo è la nascita della Chiesa. I fondamenti su cui poggia questa costruzione spirituale sono: l’insegnamento degli Apostoli, ossia la Didachè, la Comunione, l’Agape, l’Eucaristia, la Fractio Panis. Il tutto centrato sul dono dello Spirito Santo.
 Chiunque crede nella risurrezione di Cristo, allora avrà certamente fede anche nella propria risurrezione. Gesù agli Apostoli mostra i segni della sua risurrezione, le mani e i piedi, il costato.
 Ma per credere nella sua risurrezione, agli Apostoli non è sufficiente il vedere, hanno bisogno di altro, ecco perchè Gesù alita, soffia “Enèfusesen” su di loro il suo Spirito, conferendo a ognuno di loro la potenza della sua stessa risurrezione. Ma più della risurrezione dai morti, il dono di Gesù conferisce agli Apostoli e per loro alla Chiesa, il dono della risurrezione nello Spirito di Dio, siamo davanti ad una nuova creazione.
 Questo alitare, soffiare, ci richiama ad Adamo, a Gen. 2,21 con il soffio di Dio, Adamo viene creato.
