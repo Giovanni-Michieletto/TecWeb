@@ -369,32 +369,39 @@ dt{
 /* ======================= */
 /* ==== PAGINA LETTURA==== */
 /* ======================= */
+.content{
+	display: flex;
+	flex-direction: column;
+	margin-top: 2em;
+	border: 1px solid #ccc;
+	padding: 1.5em;
+	border-radius: 5%;
+}
 
-.container-singolo{
+#title{
 	display: flex;
 	flex-direction: column;
 	margin-top: 2vh;
 }
-.immagine-singolo{
-	
+#image{
 	width: 100%;
-	height: auto;
-	justify-content: center;
-	display: flex;
-	margin: 0% 0% 4% 0%;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    margin: 4% 0%;
   
 }
-.immagine-singolo img{
-    height: 100%;
-    min-height: 1vh;
-    height: 17rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+#image img{
+	height: 100%;
+	width: 100%;
+	/* min-height: 1vh; */
+	height: 100%;
+	/* border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%; */
 }
-.testo-singolo{
+#text{
 	font-size: 1.3em;
 }
 
