@@ -1,66 +1,52 @@
-function campoDefault(input, text) {
-    input.className = "default-text";
-    input.value = text;
-}
+var login = {
+    "Username" : ["Inserire username"],
+    "Password" : ["Inserire password"]   
+};
 
-function campoPerInput(input, text) {
-    if(input.value == text) {
-        input.value = "";
-        input.className = "";
-    }
-}
+var form = {
+    "Titolo" : ["Titolo"],
+    "AltImmagine" : ["Descrizione immagine"],
+    "Testo" : ["Testo"]
+};
 
 function placeholderForm() {
-    var Id = ["Titolo", "AltImmagine", "Testo"];
-
-    for(var i = 0; i < Id.length; i++) {
-        var input = document.getElementById(Id[i]);
-
-        if(Id[i] == "Titolo") {
-            var text = "Titolo"
-            campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(this, text);}
-        }
-
-        if(Id[i] == "AltImmagine") {
-            var text = "Descrizione immagine"
-            campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(this, text);}
-        }
-
-        if(Id[i] == "Testo") {
-            var text = "Testo"
-            campoDefault(input, text);
-            input.onfocus = function () {campoPerInput(this, text);}
-        }
-    }
+    for(var key in form) {
+        var input = document.getElementById(key);
+        input.className = "default-text";
+        input.value = form[input.id][0];
+        input.onfocus = function() { 
+            if(this.value == form[this.id][0]) {
+            this.value = "";
+            this.className = "";
+            }
+        };
+    }  
 }
 
 function placeholderLogin() {
-    var Id = ["Username", "Password"];
-
-    for(var i = 0; i < Id.length; i++) {
-        var input = document.getElementById(Id[i]);
-
-        if(Id[i] == "Username") {
-            var text = "Inserire username"
-            campoDefault(input, text);
-            input.onfocus = function() {campoPerInput(this, text);}
-        }
-
-        if(Id[i] == "Password") {
-            var text = "Inserire password"
-            campoDefault(input, text);
-            input.onfocus = function() {campoPerInput(this, text);}
-        }
+    for(var key in login) {
+        var input = document.getElementById(key);
+        input.className = "default-text";
+        input.value = login[input.id][0];
+        input.onfocus = function() { 
+            if(this.value == login[this.id][0]) {
+            this.value = "";
+            this.className = "";
+            }
+        };
     }
 }
 
 function placeholderSearch() {
-    var input = document.getElementById("cerca");
-    var text = "Cosa cerchi?"
-    campoDefault(input, text);
-    input.onfocus = function() {campoPerInput(this, text);}
+   var input = document.getElementById("cerca");
+    input.className = "default-text";
+    input.value = "Cosa cerchi?";
+    input.onfocus = function() { 
+        if(this.value == input.value) {
+        this.value = "";
+        this.className = "";
+        }
+    };
 }
 
 function validate() {
