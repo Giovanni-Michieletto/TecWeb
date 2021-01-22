@@ -139,7 +139,7 @@ fratelli. È un cammino che richiede libertà interiore, forza, costanza, che du
 vita, ma che parte da una chiamata, dall’iniziativa di Dio"); 
 
 INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Marco (1,7-11) ","./upload/Commenti/gesu2.jpg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
+("Dal Vangelo secondo Marco (1,7-11) ","./upload/Commenti/gesu2.jpeg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
 più forte di me: io non sono degno di chinarmi per slegare i lacci dei suoi sandali. Io vi ho battezzato con acqua, ma egli vi battezzerà in
 Spirito Santo». Ed ecco, in quei giorni, Gesù venne da Nazareth di Galilea e fu battezzato nel Giordano da Giovanni. E, subito, uscendo dall’acqua, vide squarciarsi i cieli e lo Spirito discendere verso di lui come una colomba.
 E venne una voce dal cielo: «Tu sei il Figlio mio, l’amato: in te ho posto il mio compiacimento».
@@ -307,7 +307,7 @@ Alla meditazione omiletica don Nuccio attacca sottolineando che “San Giorgio �
 Nella prima lettura, “tratta dagli Atti degli Apostoli, gli Apostoli affermano: noi siamo testimoni, insieme allo Spirito Santo, primo testimone, siamo testimoni della Risurrezione del Cristo… Noi, testimoni, cioè martiri… Poiché, in greco, testimone è martire: San Giorgio, dunque, venerato come Megalomartire, s’inserisce a pieno titolo nel tempo pasquale… E la festa di San Giorgio è una festa pasquale. E Reggio, avendolo elevato a suo Patrono, è una Città pasquale.” "); 
 
 INSERT INTO Eventi(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Domenica della Divina Misericordia.","./upload/Eventi/misericordia.jpg","foto della messa della domenica di mesericordia", "Oggi celebriamo la domenica della fede, il frutto della risurrezione di Cristo è la nascita della Chiesa. I fondamenti su cui poggia questa costruzione spirituale sono: l’insegnamento degli Apostoli, ossia la Didachè, la Comunione, l’Agape, l’Eucaristia, la Fractio Panis. Il tutto centrato sul dono dello Spirito Santo.
+("Domenica della Divina Misericordia.","./upload/Eventi/misericordia.jpeg","foto della messa della domenica di mesericordia", "Oggi celebriamo la domenica della fede, il frutto della risurrezione di Cristo è la nascita della Chiesa. I fondamenti su cui poggia questa costruzione spirituale sono: l’insegnamento degli Apostoli, ossia la Didachè, la Comunione, l’Agape, l’Eucaristia, la Fractio Panis. Il tutto centrato sul dono dello Spirito Santo.
 Chiunque crede nella risurrezione di Cristo, allora avrà certamente fede anche nella propria risurrezione. Gesù agli Apostoli mostra i segni della sua risurrezione, le mani e i piedi, il costato.
 Ma per credere nella sua risurrezione, agli Apostoli non è sufficiente il vedere, hanno bisogno di altro, ecco perchè Gesù alita, soffia “Enèfusesen” su di loro il suo Spirito, conferendo a ognuno di loro la potenza della sua stessa risurrezione. Ma più della risurrezione dai morti, il dono di Gesù conferisce agli Apostoli e per loro alla Chiesa, il dono della risurrezione nello Spirito di Dio, siamo davanti ad una nuova creazione.
 Questo alitare, soffiare, ci richiama ad Adamo, a Gen. 2,21 con il soffio di Dio, Adamo viene creato.
@@ -321,7 +321,7 @@ Oggi, festa della Divina Misericordia, la Chiesa celebra il grande amore del Sig
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Donne protagoniste",".\upload\Articoli\donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
+("Donne protagoniste","./upload/Articoli/donne.jpg", "foto delle donne che partecipano alla Chiesa", "È sotto gli occhi di tutti che nella vita delle parrocchie le protagoniste sono le
 donne e le nostre comunità non fanno eccezione: nel catechismo, nel servizio dei
 lettori, come ministri della Comunione ai malati o durante le Messe, per non
 parlare della partecipazione alle Messe stesse. Qualche scalpore ha quindi
@@ -342,7 +342,7 @@ ministeri stabili di lettore e accolito (servizio all’eucaristia). Un mio sogn
 giorno ad eleggere il Papa possa esserci una assemblea di uomini e donne."); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Un nuovo anno: due vaccini",".\upload\Articoli\pandemia.jpg", "foto della Chiesa durante la pandemia", "Riprendiamo il cammino, ogni anno lo facciamo, ma quest’anno c’è un motivo
+("Un nuovo anno: due vaccini","./upload/Articoli/pandemia.jpg", "foto della Chiesa durante la pandemia", "Riprendiamo il cammino, ogni anno lo facciamo, ma quest’anno c’è un motivo
 particolare che a tutti sta a cuore. È il desiderio e la speranza che la pandemia
 possa essere sconfitta. Come ci ha ricordato il Presidente della Repubblica, nel
 suo discorso di fine anno, e anche il Papa, è dovere morale di tutti (salvo motivi
@@ -362,7 +362,7 @@ che ci viene donata per camminare con il Signore: Non perdiamola!");
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Grazie",".\upload\Articoli\grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. GRAZIE per l’anno che finisce, certo
+("Grazie","./upload/Articoli/grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. GRAZIE per l’anno che finisce, certo
 duro, difficile, brutto, ma come cristiani crediamo che in ogni attimo c’è la
 presenza di Dio provvidente dove cercare i suoi segni di bene. GRAZIE per tutti i
 medici, gli infermieri, gli operatori sanitari, le forze dell’ordine, gli amministratori
@@ -381,7 +381,7 @@ sempre amore: spero che presto possano sentire il desiderio di ricevere la Grazi
 del Matrimonio cristiano.");  
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Fraternizzare",".\upload\Articoli\natale.jpg", "foto di una mascherina appesa all'albero di Natale", "In questo strano Natale, vogliamo proporre questa ultima parola come
+("Fraternizzare","./upload/Articoli/natale.jpg", "foto di una mascherina appesa all'albero di Natale", "In questo strano Natale, vogliamo proporre questa ultima parola come
 sintesi di questa festa così cara, ma anche così bistrattata. Ci
 mancheranno amici e parenti, ma non deve mancarci GESU’ che a noi
 cristiani ricorda come siamo TUTTI FRATELLI suoi e quindi tra di noi. Un
@@ -396,7 +396,7 @@ semplice saluto alla finestra. E sarà comunque Natale, e sarà di più Natale.
 Buon Natale a tutti, dunque, il Signore doni a tutti gioia, pace e speranza."); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Preparare",".\upload\Articoli\preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a PREPARARE la festa sono notevolmente
+("Preparare","./upload/Articoli/preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a PREPARARE la festa sono notevolmente
 rallentate se non interrotte. Preparare i regali, preparare il cenone, le cene
 aziendali, le settimane bianche, ecc… Tutto bloccato, tutto o tanto cancellato. Al
 di là dei problemi economici non certo secondari, soprattutto per chi lavora in
@@ -414,7 +414,7 @@ posto a qualcuno che ha bisogno. Allora avremo davvero preparato il Natale!
 "); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Attendere",".\upload\Articoli\avvento.jpg", " foto della Chiesa in periodo di avvento", "L’AVVENTO che inizia è la grande “ri-partenza” che l’anno liturgico della
+("Attendere","./upload/Articoli/avvento.jpg", " foto della Chiesa in periodo di avvento", "L’AVVENTO che inizia è la grande “ri-partenza” che l’anno liturgico della
 Chiesa - quel modo di ritmare il tempo nel segno del Vangelo di Gesù, la
 Buona Notizia - che siamo invitati, anno dopo anno, a credere e sul cui
 ritmo siamo inviatati a vivere. Anche in questo tempo di coronavirus.
@@ -430,7 +430,7 @@ vite.
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Quarantena",".\upload\Articoli\quarantena.jpg", "foto di una Famiglia in quarantena","Pensavamo fosse una parola che non ci avrebbe
+("Quarantena","./upload/Articoli/quarantena.jpg", "foto di una Famiglia in quarantena","Pensavamo fosse una parola che non ci avrebbe
 mai riguardato, ormai relegata ai libri di storia o
 a casi eccezzionali. Invece è diventata d’uso comune, anche il sottoscritto ne sta
 facendo le spese. Come molti sapranno, nel mio caso come misura preventiva,
@@ -448,7 +448,7 @@ più grande, che è il bene dell’altro. Un grande atto cristiano. Vi scongiuro
 molte persone stanno soffrendo tanto. E per tutti prego e preghiamo!"); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Il nuovo Messale",".\upload\Articoli\messale.jpg", "foto del nostro messale","inizieremo noi sacerdoti
+("Il nuovo Messale","./upload/Articoli/messale.jpg", "foto del nostro messale","inizieremo noi sacerdoti
 inizieremo a utilizzare il “nuovo Messale”, dovremo
 dire la 3^ edizione italiana del Messale Romano. Nato dalla grande riforma del
 Concilio Vaticano II (da latino si era passati alle lingue volgari, ma soprattutto la
@@ -467,7 +467,7 @@ Padre nostro (...anche noi li rimettiamo... e non abbandonarci alla tentazione).
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Croci e cimiteri",".\upload\Articoli\cimitero.jpg", "foto del nostro cimitero","La croce campeggia nei nostri cimiteri, anche se
+("Croci e cimiteri","./upload/Articoli/cimitero.jpg", "foto del nostro cimitero","La croce campeggia nei nostri cimiteri, anche se
 non è l’unico simbolo presente. A volte viene usata
 a sproposito, ma noi sappiamo e vogliamo considerarla per quello che ne ha
 fatto il Cristo: segno d’amore, di perdono e misericordia.
