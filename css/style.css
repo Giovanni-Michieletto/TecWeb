@@ -255,10 +255,10 @@ dt{
 	width: 17rem;
 	*/transition: width 0.3s ease-in-out;
 	/*border: 1px solid grey;
-	*/width: 15em;
+	*/width: 17em;
 	min-width: 230px;
 	margin-bottom: 2rem;
-	height: 90%;
+	height: 18em;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	overflow: hidden;
@@ -278,7 +278,7 @@ dt{
 
 	border-radius: 5px 5px 0 0;
 	padding: 0.7rem;
-	height: 2rem;
+	height: 3em;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -312,8 +312,8 @@ dt{
 .card-text {
 	/* background-color: rgba(198, 88, 82, 0.1); */
 	border-radius: 0 0 5px 5px;
-	padding: 0.2em;
-	height: 45%;
+	/* padding: 0.5em; */
+	height: 50%;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -322,6 +322,10 @@ dt{
 	-moz-border-radius: 0 0 5px 5px;
 	-ms-border-radius: 0 0 5px 5px;
 	-o-border-radius: 0 0 5px 5px;
+}
+.card-text p{
+	text-align: center;
+	padding: 0.9em;
 }
 
 .card:hover h3{
@@ -618,7 +622,7 @@ textarea#Link{
 	justify-content: center;
 	color: white;
 	float: inline-end;
-	
+
 }
 
 
@@ -801,7 +805,7 @@ textarea#Link{
 	}
 	.card-container{
 		grid-template-columns: auto auto auto;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 	
 	/* ================================== */
