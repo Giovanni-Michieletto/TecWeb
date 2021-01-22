@@ -146,13 +146,20 @@ a {
 /* ======================= */
 /* =======PERCORSO======== */
 /* ======================= */
+.container-percorso-search{
+	background-color: rgb(226, 226, 226);
+	display: flex;
+	
+
+}
+
 #percorso{
-	width: 100%;
+	width: 30%;
 	/* height: 6vh; */
 	height: 3em;
 	display: flex;
 	align-items: center;
-	background-color: rgb(226, 226, 226);
+	
 	color: rgb(104, 5, 5);
 }
 #space {
