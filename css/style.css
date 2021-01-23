@@ -737,7 +737,10 @@ textarea#Link{
 .container-text-footer{
 	padding: 1em;
 }
-
+ .TornaSu{
+	position: absolute;
+	left: -9999px;
+} 
 #TornaSu {
 	background-color: rgba(198, 88, 82, 0.6);
 	width: 50px;
