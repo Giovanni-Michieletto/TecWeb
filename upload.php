@@ -29,7 +29,7 @@
         }
     }
     $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
-    if($_SESSION['action'] =="Nuovo" && $title="Associazione") {
+    if($_SESSION['action'] =="Nuovo" && $title=="Associazione") {
         $page =  str_replace("<percorso />",' Admin » Nuova '.$title,$page);
     }
     else {
@@ -68,6 +68,7 @@
                 }
             else {
                 $message = '<strong class="errori">Errore nell\'inserimento</strong>';
+                $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
