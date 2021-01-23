@@ -15,11 +15,25 @@
         $ID = "";
     }
 
+    $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
+    $titleArray = ['Articolo','Associazione','Vangelo','Evento'];
+    for ($i=0;$i<4;++$i){
+        if($table==$titleArray[$i]) {
+            $title = $table;
+            $table = $tableArray[$i];
+        }
+    }
+
     $page = file_get_contents('blankForm.html');
 
     $page = buildHTML($page,'',$_SESSION['logged']);
-    $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
-    $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page);
+    $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
+    if($_SESSION['action'] =="Nuovo" && $title="Associazione") {
+        $page =  str_replace("<percorso />",' Admin » Nuova '.$title,$page);
+    }
+    else {
+        $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
+    }
 
 
     if(isset($_POST['admin'])){
@@ -66,7 +80,7 @@
             
         if($error == true) {
             move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
- 
+
             if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }

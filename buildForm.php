@@ -12,7 +12,12 @@
     include 'scraping.php';
 
     $page = footer($page,$_SESSION['logged']);
-    $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page); 
+    if($_SESSION['action'] =="Nuovo" && $title="Associazione") {
+        $page =  str_replace("<percorso />",' Admin » Nuova '.$table,$page);
+    }
+    else {
+        $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page);
+    }
     $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
 
     //PRENDO VARIABILI PASSATE
