@@ -14,17 +14,28 @@ body::-webkit-scrollbar-thumb{
 .margin-5 {
 	margin: 0 5% 0 5%;
 }
-.margin-5 dt {
-	padding: 0 0 0 2em;
+
+.content-search {
+	margin: 0 5% 0 5%;
 }
-.margin-5 dd {
-	padding: 0 0 1em 4em;
+.content-search dt {
+	padding: 0 0 0 3em;
 }
-.margin-5 h1 {
-	padding: 0.5em 0 0.5em 0;
+.content-search dd {
+	padding: 0 0 1em 5em;
 }
-.dt {
-	padding: 0 0 0 2em;
+.content-search h2 {
+	padding: 0.5em 0 0.5em 1em;
+}
+.content-search a{
+	color: black;
+	width: 100%;
+}
+.content-search a:hover{
+	color: rgb(0, 155, 159);
+}
+.content-search p {
+	padding: 0 0 0 3em;
 }
 
 .evidenzia{
