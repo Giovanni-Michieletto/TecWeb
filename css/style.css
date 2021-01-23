@@ -172,7 +172,7 @@ a {
 	display: flex;
 	width: 100%;
 	align-items: center;
-	justify-content: space-between;
+	
 }
 fieldset.form{
 	align-items: flex-end;
@@ -822,9 +822,26 @@ textarea#Link{
 	/* ================ */
 	/* ======HOME===== */
 	/* ================ */
+	#presentazione-convento{
+	  background-color: rgb(226, 226, 226);
+	  display: flex;
+	  align-items: center;
+	  width: 100%;
+	  border: 1px solid #ccc;
+	  padding: 0.5em;
+	  border-radius: 15px;
+	  -webkit-border-radius: 15px;
+	  -moz-border-radius: 15px;
+	  -ms-border-radius: 15px;
+	  -o-border-radius: 15px;
+	}
+	.title-convento h1{
+		padding: 0.3em;
+      color:  #94080b;
+	}
 	.contenitore-body{
       flex-direction: column;
-      width: 100%;
+      width: 95%;
    }
    .container-lista{
       flex-direction: column;
@@ -869,6 +886,11 @@ textarea#Link{
 		width: 13em;
 	 	height: 18em;
 	}
+	.container-percorso-search{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	#footer{
 		flex-direction: column;
 	}
@@ -884,19 +906,16 @@ textarea#Link{
 	/* ======HOME===== */
 	/* ================ */
 	#presentazione-convento{
-      background-color: rgb(226, 226, 226);
-     display: flex;
+      
      flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     width: 100%;
-     border: 1px solid #ccc;
+	  justify-content: space-between;
+	  padding: 0;
      border-radius:  30px ;
      -webkit-border-radius:  30px ;
      -moz-border-radius:  30px ;
      -ms-border-radius:  30px ;
      -o-border-radius:  30px ;
-}
+	}
 
    .convento{
       /* display: block; */
@@ -928,12 +947,14 @@ textarea#Link{
 	.links{
 		grid-template-columns: 10em 11em 15em 12em;
 	}
-   .title-convento h1{
-      color:  #94080b;
-	}
+   
 	.card-container{
 		grid-template-columns: auto auto;
 		justify-content: space-evenly;
+	}
+	.container-percorso-search{
+		flex-direction: row;
+		justify-content: space-between;align-items: center;
 	}
 	#footer{
 		flex-direction: row;
