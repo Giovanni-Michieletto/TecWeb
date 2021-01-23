@@ -179,8 +179,7 @@ fieldset.form{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-bottom: 0;
-	padding: 0;
+	
 }
 input[type="text"]#cerca{
 	margin: 0;
@@ -226,7 +225,7 @@ input[type="submit"].cerca{
 
 .title h2 {
    font-weight: 700;
-   font-size: 2rem;
+   font-size: 1,7em;
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -271,7 +270,7 @@ ul li{
 	font-weight: bold;
 	text-align: center;
 	display: inline-block;
-   font-size: 1.7em;
+   font-size: 2em;
 }
 
 
@@ -790,6 +789,23 @@ textarea#Link{
 /* ============================ */
 
 @media screen and (min-width:300px){
+	#presentazione-convento{
+		background-color: rgb(226, 226, 226);
+		display: flex;
+		align-items: center;
+		width: 100%;
+		border: 1px solid #ccc;
+		padding: 0.5em;
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-ms-border-radius: 15px;
+		-o-border-radius: 15px;
+	 }
+	 fieldset.form{
+		margin-left: 0.5em;
+		margin-bottom: 0;
+	 }
 
 	#menu{
 		width: 100%;
@@ -822,19 +838,7 @@ textarea#Link{
 	/* ================ */
 	/* ======HOME===== */
 	/* ================ */
-	#presentazione-convento{
-	  background-color: rgb(226, 226, 226);
-	  display: flex;
-	  align-items: center;
-	  width: 100%;
-	  border: 1px solid #ccc;
-	  padding: 0.5em;
-	  border-radius: 15px;
-	  -webkit-border-radius: 15px;
-	  -moz-border-radius: 15px;
-	  -ms-border-radius: 15px;
-	  -o-border-radius: 15px;
-	}
+	
 	.title-convento h1{
 		padding: 0.3em;
       color:  #94080b;
@@ -916,7 +920,10 @@ textarea#Link{
      -ms-border-radius:  30px ;
      -o-border-radius:  30px ;
 	}
-
+	fieldset.form{
+		margin-bottom: 0;
+		padding: 0;
+	}
    .convento{
       /* display: block; */
       display: flex;
