@@ -498,7 +498,7 @@ fieldset.admin{
 	margin-left: 2em;
 }
 input[type=radio]{
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 button[type=submit]{
 	/* width: 8em;
