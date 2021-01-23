@@ -51,6 +51,7 @@
             $definition .= '<h2>Storia</h2>';
             $definition .= '<p>Nessuna ricorrenza trovata</p>';
         }
+        $definition .='</div>';
     } 
     $page=str_replace('<list />',$definition,$page);
     $page=buildHTML($page, "", $_SESSION['logged']);

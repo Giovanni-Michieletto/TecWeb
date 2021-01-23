@@ -42,19 +42,17 @@
             <titolo />
         </div>
         <list />
+        <a class="TornaSu" href="Home.php">Torna su</a>
+        <div id="TornaSu" class="d-none">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
     </div>
-    <a class="TornaSu" href="Home.php">Torna su</a>
-    <div id="TornaSu" class="d-none">
-        <i class="fas fa-angle-double-up"></i>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
-    </script>
+   
+    
 
     <div id="footer">
         <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
-        <div class="container-text-footer margin-5">
+        <div class="container-text-footer">
             <p>
                 Contatti utili
             </p>
@@ -73,6 +71,10 @@
         </div>
         <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
+    </script>
 </body>
 
 
