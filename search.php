@@ -18,7 +18,7 @@
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection();
 
-    $tabelle=['Articoli','Associazioni','Commenti','Eventi'];
+    $tabelle=['Articoli','Associazioni','Vangeli','Eventi'];
 
     if($connection)  {
 

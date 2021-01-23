@@ -71,7 +71,7 @@ function showError(input, errormsg) {
 function validateAdmin() {
     var validation = true;
 
-    if(!document.getElementById("Eventi").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
+    if(!document.getElementById("Eventi").checked && !document.getElementById("Vangeli").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
         var input = document.getElementById("js");
         var parent = input.parentNode; 
         
