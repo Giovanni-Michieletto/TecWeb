@@ -65,7 +65,12 @@
 
 
     $page = str_replace("<titlePage />",$table,$page);
-    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);  
+    if($_SESSION['logged'] == false) {
+        $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);  
+    }
+    else {
+        $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page);
+    }  
     $page =  str_replace("<tornasu />","view.php?table=$table",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {

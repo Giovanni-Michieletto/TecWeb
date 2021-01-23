@@ -4,6 +4,10 @@
     $table = $_GET['table'];
     $ID = $_GET['ID'];
 
+    if(empty($_SESSION['logged'])) {
+        $_SESSION['logged'] = false;
+    }
+
     $page = file_get_contents('singolo.html');
 
     include 'scraping.php';
@@ -35,6 +39,12 @@
     }
 
     $page = buildHTML($page,'',$_SESSION['logged']);
+    if($_SESSION['logged'] == false) {
+        $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);  
+    }
+    else {
+        $page =  str_replace("<percorso />",' Admin » ' .$table.' » '.$Titolo,$page);
+    }  
     $page =  str_replace("<percorso />",$table.' » '.$Titolo,$page);
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);

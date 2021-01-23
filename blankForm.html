@@ -1,52 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-     
-        <script type="text/javascript" src="myScript.js"></script>
 
-        <!-- my css -->
-        <link rel="stylesheet" href="./css/desktop.css">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="myScript.js"></script>
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+    <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
+</head>
 
-    
-        <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
-
-
-        <!-- my css -->
-        <link rel="stylesheet" href="./css/style.css">
-
-        <title>Convento S. Maria del Cengio</title>
-
-    </head>
-
-
-    <body>
-    
-    <!-- === HEADER === -->
+<body onload="placeholderSearch()">
     <div id="header">
-        <a href="./admin.php">
+        <a href="./Home.php">
             <img src="./db/img/logo-small.png" alt="">
         </a>
     </div>
-
-    <!-- === MENU === -->
+    <div class="container-percorso-search">
+        <div id="percorso">
+            <span id="space">
+                <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
+            </span>
+        </div>
+        <div id="search">
+            <form name="ricerca" method="post" action="search.php">
+                <fieldset class="form">
+                    <div class="textbutton">
+                        <input type="text" id="cerca" name="cerca" > 
+                        <input type="submit" class="cerca" name="submit" value="Cerca">
+                    </div>
+                </fieldset>
+            </form>  
+        </div>
+    </div> 
     <div id="menu"> 
         <ul class="links">
             <menu />
         </ul> 
     </div>
-
-    <!-- === PERCORSO === -->
-    <div id="percorso">
-        <span id="space">
-            <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
-        </span>
-    </div>
-
-
-    <div id="spacer-top">
-    </div>
+    <div id="spacer-top"></div>
     <div class="Titolo-aggiungi align">
         <h1>
             <titlePage />
@@ -55,14 +47,11 @@
     <div class="abort">
         <abort />
     </div>
-    
     <div class="container-amministration margin-10">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
             <div>
                 <message />
             </div>
-
-            <!-- TITOLO -->
             <fieldset class="align">
                 <div class="title-amministration">
                     <img src="./db/img/deco.svg" alt="">
@@ -75,8 +64,6 @@
                     </span>
                 </div>
             </fieldset>
-
-            <!-- ALTIMMAGINE E IMMAGINE -->
             <fieldset class="align"> 
                 <div class="title-amministration">
                     <img src="./db/img/deco.svg" alt="">
@@ -98,8 +85,6 @@
                     </span>
                 </div>
             </fieldset>
-
-            <!-- TESTO -->
             <fieldset>
                 <div class="title-amministration">
                     <img src="./db/img/deco.svg" alt="">
@@ -112,42 +97,33 @@
                     </span>
                 </div>
             </fieldset>
-
-            <!-- BOTTONE -->
             <fieldset class="button-aggiungi">
                 <button type="submit" name="submit" ><buttonName /></button>
             </fieldset>
         </form>
     </div>
-    <div id="footer">
-
-    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
-    <div class="container-text-footer margin-5">
-       <!-- <div id="contatti" class="container-lista"> -->
-          <p>
-             Contatti utili
-            </p>
-            <ul>
-               <li>Telefono: +79394390273</li>
-               <li>E-mail: smariadelcengio@mail.com</li>
-            </ul>
-         <!-- </div> -->
-         <!-- <div class="container-lista"> -->
-
-            <div id="login" >
-               <p>
-                  <admin />
-               </p>
-            </div>
-         <!-- </div> -->
-         <p  class="end-footer">
-            S.Maria del Cengio - Comunità dei Servi di Maria
-         </p>
-      </div>
-         <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
-</div>
 </body>
 
-   
+<div id="footer">
+    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
+    <div class="container-text-footer margin-5">
+        <p>
+            Contatti utili
+        </p>
+        <ul>
+            <li>Telefono: +79394390273</li>
+            <li>E-mail: smariadelcengio@mail.com</li>
+        </ul>
+        <div id="login" >
+            <p>
+                <admin />
+            </p>
+        </div>
+        <p  class="end-footer">
+            S.Maria del Cengio - Comunità dei Servi di Maria
+        </p>
+    </div>
+    <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
+</div>
 
 </html>

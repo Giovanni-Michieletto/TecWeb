@@ -10,6 +10,12 @@
     	$_SESSION['logged'] = false;
     }
 
+    if($_SESSION['logged'] == false) {
+        $page =  str_replace("<percorso />",'Home',$page);  
+    }
+    else {
+        $page =  str_replace("<percorso />",' Admin » Home',$page);
+    }  
     $page = buildHTML($page,'Home',$_SESSION['logged']);
 
     echo $page;
