@@ -6,6 +6,10 @@
     
     include 'scraping.php';
 
+    if(empty($_SESSION['action'])) {
+        $_SESSION['action'] = "";
+    }
+
     /*______CREAZIONE CARD______*/
 
     require_once "dbConnection.php";

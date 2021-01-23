@@ -6,6 +6,10 @@
 
     include 'scraping.php';
 
+    if(empty($_SESSION['logged'])) {
+    	$_SESSION['logged'] = false;
+    }
+
     $page = buildHTML($page,'Home',$_SESSION['logged']);
 
     echo $page;
