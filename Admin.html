@@ -48,12 +48,12 @@
 
             <div class="bordo">
                <form name="form" id="form" method="post" action="redirect.php" onsubmit="return validateAdmin()">
-                  <fieldset>
-                     <div class="title-amministration">
+                  <fieldset class="admin">
+                     <div id="admin-home" class="title-amministration">
                         <img src="./db/img/deco.svg" alt="">
                         <label for="Titolo">Scegli la sezione: </label>
                      </div>
-                     <div>
+                     <div class="radio">
                         <span id="js">
                         <input type="radio" id="Eventi" name="table" value="Eventi">
                            <label for="Eventi">Eventi</label><br>
@@ -66,20 +66,20 @@
                         </span>
                      </div>
                   </fieldset> 
-                  <fieldset>
-                     <div class="title-amministration">
+                  <fieldset class="admin">
+                     <div id="admin-home" class="title-amministration">
                         <img src="./db/img/deco.svg" alt="">
                         <label for="Titolo">Cosa vuoi fare: </label>
                      </div>
-                     <div>
-                        <span>
+                     <div class="option-admin">
+                        <!-- <span> -->
                            <button type="submit" name="Nuovo">Nuovo</button>
                               
                            <button type="submit" name="Modifica">Modifica</button>
                               
                            <button type="submit" name="Elimina">Elimina</button>
                               
-                        </span>
+                        <!-- </span>s -->
                      </div>
                   </fieldset> 
                </form>
