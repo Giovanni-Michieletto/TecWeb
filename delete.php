@@ -1,30 +1,18 @@
 <?php
+    require_once "dbConnection.php"; 
+    include 'scraping.php';
     session_start();
     if($_SESSION['logged']!=true) {
         header('Location: login.html',TRUE);
     }
-
-    $page = file_get_contents('blankForm.html');
-
-    include 'scraping.php';
-
-    $ID = $_GET['ID'];
-    $table = $_GET['table'];
-
-    $page = footer($page,$_SESSION['logged']);
-    $page = str_replace('<titlePage />', 'Eliminazione '.$table, $page);
-    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);
-
     if(isset($_POST['admin'])){
         header("Location: Admin.php");
     }
-    
-    require_once "dbConnection.php"; 
-
+    $ID = $_GET['ID'];
+    $table = $_GET['table'];
+    $page = file_get_contents('blankForm.html');
     $dbAccess = new DBAccess();
-
-    $connection = $dbAccess->openDBConnection();            
-
+    $connection = $dbAccess->openDBConnection(); 
     if($connection) {
         $insertion = $dbAccess->deleteFile($table,$ID);
         if($insertion == true) {
@@ -39,7 +27,8 @@
         }
         $page = str_replace('<message />',$message,$page);
     }
-
+    $page = footer($page,$_SESSION['logged']);
+    $page = str_replace('<titlePage />', 'Eliminazione '.$table, $page);
+    $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page);
     echo $page;
-
 ?>

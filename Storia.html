@@ -1,74 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-   <head>
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
-      
-      <!-- my css -->
       <link rel="stylesheet" href="./css/style.css" media="screen">
     <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+    <script type="text/javascript" src="myScript.js"></script>
+    <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
+</head>
 
-      <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
-
-   </head>
-<body>
-
-
-        <!-- === HEADER === -->
-        <div id="header">
-            <a href="./conventoPHP.php">
-                <img src="./db/img/logo-small.png" alt="">
-            </a>
-        </div>
-        <!-- === PERCORSO === -->
-        <div class="container-percorso-search">
-
-            <!-- === PERCORSO === -->
-            <div id="percorso">
-                <span id="space">
-                    <p>Ti trovi in: <span xml:lang="en">Home</span></p>
-                </span>
-            </div>
-            
-            <div id="search">
-                <form name=”ricerca” method="POST" action="search.php" >
-                    <fieldset class="form">
-                        <!-- <div class="textbutton"> -->
-                            <input type="text" id="cerca" name="cerca" value="Cosa cerchi?"> 
-                            <input type="submit" class="cerca" name="submit" value="Cerca">
-                        <!-- </div> -->
-                    </fieldset>
-                </form>
-            </div>   
-        </div>
-        
-        <!-- === MENU === -->
+<body onload="placeholderSearch()">
+    <div id="header">
+        <a href="./Home.php">
+            <img src="./db/img/logo-small.png" alt="">
+        </a>
         <div id="menu"> 
             <ul class="links">
                 <menu />
             </ul> 
         </div>
-
-        
-    
-        <!-- === CONTENUTO === -->
-        <div class="contenutostoria margin-5">
-            <h1>Cronologia storica essenziale </br> della presenza della chiesa e del convento</h1>
-            <dl> 
-                <dd id="introduzione"> 
-                    <p>
-                        "Da mille anni una chiesa dedicata alla Vergine Maria pervade di significato sacro la cengia di Isola. Elevata tra terra e cielo propaga un’aura religiosa di spiritualità mariana sul paese e sul territorio circostante."
-                    </p>
-                </dd>
-                <dt>
-                    <div class="title">
-                        <img src="./db/img/deco.svg" alt="">
-                        <h2>Periodo medievale</h2>
+        <div id="search">
+            <form name="ricerca" method="post" action="search.php">
+                <fieldset class="form">
+                    <div class="textbutton">
+                        <input type="text" id="cerca" name="cerca" > 
+                        <input type="submit" class="cerca" name="submit" value="Cerca">
                     </div>
-                </dt> 
+                </fieldset>
+            </form>  
+        </div>
+    </div>   
+    <div id="percorso">
+        <span id="space">
+            <p>Ti trovi in: <span xml:lang="en">Storia</span></p>
+        </span>
+    </div>
+    <div class="spacer-top"></div>
+    <div class="contenutostoria margin-5">
+        <h1>Cronologia storica essenziale </br> della presenza della chiesa e del convento</h1>
+        <dl> 
+            <dd id="introduzione"> 
+                <p>
+                    "Da mille anni una chiesa dedicata alla Vergine Maria pervade di significato sacro la cengia di Isola. Elevata tra terra e cielo propaga un’aura religiosa di spiritualità mariana sul paese e sul territorio circostante."
+                </p>
+            </dd>
+            <dt>
+                <div class="title">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>Periodo medievale</h2>
+                </div>
+            </dt> 
                 <dd>
                     <p>
                         Le origini del complesso di Santa Maria non sono documentate. La chiesa è attestata per la prima volta nel 1192.
@@ -77,12 +60,12 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd>
-                <dt>
-                    <div class="title">
-                        <img src="./db/img/deco.svg" alt="">
-                        <h2>La costruzione del convento</h2>
-                    </div>
-                </dt> 
+            <dt>
+                <div class="title">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>La costruzione del convento</h2>
+                </div>
+            </dt> 
                 <dd> 
                     <p>
                         Le origini del convento sono legate al fervore mariano e al clima di spiritualità che si diffusero nel territorio vicentino prima della metà del Quattrocento.
@@ -93,12 +76,12 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd> 
-                <dt>
-                    <div class="title">
-                        <img src="./db/img/deco.svg" alt="">
-                        <h2>I canonici di San Salvatore</h2>
-                    </div>
-                </dt>
+            <dt>
+                <div class="title">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>I canonici di San Salvatore</h2>
+                </div>
+            </dt>
                 <dd> 
                     <p>
                         Dopo la partenza dei frati di santa Brigida, la famiglia Porto chiamò sulla cengia i frati dell’ordine dei Canonici di San Salvatore di Venezia. Il 18 marzo 1462 la nuova comunità, alla guida di fra Cristoforo da Milano, iniziò a ufficiare la chiesa e abitare il convento.
@@ -111,12 +94,12 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd>
-                <dt>
-                    <div class="title">
-                        <img src="./db/img/deco.svg" alt="">
-                        <h2>Il miracolo delle lacrime</h2>
-                    </div>
-                </dt> 
+            <dt>
+                <div class="title">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>Il miracolo delle lacrime</h2>
+                </div>
+            </dt> 
                 <dd> 
                     <p>
                         Nel 1513 il complesso di Santa Maria fu coinvolto in uno degli episodi collaterali della Battaglia della Motta. In quell’occasione il convento e la chiesa furono saccheggiati e incendiati da un gruppo di armigeri della coalizione imperiale e spagnola.
@@ -126,12 +109,12 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd>
-                <dt>
-                    <div class="title">
-                        <img src="./db/img/deco.svg" alt="">
-                        <h2>Il convento senza frati</h2>
-                    </div>
-                </dt> 
+            <dt>
+                <div class="title">
+                    <img src="./db/img/deco.svg" alt="">
+                    <h2>Il convento senza frati</h2>
+                </div>
+            </dt> 
                 <dd> 
                     <p>
                         Il 12 settembre 1771, per iniziativa del Senato della Repubblica di Venezia, la comunità monastica di Isola fu soppressa. I Canonici di San Salvatore abbandonarono il convento. Per tutto l’Ottocento il monastero restò disabitato. Solo la chiesa mantenne la sua funzione religiosa essendo ufficiata saltuariamente da un prete.
@@ -139,12 +122,12 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd>
+            <dt>
                 <div class="title">
                     <img src="./db/img/deco.svg" alt="">
-                    <dt>
-                        <h2>I Servi di Maria</h2>
-                    </dt>
+                    <h2>I Servi di Maria</h2>
                 </div>
+            </dt>
                 <dd> 
                     <p>
                         Nel 1894 il conte Antonio Porto espresse l’intenzione di cedere ai Servi di Maria di Monte Berico l’intero complesso di Santa Maria di Isola. Il 14 dicembre 1904 il Consiglio Generalizio dei Servi determinò la fondazione di una comunità conventuale sulla cengia. E il 27 aprile del 1905 la nuova comunità, guidata da fra Giovanni M. Bianchini, iniziò ad abitare il convento e ufficiare la chiesa. Nel 1912 la comunità conventuale di Isola divenne autonoma, nominando primo priore fra Filippo Maria Grendene.
@@ -159,46 +142,37 @@
                     </p>
                     <a class="TornaSu" href="Storia.php">Torna su</a>
                 </dd>
-            </dl> 
-        </div>
-        <div id="TornaSu" class="d-none">
-            <i class="fas fa-angle-double-up"></i>
-        </div>
+        </dl> 
+    </div>
+    <div id="TornaSu" class="d-none">
+        <i class="fas fa-angle-double-up"></i>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $('#TornaSu').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-        })
+        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
     </script>
-
-        <div id="footer">
-
-            <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
-            <div class="container-text-footer margin-5">
-               <!-- <div id="contatti" class="container-lista"> -->
-                  <p>
-                     Contatti utili
-                    </p>
-                    <ul>
-                       <li>Telefono: +79394390273</li>
-                       <li>E-mail: smariadelcengio@mail.com</li>
-                    </ul>
-                 <!-- </div> -->
-                 <!-- <div class="container-lista"> -->
-        
-                    <div id="login" >
-                       <p>
-                          <admin />
-                       </p>
-                    </div>
-                 <!-- </div> -->
-                 <p  class="end-footer">
-                    S.Maria del Cengio - Comunità dei Servi di Maria
-                 </p>
-              </div>
-                 <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
-        </div>
-
 </body>
+
+<div id="footer">
+    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
+    <div class="container-text-footer margin-5">
+        <p>
+            Contatti utili
+        </p>
+        <ul>
+            <li>Telefono: +79394390273</li>
+            <li>E-mail: smariadelcengio@mail.com</li>
+        </ul>
+        <div id="login" >
+            <p>
+                <admin />
+            </p>
+        </div>
+        <p  class="end-footer">
+            S.Maria del Cengio - Comunità dei Servi di Maria
+        </p>
+    </div>
+    <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
+</div>
+
 </html>

@@ -1,78 +1,96 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- my css -->
-      <link rel="stylesheet" href="./css/style.css">
-      <!-- <link rel="stylesheet" href="./css/Amministratore.css"> -->
-      <!-- <link rel="stylesheet" href="./css/login.css"> -->
-      <script type="text/javascript" src="myScript.js"></script>
 
-      <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
-   </head>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./css/style.css" media="screen">
+   <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+   <script type="text/javascript" src="myScript.js"></script>
+   <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
+</head>
 
-   <body>
-         <!-- === HEADER === -->
-         <div id="header">
-            <a href="./conventoPHP.php">
-               <img src="./db/img/logo-small.svg" alt="">
-            </a>
-         </div>
-         
-         
-         <!-- ================= -->
-         <!-- === MAIN AREA === -->
-         <!-- ================= -->
-         <div id="container-login" class="container-amministration margin-5">
-            <form enctype="multipart/form-data" method="POST" action="login.php">
-               <fieldset class="align">
-                  <div class="title-amministration">
-                     <img src="./db/img/deco.svg" alt="">
-                     <label for="Username"><span xml:lang="en">Username</span>: </label>
-                  </div>
-                  <div class="text-box">
-                     <span>
-                        <input type="text" id="Username" name="Username">
-                        <errorUser />
-                     </span>
-                  </div>
-               </fieldset>
-               <fieldset class="align">
-                  <div class="title-amministration">
-                     <img src="./db/img/deco.svg" alt="">
-                     <label for="Password"><span xml:lang="en">Password</span>: </label>
-                  </div>
-                  <div class="text-box">
-                     <span>
-                        <input type="password" name="Password" id="Password">
-                        <errorPass />
-                     </span>
-                  </div>
-               </fieldset>
-               <message />
-               <fieldset class="button-aggiungi">
-                  <button class="aggiungi" type="submit" name="submit">Invia</button>
-               </fieldset>
-            </form>
-         </div>
-   
-   
-      <!-- === FOOTER === -->
-     <div id="footer">
-    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
-    <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
-    <p>Contatti utili
-        <ul>
-            <li>Telefono: +79394390273</li>
-            <li>E-mail: smariadelcengio@mail.com</li>
-        </ul>
+<body onload="placeholderSearch()">
+   <div id="header">
+      <a href="./Home.php">
+         <img src="./db/img/logo-small.png" alt="">
+      </a>
+      <div id="menu"> 
+         <ul class="links">
+            <li><a href="Home.php">Home</a></li>
+            <li><a href="view.php?table=Articoli">Articoli</a></li>
+            <li><a href="view.php?table=Associazioni">Associazioni</a></li>
+            <li><a href="view.php?table=Commenti">Commenti</a></li>
+            <li><a href="view.php?table=Eventi">Eventi</a></li>
+            <li><a href="Storia.php">Storia</a></li>
+         </ul> 
+      </div>
+      <div id="search">
+         <form name="ricerca" method="post" action="search.php">
+            <fieldset class="form">
+               <div class="textbutton">
+                  <input type="text" id="cerca" name="cerca" > 
+                  <input type="submit" class="cerca" name="submit" value="Cerca">
+               </div>
+            </fieldset>
+         </form>  
+      </div>
+   </div>   
+   <div id="percorso">
+      <span id="space">
+         <p>Ti trovi in: <span xml:lang="en">Login</span></p>
+      </span>
+   </div>
+   <div class="spacer-top"></div>
+   <div id="container-login" class="container-amministration margin-5">
+      <form enctype="multipart/form-data" method="POST" action="login.php">
+         <fieldset class="align">
+            <div class="title-amministration">
+               <img src="./db/img/deco.svg" alt="">
+               <label for="Username"><span xml:lang="en">Username</span>: </label>
+            </div>
+            <div class="text-box">
+               <span>
+                  <input type="text" id="Username" name="Username">
+                  <errorUser />
+               </span>
+            </div>
+         </fieldset>
+         <fieldset class="align">
+            <div class="title-amministration">
+               <img src="./db/img/deco.svg" alt="">
+               <label for="Password"><span xml:lang="en">Password</span>: </label>
+            </div>
+            <div class="text-box">
+               <span>
+                  <input type="password" name="Password" id="Password">
+                  <errorPass />
+               </span>
+            </div>
+         </fieldset>
+         <message />
+         <fieldset class="button-aggiungi">
+            <button class="aggiungi" type="submit" name="submit">Invia</button>
+         </fieldset>
+      </form>
+   </div>
+</body>
 
-        <admin />
-
-        S.Maria del Cengio - Comunità dei Servi di Maria
-    </p>
+<div id="footer">
+   <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
+   <div class="container-text-footer margin-5">
+      <p>
+         Contatti utili
+      </p>
+      <ul>
+         <li>Telefono: +79394390273</li>
+         <li>E-mail: smariadelcengio@mail.com</li>
+      </ul>
+      <p  class="end-footer">
+         S.Maria del Cengio - Comunità dei Servi di Maria
+      </p>
+   </div>
+   <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
 </div>
-
 
 </html>

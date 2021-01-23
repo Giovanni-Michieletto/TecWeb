@@ -26,9 +26,9 @@ CREATE TABLE Eventi (
 
 
 --
--- Struttura tabella Commenti
+-- Struttura tabella Vangeli
 --
-CREATE TABLE Commenti (
+CREATE TABLE Vangeli (
     ID int NOT NULL AUTO_INCREMENT,
     Titolo text NOT NULL,
     Immagine text NOT NULL,
@@ -110,10 +110,10 @@ I fedeli dell'associazione dei ciechi si impegnano a collaborare alla missione a
 
 
 --
--- Inserimento Commenti
+-- Inserimento Vangeli
 --
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Giovanni (1,35-42)","./upload/Commenti/gesu1.jpg","foto di gesù mentre chiama i primi discepoli", "In quel tempo Giovanni stava con due dei suoi discepoli e, fissando lo
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Giovanni (1,35-42)","./upload/Vangeli/gesu1.jpg","foto di gesù mentre chiama i primi discepoli", "In quel tempo Giovanni stava con due dei suoi discepoli e, fissando lo
 sguardo su Gesù che passava, disse: «Ecco l’agnello di Dio!». E i suoi due discepoli, sentendolo parlare così, seguirono Gesù.
 Gesù allora si voltò e, osservando che essi lo seguivano, disse loro: «Checosa cercate?». Gli risposero: «Rabbì – che, tradotto, significa maestro –, dove dimori?». Disse loro: «Venite e vedrete». Andarono dunque e videro dove egli dimorava e quel giorno rimasero con lui; erano circa le quattro del
 pomeriggio. Uno dei due che avevano udito le parole di Giovanni e lo avevano seguito, era Andrea, fratello di Simon Pietro. Egli incontrò per primo
@@ -138,8 +138,8 @@ aver trovato Cristo, dobbiamo sentire l’impegno e la gioia di farlo conoscere 
 fratelli. È un cammino che richiede libertà interiore, forza, costanza, che dura tutta la
 vita, ma che parte da una chiamata, dall’iniziativa di Dio"); 
 
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Marco (1,7-11) ","./upload/Commenti/gesu2.jpeg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Marco (1,7-11) ","./upload/Vangeli/gesu2.jpeg", "foto del battesimo di Gesù ", "In quel tempo, Giovanni proclamava: «Viene dopo di me colui che è
 più forte di me: io non sono degno di chinarmi per slegare i lacci dei suoi sandali. Io vi ho battezzato con acqua, ma egli vi battezzerà in
 Spirito Santo». Ed ecco, in quei giorni, Gesù venne da Nazareth di Galilea e fu battezzato nel Giordano da Giovanni. E, subito, uscendo dall’acqua, vide squarciarsi i cieli e lo Spirito discendere verso di lui come una colomba.
 E venne una voce dal cielo: «Tu sei il Figlio mio, l’amato: in te ho posto il mio compiacimento».
@@ -153,8 +153,8 @@ vita. E Gesù si manifesta a noi ogni giorno: nella Chiesa, nella preghiera, nei
 Il Battesimo è la porta d'ingresso nel Vangelo. Chi non passa per qui rimane intrappolato nelle proprie attese religiose e non conosce Dio e il Suo dono.
 Oggi ci chiediamo: Riconosco la Sua presenza, il Suo Amore nella mia vita? Vivo un vero rapporto filiale con Dio?"); 
 
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Giovanni (1,1-18)","./upload/Commenti/gesu3.jpg", "foto di gesù","In principio era il Verbo, e il Verbo era presso Dio e il Verbo era Dio.
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Giovanni (1,1-18)","./upload/Vangeli/gesu3.jpg", "foto di gesù","In principio era il Verbo, e il Verbo era presso Dio e il Verbo era Dio.
 Egli era, in principio, presso Dio: tutto è stato fatto per mezzo di lui e senza di lui nulla è stato fatto di ciò che esiste. In lui era la vita e la vita era la luce degli uomini; la luce splende nelle tenebre e le tenebre non l’hanno vinta.
 Venne un uomo mandato da Dio: il suo nome era Giovanni. Egli venne come testimone per dare testimonianza alla luce, perché tutti credessero per mezzo di lui.
  Non era lui la luce, ma doveva dare testimonianza alla luce.
@@ -187,8 +187,8 @@ Il Padrone di Casa ha dato ai suoi servi “il potere, a ciascuno il suo compito
 Alcuni strumenti che ci possono aiutare nel rimanere svegli, veglianti? Le opere buone alle quali ciascuno di noi è chiamato, l’Ascolto quotidiano ed assiduo della Parola, la confi− denza con quel Padrone di Casa che non ha egoisticamente tenuto tutto per sé, ma  ha “lasciato ai suoi servi la propria casa e dato loro il potere.”.
 Sentiamoci amati in tutto questo, viviamo il Dono di questo Tempo, donato, regalato, in ogni istante, in ogni secondo della nostra vita nell’attesa, vigilante, del Suo ritorno.");
 
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Matteo (25,1-13) ","./upload/Commenti/gesu4.jpg", "foto di gesù con una luce in mano", "In quel tempo, Gesù disse ai suoi discepoli questa parabola:
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Matteo (25,1-13) ","./upload/Vangeli/gesu4.jpg", "foto di gesù con una luce in mano", "In quel tempo, Gesù disse ai suoi discepoli questa parabola:
 «Il regno dei cieli sarà simile a dieci vergini che presero le loro lampade e uscirono incontro allo sposo. Cinque di esse erano stolte e cinque sagge; le stolte
 presero le loro lampade, ma non presero con sé l’olio; le sagge invece, insieme
 alle loro lampade, presero anche l’olio in piccoli vasi. Poiché lo sposo tardava,
@@ -216,8 +216,8 @@ difficoltà, possiamo restare tranquilli mentre attendiamo la venuta dello sposo
 non ci spaventa perchè abbiamo la riserva di olio accumulata con la carità
 operata ogni giorno."); 
 
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Matteo (25,31-46) ","./upload/Commenti/gesu5.jpg", "foto di gesù pastore","Gesù disse ai suoi discepoli: «Quando il Figlio dell'uomo verrà nella sua
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Matteo (25,31-46) ","./upload/Vangeli/gesu5.jpg", "foto di gesù pastore","Gesù disse ai suoi discepoli: «Quando il Figlio dell'uomo verrà nella sua
 gloria, e tutti gli angeli con lui, siederà sul trono della sua gloria. Davanti a
 lui verranno radunati tutti i popoli. Egli separerà gli uni dagli altri, come il
 pastore separa le pecore dalle capre, e porrà le pecore alla sua destra e le
@@ -244,8 +244,8 @@ segno di Cristo; di rendere così presente Cristo nel nostro tempo e nel nostro 
 porta, nel momento decisivo, alla carità: al bicchier d’acqua all’assetato, all’alloggio al senza tetto, al pane all’affamato, all’atto concreto cioè, sul quale – secondo
 la pagina del vangelo di Matteo – saremo un giorno giudicati.” ");  
 
-INSERT INTO Commenti(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Dal Vangelo secondo Matteo (25,31-46) ","./upload/Commenti/gesu6.jpg", "foto della distribuzione dei talenti", "In quel tempo, Gesù disse ai suoi discepoli questa parabola: «Avverrà come a
+INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
+("Dal Vangelo secondo Matteo (25,31-46) ","./upload/Vangeli/gesu6.jpg", "foto della distribuzione dei talenti", "In quel tempo, Gesù disse ai suoi discepoli questa parabola: «Avverrà come a
 un uomo che, partendo per un viaggio, chiamò i suoi servi e consegnò loro i
 suoi beni. A uno diede cinque talenti, a un altro due, a un altro uno, secondo le
 capacità di ciascuno; poi partì.
