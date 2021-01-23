@@ -12,13 +12,11 @@
 
 <body onload="placeholderSearch()">
    <div id="header">
-      <a href="./Home.php">
-         <img src="./db/img/logo-small.png" alt="">
-      </a>
+      <img src="./db/img/logo-small.png" alt="Logo con il convento stilizzato e il nome Convento Santa Maria del Cengio di fianco verticalmente">
    </div>   
    <div class="container-percorso-search">
       <div id="percorso">
-         <span id="space">
+         <span id="space" tabindex="1">
             <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
          </span>
       </div>
@@ -26,15 +24,15 @@
          <form name="ricerca" method="post" action="search.php">
             <fieldset class="form">
                   <div class="textbutton">
-                     <input type="text" id="cerca" name="cerca" > 
-                     <input type="submit" class="cerca" name="submit" value="Cerca">
+                     <input type="text" id="cerca" name="cerca" title="Cerca qua" tabindex="2"> 
+                     <input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">
                   </div>
             </fieldset>
          </form>  
       </div>
    </div>
    <div id="menu"> 
-      <ul class="links">
+      <ul class="links" tabindex="3">
          <menu />
       </ul> 
    </div>
@@ -44,17 +42,17 @@
          <div class="deco">
             <img class="deco" src="./db/img/deco.svg" alt="">
          </div>
-         <h2>      
+         <h2 tabindex="4">      
             <titlePage />
          </h2>
       </div>
       <div class="abort">
          <abort />
       </div>
-      <div class="card-container">
+      <div class="card-container" tabindex="5">
          <list />
       </div>
-      <a class="TornaSu" href="<tornasu />">Torna su</a>
+      <a class="TornaSu" href="<tornasu />" tabindex="6">Torna su</a>
    </div>
    <div id="TornaSu" class="d-none">
       <i class="fas fa-angle-double-up"></i>
@@ -68,7 +66,7 @@
 <div id="footer">
    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
    <div class="container-text-footer margin-5">
-      <p>
+      <p tabindex="7">
          Contatti utili
       </p>
       <ul>
@@ -76,7 +74,7 @@
          <li>E-mail: smariadelcengio@mail.com</li>
       </ul>
       <div id="login" >
-         <p>
+         <p tabindex="8">
             <admin />
          </p>
       </div>

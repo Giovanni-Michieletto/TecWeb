@@ -12,7 +12,6 @@ function placeholderSearch() {
 }
 
 function validate() {
-
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
     var validation = true;
 
@@ -28,6 +27,7 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showError(input, errormsg);
+                focus.focus();
                 validation = false;
             }
         }
@@ -36,6 +36,7 @@ function validate() {
             if(input.files.length == 0) {
                 var errormsg = "Inserire un'immagine!";
                 showError(input, errormsg);
+                //input.focus();
                 validation = false;
             }
         }
@@ -44,6 +45,7 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showError(input, errormsg);
+               // input.focus();
                 validation = false;
             }
         }
@@ -52,6 +54,7 @@ function validate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showError(input, errormsg);
+                //input.focus();
                 validation =  false;
             }
         }
@@ -64,6 +67,7 @@ function showError(input, errormsg) {
     var p = input.parentNode;
     var elemento = document.createElement("strong");
     elemento.className = "errori";
+    elemento.setAttribute("title", "Errore");
     elemento.appendChild(document.createTextNode(errormsg));
     p.appendChild(elemento);
 }
@@ -81,6 +85,7 @@ function validateAdmin() {
 
         var errormsg = "Selezionare un'opzione!";
         showError(input, errormsg);
+        input.focus();
         validation = false;
     }
 
