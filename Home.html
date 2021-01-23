@@ -2,23 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css" media="screen">
-        <link rel="stylesheet" href="./css/stampa.css" media="print"/>
-        <script type="text/javascript" src="myScript.js"></script>
-        <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="myScript.js"></script>
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+    <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
 
 <body onload="placeholderSearch()" onscroll="removeHeader()">
     <div id="header">
-        <img id="image" src="./db/img/logo-small.png" alt="">
+        <a class="hiddenHelp" href="#menu">Vai al menù</a>
+        <a class="hiddenHelp" href="#cerca">Vai alla barra di ricerca</a>
+        <a class="hiddenHelp" href="#starter">Vai al contenuto</a>
+        <img id="image-header" src="./db/img/logo-small.png" alt="">
         <div id="menu"> 
-            <ul class="links">
-                <menu />
-            </ul> 
+            <menu />
         </div>
-      <div id="search">
+        <div id="search">
             <form name="ricerca" method="post" action="search.php">
                 <fieldset class="form">
                     <div class="textbutton">
@@ -34,22 +37,17 @@
             <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
         </span>
     </div>
-        
-
-        <div class="spacer-top"></div>
-
-        <!-- ==== TITOLO ===== -->
-        <div id="starter" class="container margin-5">
-            <div id="presentazione-convento">
-                <div class="convento">
-                    <img src="db/img/FOTOCONVENTO.jpg" alt="">
-                </div>
-                <div class="title-convento">
-                    <h1>Santa Maria del Cengio - Comunità dei Servi di Maria</h1>
-                </div>
+    <div class="spacer-top"></div>
+    <div id="starter" class="container margin-5">
+        <div id="presentazione-convento">
+            <div class="convento">
+                <img src="db/img/FOTOCONVENTO.jpg" alt="">
+            </div>
+            <div class="title-convento">
+                <h1>Santa Maria del Cengio - Comunità dei Servi di Maria</h1>
             </div>
         </div>
-            
+    </div>
     <div class="contenitore-body margin-5">
         <div class="container-lista">
             <div class="title">

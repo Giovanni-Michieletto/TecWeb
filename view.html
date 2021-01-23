@@ -1,26 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="./css/style.css" media="screen">
-      <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="myScript.js"></script>
+   <link rel="stylesheet" href="./css/style.css" media="screen">
+   <link rel="stylesheet" href="./css/stampa.css" media="print"/>
+   <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
+</head>
 
-      <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
-
-   </head>
-
-<body onload="placeholderSearch()"> 
-  <div id="header">
-      <img src="./db/img/logo-small.png" alt="">
-     <div id="menu"> 
-         <ul class="links">
-            <menu />
-         </ul> 
+<body onload="placeholderSearch()" onscroll="removeHeader()"> 
+   <div id="header">
+      <a class="hiddenHelp" href="#menu">Vai al menù</a>
+      <a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>
+      <a class="hiddenHelp" href="#content">Vai al contenuto</a>
+      <img id="image-header" src="./db/img/logo-small.png" alt="">
+      <div id="menu"> 
+         <menu />
       </div>
-    <div id="search">
+      <div id="search">
          <form name="ricerca" method="post" action="search.php">
             <fieldset class="form">
                   <div class="textbutton">
@@ -36,12 +37,7 @@
          <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
       </span>
    </div>
-
-     
-
-     
-
-      <div id="content" class="margin-5">
+   <div id="content" class="margin-5">
 
          <!-- === TITOLO === -->
          <div class="title">
@@ -65,16 +61,12 @@
          <!-- <a class="TornaSu" href="<tornasu />">Torna su</a> -->
          <div id="TornaSu" class="d-none">
             <i class="fas fa-angle-double-up"></i>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $('#TornaSu').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-        })
-
-      
-    </script>
+      </div>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+      $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
+   </script>
 
 
 </body>

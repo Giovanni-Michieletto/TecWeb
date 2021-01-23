@@ -7,7 +7,6 @@
     if(empty($_SESSION['action'])) {
         $_SESSION['action'] = "";
     }
-
     if(empty($_SESSION['logged'])) {
         $_SESSION['logged'] = false;
     }
@@ -57,7 +56,7 @@
         } 
     }
     else {
-        $definition = '<strong class="errori">Errore di collegamento al database</strong>';
+        $definition = '<strong tabindex="1" class="errori">Errore di collegamento al database</strong>';
     }
     if($_SESSION['logged'] == false) {
         $page =  str_replace("<percorso />",$_SESSION['action'].' '.$title,$page);  
