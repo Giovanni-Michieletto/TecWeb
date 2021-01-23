@@ -19,7 +19,7 @@
 
     $page = buildHTML($page,'',$_SESSION['logged']);
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
-    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);
+    $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$table,$page);
 
 
     if(isset($_POST['admin'])){
