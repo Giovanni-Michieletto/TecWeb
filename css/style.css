@@ -225,10 +225,9 @@ input[type="submit"].cerca{
 
 .title h2 {
    font-weight: 700;
-   font-size: 1,7em;
+   font-size: 1.7em;
 	display: inline-block;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 0.5em;
 }
 
 .title img {
@@ -450,13 +449,6 @@ ul li{
 	margin: 70px 0 20px 0;
 	display: flex;
 	vertical-align: middle;
-}
-
-.title h2 {
-	font-weight: 700;
-	display: inline-block;
-	margin-left: 10px;
-	margin-right: 10px;
 }
 
 .title img {
