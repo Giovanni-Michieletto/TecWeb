@@ -161,18 +161,52 @@ a {
 /* ======================= */
 /* =======PERCORSO======== */
 /* ======================= */
-#percorso{
+.container-percorso-search{
+	background-color: rgb(226, 226, 226);
+	display: flex;
 	width: 100%;
-	/* height: 6vh; */
+	align-items: center;
+	justify-content: space-between;
+}
+fieldset.form{
+	align-items: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 0;
+	padding: 0;
+}
+input[type="text"]#cerca{
+	margin: 0;
+	padding: 0.2em;
+}
+input[type="submit"].cerca{
+	width: 8em;
+	height: 1.9em;
+	margin: 0 1.2em;
+	background-color: white;
+	border: 1px solid white;
+	border-style: outset;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+/* #search{
+	align-items: flex-end;
+} */
+#percorso{
+	width: 30%;
 	height: 3em;
 	display: flex;
 	align-items: center;
-	background-color: rgb(226, 226, 226);
+	
 	color: rgb(104, 5, 5);
 }
 #space {
 	padding-left: 2em;
-}
+} 
 
 /* =================== */
 /* ======TITOLI======= */
@@ -288,10 +322,10 @@ ul li{
 	width: 17rem;
 	*/transition: width 0.3s ease-in-out;
 	/*border: 1px solid grey;
-	*/width: 15em;
+	*/width: 17em;
 	min-width: 230px;
 	margin-bottom: 2rem;
-	height: 90%;
+	height: 18em;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	overflow: hidden;
@@ -311,7 +345,7 @@ ul li{
 
 	border-radius: 5px 5px 0 0;
 	padding: 0.7rem;
-	height: 2rem;
+	height: 3em;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -345,8 +379,8 @@ ul li{
 .card-text {
 	/* background-color: rgba(198, 88, 82, 0.1); */
 	border-radius: 0 0 5px 5px;
-	padding: 0.2em;
-	height: 45%;
+	/* padding: 0.5em; */
+	height: 50%;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -356,6 +390,10 @@ ul li{
 	-ms-border-radius: 0 0 5px 5px;
 	-o-border-radius: 0 0 5px 5px;
 }
+.card-text p{
+	text-align: center;
+	padding: 0.9em;
+}
 
 .card:hover h3{
 	color: #009b9f;
@@ -364,32 +402,40 @@ ul li{
 /* ======================= */
 /* ==== PAGINA LETTURA==== */
 /* ======================= */
-
-.container-singolo{
+.content{
 	display: flex;
 	flex-direction: column;
-	margin-top: 2vh;
+	margin-top: 2em;
+	border: 1px solid #ccc;
+	padding: 1.5em;
+	border-radius: 5%;
+	background-color: rgb(226, 226, 226);
 }
-.immagine-singolo{
-	
-	width: 100%;
-	height: auto;
-	justify-content: center;
+
+#title{
 	display: flex;
-	margin: 0% 0% 4% 0%;
-  
+	flex-direction: column;
 }
-.immagine-singolo img{
-    height: 100%;
-    min-height: 1vh;
-    height: 17rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+#image{
+	width: 100%;
+    height: 20em;
+    justify-content: center;
+    vertical-align: middle;
+    display: flex;
+    margin: 4% 0%;
+    align-items: center;
 }
-.testo-singolo{
+#image img{
+	height: 100%;
+	width: 58%;
+	/* min-height: 1vh; */
+	height: 100%;
+	/* border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%; */
+}
+#text{
 	font-size: 1.3em;
 }
 
@@ -578,6 +624,8 @@ input[type=text], input[type=blob], input[type=password] {
 	font-size: 1.2em;
 }
 
+
+
 textarea#Testo {
 	font-family: sans-serif;
 	
@@ -618,9 +666,6 @@ textarea#Link{
 }
 
 
-@media screen and (min-width:900px){
-	
-}
 
 
 
@@ -644,16 +689,46 @@ textarea#Link{
 	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
 	width: 100%;
 	margin-top: 3rem;
-	height: 20vh;
+	/* height: 20vh; */
 	background-color: rgb(0, 155, 159);
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	color: white;
 	float: inline-end;
+}
+/* #contatti{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+} */
+/* #login{
+	align-items: center;
+	margin-top: 50%;
+} */
+#login{
+	display: flex;
+    width: 100%;
+    margin: 1em 0;
+    align-items: center;
+    justify-content: center;
 	
 }
+#login p{
+	width: 30%;
+	background-color: #c65852;
+	padding: 0.3em 2em;
+	text-align: center;
+}
+/* .end-footer{
+	width: 100%;
+	text-align: center;
+	padding: 0.5em;
+} */
 
+.container-text-footer{
+	padding: 1em;
+}
 
 /* ============================ */
 /* ============================ */
@@ -747,6 +822,9 @@ textarea#Link{
 		width: 13em;
 	 	height: 18em;
 	}
+	#footer{
+		flex-direction: column;
+	}
 }
 
 /* ============================ */
@@ -759,7 +837,7 @@ textarea#Link{
 	/* ======HOME===== */
 	/* ================ */
 	#presentazione-convento{
-      background-color: #ccc;
+      background-color: rgb(226, 226, 226);
      display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -804,11 +882,14 @@ textarea#Link{
 		grid-template-columns: 10em 11em 15em 12em;
 	}
    .title-convento h1{
-      color:  #c65852;
+      color:  #94080b;
 	}
 	.card-container{
 		grid-template-columns: auto auto;
 		justify-content: space-evenly;
+	}
+	#footer{
+		flex-direction: row;
 	}
 }
 
@@ -834,7 +915,7 @@ textarea#Link{
 	}
 	.card-container{
 		grid-template-columns: auto auto auto;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 	
 	/* ================================== */
