@@ -29,7 +29,7 @@
         }
     }
     $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
-    if($_SESSION['action'] =="Nuovo" && $title="Associazione") {
+    if($_SESSION['action'] =="Nuovo" && $title=="Associazione") {
         $page =  str_replace("<percorso />",' Admin » Nuova '.$title,$page);
     }
     else {
