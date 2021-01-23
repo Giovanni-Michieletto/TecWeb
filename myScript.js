@@ -11,6 +11,17 @@ function placeholderSearch() {
     };
 }
 
+function removeHeader() {
+    var header = document.getElementById("header");
+    var height = document.getElementById("image").offsetHeight;
+    if(window.pageYOffset>=height) {
+        header.style.display='unset';
+    }
+    if(window.pageYOffset<=height) {
+        header.style.display='';
+    }
+}
+
 function validate() {
 
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
