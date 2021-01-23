@@ -10,11 +10,12 @@
    <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
 
-<body onload="placeholderSearch()">
+<body onload="placeholderSearch()" onscroll="removeHeader()">
    <div id="header">
-      <a href="./Home.php">
-         <img src="./db/img/logo-small.png" alt="">
-      </a>
+      <a class="hiddenHelp" href="#menu">Vai al menù</a>
+      <a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>
+      <a class="hiddenHelp" href="#container-login">Vai al login</a>
+      <img id="image-header" src="./db/img/logo-small.png" alt=""> 
       <div id="menu"> 
          <ul class="links">
             <li><a href="Home.php">Home</a></li>

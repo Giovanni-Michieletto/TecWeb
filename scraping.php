@@ -145,7 +145,7 @@ function footer($page,$session) {
 
 //COSTRUISCE IL MENU
 function menu($page,$table,$session) {
-    $menu='';
+    $menu='<ul class="links">';
     $tabelle=['Home','Articoli','Associazioni','Vangeli','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
@@ -166,6 +166,7 @@ function menu($page,$table,$session) {
             $menu .= '<li><a href="Admin.php">Admin</a></li>';
         }
     }
+    $menu .= '</ul>';
     $page =  str_replace("<menu />",$menu,$page);
     return $page;
 }

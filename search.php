@@ -3,7 +3,7 @@
     require_once "dbConnection.php";
     session_start();
     $cerca = $_POST['cerca'];
-    $page = file_get_contents('view.html');
+    $page = file_get_contents('search.html');
     $home= file_get_contents('Home.html'); 
     $storia=file_get_contents('storia.html'); 
     $dbAccess = new DBAccess();          
@@ -13,39 +13,39 @@
         $definition = '<div id="list">';
         foreach ($tabelle as $table){
             $find=false;
-            $definition .= '<h3>'.$table.'</h3>';
+            $definition .= '<h1>'.$table.'</h1>';
             $list = $dbAccess->getFile($table); 
             if($list) {
                 foreach($list as $cell){
-                    if(strpos($cell['Titolo'],$cerca)!=false){
+                    if(strpos(strtolower($cell['Titolo']),strtolower($cerca))!=false){
                         $find=true; 
-                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl>';
+                        $definition .= '<dl> <dt> <h2>'.$cell['Titolo'].'</h2> </dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl>';
                     } 
-                    else if(strpos($cell['Testo'],$cerca)!=false){
+                    else if(strpos(strtolower($cell['Testo']),strtolower($cerca))!=false){
                         $find=true;
-                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl>';
+                        $definition .= '<dl> <dt> <h2>'.$cell['Titolo'].'</h2> </dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl>';
                     }
                 } 
             }
             if($find==false){
-                $definition .= '<p>Nessuna ricorrenza trovata</p>'; 
+                $definition .= '<p class="dt">Nessuna ricorrenza trovata</p>'; 
             }
         } 
-        if(strpos($home,$cerca)!=false){
-            $definition .= '<h3>Home</h3>';
-            $definition .= '<p>'.substr($cell['Testo'],strpos($home,$cerca),100).'</p>';
+        if(strpos(strtolower($home),strtolower($cerca))!=false){
+            $definition .= '<h1>Home</h1>';
+            $definition .= '<p class="dt">...'.substr($cell['Testo'],strpos($home,$cerca),100).'...</p>';
         }
         else {
-            $definition .= '<h3>Home</h3>';
-            $definition .= '<p>Nessuna ricorrenza trovata</p>';
+            $definition .= '<h1>Home</h1>';
+            $definition .= '<p class="dt">Nessuna ricorrenza trovata</p>';
         }
-        if(strpos($storia,$cerca)!=false){
-            $definition .= '<h3>Storia</h3>';
-            $definition .= '<p>'.substr($cell['Testo'],strpos($home,$cerca),100).'</p>'; 
+        if(strpos(strtolower($storia),strtolower($cerca))!=false){
+            $definition .= '<h1>Storia</h1>';
+            $definition .= '<p class="dt">...'.substr($cell['Testo'],strpos($home,$cerca),150).'...</p>'; 
         }
         else {
-            $definition .= '<h3>Storia</h3>';
-            $definition .= '<p>Nessuna ricorrenza trovata</p>';
+            $definition .= '<h1>Storia</h1>';
+            $definition .= '<p class="dt">Nessuna ricorrenza trovata</p>';
         }
     } 
     $page=str_replace('<list />',$definition,$page);

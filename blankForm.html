@@ -10,16 +10,15 @@
     <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
 
-<body onload="placeholderSearch()">
+<body onload="placeholderSearch()" onscroll="removeHeader()">
     <div id="header">
-        <a href="./Home.php">
-            <img src="./db/img/logo-small.png" alt="">
-        </a>
+        <a class="hiddenHelp" href="#menu">Vai al menù</a>
+        <a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>
+        <a class="hiddenHelp" href="#content">Vai al contenuto</a>
+        <img id="image-header" src="./db/img/logo-small.png" alt="">
         <div id="menu"> 
-            <ul class="links">
-                <menu />
-            </ul> 
-        </div>
+            <menu />
+        </div>    
         <div id="search">
             <form name="ricerca" method="post" action="search.php">
                 <fieldset class="form">
@@ -48,7 +47,7 @@
     <div>
         <message />
     </div>
-    <div class="container-amministration margin-5">
+    <div id="content" class="container-amministration margin-5">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
             <fieldset class="align">
                 <div class="title-amministration">
