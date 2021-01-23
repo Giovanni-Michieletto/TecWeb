@@ -64,7 +64,6 @@
     }
 
 
-    $page = str_replace("<titlePage />",$table,$page);
     if($_SESSION['logged'] == false) {
         $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);  
     }
@@ -75,9 +74,11 @@
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
         $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
+        $page = str_replace("<titlePage />",'Seleziona '.$table,$page);
         $page = footer($page,$_SESSION['logged']);
     }
     else {
+        $page = str_replace("<titlePage />",$table,$page);
         $page = buildHTML($page,$table,$_SESSION['logged']);
     }
     echo $page;

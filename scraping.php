@@ -142,7 +142,7 @@ function footer($page,$session) {
 
 function menu($page,$table,$session) {
     $menu='';
-    $tabelle=['Home','Articoli','Associazioni','Commenti','Eventi','Storia'];
+    $tabelle=['Home','Articoli','Associazioni','Vangeli','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
             $menu .= '<li class="notlink">'.$li.'</li>';
