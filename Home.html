@@ -102,6 +102,13 @@
         </div>
         <a class="TornaSu" href="Home.php">Torna su</a>
     </div>
+    <div id="TornaSu" class="d-none">
+        <i class="fas fa-angle-double-up"></i>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
+    </script>
 </body>
 
 <div id="footer">

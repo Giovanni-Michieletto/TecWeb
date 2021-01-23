@@ -1,6 +1,6 @@
 
 function placeholderSearch() {
-   var input = document.getElementById("cerca");
+    var input = document.getElementById("cerca");
     input.className = "default-text";
     input.value = "Cosa cerchi?";
     input.onfocus = function() { 
@@ -17,10 +17,9 @@ function validate() {
     var validation = true;
 
     for(var i = 0; i < Id.length; i++) {
-
         var input = document.getElementById(Id[i]);
+        var parent = input.parentNode;
 
-        var parent = input.parentNode; 
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[1]); 
         } 
@@ -74,8 +73,8 @@ function validateAdmin() {
 
     if(!document.getElementById("Eventi").checked && !document.getElementById("Commenti").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
         var input = document.getElementById("js");
-
         var parent = input.parentNode; 
+        
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[1]);
         }
