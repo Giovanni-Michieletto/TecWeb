@@ -1,11 +1,9 @@
 <?php
+    include 'scraping.php';
+    require_once "dbConnection.php";
     session_start();
     $table = $_GET['table'];
-
     $page = file_get_contents('view.html');
-    
-    include 'scraping.php';
-
     if(empty($_SESSION['action'])) {
         $_SESSION['action'] = "";
     }
@@ -13,7 +11,6 @@
     if(empty($_SESSION['logged'])) {
         $_SESSION['logged'] = false;
     }
-
     $title=$table;
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
     $titleArray = ['Articolo','Associazione','Vangelo','Evento'];
@@ -22,20 +19,11 @@
             $table = $tableArray[$i];
         }
     }
-
-    /*______CREAZIONE CARD______*/
-
-    require_once "dbConnection.php";
-
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection(); 
-
     if($connection)  {
-
         $list = $dbAccess->getFile($table);  
-        
         $definition = "";
-
         if ($list) {        
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
@@ -71,8 +59,6 @@
     else {
         $definition = '<strong class="errori">Errore di collegamento al database</strong>';
     }
-
-
     if($_SESSION['logged'] == false) {
         $page =  str_replace("<percorso />",$_SESSION['action'].' '.$title,$page);  
     }
@@ -91,5 +77,4 @@
         $page = buildHTML($page,$table,$_SESSION['logged']);
     }
     echo $page;
-    
 ?>

@@ -1,26 +1,24 @@
 img {
     display: none;
 }
-
 #header {
     display: none;
 }
-
 #menu {
     display: none;
-    height: 0;
 }
-
 #search {
     display: none;
-    height: 0;
 }
-
+.TornaSu {
+    display: none;
+}
+.abort {
+    display: none;
+}
 #footer a {
     display: none;
 }
-
-/*____CARD____*/
 .card a {
     color: black;
     text-decoration: none;
@@ -31,9 +29,6 @@ img {
 .card-text {
     padding-left: 2em;
 }
-
-
-/*____SINGOLO____*/
 #text {
     padding-left: 1em;
 }

@@ -1,12 +1,9 @@
 <?php
     class DBAccess {
-
-        //Da inserire i valori
         private const HOST = "localhost";
         private const USERNAME = "root";
         private const PASSWORD = "";
         private const NAME = "convento";
-
         private $connection;
 
         //Funzione di connessione
@@ -18,11 +15,6 @@
             else {
                 return true;
             }
-        }
-
-        //Funzione che chiude il collegamento
-        public function closeDBConnection() {
-            //da fare
         }
 
         //Funzione generale di estrazione dati
@@ -62,8 +54,6 @@
             }
         }
 
-
-
         //Funzione modifica dati
         public function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
             $list = $this->getFile($table);
@@ -82,7 +72,6 @@
                 return false;
             }
         }
-
 
         //Funzione elimina dati
         public function deleteFile($table,$ID) {
@@ -103,9 +92,7 @@
             }
         }
 
-        //
-        // LOGIN
-        //
+        // Login
         public function getLogin() {
             $querySelect = 'SELECT * FROM Login';
             $queryResult = mysqli_query($this->connection, $querySelect);
@@ -122,7 +109,5 @@
                 return $cell;
             }
         }
-        
     }
-
 ?>

@@ -1,27 +1,15 @@
 <?php
+    include 'scraping.php';
+    require_once "dbConnection.php";
     session_start();
-    
     $cerca = $_POST['cerca'];
-
     $page = file_get_contents('view.html');
     $home= file_get_contents('Home.html'); 
     $storia=file_get_contents('storia.html'); 
-
-    include 'scraping.php';
-
-    $page = footer($page,$_SESSION['logged']);
-
-    /*______CREAZIONE CARD______*/
-
-    require_once "dbConnection.php";
-
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection();
-
     $tabelle=['Articoli','Associazioni','Vangeli','Eventi'];
-
     if($connection)  {
-
         $definition = '<div id="list">';
         foreach ($tabelle as $table){
             $find=false;
@@ -60,14 +48,9 @@
             $definition .= '<p>Nessuna ricorrenza trovata</p>';
         }
     } 
-
     $page=str_replace('<list />',$definition,$page);
-
     $page=buildHTML($page, "", $_SESSION['logged']);
     $page =  str_replace("<percorso />",'Pagina di ricerca',$page);
     $page =  str_replace("<titolo />",'Risultati ricerca',$page); 
-
-
     echo $page;
-    
 ?>

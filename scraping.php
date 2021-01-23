@@ -1,5 +1,4 @@
 <?php
-
 //INSERISCE TITOLO, ALT E TEST
 function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
     $page = str_replace('<message />', $message, $page);
@@ -8,7 +7,6 @@ function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
     $page = str_replace('name="Testo">', 'name="Testo" ' . $end . '>' .$Testo, $page);
     return $page;
 }
-
 
 //CONTROLLA DOPPIONI
 function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
@@ -31,7 +29,6 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     return array($error,$page);
 }
 
-
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $message = '<strong class="successo">Inserimento andato a buon fine!</strong>';
@@ -46,14 +43,13 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     return sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo);
 }
 
-
 //INSERISCE IMMAGINE IN CASO DI MODIFICA E POI CHIAMA SOSTITUTE()
 function updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     $page = str_replace('<errorImage />', '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>',$page);
     return sostitute($page,'','',$Titolo,$AltImmagine,$Testo);
 }
 
-//INSERISCE IMMAGINE IN CASO DI MODIFICA E POI CHIAMA SOSTITUTE()
+//INSERISCE IMMAGINE IN CASO DI ELIMINAZIONE E POI CHIAMA SOSTITUTE()
 function deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
@@ -62,6 +58,7 @@ function deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     return sostitute($page,$end,'',$Titolo,$AltImmagine,$Testo);
 }
 
+//COSTRUISCE FORM DOPO ELIMINAZIONE
 function deleted($page) {
     $page = str_replace('<action />','Admin.php',$page);
     $page = str_replace('name="submit"','name="admin"',$page);
@@ -75,10 +72,10 @@ function deleted($page) {
     $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
     $page = str_replace('<label for="Testo">Testo: </label>','',$page);
     $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
-
     return $page;
 }
 
+//COMPILA I FORM DATO IL LORO ID
 function compile($page,$table,$ID,$session) {
     require_once "dbConnection.php"; 
     $dbAccess = new DBAccess();
@@ -105,7 +102,7 @@ function compile($page,$table,$ID,$session) {
     return $page;
 }   
 
-
+//COSTRUISCE I FORM
 function buildForm($page,$title,$ID,$session) {
     $table = $title;
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
@@ -132,11 +129,10 @@ function buildForm($page,$title,$ID,$session) {
         $page = str_replace('<buttonName />','Inserisci',$page);
         $page = str_replace('<action />','upload.php?table='.$title,$page);
     }
-    
     return $page;
 }
 
-
+//COSTRUISCE IL FOOTER
 function footer($page,$session) {
     if($session==true) {
         $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
@@ -147,7 +143,7 @@ function footer($page,$session) {
     return $page;
 }
 
-
+//COSTRUISCE IL MENU
 function menu($page,$table,$session) {
     $menu='';
     $tabelle=['Home','Articoli','Associazioni','Vangeli','Eventi','Storia'];
@@ -174,11 +170,10 @@ function menu($page,$table,$session) {
     return $page;
 }
 
-
+//USATA PER CHIAMARE MENU E FOOTER
 function buildHTML($page,$table,$session) {
     $page = menu($page,$table,$session);
     $page = footer($page,$session);
     return $page;
 }
-
 ?>
