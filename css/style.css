@@ -64,26 +64,30 @@ a {
 }
 
 #header {
-	height: 18vh;
+	/*height: 18vh;*/
 	background-image: url("../db/img/header.png");
 	background-position: center top;
 	background-size: cover;
 	width: 100%;
-	min-height: 5vh;
+	min-height: 3vh;
 }
-
 #header img {
-	height: 17vh;
-	/* min-height: 8rem; */
+	padding: 1vh 0 0 1vh;
+	height: 15vh;
 	margin-left: 1em;
+}
+#menu {
+	margin-top: 3vh;
+	padding: 0.5em;
 }
 
 #starter{
-   margin-top: 1em;
+	margin-top: 1em;
 }
 
 .default-text {
 	opacity: 0.5;
+	background-color: white;
 }
 
 /* =================== */
@@ -167,12 +171,12 @@ a {
 /* ======================= */
 /* =======PERCORSO======== */
 /* ======================= */
-.container-percorso-search{
+#search{
 	background-color: rgb(226, 226, 226);
-	display: flex;
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0.5em;
 }
 fieldset.form{
 	align-items: flex-end;
@@ -183,15 +187,17 @@ fieldset.form{
 	padding: 0;
 }
 input[type="text"]#cerca{
+	background-color: white;
 	margin: 0;
 	padding: 0.2em;
+	border: 1px solid black;
 }
 input[type="submit"].cerca{
 	width: 8em;
 	height: 1.9em;
 	margin: 0 1.2em;
 	background-color: white;
-	border: 1px solid white;
+	border: 1px solid black;
 	border-style: outset;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -199,15 +205,11 @@ input[type="submit"].cerca{
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 }
-/* #search{
-	align-items: flex-end;
-} */
 #percorso{
 	width: 30%;
 	height: 3em;
 	display: flex;
 	align-items: center;
-	
 	color: rgb(104, 5, 5);
 }
 #space {
