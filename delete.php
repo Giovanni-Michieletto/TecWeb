@@ -28,7 +28,7 @@
     if($connection) {
         $insertion = $dbAccess->deleteFile($table,$ID);
         if($insertion == true) {
-            $message = 'Eliminazione andata a buon fine';
+            $message = '<strong class="successo">Eliminazione andata a buon fine!</strong>';
             $page = deleted($page);
             $page = buildHTML($page,'',$_SESSION['logged']);
             $_SESSION['action'] = '';
