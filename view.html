@@ -16,7 +16,7 @@
   <div id="header">
       <img src="./db/img/logo-small.png" alt="">
      <div id="menu"> 
-         <ul class="links">
+         <ul class="links" title="Menù" tabindex="0">
             <menu />
          </ul> 
       </div>
@@ -25,7 +25,7 @@
             <fieldset class="form">
                   <div class="textbutton">
                      <input type="text" id="cerca" name="cerca" title="Cosa cerchi?"> 
-                     <input type="submit" class="cerca" name="submit" value="Cerca">
+                     <input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">
                   </div>
             </fieldset>
          </form>  
@@ -33,7 +33,7 @@
    </div>   
    <div id="percorso">
       <span id="space">
-         <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
+         <p tabindex="0">Ti trovi in: <span xml:lang="en"><percorso /></span></p>
       </span>
    </div>
 
@@ -48,7 +48,7 @@
             <div class="deco">
                <img class="deco" src="./db/img/deco.svg" alt="">
             </div>
-            <h2>      
+            <h2 tabindex="0">      
                <titlePage />
             </h2>
          </div>
@@ -61,7 +61,7 @@
          <div class="card-container">
             <list />
          </div>
-         
+         <a class="TornaSu" href="view.php">Torna su</a>
          <!-- <a class="TornaSu" href="<tornasu />">Torna su</a> -->
          <div id="TornaSu" class="d-none">
             <i class="fas fa-angle-double-up"></i>
@@ -82,7 +82,7 @@
 <div id="footer">
    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
    <div class="container-text-footer margin-5">
-      <p>
+      <p tabindex="0">
          Contatti utili
       </p>
       <ul>
