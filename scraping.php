@@ -13,19 +13,19 @@ function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
 //CONTROLLA DOPPIONI
 function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     if($Titolo == $cell['Titolo']) {
-        $page = str_replace('<errorTitle />','<p style="color:red;">Titolo gia esistente</p>', $page);
+        $page = str_replace('<errorTitle />','<strong class="errori">Titolo già esistente!</strong>', $page);
         $error = false;
     }
     if($imgContent == $cell['Immagine']) {
-        $page = str_replace('<errorImage />', '<p style="color:red;">Immagine gia esistente</p>', $page);
+        $page = str_replace('<errorImage />', '<strong class="errori">Immagine già esistente!</strong>', $page);
         $error = false;
     }
     if($AltImmagine == $cell['AltImmagine']) {
-        $page = str_replace('<errorAlt />','<p style="color:red;">AltImmagine gia esistente</p>', $page);
+        $page = str_replace('<errorAlt />','<strong class="errori">AltImmagine già esistente!</strong>', $page);
         $error = false;
     }
     if($Testo == $cell['Testo']) {
-        $page = str_replace('<errorText />','<p style="color:red;">Testo gia esistente</p>', $page);
+        $page = str_replace('<errorText />','<strong class="errori">Testo già esistente!</strong>', $page);
         $error = false;
     }
     return array($error,$page);
@@ -62,6 +62,22 @@ function deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     return sostitute($page,$end,'',$Titolo,$AltImmagine,$Testo);
 }
 
+function deleted($page) {
+    $page = str_replace('<action />','Admin.php',$page);
+    $page = str_replace('name="submit"','name="admin"',$page);
+    $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
+    $page = str_replace('<img src="./db/img/deco.svg" alt="">','',$page);
+    $page = str_replace('<label for="Titolo">Titolo: </label>','',$page);
+    $page = str_replace('<input type="text" id="Titolo" name="Titolo" />','',$page);
+    $page = str_replace('<label for="Immagine">Immagine: </label>','',$page);
+    $page = str_replace('<input type="file" id="Immagine" accept="image/*" name="Immagine"/>','',$page);
+    $page = str_replace('<label for="AltImmagine"><abbr title="AltImmagine">Alt Immagine:</abbr></label>','',$page);
+    $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
+    $page = str_replace('<label for="Testo">Testo: </label>','',$page);
+    $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
+
+    return $page;
+}
 
 function compile($page,$table,$ID,$session) {
     require_once "dbConnection.php"; 
@@ -69,12 +85,14 @@ function compile($page,$table,$ID,$session) {
     $connection = $dbAccess->openDBConnection();            
     if($connection) {
         $list = $dbAccess->getFile($table); 
-        foreach ($list as $cell) {
-            if($ID == $cell['ID']) {
-                $Titolo = $cell['Titolo'];
-                $Immagine = $cell['Immagine'];
-                $AltImmagine = $cell['AltImmagine'];
-                $Testo = $cell['Testo'];
+        if($list) {
+            foreach ($list as $cell) {
+                if($ID == $cell['ID']) {
+                    $Titolo = $cell['Titolo'];
+                    $Immagine = $cell['Immagine'];
+                    $AltImmagine = $cell['AltImmagine'];
+                    $Testo = $cell['Testo'];
+                }
             }
         }
         if($session=="Modifica") {
@@ -116,7 +134,7 @@ function footer($page,$session) {
         $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
     }
     else {
-        $page = str_replace('<admin />','<a href="login.html">Login</a>',$page);
+        $page = str_replace('<admin />','<a href="login.html">Login Amministratore</a>',$page);
     }
     return $page;
 }

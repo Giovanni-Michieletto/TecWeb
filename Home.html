@@ -5,37 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"> -->
         <!-- my css -->
-        <link rel="stylesheet" href="./css/style.css">
-        <!-- <link rel="stylesheet" href="./css/home.css"> -->
+        <link rel="stylesheet" href="./css/style.css" media="screen">
+        <link rel="stylesheet" href="./css/stampa.css" media="print"/>
         
+        <script type="text/javascript" src="myScript.js"></script>
+  
         <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
+
 
 </head>
 
-<body>
+<body onload="placeholderSearch()">
         
     <!-- <div id="container"> -->
 
         <!-- === HEADER === -->
         <div id="header">
-            <a href="./conventoPHP.php">
+            <a href="./Home.php">
                 <img src="./db/img/logo-small.png" alt="">
             </a>
         </div>        
         <div class="container-percorso-search">
 
-            <!-- === PERCORSO === -->
-            <div id="percorso">
-                <span id="space">
-                    <p>Ti trovi in: <span xml:lang="en">Home</span></p>
-                </span>
-            </div>
-            
-            <div id="search">
-                <form name=”ricerca” method="POST" action="search.php" >
-                    <fieldset class="form">
-                        <!-- <div class="textbutton"> -->
-                            <input type="text" id="cerca" name="cerca" value="Cosa cerchi?"> 
+
+        <!-- === PERCORSO === -->
+        <div id="percorso">
+            <span id="space">
+                <p>Ti trovi in: <span xml:lang="en">Home</span></p>
+            </span>
+        </div>
+
+        <div id="search">
+            <form name=”ricerca” method="POST" action="search.php" >
+                <fieldset class="form">
+                    <div class="textbutton">
+                            <input type="text" id="cerca" name="cerca" > 
                             <input type="submit" class="cerca" name="submit" value="Cerca">
                         <!-- </div> -->
                     </fieldset>
@@ -65,7 +69,7 @@
                     <h1>S.Maria del Cengio - Comunità dei Servi di Maria</h1>
                 </div>
             </div>
-                
+        </div>
             
     <div class="contenitore-body">
         <div class="container-lista">
@@ -101,6 +105,7 @@
                 </div>
             </div>
         </div>
+        <a class="TornaSu" href="Home.php">Torna su</a>
         <div class="ultimo-container-lista">
             <div class="title">
                 <img src="./db/img/deco.svg" alt="">
@@ -117,23 +122,14 @@
                 </ul>
             </div>
         </div>
-
+        <a class="TornaSu" href="Home.php">Torna su</a>
     </div>
 
-  
-    
-
-    
     <!-- === FOOTER === -->
 
-
-        </div>
-
-  
-   
-        
-
 </body>
+
+
  <!-- === FOOTER === -->
 <div id="footer">
 

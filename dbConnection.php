@@ -66,6 +66,13 @@
 
         //Funzione modifica dati
         public function updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID) {
+            $list = $this->getFile($table);
+            foreach ($list as $cell) {
+                if($ID == $cell['ID']) {
+                    $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('./','/TecWeb/',$cell['Immagine']);
+                }
+            }
+            unlink($directory);
             $queryInsert = "UPDATE $table SET Titolo=\"$Titolo\", Immagine=\"$Immagine\", AltImmagine=\"$AltImmagine\", Testo=\"$Testo\" WHERE $table . ID=\"$ID\"";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {
@@ -82,7 +89,7 @@
             $list = $this->getFile($table);
             foreach ($list as $cell) {
                 if($ID == $cell['ID']) {
-                    $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('.','/TecWeb',$cell['Immagine']);
+                    $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('./','/TecWeb/',$cell['Immagine']);
                 }
             }
             unlink($directory);
@@ -115,69 +122,6 @@
                 return $cell;
             }
         }
-
-
-
-
-        /*
-        //
-        //ARTICOLI
-        //
-        public function getArticles() {
-            $table = "Articoli";
-            return $this->getFile($table);
-        }
-        public function insertArticle($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table = "Articoli(Titolo,Immagine,AltImmagine,Testo)";
-            $value = "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-        
-        
-        //
-        // Eventi
-        //
-        public function getNews() {
-            $table = "Eventi";
-            return $this->getFile($table);
-        }
-        public function insertNews($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="Eventi(Titolo,Immagine,AltImmagine,Testo)";
-            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-        //
-        // COMMENTI
-        //
-        public function getComments() {
-            $table = "Commenti";
-            return $this->getFile($table);
-        }
-        public function insertComments($Titolo,$Immagine,$AltImmagine,$Testo) {
-            $table ="Commenti(Titolo,Immagine,AltImmagine,Testo)";
-            $value ="(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-
-
-        //=====================
-        //=====ASSOCIAZIONI====
-        //=====================
-        public function getAssociation(){
-            $table = "Associazioni";
-            return $this->getFile($table);
-        }
-        public function insertAssociation($Titolo,$Immagine,$AltImmagine,$Testo){
-            $table = "Associazioni(Titolo,Immagine,AltImmagine,Testo)";
-            $value= "(\"$Titolo\",\"$Immagine\",\"$AltImmagine\",\"$Testo\")";
-            return $this->insertFile($table,$value);
-        }
-        */
-
-
-
         
     }
 

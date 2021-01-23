@@ -4,8 +4,11 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/stampa.css" media="print"/>
       
-      <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
+      <script type="text/javascript" src="myScript.js"></script>
+
+      <title>Convento S. Maria del Cengio</title>
    </head>
 
 <body>
@@ -30,6 +33,8 @@
             <p>Ti trovi in: <span xml:lang="en">Home</span></p>
          </span>
       </div>
+
+      <!-- === CERCA === -->
       <div id="cerca">
          <label for="s" class="hide" >Cerca sul sito</label>
          <input type="search" id="s"  name="s" placeholder="Cosa cerchi?" src="../db/img/lente.png">
@@ -42,14 +47,14 @@
          <div class="container-home-amministratore">
 
             <div class="bordo">
-               <form name="form" id="form" method="post" action="">
+               <form name="form" id="form" method="post" action="redirect.php" onsubmit="return validateAdmin()">
                   <fieldset>
                      <div class="title-amministration">
                         <img src="./db/img/deco.svg" alt="">
                         <label for="Titolo">Scegli la sezione: </label>
                      </div>
                      <div>
-                        <span>
+                        <span id="js">
                         <input type="radio" id="Eventi" name="table" value="Eventi">
                            <label for="Eventi">Eventi</label><br>
                         <input type="radio" id="Commenti" name="table" value="Commenti">
@@ -60,7 +65,6 @@
                            <label for="Associazioni">Associazioni</label><br>
                         </span>
                      </div>
-                     <errorpage />
                   </fieldset> 
                   <fieldset>
                      <div class="title-amministration">
@@ -69,19 +73,15 @@
                      </div>
                      <div>
                         <span>
-                           <input type="radio" id="Nuovo" name="action" value="Nuovo">
-                              <label for="Nuovo">Nuovo</label><br>
-                           <input type="radio" id="Modifica" name="action" value="Modifica">
-                              <label for="Modifica">Modifica</label><br>
-                           <input type="radio" id="Elimina" name="action" value="Elimina">
-                              <label for="Elimina">Elimina</label><br>
+                           <button type="submit" name="Nuovo">Nuovo</button>
+                              
+                           <button type="submit" name="Modifica">Modifica</button>
+                              
+                           <button type="submit" name="Elimina">Elimina</button>
+                              
                         </span>
                      </div>
-                     <erroraction />
                   </fieldset> 
-                  <fieldset class="button-aggiungi">
-                     <button type="submit" name="submit" onsubmit="Admin.php">Vai</button>
-                  </fieldset>
                </form>
             </div>
          </div>

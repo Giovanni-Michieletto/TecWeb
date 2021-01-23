@@ -82,6 +82,21 @@ a {
    margin-top: 1em;
 }
 
+.default-text {
+	opacity: 0.5;
+}
+
+/* =================== */
+/* =======ERRORI======== */
+/* =================== */
+
+.errori {
+	color: #94080b;
+	float: left;
+	font-size: 1.5em;
+}
+
+
 /* =================== */
 /* =======MENU======== */
 /* =================== */
@@ -266,13 +281,31 @@ ul li{
 /* ============================ */
 /* =========STORIA============= */
 /* ============================ */
-dt{
+.contenutostoria h1{
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	font-size: 2.3em;
+}
+
+.contenutostoria dd {
+	line-height: 1.5em;
+	font-size: 1.1em;
+	text-align: justify;
+}
+
+.contenutostoria #introduzione {
+	text-align: center;
+	font-style: italic;
+}
+
+.contenutostoria dt{
    width: 100%;
    height: auto;
 }
 
-.contenutostoria h4{
-   font-size: 3em;
+.contenutostoria h2{
+   font-size: 1.8em;
 }
 
 /* ============================ */

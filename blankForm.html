@@ -52,12 +52,14 @@
             <titlePage />
         </h1>
     </div>
+    <div class="abort">
+        <abort />
+    </div>
+    
     <div class="container-amministration margin-10">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
-            <div id="conferma">
-                <p>
-                    <message />
-                </p>
+            <div>
+                <message />
             </div>
 
             <!-- TITOLO -->
@@ -68,7 +70,7 @@
                 </div>
                 <div class="text-box">
                     <span>
-                        <input type="text" id="Titolo" name="Titolo" placeholder="Titolo" />
+                        <input type="text" id="Titolo" name="Titolo" />
                         <errorTitle />
                     </span>
                 </div>
@@ -91,7 +93,7 @@
                 </div>
                 <div class="altimmagine-box">
                     <span>
-                        <input type="text" name="AltImmagine" id="AltImmagine" placeholder="Descizione Immagine"/>
+                        <input type="text" name="AltImmagine" id="AltImmagine" />
                         <errorAlt />
                     </span>
                 </div>
@@ -105,7 +107,7 @@
                 </div>
                 <div class="text-box">
                     <span>
-                        <textarea id="Testo" rows="30" cols="100" placeholder="Testo" name="Testo"></textarea>
+                        <textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>
                         <errorText />
                     </span>
                 </div>

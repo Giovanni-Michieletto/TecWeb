@@ -8,14 +8,18 @@
 
     //PRENDO VARIABILI PASSATE
     $table = $_GET['table'];
-    if($_GET['ID']) {
+    if(!empty($_GET['ID'])) {
         $ID = $_GET['ID'];
+    }
+    else {
+        $ID = "";
     }
 
     $page = file_get_contents('blankForm.html');
 
     $page = buildHTML($page,'',$_SESSION['logged']);
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
+    $page =  str_replace("<percorso />",$_SESSION['action'].' '.$table,$page);
 
 
     if(isset($_POST['admin'])){
@@ -42,6 +46,7 @@
         $list = $dbAccess->getFile($table);
             
         //SETUP IMMAGINE
+        $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
         $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
         $dir = './upload/' . $table . '/';
         $ImmagineUpload = $directory . $file;
@@ -49,18 +54,20 @@
 
         //VERIFICA DOPPIONI
         $error = true;
-        foreach ($list as $cell) {
-            if($ID != $cell['ID']) {
-                $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
-                $error = $array[0];
-                $page = $array[1];    
+        if($list) {
+            foreach ($list as $cell) {
+                if($ID != $cell['ID']) {
+                    $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
+                    $error = $array[0];
+                    $page = $array[1];    
+                }
             }
         }
             
         if($error == true) {
             move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
-
-            if($_SESSION['action']=="modifica") {
+ 
+            if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
             else {
@@ -69,15 +76,16 @@
             
             if($insertion == true) {
                 $page = insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table);
+                $_SESSION['action'] = '';
                 }
             else {
-                $message = 'Errore nell\'inserimento';
+                $message = '<strong class="errori">Errore nell\'inserimento</strong>';
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
         }
         else {
-            $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
+            $page = sostitute($page,'', '',$Titolo,$AltImmagine,$Testo);
             $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
     }

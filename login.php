@@ -28,13 +28,13 @@
                 header('Location: Admin.php',TRUE);
             }
             else {
-                $message = '<div><p style="color:red;">Username o password non corretti</p></div>';
+                $message = '<div><strong class="errori">Username o password non corretti!</strong></div>';
                 $page = str_replace('<message />', $message, $page);
                 echo $page;
             }
         }
         else {
-            $message = '<div><p style="color:red;">Errore di connessione al database</p></div>';
+            $message = '<div><strong class="errori">Errore di connessione al database</strong></div>';
             $page = str_replace('<message />', $message, $page);
             echo $page;
         }
