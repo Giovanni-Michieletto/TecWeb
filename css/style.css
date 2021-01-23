@@ -501,8 +501,12 @@ input[type=radio]{
 	margin-bottom: 1em;
 }
 button[type=submit]{
-	width: 8em;
-	height: 1.9em;
+	/* width: 8em;
+	height: 1.9em; */
+	width: 10em;
+	height: 2em;
+	font-size: 1.2em;
+	letter-spacing: 0.1em;
 	margin: 0 1.2em;
 	background-color: burlywood;
 	border: 1px solid white;
@@ -683,12 +687,9 @@ textarea#Link{
 	text-align: center;
 	/* justify-content: center; */
 }
-.button-conferma button[type=submit]{
-	width: 10em;
-	height: 2em;
-	font-size: 1.2em;
-	letter-spacing: 0.1em;
-}
+/* .button-conferma button[type=submit]{
+	
+} */
 .aggiungi{
 	padding: 0.5rem 5rem;
    background-color: #c65852;
