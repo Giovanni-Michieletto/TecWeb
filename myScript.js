@@ -39,6 +39,7 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showError(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "1");
                 validation = false;
             }
         }
@@ -47,6 +48,7 @@ function validate() {
             if(input.files.length == 0) {
                 var errormsg = "Inserire un'immagine!";
                 showError(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "2");
                 validation = false;
             }
         }
@@ -55,6 +57,7 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showError(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "3");
                 validation = false;
             }
         }
@@ -63,9 +66,23 @@ function validate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showError(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "4");
                 validation =  false;
             }
         }
+    }
+
+    if(validation==false) {
+        var input = document.getElementById("Bottone");
+        var parent = input.parentNode;
+
+        if(parent.children.length == 2) { 
+            parent.removeChild(parent.children[1]); 
+        }
+
+        var errormsg = "Inserimento errato!";
+        showError(input, errormsg);
+        return validation;
     }
 
     return validation;
