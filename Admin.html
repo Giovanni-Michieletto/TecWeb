@@ -30,49 +30,55 @@
             </fieldset>
          </form>  
       </div>
-   </div>   
-   <div id="percorso">
+     </div> 
+  <div id="percorso">
       <span id="space">
          <p>Ti trovi in: <span xml:lang="en">Admin</span></p>
       </span>
    </div>
-   <div class="spacer-top"></div>
-   <div id="starter" class="container margin-5">
-      <div class="container-home-amministratore">
-         <div class="bordo">
-            <form name="form" id="form" method="post" action="redirect.php" onsubmit="return validateAdmin()">
-               <fieldset>
-                  <div class="title-amministration">
-                     <img src="./db/img/deco.svg" alt="">
-                     <label for="Titolo">Scegli la sezione: </label>
-                  </div>
-                  <div>
-                     <span id="js">
-                     <input type="radio" id="Evento" name="table" value="Evento">
-                        <label for="Evento">Evento</label><br>
-                     <input type="radio" id="Vangelo" name="table" value="Vangelo">
-                        <label for="Vangelo">Vangelo</label><br>
-                     <input type="radio" id="Articolo" name="table" value="Articolo">
-                        <label for="Articolo">Articolo</label><br>
-                     <input type="radio" id="Associazione" name="table" value="Associazione">
-                        <label for="Associazione">Associazione</label><br>
-                     </span>
-                  </div>
-               </fieldset> 
-               <fieldset>
-                  <div class="title-amministration">
-                     <img src="./db/img/deco.svg" alt="">
-                     <label for="Titolo">Cosa vuoi fare: </label>
-                  </div>
-                  <div>
-                     <span>
-                        <button type="submit" name="Nuovo">Nuovo</button>
-                        <button type="submit" name="Modifica">Modifica</button>
-                        <button type="submit" name="Elimina">Elimina</button>
-                     </span>
-                  </div>
-               </fieldset> 
-            </form>
+      <!-- ====ADMIN==== -->
+
+      <div id="starter" class="container margin-5">
+         <div class="container-home-amministratore">
+
+            <div class="bordo">
+               <form name="form" id="form" method="post" action="redirect.php" onsubmit="return validateAdmin()">
+                  <fieldset class="admin">
+                     <div id="admin-home" class="title-amministration">
+                        <img src="./db/img/deco.svg" alt="">
+                        <label for="Titolo">Scegli la sezione: </label>
+                     </div>
+                     <div class="radio">
+                        <span id="js">
+                        <input type="radio" id="Eventi" name="table" value="Eventi">
+                           <label for="Eventi">Eventi</label><br>
+                        <input type="radio" id="Commenti" name="table" value="Commenti">
+                           <label for="Commenti">Commenti</label><br>
+                        <input type="radio" id="Articoli" name="table" value="Articoli">
+                           <label for="Articoli">Articoli</label><br>
+                        <input type="radio" id="Associazioni" name="table" value="Associazioni">
+                           <label for="Associazioni">Associazioni</label><br>
+                        </span>
+                     </div>
+                  </fieldset> 
+                  <fieldset class="admin">
+                     <div id="admin-home" class="title-amministration">
+                        <img src="./db/img/deco.svg" alt="">
+                        <label for="Titolo">Cosa vuoi fare: </label>
+                     </div>
+                     <div class="option-admin">
+                        <!-- <span> -->
+                           <button type="submit" name="Nuovo">Nuovo</button>
+                              
+                           <button type="submit" name="Modifica">Modifica</button>
+                              
+                           <button type="submit" name="Elimina">Elimina</button>
+                              
+                        <!-- </span>s -->
+                     </div>
+                  </fieldset> 
+               </form>
+            </div>
          </div>
       </div>
    </div>

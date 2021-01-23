@@ -1,26 +1,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="./css/style.css" media="screen">
-   <link rel="stylesheet" href="./css/stampa.css" media="print"/>
-   <script type="text/javascript" src="myScript.js"></script>
-   <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
-</head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./css/style.css" media="screen">
+      <link rel="stylesheet" href="./css/stampa.css" media="print"/>
 
-<body onload="placeholderSearch()">
-   <div id="header">
+      <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
+
+   </head>
+
+<body onload="placeholderSearch()"> 
+  <div id="header">
       <a href="./Home.php">
          <img src="./db/img/logo-small.png" alt="">
       </a>
-      <div id="menu"> 
+     <div id="menu"> 
          <ul class="links">
             <menu />
          </ul> 
       </div>
-      <div id="search">
+    <div id="search">
          <form name="ricerca" method="post" action="search.php">
             <fieldset class="form">
                   <div class="textbutton">
@@ -36,31 +38,47 @@
          <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
       </span>
    </div>
-   <div class="spacer-top"></div>
-   <div id="content" class="margin-5">
-      <div class="title">
-         <div class="deco">
-            <img class="deco" src="./db/img/deco.svg" alt="">
+
+     
+
+     
+
+      <div id="content" class="margin-5">
+
+         <!-- === TITOLO === -->
+         <div class="title">
+            <div class="deco">
+               <img class="deco" src="./db/img/deco.svg" alt="">
+            </div>
+            <h2>      
+               <titlePage />
+            </h2>
          </div>
-         <h2>      
-            <titlePage />
-         </h2>
-      </div>
-      <div class="abort">
-         <abort />
-      </div>
-      <div class="card-container">
-         <list />
-      </div>
-      <a class="TornaSu" href="<tornasu />">Torna su</a>
-   </div>
-   <div id="TornaSu" class="d-none">
-      <i class="fas fa-angle-double-up"></i>
-   </div>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script>
-      $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
-   </script>
+
+         <div class="abort">
+            <abort />
+         </div>
+         
+         <!-- === CARD === -->
+         <div class="card-container">
+            <list />
+         </div>
+         
+         <!-- <a class="TornaSu" href="<tornasu />">Torna su</a> -->
+         <div id="TornaSu" class="d-none">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#TornaSu').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        })
+
+      
+    </script>
+
+
 </body>
 
 <div id="footer">
