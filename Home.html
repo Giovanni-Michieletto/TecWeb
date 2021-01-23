@@ -3,7 +3,8 @@
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
         <!-- my css -->
         <link rel="stylesheet" href="./css/style.css" media="screen">
         <link rel="stylesheet" href="./css/stampa.css" media="print"/>
@@ -38,7 +39,7 @@
         <div id="search">
             <form name=”ricerca” method="POST" action="search.php" >
                 <fieldset class="form">
-                    <div class="textbutton">
+                    <!-- <div class="textbutton"> -->
                             <input type="text" id="cerca" name="cerca" > 
                             <input type="submit" class="cerca" name="submit" value="Cerca">
                         <!-- </div> -->
@@ -122,10 +123,19 @@
                 </ul>
             </div>
         </div>
-        <a class="TornaSu" href="Home.php">Torna su</a>
+        <!-- <a id="TornaSu" class="d-none" href="Home.php">^</a> -->
+         <div id="TornaSu" class="d-none">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#TornaSu').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        })
 
-    <!-- === FOOTER === -->
+      
+    </script>
 
 </body>
 

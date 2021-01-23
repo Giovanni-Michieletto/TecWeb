@@ -326,7 +326,7 @@ ul li{
 	min-width: 230px;
 	margin-bottom: 2rem;
 	height: 18em;
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 	border-radius: 5px;
 	overflow: hidden;
 	-webkit-border-radius: 5px;
@@ -375,6 +375,7 @@ ul li{
 	min-height: 100%;
 	min-width: 100%;
 	object-fit: cover;
+	padding: 0 0.2em
 }
 .card-text {
 	/* background-color: rgba(198, 88, 82, 0.1); */
@@ -406,6 +407,7 @@ ul li{
 	display: flex;
 	flex-direction: column;
 	margin-top: 2em;
+	margin-bottom: 2em;
 	border: 1px solid #ccc;
 	padding: 1.5em;
 	border-radius: 5%;
@@ -730,6 +732,42 @@ textarea#Link{
 	padding: 1em;
 }
 
+#TornaSu {
+	background-color: rgba(198, 88, 82, 0.6);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: white; 
+	line-height: 1.5rem;
+	cursor: pointer;
+}
+/* 
+#header.scrolled {
+	background: rgba(221, 202, 201, 0.95);
+	transition: background 500ms;
+	-webkit-transition: background 1500ms;
+	-moz-transition: background 500ms;
+	-ms-transition: background 500ms;
+	-o-transition: background 500ms;
+} */
+/* .d-none {
+	display: none;
+}
+
+#sentieri-button-scroll.d-none {
+	display: none;
+} */
 /* ============================ */
 /* ============================ */
 /* =========MEDIA-QUERY========*/
