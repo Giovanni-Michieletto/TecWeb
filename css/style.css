@@ -376,24 +376,25 @@ dt{
 	border: 1px solid #ccc;
 	padding: 1.5em;
 	border-radius: 5%;
+	background-color: rgb(226, 226, 226);
 }
 
 #title{
 	display: flex;
 	flex-direction: column;
-	margin-top: 2vh;
 }
 #image{
 	width: 100%;
-    height: auto;
+    height: 20em;
     justify-content: center;
+    vertical-align: middle;
     display: flex;
     margin: 4% 0%;
-  
+    align-items: center;
 }
 #image img{
 	height: 100%;
-	width: 100%;
+	width: 58%;
 	/* min-height: 1vh; */
 	height: 100%;
 	/* border-radius: 50%;
