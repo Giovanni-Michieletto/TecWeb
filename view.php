@@ -10,6 +10,10 @@
         $_SESSION['action'] = "";
     }
 
+    if(empty($_SESSION['logged'])) {
+        $_SESSION['logged'] = false;
+    }
+
     /*______CREAZIONE CARD______*/
 
     require_once "dbConnection.php";

@@ -87,13 +87,19 @@ a {
 }
 
 /* =================== */
-/* =======ERRORI======== */
+/* ==ERRORI/SUCCESSO== */
 /* =================== */
 
 .errori {
-	color: #94080b;
+	color: #ff0000;
 	float: left;
 	font-size: 1.5em;
+}
+
+.successo {
+	color: #00d221;
+	float right;
+	font-size: 2em;
 }
 
 
