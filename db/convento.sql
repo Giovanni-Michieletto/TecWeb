@@ -82,7 +82,7 @@ INSERT INTO Associazioni(Titolo, Immagine, AltImmagine, Testo) VALUES
 ("Catechismo", "./upload/Associazioni/catechismo.jpg", "foto del gruppo di catechismo", "Il percorso di catechesi segue le indicazioni diocesane che ci apprestiamo a ripercorrere l’antico ordine dei sacramenti. La cresima torna ad essere la conferma che ognuno dà alla scelta di seguire il Cristo, e la comunione il punto di arrivo del cammino di iniziazione che ci unisce a Gesù Cristo per divenire ogni giorno, domenica dopo domenica,  sempre più cristiani.
 Le tappe di questi due sacramenti non sono più legate al percorso scolastico e all’età anagrafica, ma prevedono un percorso di tre anni, da fare insieme alle famiglie, che ne condividano il cammino, a qualsiasi età si decida di iniziare!
 Quindi concretamente l’Unità Pastoralepropone a chi vuole completare il cammino per diventare cristiani un percorso in 4 anni e poi 4 (2+2) di accompagnamento alla vita cristiana ( detta anche Mistagogia termine che si potrebbe tradurre in: Vivere i sacramenti o con i sacramenti ricevuti la vita quotidiana).
-I sacramenti sono all’interno del percorso dei tre anni e necessitano del cammino completo per essere quello che sono.. cioè tappe e momenti speciali di accompagnamento alla vita della fede. Da soli slegati al percorso non hanno alcun senso. E’, per fare un esempio concreto , come se portassimo un ciclista in macchina a tagliare i traguardi delle tappe  percorrendo solo gli ultimi 100 metri di ogni tappa.. con la pretesa che sia un ciclista!");
+I sacramenti sono all’interno del percorso dei tre anni e necessitano del cammino completo per essere quello che sono, cioè tappe e momenti speciali di accompagnamento alla vita della fede. Da soli slegati al percorso non hanno alcun senso. E’, per fare un esempio concreto , come se portassimo un ciclista in macchina a tagliare i traguardi delle tappe  percorrendo solo gli ultimi 100 metri di ogni tappa, con la pretesa che sia un ciclista!");
 
 INSERT INTO Associazioni(Titolo, Immagine, AltImmagine, Testo) VALUES 
 ("Grest", "./upload/Associazioni/grest.jpg", "foto del grest", "La parola Grest significa, letteralmente, “GRuppo ESTivo” ed è la “versione” estiva dell’oratorio dedicata ai più piccoli. 
@@ -92,7 +92,7 @@ Tutto questo però non sarebbe possibile se non ci fossero gli animatori!
 Il gruppo animatori è composto da ragazzi, dai 14 in su, che si mettono al servizio dei più piccoli non solo per le due settimane in cui si svolge il Grest ma spendendosi nei mesi e settimane precedenti per ideare, creare e organizzare i giochi e le varie attività di animazione.
 La preparazione del Grest è per gli animatori un momento di crescita personale, in cui mettersi in gioco e tirar fuori i propri talenti per poi donarli agli altri.
 Ogni anno il Grest ha un tema diverso che da l’impronta ai giochi, alle canzoni (bans) e a tutte le attività di animazione e che guida i bambini alla scoperta della Parola di Dio rendendola concreta a vicina alle esperienze che facciamo insieme al Grest.
-Quest’anno il Grest 2016 si svolgerà dal 12 al 25 giugno. Inizierà con la partecipazione di animatori, bambini e genitori alla messa domenicale e proseguirà con l’animazione settimanale dal lunedì al venerdì, dalle 16.00 alle 19.00."); 
+Quest’anno il Grest 2020 si svolgerà dal 12 al 25 giugno. Inizierà con la partecipazione di animatori, bambini e genitori alla messa domenicale e proseguirà con l’animazione settimanale dal lunedì al venerdì, dalle 16.00 alle 19.00."); 
 
 INSERT INTO Associazioni(Titolo, Immagine, AltImmagine, Testo) VALUES 
 ("Gruppo Giovani Accolti", "./upload/Associazioni/disabili.jpg", "foto del gruppo dei giovani accolti", "La parrocchia, attraverso dei volontari, svolge un servizio di assistenza a ragazzi e adulti diversamente abili. Il gruppo è nato più di venti anni fa per dare ai ragazzi che frequentano i gruppi di catechesi e, più in generale, alla realtà parrocchiale, la possibilità di vivere un’esperienza pratica di carità e di solidarietà.
@@ -101,10 +101,10 @@ Sono circa una ventina le persone (portatori di diversi tipi di handicap fisici 
 Gli operatori volontari sono una trentina (sia giovani che adulti, ma tutti con alle spalle un cammino di fede), che, con impegno e sacrificio, sono riusciti a creare con i diversamente abili un rapporto di amicizia che li gratifica e li ripaga abbondantemente del servizio svolto. Ricordiamo che possono aderire ragazzi ed adulti di età non inferiore ai 18 anni, che desiderino mettersi a servizio ed assistere ragazzi portatori di handicap, con serietà e disponibilità.");
 
 INSERT INTO Associazioni(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Associazione dei ciechi", "./upload/Associazioni/ciechi.jpg", "foto del gruppo dell'associazione ciechi","Il gruppo dei ciechi è un'associazione di fedeli, ciechi e vedenti, per il servizio all'uomo, alle persone associate, alle comunità ecclesiali e alle comunità civili.
+("Associazione Arcobaleno", "./upload/Associazioni/ciechi.jpg", "foto del gruppo Arcobaleno","Il gruppo Arcobaleno è un'associazione di fedeli, ciechi e vedenti, per il servizio all'uomo, alle persone associate, alle comunità ecclesiali e alle comunità civili.
 Quanti vi aderiscono, vedenti e non vedenti, si impegnano a maturare un rapporto consapevole e responsabile con la cecità, con il non vedere in ascolto della parola di Dio e seguendo l'insegnamento della dottrina sociale della Chiesa Cattolica. Si radunano nei gruppi diocesani che sono luoghi di incontro, di formazione, di azione sociale sul territorio ove si sperimentano relazioni di reciprocità, di fraternità e di condivisione.
 Tutti gli associati si pongono al servizio gli uni degli altri e si impegnano ad essere fermento di comunità ospitali, accoglienti e aperte alle differenze promuovendo e diffondendo una cultura dei diritti, di partecipazione e di inclusione. Si pongono, in particolare, al servizio di quanti si trovano in situazioni di svantaggio a motivo della cecità o di altra disabilità in Italia e soprattutto nei Paesi più poveri del Sud del mondo.
-I fedeli dell'associazione dei ciechi si impegnano a collaborare alla missione apostolica della Chiesa nella evangelizzazione della fragilità dell'uomo contribuendo a porre in atto orientamenti pastorali e teologici che favoriscano il superamento del pietismo e dell'assistenzialismo. Vogliono essere testimoni della chiamata universale alla santità per tutti gli uomini in ogni condizione fisica, psichica e sensoriale, anche dei disabili.");
+I fedeli dell'associazione Arcobaleno si impegnano a collaborare alla missione apostolica della Chiesa nella evangelizzazione della fragilità dell'uomo contribuendo a porre in atto orientamenti pastorali e teologici che favoriscano il superamento del pietismo e dell'assistenzialismo. Vogliono essere testimoni della chiamata universale alla santità per tutti gli uomini in ogni condizione fisica, psichica e sensoriale, anche dei disabili.");
 
 
 
@@ -201,8 +201,8 @@ Ma egli rispose: “In verità io vi dico: non vi conosco”.
 Vegliate dunque, perché non sapete né il giorno né l’ora». 
 
 
-STOLTEZZA e SAGGEZZA: non c'è alternativa. La differenza consiste nel prepararsi o meno all'incontro con il Signore, prendendo con sé l'olio. Prendere con
-sé l'olio significa essere preparati. TUTTE le vergini si addormentano; TUTTE le
+Stolezza e Saggezza: non c'è alternativa. La differenza consiste nel prepararsi o meno all'incontro con il Signore, prendendo con sé l'olio. Prendere con
+sé l'olio significa essere preparati. Tutte le vergini si addormentano; tutte le
 vergini si svegliano al grido di “ECCO LO SPOSO”; solo ALCUNE sono pronte.
 Ecco il significato di essere saggi e prudenti: non aspettare l'ultimo momento
 della nostra vita per collaborare con la Grazia di Dio.
@@ -235,7 +235,7 @@ fatto a me [...]
 Cristo è re, di un regno di “verità e di vita, di santità e grazia, di giustizia, d’amore
 e di pace”. Che razza di regno è??
 Per comprenderlo ci viene in aiuto il profeta Ezechiele. Cristo è un re-pastore che
-si prende cura delle sue pecore, cerca quelle perdute, cura quelle malate... le nutre
+si prende cura delle sue pecore, cerca quelle perdute, cura quelle malate, le nutre
 conducendole su ottimi pascoli.
 Cristo, ci ricorda S.Paolo, è il re che dona all’uomo, ad ogni uomo la vita nella Resurrezione. L’evangelista Matteo ci narra di come sarà il giudizio alla fine di questo tempo, e come Cristo Re ci giudicherà: il giudizio sarà sulla carità.
 Paolo VI così affermava: “Se davvero la nostra carità tende a imitare quella sconfinata e divina di Gesù, Gesù è presente! La nostra carità diventa segno, segno di
@@ -246,20 +246,20 @@ la pagina del vangelo di Matteo – saremo un giorno giudicati.” ");
 
 INSERT INTO Vangeli(Titolo, Immagine, AltImmagine, Testo) VALUES 
 ("Dal Vangelo secondo Matteo (25,31-46) ","./upload/Vangeli/gesu6.jpg", "foto della distribuzione dei talenti", "In quel tempo, Gesù disse ai suoi discepoli questa parabola: «Avverrà come a
-un uomo che, partendo per un viaggio, chiamò i suoi servi e consegnò loro i
+un uomo che, partendo per un viaggio, chiamò i suoi servi e consegno' loro i
 suoi beni. A uno diede cinque talenti, a un altro due, a un altro uno, secondo le
 capacità di ciascuno; poi partì.
 Dopo molto tempo il padrone di quei servi tornò e volle regolare i conti con
 loro. Si presentò colui che aveva ricevuto cinque talenti e ne portò altri cinque,
 dicendo: Signore, mi hai consegnato cinque talenti; ecco, ne ho guadagnati altri
-cinque. Bene, servo buono e fedele - gli disse il suo padrone -, sei stato fedele
-nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone». \n \n  </br>
+cinque. Bene, servo buono e fedele , gli disse il suo padrone , sei stato fedele
+nel poco, ti darò potere su molto; prendi parte alla gioia del tuo padrone». 
 
 
 Questa parabola, detta dei talenti, chiude il ciclo delle tre parabole sulla vigilanza.
 Per Matteo “vigilare” in attesa del ritorno del Signore vuol dire utilizzare il tempo
 che ci è dato compiendo il bene, facendo il miglior uso possibile dei doni ricevuti,
-che sono sia quelli naturali, ma anche il Vangelo, la Chiesa, i Sacramenti, la famiglia, il creato... Siamo chiamati a moltiplicare i talenti per la missione che Dio ci
+che sono sia quelli naturali, ma anche il Vangelo, la Chiesa, i Sacramenti, la famiglia, il creato...Siamo chiamati a moltiplicare i talenti per la missione che Dio ci
 ha affidato, mettendoli a servizio degli altri e ciò richiede impegno, dedizione, perseveranza, disponibilità. In questo modo, nella fedele semplicità di tutti i giorni,
 noi possiamo dare gloria al Signore e diventare piccole fiammelle capaci di illuminare il cammino dei fratelli che ci vivono accanto. Comprendiamo bene che l’incontro con il Signore non si può improvvisare, ma va preparato da una fede operosa e creativa, impegnata nella carità, fiduciosa nel Dio della Vita, che ci ricolma di
 doni per la nostra gioia, senza alcun interesse da parte sua. La Parabola dei Talenti
@@ -309,7 +309,7 @@ Nella prima lettura, “tratta dagli Atti degli Apostoli, gli Apostoli affermano
 INSERT INTO Eventi(Titolo, Immagine, AltImmagine, Testo) VALUES 
 ("Domenica della Divina Misericordia.","./upload/Eventi/misericordia.jpeg","foto della messa della domenica di mesericordia", "Oggi celebriamo la domenica della fede, il frutto della risurrezione di Cristo è la nascita della Chiesa. I fondamenti su cui poggia questa costruzione spirituale sono: l’insegnamento degli Apostoli, ossia la Didachè, la Comunione, l’Agape, l’Eucaristia, la Fractio Panis. Il tutto centrato sul dono dello Spirito Santo.
 Chiunque crede nella risurrezione di Cristo, allora avrà certamente fede anche nella propria risurrezione. Gesù agli Apostoli mostra i segni della sua risurrezione, le mani e i piedi, il costato.
-Ma per credere nella sua risurrezione, agli Apostoli non è sufficiente il vedere, hanno bisogno di altro, ecco perchè Gesù alita, soffia “Enèfusesen” su di loro il suo Spirito, conferendo a ognuno di loro la potenza della sua stessa risurrezione. Ma più della risurrezione dai morti, il dono di Gesù conferisce agli Apostoli e per loro alla Chiesa, il dono della risurrezione nello Spirito di Dio, siamo davanti ad una nuova creazione.
+Ma per credere nella sua risurrezione, agli Apostoli non è sufficiente il vedere, hanno bisogno di altro, ecco perchè Gesù alita, soffia incenso su di loro il suo Spirito, conferendo a ognuno di loro la potenza della sua stessa risurrezione. Ma più della risurrezione dai morti, il dono di Gesù conferisce agli Apostoli e per loro alla Chiesa, il dono della risurrezione nello Spirito di Dio, siamo davanti ad una nuova creazione.
 Questo alitare, soffiare, ci richiama ad Adamo, a Gen. 2,21 con il soffio di Dio, Adamo viene creato.
 Qui con il soffio di Cristo gli Apostoli e noi con loro, veniamo ri-creati. La prima era una creazione fisica, per la vita terrena, destinata alla morte, la seconda è per la creazione spirituale, per una vita eterna. Gli Apostoli ricevendo il soffio di Cristo, cioè lo Spirito Santo, ricevono quel soffio creativo che rimane nella Chiesa, sorgente di creazione spirituale per la vita eterna!
 La nuova creazione per noi cristiani, nasce già dai sacramenti: dal battesimo che la fa esistere, dalla cresima che la incrementa, dall’ eucaristia che la alimenta. La vita spirituale è iniziata dopo quella fisica, ma questa lentamente è destinata a finire e a cedere il passo poco alla volta a quella spirituale.
@@ -332,7 +332,7 @@ pagina per modificare addirittura il Codice di Diritto Canonico e ammettere
 laici, uomini e donne che abbiano l’età e le doti necessarie. Forse non tutti sanno
 che questi servizi finora sono sempre stati “straordinari”. Quelli “ordinari” erano
 invece solo per i candidati al sacerdozio! Ora invece, ecco la piccola grande
-rivoluzione - che in un sol colpo salta 2 “steccati” -, diventano accessibili
+rivoluzione , che in un sol colpo salta 2 “steccati” , diventano accessibili
 stabilmente per tutti i laici (primo steccato) e sia a uomini, ma soprattutto a
 donne (secondo e davvero alto steccato). Credo davvero che si sia aperto un
 cammino che porterà tanto bene nella Chiesa, anche se per ora non abbiamo
@@ -362,29 +362,29 @@ che ci viene donata per camminare con il Signore: Non perdiamola!");
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Grazie","./upload/Articoli/grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. GRAZIE per l’anno che finisce, certo
+("Grazie","./upload/Articoli/grazie.jpg", "foto di una suora andata in Africa per aiutare", "Tanti i motivi per dire grazie in questi giorni. Grazie per l’anno che finisce, certo
 duro, difficile, brutto, ma come cristiani crediamo che in ogni attimo c’è la
-presenza di Dio provvidente dove cercare i suoi segni di bene. GRAZIE per tutti i
+presenza di Dio provvidente dove cercare i suoi segni di bene. Grazie per tutti i
 medici, gli infermieri, gli operatori sanitari, le forze dell’ordine, gli amministratori
 e i volontari di tante sigle e realtà che in questi mesi si sono prodigati spesso oltre
-ogni sforzo per aiutare tutti i malati. GRAZIE per i tanti volontari della parrocchia
+ogni sforzo per aiutare tutti i malati. Grazie per i tanti volontari della parrocchia
 che in quest’anno e in questi giorni si sono prodigati nella liturgia, nell’educazione,
 nella carità perché il messaggio di Gesù potesse continuare ad essere annunciato.
-GRAZIE per tutte le famiglie, nel giorno della festa della Santa Famiglia, perché
+Grazie per tutte le famiglie, nel giorno della festa della Santa Famiglia, perché
 siete resistenti e resilienti, accoglienti e generose, sostenete i piccoli e gli anziani
-e finite sui giornali solo quando le cose vanno male. In particolare: GRAZIE per le
+e finite sui giornali solo quando le cose vanno male. In particolare: grazie per le
 10 famiglie che hanno preparato il pranzo di Natale per 15 persone o situazioni di
-solitudine o altra emarginazione donando un sorriso. GRAZIE alle 26 famiglie che
-hanno battezzato i loro bambini quest’anno. GRAZIE alle 4 nuove famiglie nate dai
-matrimoni celebrati quest’anno. GRAZIE anche ai giovani che convivono, è pur
+solitudine o altra emarginazione donando un sorriso. Grazie alle 26 famiglie che
+hanno battezzato i loro bambini quest’anno. Grazie alle 4 nuove famiglie nate dai
+matrimoni celebrati quest’anno. Grazie anche ai giovani che convivono, è pur
 sempre amore: spero che presto possano sentire il desiderio di ricevere la Grazia
 del Matrimonio cristiano.");  
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
 ("Fraternizzare","./upload/Articoli/natale.jpg", "foto di una mascherina appesa all'albero di Natale", "In questo strano Natale, vogliamo proporre questa ultima parola come
 sintesi di questa festa così cara, ma anche così bistrattata. Ci
-mancheranno amici e parenti, ma non deve mancarci GESU’ che a noi
-cristiani ricorda come siamo TUTTI FRATELLI suoi e quindi tra di noi. Un
+mancheranno amici e parenti, ma non deve mancarci Gesù che a noi
+cristiani ricorda come siamo tutti fratelli suoi e quindi tra di noi. Un
 grande dono, un grande compito. Come credenti facciamo tesoro di
 questo “strano” Natale per mettere Lui al centro senza distrazioni o
 nostalgie di ciò che con il Natale centra poco. Un po’ di preghiera insieme,
@@ -396,30 +396,30 @@ semplice saluto alla finestra. E sarà comunque Natale, e sarà di più Natale.
 Buon Natale a tutti, dunque, il Signore doni a tutti gioia, pace e speranza."); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Preparare","./upload/Articoli/preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a PREPARARE la festa sono notevolmente
+("Preparare","./upload/Articoli/preparare.jpg", "foto di una famiglia che prepara l'albero di Natale", "Quest’anno le “corse” natalizie a preparare la festa sono notevolmente
 rallentate se non interrotte. Preparare i regali, preparare il cenone, le cene
 aziendali, le settimane bianche, ecc… Tutto bloccato, tutto o tanto cancellato. Al
 di là dei problemi economici non certo secondari, soprattutto per chi lavora in
 questi comparti, certo la pandemia ci sta proponendo una brutale battuta
 d’arresto a certe corse sfrenate. E tutto cosa ci dice?
-Forse siamo inviati a scoprire ciò che vale veramente PREPARARE, che è il nostro
-cuore alla venuta-presenza di un Dio-bambino, nascosto, non imposto,
+Forse siamo inviati a scoprire ciò che vale veramente Preparare, che è il nostro
+cuore alla venuta, presenza di un Dio, bambino, nascosto, non imposto,
 “impotente” non onnipotente. Un Dio che non sbaraglia eserciti e nemmeno
 pandemie, perché vuole abitare i cuori, renderli sensibili all’unica energia che
 muove il mondo, l’amore, l’unico atteggiamento che ci rende umani, la
-fratellanza universale. PREPARIAMO la sua venuta, prepariamoci ad accoglierlo,
+fratellanza universale. prepariamo la sua venuta, prepariamoci ad accoglierlo,
 preparando certo il presepio, anche l’albero, un po’ di festa e qualche regalo, ma
 soprattutto preparando noi stessi, a questa presenza: questo si fa solo facendo
 posto a qualcuno che ha bisogno. Allora avremo davvero preparato il Natale!
 "); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Attendere","./upload/Articoli/avvento.jpg", " foto della Chiesa in periodo di avvento", "L’AVVENTO che inizia è la grande “ri-partenza” che l’anno liturgico della
-Chiesa - quel modo di ritmare il tempo nel segno del Vangelo di Gesù, la
-Buona Notizia - che siamo invitati, anno dopo anno, a credere e sul cui
+("Attendere","./upload/Articoli/avvento.jpg", " foto della Chiesa in periodo di avvento", "L’avvento che inizia è la grande “ri-partenza” che l’anno liturgico della
+Chiesa, quel modo di ritmare il tempo nel segno del Vangelo di Gesù, la
+Buona Notizia, che siamo invitati, anno dopo anno, a credere e sul cui
 ritmo siamo inviatati a vivere. Anche in questo tempo di coronavirus.
-ATTENDERE è il verbo che descrive bene la prima pagina che ci viene
-proposta. Viene dal Vangelo di MARCO che ci accompagnerà nelle
+Attendere è il verbo che descrive bene la prima pagina che ci viene
+proposta. Viene dal Vangelo di Marco che ci accompagnerà nelle
 domeniche fino a novembre del prossimo anno (con qualche eccezione). Il
 Signore, è come fosse partito, e spesso noi abbiamo la sensazione di
 essere anche soli. Non siamo soli, non siamo abbandonati. Il Signore è
@@ -448,8 +448,7 @@ più grande, che è il bene dell’altro. Un grande atto cristiano. Vi scongiuro
 molte persone stanno soffrendo tanto. E per tutti prego e preghiamo!"); 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 
-("Il nuovo Messale","./upload/Articoli/messale.jpg", "foto del nostro messale","inizieremo noi sacerdoti
-inizieremo a utilizzare il “nuovo Messale”, dovremo
+("Il nuovo Messale","./upload/Articoli/messale.jpg", "foto del nostro messale","Inizieremo noi sacerdoti a utilizzare il “nuovo Messale”, dovremo
 dire la 3^ edizione italiana del Messale Romano. Nato dalla grande riforma del
 Concilio Vaticano II (da latino si era passati alle lingue volgari, ma soprattutto la
 Messa diventa “cosa” di tutti), questa è la sua seconda edizione dopo quella del
@@ -459,11 +458,11 @@ Messa-Eucarestia che è incontro reale con Gesù tramite la Parola, il Pane e il
 Popolo di Dio, specie i poveri. Si pone in continuità con le precedenti traduzioni,
 alcuni testi sono stati rivisti secondo la nuova traduzione italiana della Bibbia
 (2007), aggiorna l’elenco dei Santi, ha anche formulari rinnovati, un linguaggio
-più inclusivo (es. fratelli e sorelle) e suggerisce di cantare di più. Le risposte fisse
+più inclusivo (per esempio fratelli e sorelle) e suggerisce di cantare di più. Le risposte fisse
 del popolo sono quasi tutte rimaste inalterate per evitare confusioni. I 3 testi con
-piccoli-grandi cambiamenti sono: Confesso a Dio onnipotente (...fratelli e sorelle),
-Gloria a Dio nell’alto dei cieli (...pace in terra agli uomini, amati dal Signore) e il
-Padre nostro (...anche noi li rimettiamo... e non abbandonarci alla tentazione)."); 
+piccoli-grandi cambiamenti sono: Confesso a Dio onnipotente (fratelli e sorelle),
+Gloria a Dio nell’alto dei cieli (pace in terra agli uomini, amati dal Signore) e il
+Padre nostro (anche noi li rimettiamo e non abbandonarci alla tentazione)."); 
 
 
 INSERT INTO Articoli(Titolo, Immagine, AltImmagine, Testo) VALUES 

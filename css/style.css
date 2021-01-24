@@ -535,9 +535,7 @@ ul li{
 	flex-direction: column;
 	width: 100%;
 }
-#admin-home{
-	width: 100%;
-}
+
 fieldset.admin{
 	display: flex;
 	flex-direction: column;
@@ -636,6 +634,7 @@ button[type=submit]{
 	display: flex;
 	width: 27%;
 	margin-bottom: 2em;
+	width: 100%;
 }
 .title-amministration img{
 	width: auto;
