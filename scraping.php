@@ -11,19 +11,19 @@ function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
 //CONTROLLA DOPPIONI
 function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     if($Titolo == $cell['Titolo']) {
-        $page = str_replace('<errorTitle />','<strong class="errori">Titolo già esistente!</strong>', $page);
+        $page = str_replace('<errorTitle />','<a class="errori" href="#Titolo" tabindex="1">Titolo già esistente!</a>', $page);
         $error = false;
     }
     if($imgContent == $cell['Immagine']) {
-        $page = str_replace('<errorImage />', '<strong class="errori">Immagine già esistente!</strong>', $page);
+        $page = str_replace('<errorImage />', '<a class="errori" href="#Immagine" tabindex="2">Immagine già esistente!</a>', $page);
         $error = false;
     }
     if($AltImmagine == $cell['AltImmagine']) {
-        $page = str_replace('<errorAlt />','<strong class="errori">AltImmagine già esistente!</strong>', $page);
+        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" tabindex="3">AltImmagine già esistente!</a>', $page);
         $error = false;
     }
     if($Testo == $cell['Testo']) {
-        $page = str_replace('<errorText />','<strong class="errori">Testo già esistente!</strong>', $page);
+        $page = str_replace('<errorText />','<a class="errori" href="#Testo" tabindex="4">Testo già esistente!</a>', $page);
         $error = false;
     }
     return array($error,$page);
@@ -31,7 +31,7 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
-    $message = '<strong class="successo" tabindex="1">Inserimento andato a buon fine!</strong>';
+    $message = '<a class="successo" href="#bottone" tabindex="1">Inserimento andato a buon fine!</a>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';

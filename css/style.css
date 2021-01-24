@@ -137,12 +137,21 @@ a {
 	color: #ff0000;
 	float: left;
 	font-size: 1.5em;
+	max-height: 2em;
+}
+
+a.errori {
+	font-weight: bold;
 }
 
 .successo {
 	margin: 0 0 3em 5%;
 	color: #00d221;
 	font-size: 2em;
+}
+
+a.successo {
+	font-weight: bold;
 }
 
 
