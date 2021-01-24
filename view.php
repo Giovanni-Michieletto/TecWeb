@@ -52,7 +52,7 @@
             }
         }
         else {
-            $definition = "<p>Nessuna file presente</p>";  
+            $definition = '<p class="no-file">Nessun file presente</p>';  
         } 
     }
     else {
