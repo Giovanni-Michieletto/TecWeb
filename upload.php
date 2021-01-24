@@ -21,9 +21,9 @@
     $page = file_get_contents('blankForm.html');
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
     $titleArray = ['Articolo','Associazione','Vangelo','Evento'];
+    $title = $table;
     for ($i=0;$i<4;++$i){
         if($table==$titleArray[$i]) {
-            $title = $table;
             $table = $tableArray[$i];
         }
     }
