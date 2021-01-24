@@ -77,8 +77,7 @@ a {
 }
 
 .hiddenHelp {
-	position: absolute;
-	left: 9999px;
+	text-indent: -9999px;
 }
 #convento-button-scroll.d-none {
 	display: none;
@@ -443,8 +442,12 @@ ul li{
 	margin-bottom: 2em;
 	border: 2px solid rgb(148, 148, 148);
 	padding: 1.5em;
-	border-radius: 5%;
+	border-radius: 13px;
 	background-color: rgb(245, 245, 245);
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	-ms-border-radius: 13px;
+	-o-border-radius: 13px;
 }
 
 #title{
