@@ -1,7 +1,7 @@
 <?php
 //INSERISCE TITOLO, ALT E TEST
 function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
-    $page = str_replace('<message />', $message, $page);
+    $page = str_replace('<message id="message"/>', $message, $page);
     $page = str_replace('name="Titolo"', 'name="Titolo" ' . $end .' value="'.$Titolo.'"', $page);
     $page = str_replace('name="AltImmagine"', 'name="AltImmagine" ' . $end .' value="'.$AltImmagine.'"', $page);
     $page = str_replace('name="Testo">', 'name="Testo" ' . $end . '>' .$Testo, $page);
@@ -11,19 +11,19 @@ function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
 //CONTROLLA DOPPIONI
 function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     if($Titolo == $cell['Titolo']) {
-        $page = str_replace('<errorTitle />','<strong class="errori">Titolo già esistente!</strong>', $page);
+        $page = str_replace('<errorTitle />','<a class="errori" href="#Titolo" tabindex="1">Titolo già esistente!</a>', $page);
         $error = false;
     }
     if($imgContent == $cell['Immagine']) {
-        $page = str_replace('<errorImage />', '<strong class="errori">Immagine già esistente!</strong>', $page);
+        $page = str_replace('<errorImage />', '<a class="errori" href="#Immagine" tabindex="2">Immagine già esistente!</a>', $page);
         $error = false;
     }
     if($AltImmagine == $cell['AltImmagine']) {
-        $page = str_replace('<errorAlt />','<strong class="errori">AltImmagine già esistente!</strong>', $page);
+        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" tabindex="3">AltImmagine già esistente!</a>', $page);
         $error = false;
     }
     if($Testo == $cell['Testo']) {
-        $page = str_replace('<errorText />','<strong class="errori">Testo già esistente!</strong>', $page);
+        $page = str_replace('<errorText />','<a class="errori" href="#Testo" tabindex="4">Testo già esistente!</a>', $page);
         $error = false;
     }
     return array($error,$page);
@@ -31,7 +31,7 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
-    $message = '<strong class="successo" tabindex="1">Inserimento andato a buon fine!</strong>';
+    $message = '<a class="successo" href="#bottone" tabindex="1">Inserimento andato a buon fine!</a>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';
@@ -64,21 +64,20 @@ function deleted($page) {
     $page = str_replace('name="submit"','name="admin"',$page);
     $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
     $page = str_replace('<img src="./db/img/deco.svg" alt="">','',$page);
-    $page = str_replace('<label for="Titolo">Titolo: </label>','',$page);
+    $page = str_replace('<label for="Titolo">Titolo*: </label>','',$page);
     $page = str_replace('<input type="text" id="Titolo" name="Titolo" />','',$page);
-    $page = str_replace('<label for="Immagine">Immagine: </label>','',$page);
+    $page = str_replace('<label for="Immagine">Immagine*: </label>','',$page);
     $page = str_replace('<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />','',$page);
-    $page = str_replace('<label for="AltImmagine"><abbr title="AltImmagine">Descrizione immagine:</abbr></label>','',$page);
+    $page = str_replace('<label for="AltImmagine"><abbr title="Descrizione necessaria per permettere agli utenti non vedenti di percepire il contesto dell\'Immagine">Descrizione immagine*:</abbr></label>','',$page);
     $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
-    $page = str_replace('<label for="Testo">Testo: </label>','',$page);
+    $page = str_replace('<label for="Testo">Testo*: </label>','',$page);
     $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
-    $page = str_replace ('<message />','<strong class="successo" tabindex="1">Eliminazione andata a buon fine!</strong>',$page);
+    $page = str_replace ('<message id="message"/>','<strong class="successo" tabindex="1">Eliminazione andata a buon fine!</strong>',$page);
     return $page;
 }
 
 //COMPILA I FORM DATO IL LORO ID
 function compile($page,$table,$ID,$session) {
-    session_start();
     require_once "dbConnection.php"; 
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();            
@@ -188,11 +187,21 @@ function search($page) {
     return $page;
 }
 
+//COSTRUISCE LINK HEADER
+function headerLink($page) {
+    $link = '<a class="hiddenHelp" href="#menu">Vai al menù</a>';
+    $link .= '<a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>';
+    $link .= '<a class="hiddenHelp" href="#content">Vai al contenuto</a>';
+    $page =  str_replace("<link />",$link,$page);
+    return $page;
+}
+
 //USATA PER CHIAMARE MENU E FOOTER
 function buildHTML($page,$table,$session) {
     $page = menu($page,$table,$session);
     $page = footer($page,$session);
     $page = search($page);
+    $page = headerLink($page);
     return $page;
 }
 ?>

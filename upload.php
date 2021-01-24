@@ -21,13 +21,18 @@
     $page = file_get_contents('blankForm.html');
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
     $titleArray = ['Articolo','Associazione','Vangelo','Evento'];
+    $title = $table;
     for ($i=0;$i<4;++$i){
         if($table==$titleArray[$i]) {
-            $title = $table;
             $table = $tableArray[$i];
         }
     }
-    $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
+    if($_SESSION['action']=="Modifica") {
+        $page = str_replace('<titlePage />', 'Modifica '.$title, $page);
+    }
+    else {
+        $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
+    }
     if($_SESSION['action'] =="Nuovo" && $title=="Associazione") {
         $page =  str_replace("<percorso />",' Admin » Nuova '.$title,$page);
     }
@@ -39,16 +44,17 @@
     if($connection) {    
         if(empty($_FILES['Immagine']['name']) && $_SESSION['action']=="Modifica") {
             $Immagine = $_SESSION['image'];
+            $_SESSION['image'] == '';
         }
         else {
             $file = $_FILES['Immagine']['name'];
-            $list = $dbAccess->getFile($table);
             $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
             $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
             $dir = './upload/' . $table . '/';
             $ImmagineUpload = $directory . $file;
             $Immagine = $dir . $file;
         }
+        $list = $dbAccess->getFile($table);
         $error = true;
         if($list) {
             foreach ($list as $cell) {
@@ -60,7 +66,9 @@
             }
         }
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            if(!empty($_FILES['Immagine']['name'])) {
+                move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            }
             if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
@@ -72,8 +80,8 @@
                 $_SESSION['action'] = '';
                 }
             else {
-                $message = '<strong class="errori">Errore nell\'inserimento</strong>';
-                $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+                $message = '<strong class="errori"  tabindex="0">Errore nell\'inserimento</strong>';
+                $page =  str_replace("<abort />",'<div id="annulla-operazione" tabindex="0"> <p>Annulla operazione</p> </div>',$page);
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
