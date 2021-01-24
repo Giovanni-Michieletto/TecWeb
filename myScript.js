@@ -23,7 +23,6 @@ function removeHeader() {
 }
 
 function validate() {
-
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
     var validation = true;
 
@@ -38,8 +37,9 @@ function validate() {
         if(Id[i] == "Titolo") {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
-                showError(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "1");
+                showErrorStrong(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "2");
+                parent.children[0].setAttribute("tabindex", "3");
                 validation = false;
             }
         }
@@ -47,8 +47,9 @@ function validate() {
         if(Id[i] == "Immagine") {
             if(input.files.length == 0) {
                 var errormsg = "Inserire un'immagine!";
-                showError(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "2");
+                showErrorStrong(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "4");
+                parent.children[0].setAttribute("tabindex", "5");
                 validation = false;
             }
         }
@@ -56,8 +57,9 @@ function validate() {
         if(Id[i] == "AltImmagine") {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
-                showError(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "3");
+                showErrorStrong(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "6");
+                parent.children[0].setAttribute("tabindex", "7");
                 validation = false;
             }
         }
@@ -65,30 +67,78 @@ function validate() {
         if(Id[i] == "Testo") {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
-                showError(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "4");
+                showErrorStrong(input, errormsg);
+                parent.children[1].setAttribute("tabindex", "8");
+                parent.children[0].setAttribute("tabindex", "9");
                 validation =  false;
             }
         }
     }
 
-    /*if(validation==false) {
-        var input = document.getElementById("Bottone");
-        var parent = input.parentNode;
+    if(validation==false) {
+        var errore = "Errore nell'inserimento!";
+        var message = document.getElementById("message");
 
+        var parent = message.parentNode;
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[1]); 
         }
 
-        var errormsg = "Inserimento errato!";
-        showError(input, errormsg);
-        return validation;
-    }*/
+        showErrorStrong(message, errore);
+        parent.children[1].setAttribute("tabindex", "1");      
+    } 
+
+    if(validation==false) {
+        var input = document.getElementById("bottone");
+        var errormsg = "Rilevati errori!";
+
+        var parent = input.parentNode;
+        if(parent.children.length == 2) { 
+            parent.removeChild(parent.children[1]); 
+        } 
+
+        showErrorLink(input, errormsg);
+        parent.children[1].setAttribute("href", "#message");
+    }
+
+   /* if(validation==false) {
+        var error = ["bottone", "message"];
+
+        for(var i = 0; i < error.length; i++) {
+        var input = document.getElementById(error[i]);
+
+        var parent = input.parentNode;
+        if(parent.children.length == 2) { 
+            parent.removeChild(parent.children[1]); 
+        } 
+
+        if(error[i] == "message") {
+            var errormsg = "Errore nell'inserimento!";
+            showErrorStrong(input, errormsg);
+        }
+        
+        if(error[i] == "bottone") {
+            var errormsg = "Rilevati errori!";
+            showErrorLink(input, errormsg);
+            parent.children[1].setAttribute("href", "#message");
+        }
+
+        
+       // <a class="hiddenHelp" href="#menu">Vai al menù</a>
+    } */
 
     return validation;
 }
 
-function showError(input, errormsg) {
+function showErrorLink(input, errormsg) {
+    var p = input.parentNode;
+    var elemento = document.createElement("a");
+    elemento.className = "hiddenHelp";
+    elemento.appendChild(document.createTextNode(errormsg));
+    p.appendChild(elemento);
+}
+
+function showErrorStrong(input, errormsg) {
     var p = input.parentNode;
     var elemento = document.createElement("strong");
     elemento.className = "errori";
@@ -99,7 +149,7 @@ function showError(input, errormsg) {
 function validateAdmin() {
     var validation = true;
 
-    if(!document.getElementById("Eventi").checked && !document.getElementById("Vangeli").checked && !document.getElementById("Articoli").checked && !document.getElementById("Associazioni").checked) {
+    if(!document.getElementById("Evento").checked && !document.getElementById("Vangelo").checked && !document.getElementById("Articolo").checked && !document.getElementById("Associazione").checked) {
         var input = document.getElementById("js");
         var parent = input.parentNode; 
         
@@ -107,9 +157,26 @@ function validateAdmin() {
             parent.removeChild(parent.children[1]);
         }
 
-        var errormsg = "Selezionare un'opzione!";
-        showError(input, errormsg);
+        var errormsg = "Errore, selezionare un'opzione!";
+        showErrorStrong(input, errormsg);
+        parent.children[1].setAttribute("id", "error");
+        parent.children[1].setAttribute("tabindex", "1");
+        parent.children[0].setAttribute("tabindex", "2");
+
         validation = false;
+    }
+
+    if(validation==false) {
+        var button = document.getElementById("bottone");
+        var errormsg = "Rilevati errori!";
+
+        var parent = button.parentNode;
+        if(parent.children.length == 4) { 
+            parent.removeChild(parent.children[3]); 
+        } 
+
+        showErrorLink(button, errormsg);
+        parent.children[3].setAttribute("href", "#error");
     }
 
     return validation;

@@ -39,7 +39,7 @@
     </div>
     <div id="spacer-top"></div>
     <div>
-        <message />
+        <message id="message"/>
     </div>
     <div class="Titolo-aggiungi align">
         <h1 tabindex="0">
@@ -52,8 +52,8 @@
     <div id="annulla-operazione" class="d-none">
         <tornadietro />
     </div>
-    <div>
-        <message id="message"/>
+    <div id="message">
+        <message />
     </div>
     <div id="content" class="container-amministration margin-5">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
@@ -104,7 +104,6 @@
             </fieldset>
 
             <fieldset class="button-conferma">
-
                 <button id="bottone" type="submit" name="submit" ><buttonName /></button>
             </fieldset>
         </form>
