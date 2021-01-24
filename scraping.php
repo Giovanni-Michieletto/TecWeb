@@ -145,7 +145,7 @@ function footer($page,$session) {
 
 //COSTRUISCE IL MENU
 function menu($page,$table,$session) {
-    $menu='<ul class="links">';
+    $menu='<ul class="links" title="Menù" tabindex="0">';
     $tabelle=['Home','Articoli','Associazioni','Vangeli','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {

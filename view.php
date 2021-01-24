@@ -63,6 +63,7 @@
     }
     else {
         $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
+        $page =  str_replace("<abort />",'<a class="hide" href="Admin.php">Annulla operazione</a>',$page);
     }  
     $page =  str_replace("<tornasu />","view.php?table=$title",$page);  
     $page =  str_replace("<list />",$definition,$page);
