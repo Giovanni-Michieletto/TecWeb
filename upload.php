@@ -17,12 +17,6 @@
     }
     $Titolo = $_POST['Titolo'];
     $AltImmagine = $_POST['AltImmagine'];
-    if(!empty($_FILES['Immagine']['name'])) {
-
-    }
-    else {
-        $file = $_FILES['Immagine']['name'];
-    }
     $Testo = $_POST['Testo'];
     $page = file_get_contents('blankForm.html');
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
@@ -43,12 +37,18 @@
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();
     if($connection) {    
-        $list = $dbAccess->getFile($table);
+        if(!empty($_FILES['Immagine']['name'])) {
+            $Immagine = $_SESSION['image'];
+        }
+        else {
+            $file = $_FILES['Immagine']['name'];
+            $list = $dbAccess->getFile($table);
         $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
         $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
         $dir = './upload/' . $table . '/';
         $ImmagineUpload = $directory . $file;
         $Immagine = $dir . $file;
+        }
         $error = true;
         if($list) {
             foreach ($list as $cell) {
