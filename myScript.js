@@ -11,7 +11,7 @@ function placeholderSearch() {
     };
 }
 
-function removeheader() {
+function removeHeader() {
     var header = document.getElementById("header");
     var height = document.getElementById("image-header").offsetHeight;
     if(window.pageYOffset>=height) {
