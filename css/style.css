@@ -11,10 +11,21 @@ body{
 	height: 11px;
 	width: 6px;
 	}
-::-webkit-scrollbar-thumb {
-background: rgb(0, 155, 159);
--webkit-border-radius: 3px;
-}
+
+	::-webkit-scrollbar {
+		height: 11px;
+		width: 6px;
+		}
+		::-webkit-scrollbar-thumb {
+		background: rgb(0, 155, 159);
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+	}
+		::-webkit-scrollbar-corner {
+			background:rgb(0, 155, 159);
+		}
 
 .margin-5 {
 	margin: 0 5% 0 5%;
