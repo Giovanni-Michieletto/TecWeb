@@ -64,15 +64,15 @@ function deleted($page) {
     $page = str_replace('name="submit"','name="admin"',$page);
     $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
     $page = str_replace('<img src="./db/img/deco.svg" alt="">','',$page);
-    $page = str_replace('<label for="Titolo">Titolo: </label>','',$page);
+    $page = str_replace('<label for="Titolo">Titolo*: </label>','',$page);
     $page = str_replace('<input type="text" id="Titolo" name="Titolo" />','',$page);
-    $page = str_replace('<label for="Immagine">Immagine: </label>','',$page);
+    $page = str_replace('<label for="Immagine">Immagine*: </label>','',$page);
     $page = str_replace('<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />','',$page);
-    $page = str_replace('<label for="AltImmagine"><abbr title="AltImmagine">Descrizione immagine:</abbr></label>','',$page);
+    $page = str_replace('<label for="AltImmagine"><abbr title="Descrizione necessaria per permettere agli utenti non vedenti di percepire il contesto dell\'Immagine">Descrizione immagine*:</abbr></label>','',$page);
     $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
-    $page = str_replace('<label for="Testo">Testo: </label>','',$page);
+    $page = str_replace('<label for="Testo">Testo*: </label>','',$page);
     $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
-    $page = str_replace ('<message />','<strong class="successo" tabindex="1">Eliminazione andata a buon fine!</strong>',$page);
+    $page = str_replace ('<message id="message"/>','<strong class="successo" tabindex="1">Eliminazione andata a buon fine!</strong>',$page);
     return $page;
 }
 
@@ -187,11 +187,21 @@ function search($page) {
     return $page;
 }
 
+//COSTRUISCE LINK HEADER
+function headerLink($page) {
+    $link = '<a class="hiddenHelp" href="#menu">Vai al menù</a>';
+    $link .= '<a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>';
+    $link .= '<a class="hiddenHelp" href="#content">Vai al contenuto</a>';
+    $page =  str_replace("<link />",$link,$page);
+    return $page;
+}
+
 //USATA PER CHIAMARE MENU E FOOTER
 function buildHTML($page,$table,$session) {
     $page = menu($page,$table,$session);
     $page = footer($page,$session);
     $page = search($page);
+    $page = headerLink($page);
     return $page;
 }
 ?>

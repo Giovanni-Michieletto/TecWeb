@@ -59,10 +59,15 @@
             $list = $this->getFile($table);
             foreach ($list as $cell) {
                 if($ID == $cell['ID']) {
-                    $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('./','/TecWeb/',$cell['Immagine']);
+                    if($Immagine != $cell['Immagine']) {
+                        $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('./','/TecWeb/',$cell['Immagine']);
+                        unlink($directory);
+                    }
+                    if($Title==$cell['Title'] && $Immagine==$cell['Immagine'] && $AltImmagine==$cell['AltImmagine'] && $Testo==$cell['Testo']) {
+                        return true;
+                    }
                 }
             }
-            unlink($directory);
             $queryInsert = "UPDATE $table SET Titolo=\"$Titolo\", Immagine=\"$Immagine\", AltImmagine=\"$AltImmagine\", Testo=\"$Testo\" WHERE $table . ID=\"$ID\"";
             $queryResult = mysqli_query($this->connection,$queryInsert);
             if(mysqli_affected_rows($this->connection) > 0) {
