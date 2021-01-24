@@ -582,13 +582,14 @@ button[type=submit]{
 	margin: 0 10px;
 }
 .container-amministration{
+
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 10%;
 	max-width: 1100px;
 }
 #container-login{
-	margin-top: 20vh;
+	margin-top: 10%;
 	margin-left: 9%;
 	padding: 1em;
 	border: 1px solid #ccc;
@@ -701,7 +702,7 @@ textarea#Link{
 /* =========LOGIN============= */
 /* ============================ */
 #container-login{
-   margin-top: 20vh;
+   margin-top: 2%;
 	margin-left: 9%;
 	padding: 1em;
    border: 1px solid #ccc;
@@ -734,7 +735,7 @@ textarea#Link{
 	
 }
 #login p{
-	width: 30%;
+	width: 70%;
 	padding: 0.3em 2em;
 	
 	text-align: center;
@@ -746,6 +747,7 @@ textarea#Link{
 
 .container-text-footer{
 	padding: 1em;
+
 }
  .TornaSu{
 	position: absolute;
