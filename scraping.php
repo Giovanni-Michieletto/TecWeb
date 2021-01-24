@@ -176,11 +176,11 @@ function menu($page,$table,$session) {
 
 //COSTRUISCE SEARCH
 function search($page) {
-    $search = '<form name="ricerca" method="post" action="search.php">';
+    $search = '<form method="post" action="search.php">';
         $search .= '<fieldset class="form">';
             $search .= '<div class="textbutton">';
-                $search .= '<input type="text" id="cerca" name="cerca" title="Cosa cerchi?">';
-                $search .= '<input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">';
+                $search .= '<input type="text" id="cerca" name="cerca" title="Cosa cerchi?"/>';
+                $search .= '<input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca"/>';
             $search .= '</div>';
         $search .= '</fieldset>';
     $search .= '</form>';
