@@ -17,14 +17,14 @@
                 header('Location: Admin.php',TRUE);
             }
             else {
-                $message = '<div><strong class="errori">Username o password non corretti!</strong></div>';
-                $page = str_replace('<message />', $message, $page);
+                $message = ' class="errori">Username o password non corretti!';
+                $page = str_replace('>Inserire utente e password', $message, $page);
                 echo $page;
             }
         }
         else {
-            $message = '<div><strong class="errori">Errore di connessione al database</strong></div>';
-            $page = str_replace('<message />', $message, $page);
+            $message = ' class="errori">Errore di connessione al database';
+            $page = str_replace('>Inserire utente e password', $message, $page);
             echo $page;
         }
     }

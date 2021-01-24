@@ -6,9 +6,6 @@
     }
     $_SESSION['action'] = '';
     $page = file_get_contents('Admin.html');    
-    if(!empty($_GET['message'])) {
-        $page = str_replace('<message />','<strong class="errori">Selezionare una sezione</strong>',$page);
-    }
     $page = buildHTML($page,'Admin',$_SESSION['logged']);
     echo $page;
 ?>

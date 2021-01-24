@@ -132,7 +132,13 @@ a {
 /* =================== */
 /* ==ERRORI/SUCCESSO== */
 /* =================== */
-
+strong {
+	text-align: center;
+	width: 100%;
+	float: left;
+	font-size: 1.5em;
+	max-height: 2em;
+}
 .errori {
 	width: 100%;
 	color: #ff0000;

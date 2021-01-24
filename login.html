@@ -12,7 +12,7 @@
    <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
 
-<body onload="placeholderSearch()" onscroll="removeHeader()">
+<body onload="placeholderSearch()" >
    <div id="header">
       <a class="hiddenHelp" href="#menu">Vai al menù</a>
       <a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>
@@ -46,6 +46,7 @@
    </div>
    <div class="spacer-top"></div>
    <div id="container-login" class="container-amministration margin-5">
+      <strong>Inserire utente e password</strong>
       <form enctype="multipart/form-data" method="post" action="login.php">
          <fieldset class="align">
             <div class="title-amministration">
@@ -55,7 +56,6 @@
             <div class="text-box">
                <span>
                   <input type="text" id="Username" name="Username"/>
-                  <errorUser />
                </span>
             </div>
          </fieldset>
@@ -67,11 +67,9 @@
             <div class="text-box">
                <span>
                   <input type="password" name="Password" id="Password"/>
-                  <errorPass />
                </span>
             </div>
          </fieldset>
-         <message />
          <fieldset class="button-aggiungi">
             <button class="aggiungi" type="submit" name="submit">Invia</button>
          </fieldset>
