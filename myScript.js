@@ -80,7 +80,8 @@ function validate() {
             parent.removeChild(parent.children[1]); 
         }
         showErrorLink(message, errore);
-        parent.children[1].setAttribute("tabindex", "1");      
+        parent.children[1].setAttribute("tabindex", "1");  
+        parent.children[1].setAttribute("class", "erroresingolo");    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -140,7 +141,8 @@ function validateUpdate() {
             parent.removeChild(parent.children[1]); 
         }
         showErrorLink(message, errore);
-        parent.children[1].setAttribute("tabindex", "1");      
+        parent.children[1].setAttribute("tabindex", "1");
+        parent.children[1].setAttribute("class", "erroresingolo");    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");

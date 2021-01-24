@@ -63,7 +63,7 @@
                         $directory = $_SERVER['DOCUMENT_ROOT'] . str_replace('./','/TecWeb/',$cell['Immagine']);
                         unlink($directory);
                     }
-                    if($Titolo==$cell['Title'] && $Immagine==$cell['Immagine'] && $AltImmagine==$cell['AltImmagine'] && $Testo==$cell['Testo']) {
+                    if($Titolo==$cell['Titolo'] && $Immagine==$cell['Immagine'] && $AltImmagine==$cell['AltImmagine'] && $Testo==$cell['Testo']) {
                         return true;
                     }
                 }
