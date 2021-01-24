@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 		width: 4px;
 		}
 		body::-webkit-scrollbar-thumb {
-		background: #035659;
+		background:#01B8BD;
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-ms-border-radius: 3px;
@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 	width: 100%;
 }
 .content-search a:hover{
-	color: #035659;
+	color:#01B8BD;
 }
 .content-search p {
 	padding: 0 0 0 3em;
@@ -84,7 +84,7 @@ a {
 }
 
 #convento-button-scroll {
-	background-color: #035659;
+	background-color:#01B8BD;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -182,7 +182,7 @@ a.successo {
 }
 
 .bordo{
-	border: 1px solid #ccc;
+	border: 1px solid white;
 	padding: 1em;
 	border-radius: 15px;
 	margin-bottom: 1em;
@@ -198,8 +198,8 @@ a.successo {
 	list-style: none;
 }
 .notlink{
-	background-color:#c65852;
-	color: gainsboro;
+	background-color:#A92322;
+	color: white;
 
 	text-decoration: none;
 	letter-spacing: 3px;
@@ -208,13 +208,13 @@ a.successo {
 }
 .links a {
 	
-	color: #ccc;
+	color: white;
 	letter-spacing: 3px;
 	font-weight: bold;
 
 }
 .links li:hover{
-	background-color: #c65852;
+	background-color: #A92322;
 } 
 .links a:visited{
 	color:rgb(97, 178, 245);
@@ -387,7 +387,7 @@ ul li{
 	min-width: 230px;
 	margin-bottom: 2rem;
 	height: 18em;
-	border: 2px solid #ccc;
+	border: 2px solid white;
 	border-radius: 5px;
 	overflow: hidden;
 	-webkit-border-radius: 5px;
@@ -545,7 +545,7 @@ ul li{
 	display: inline;*/
 }
 #abort a:hover {
-	color: #035659;
+	color:#01B8BD;
 }
 .container-home-amministratore{
 	display: flex;
@@ -570,7 +570,7 @@ button[type=submit]{
 	font-size: 1.2em;
 	letter-spacing: 0.1em;
 	margin: 0 1.2em;
-	background-color: burlywood;
+	background-color: #94080b;
 	border: 1px solid white;
 	border-style: outset;
 	border-radius: 5px;
@@ -578,7 +578,7 @@ button[type=submit]{
 	-moz-border-radius: 5px;
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
-
+	color: white;
 }
 
 .title-a{
@@ -606,9 +606,9 @@ button[type=submit]{
 }
 .scelta-azione ul li a{
 	text-decoration: none;
-	color: #ccc;
+	color: white;
 	font-size: 1.1em;
-	background-color: #c65852;
+	background-color: #A92322;
 	padding: 0.3em 2em;
     width: 10em;
     text-align: center;
@@ -621,7 +621,7 @@ button[type=submit]{
 	padding: 1.3em;
 }
 .scelta-azione li:hover a{
-	color: #035659;
+	color:#01B8BD;
 }
 .Titolo-aggiungi{
 	display: flex;
@@ -702,7 +702,7 @@ input[type=text], input[type=blob], input[type=password] {
 	padding: 12px 20px;
 	margin: 0.8em 0;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid white;
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 1.2em;
@@ -718,7 +718,7 @@ textarea#Testo {
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid white;
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 1.2em; 
@@ -729,7 +729,7 @@ textarea#Link{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1.2em; 
@@ -741,7 +741,7 @@ textarea#Link{
 }
 .aggiungi{
 	padding: 0.5rem 5rem;
-   background-color: #c65852;
+   background-color: #A92322;
    height: auto;
    margin: 0 auto;
    text-decoration: none;
@@ -757,7 +757,7 @@ textarea#Link{
    margin-top: 2%;
 	margin-left: 9%;
 	padding: 1em;
-   border: 1px solid #ccc;
+   border: 1px solid white;
 }
 
 /* ====================== */
@@ -767,11 +767,11 @@ textarea#Link{
 #footer {
 	width: 100%;
 	margin-top: 3rem;
-	background-color: #035659; 
+	background-color:#01B8BD; 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	color: white;
+	color: black;
 	padding: 1em 0;
 	clear: both;
 }
@@ -794,7 +794,7 @@ textarea#Link{
 	text-align: center;
 }
 #login p a{
-	color: white;
+	color: black;
 	letter-spacing: 0.1em;
 }
 
@@ -844,7 +844,7 @@ textarea#Link{
 		display: flex;
 		align-items: center;
 		width: 100%;
-		border: 1px solid #ccc;
+		border: 1px solid white;
 		padding: 0.5em;
 		border-radius: 15px;
 		-webkit-border-radius: 15px;
@@ -880,7 +880,7 @@ textarea#Link{
 	}
 	.notlink li{
 		padding: 0.5em 1.5em 0.2em 1.5em;
-		color: #ccc;
+		color: white;
 		text-decoration: underline;
 		letter-spacing: 3px;
 		font-weight: bold;
