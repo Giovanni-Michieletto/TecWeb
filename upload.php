@@ -42,13 +42,13 @@
         }
         else {
             $file = $_FILES['Immagine']['name'];
-            $list = $dbAccess->getFile($table);
             $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
             $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
             $dir = './upload/' . $table . '/';
             $ImmagineUpload = $directory . $file;
             $Immagine = $dir . $file;
         }
+        $list = $dbAccess->getFile($table);
         $error = true;
         if($list) {
             foreach ($list as $cell) {
@@ -60,7 +60,9 @@
             }
         }
         if($error == true) {
-            move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            if(!empty($_FILES['Immagine']['tmp_name'])) {
+                move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
+            }
             if($_SESSION['action']=="Modifica") {
                 $insertion = $dbAccess->updateFile($table,$Titolo,$Immagine,$AltImmagine,$Testo,$ID);
             }
