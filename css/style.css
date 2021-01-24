@@ -230,6 +230,9 @@ input[type="submit"].cerca{
 	-o-border-radius: 5px;
 }
 #percorso{
+	font-size: 1.1em;
+	width: 100%;
+  padding-top: 2em;
 	height: 3em;
 	display: flex;
 	align-items: center;
@@ -247,7 +250,14 @@ input[type="submit"].cerca{
 	margin: 70px 0 20px 0;
 	display: flex;
 	vertical-align: middle;
+	align-items: center;
 
+}
+.title h1{
+	font-weight: bold;
+   font-size: 2.6em;
+	display: inline-block;
+	margin-left: 0.5em;
 }
 
 .title h2 {
@@ -302,12 +312,12 @@ ul li{
 /* ============================ */
 /* =========STORIA============= */
 /* ============================ */
-.contenutostoria h1{
+/* .contenutostoria h1{
 	text-align: center;
 	padding-top: 1em;
 	padding-bottom: 0.5em;
 	font-size: 2.3em;
-}
+} */
 
 .contenutostoria dd {
 	line-height: 1.5em;
@@ -441,16 +451,9 @@ ul li{
 	font-size: 1.3em;
 }
 
-.title {
-	margin: 70px 0 20px 0;
-	display: flex;
-	vertical-align: middle;
-}
 
-.title img {
-	width: auto;
-	height: 40px;
-}
+
+
 
 /* ============================ */
 /* =========AMMINISTRATORE===== */
@@ -758,8 +761,8 @@ textarea#Link{
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 3%;
+	right: 3%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -794,6 +797,9 @@ textarea#Link{
 		-ms-border-radius: 15px;
 		-o-border-radius: 15px;
 	 }
+	input[type="text"]#cerca {
+		width: 10em;
+	}
 	 fieldset.form{
 		margin-left: 0.5em;
 		margin-bottom: 0;
@@ -883,13 +889,15 @@ textarea#Link{
 	.altimmagine-box{
 		width: 70%;
 		margin-left: 2em;
-	}
-	
+	}	
 	.container-percorso-search{
 		flex-direction: column;
 		align-items: flex-start;
+	} */
+	.textbutton{
+		display: flex;
+		align-items: center;
 	}
-
 	#footer{
 		flex-direction: column;
 	}
@@ -925,6 +933,10 @@ textarea#Link{
      -ms-border-radius:  30px ;
      -o-border-radius:  30px ;
 	}
+	input[type="text"]#cerca {
+		width: 15em;
+	}
+
 	fieldset.form{
 		margin-bottom: 0;
 		padding: 0;
