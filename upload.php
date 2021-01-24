@@ -27,7 +27,12 @@
             $table = $tableArray[$i];
         }
     }
-    $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
+    if($_SESSION['action']=="Modifica") {
+        $page = str_replace('<titlePage />', 'Modifica '.$title, $page);
+    }
+    else {
+        $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);
+    }
     if($_SESSION['action'] =="Nuovo" && $title=="Associazione") {
         $page =  str_replace("<percorso />",' Admin » Nuova '.$title,$page);
     }
@@ -39,6 +44,7 @@
     if($connection) {    
         if(empty($_FILES['Immagine']['name']) && $_SESSION['action']=="Modifica") {
             $Immagine = $_SESSION['image'];
+            $_SESSION['image'] == '';
         }
         else {
             $file = $_FILES['Immagine']['name'];
@@ -60,7 +66,7 @@
             }
         }
         if($error == true) {
-            if(!empty($_FILES['Immagine']['tmp_name'])) {
+            if(!empty($_FILES['Immagine']['name'])) {
                 move_uploaded_file($_FILES['Immagine']['tmp_name'],$ImmagineUpload);
             }
             if($_SESSION['action']=="Modifica") {
@@ -74,8 +80,8 @@
                 $_SESSION['action'] = '';
                 }
             else {
-                $message = '<strong class="errori">Errore nell\'inserimento</strong>';
-                $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+                $message = '<strong class="errori"  tabindex="0">Errore nell\'inserimento</strong>';
+                $page =  str_replace("<abort />",'<div id="annulla-operazione" tabindex="0"> <p>Annulla operazione</p> </div>',$page);
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
