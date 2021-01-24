@@ -175,10 +175,6 @@ a.successo {
 	align-items: center;
 	vertical-align: middle;
 	background-color: #94080b;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	z-index: 1;
 }
 
 .bordo{
