@@ -34,7 +34,7 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $message = '<strong class="successo" tabindex="1">Inserimento andato a buon fine!</strong>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
-    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
+    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';
     $newString = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
     $page = str_replace($stringToreplace,$newString,$page);
     $page = str_replace('<action />','Admin.php',$page);
@@ -52,7 +52,7 @@ function updateForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
 //INSERISCE IMMAGINE IN CASO DI ELIMINAZIONE E POI CHIAMA SOSTITUTE()
 function deleteForm($page,$Titolo,$Immagine,$AltImmagine,$Testo) {
     $end = 'readonly';
-    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
+    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';
     $String = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
     $page = str_replace($stringToreplace,$String,$page);
     return sostitute($page,$end,'',$Titolo,$AltImmagine,$Testo);
@@ -67,16 +67,18 @@ function deleted($page) {
     $page = str_replace('<label for="Titolo">Titolo: </label>','',$page);
     $page = str_replace('<input type="text" id="Titolo" name="Titolo" />','',$page);
     $page = str_replace('<label for="Immagine">Immagine: </label>','',$page);
-    $page = str_replace('<input type="file" id="Immagine" accept="image/*" name="Immagine"/>','',$page);
-    $page = str_replace('<label for="AltImmagine"><abbr title="AltImmagine">Alt Immagine:</abbr></label>','',$page);
+    $page = str_replace('<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />','',$page);
+    $page = str_replace('<label for="AltImmagine"><abbr title="AltImmagine">Descrizione immagine:</abbr></label>','',$page);
     $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
     $page = str_replace('<label for="Testo">Testo: </label>','',$page);
     $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
+    $page = str_replace ('<message />','<strong class="successo" tabindex="1">Eliminazione andata a buon fine!</strong>',$page);
     return $page;
 }
 
 //COMPILA I FORM DATO IL LORO ID
 function compile($page,$table,$ID,$session) {
+    session_start();
     require_once "dbConnection.php"; 
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();            
@@ -89,6 +91,7 @@ function compile($page,$table,$ID,$session) {
                     $Immagine = $cell['Immagine'];
                     $AltImmagine = $cell['AltImmagine'];
                     $Testo = $cell['Testo'];
+                    $_SESSION['image'] = $Immagine;
                 }
             }
         }
@@ -171,10 +174,25 @@ function menu($page,$table,$session) {
     return $page;
 }
 
+//COSTRUISCE SEARCH
+function search($page) {
+    $search = '<form name="ricerca" method="post" action="search.php">';
+        $search .= '<fieldset class="form">';
+            $search .= '<div class="textbutton">';
+                $search .= '<input type="text" id="cerca" name="cerca" title="Cosa cerchi?">';
+                $search .= '<input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">';
+            $search .= '</div>';
+        $search .= '</fieldset>';
+    $search .= '</form>';
+    $page =  str_replace("<search />",$search,$page);
+    return $page;
+}
+
 //USATA PER CHIAMARE MENU E FOOTER
 function buildHTML($page,$table,$session) {
     $page = menu($page,$table,$session);
     $page = footer($page,$session);
+    $page = search($page);
     return $page;
 }
 ?>
