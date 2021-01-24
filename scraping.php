@@ -78,7 +78,6 @@ function deleted($page) {
 
 //COMPILA I FORM DATO IL LORO ID
 function compile($page,$table,$ID,$session) {
-    session_start();
     require_once "dbConnection.php"; 
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();            
