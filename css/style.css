@@ -133,7 +133,6 @@ a {
 /* =======MENU======== */
 /* =================== */
 #menu{
-	padding: 0.5em;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -206,8 +205,13 @@ fieldset.form{
 	align-items: center;
 	
 }
+.textbutton{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 input[type="text"]#cerca{
-	width: 15em;
+	min-width: 3em;
 	float: left;
 	background-color: white;
 	margin: 0;
@@ -494,6 +498,33 @@ header#primary-header.scrolled {
 /* =========AMMINISTRATORE===== */
 /* ============================ */
 
+.abort{
+	position: absolute;
+	left: -9999px;
+}
+#annulla-operazione{
+	background-color: rgba(198, 88, 82, 0.6);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	position: relative;
+	left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: white;
+	line-height: 1.5rem;
+	cursor: pointer;
+	margin: 2em 0;
+}
+a#annulla-operazione{
+	text-decoration: none;
+}
 .container-home-amministratore{
 	display: flex;
 	flex-direction: column;
@@ -515,8 +546,12 @@ input[type=radio]{
 button[type=submit]{
 	/* width: 8em;
 	height: 1.9em; */
-	width: 10em;
-	height: 2em;
+	/* width: 10em; */
+	/* height: 2em; */
+	/* width: 100%; */
+	min-width: 6em;
+	min-height: 2.2em;
+	padding: 0.5em 2em;
 	font-size: 1.2em;
 	letter-spacing: 0.1em;
 	margin: 0 1.2em;
@@ -658,6 +693,7 @@ input[type=file]{
 }
 input[type=text], input[type=blob], input[type=password] {
 	width: 100%;
+	min-width: 13em;
 	font-family: sans-serif;
 	padding: 12px 20px;
 	margin: 0.8em 0;
@@ -672,15 +708,16 @@ input[type=text], input[type=blob], input[type=password] {
 
 textarea#Testo {
 	font-family: sans-serif;
-	
+	min-width: 13em;
+   min-height: 18em;
 	width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1.2em; 
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 1.2em; 
 }
 textarea#Link{
 	height: 40vh;
@@ -744,6 +781,10 @@ textarea#Link{
 	justify-content: space-between;
 	color: white;
 	float: inline-end;
+	padding: 1em 0;
+}
+.padding-05{
+	padding: 0.5em;
 }
 /* #contatti{
 	display: flex;
@@ -764,9 +805,14 @@ textarea#Link{
 }
 #login p{
 	width: 30%;
-	background-color: #c65852;
+	/* background-color: #c65852; */
 	padding: 0.3em 2em;
+	
 	text-align: center;
+}
+#login p a{
+	color: white;
+	letter-spacing: 0.1em;
 }
 /* .end-footer{
 	width: 100%;
@@ -877,6 +923,14 @@ textarea#Link{
     font-size: 1.1em;
 	}
 	/* ================ */
+	/* ======CERCA===== */
+	/* ================ */
+	input[type="text"]#cerca{
+		width: 8em;
+	}
+
+
+	/* ================ */
 	/* ======HOME===== */
 	/* ================ */
 	
@@ -927,10 +981,10 @@ textarea#Link{
 		width: 70%;
 		margin-left: 2em;
 	}
-	textarea#Testo{
+	/* textarea#Testo{
 		width: 13em;
 	 	height: 18em;
-	}
+	} */
 	.container-percorso-search{
 		flex-direction: column;
 		align-items: flex-start;
@@ -1006,7 +1060,11 @@ textarea#Link{
 	.links{
 		grid-template-columns: 10em 11em 15em 12em;
 	}
-   
+	
+	input[type="text"]#cerca{
+		width: 15em;
+	}
+
 	.card-container{
 		grid-template-columns: auto auto;
 		justify-content: space-evenly;
@@ -1069,9 +1127,6 @@ textarea#Link{
 		vertical-align: middle;
 		align-items: center;
 	}
-	textarea#Testo{
-		height: 30em;
-		width: 30em;
-	}
+	
 	
 }
