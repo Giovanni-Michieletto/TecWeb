@@ -3,12 +3,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400; display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/faf93335fe.js" type=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type=""></script>
     <script type="text/javascript" src="myScript.js"></script>
-    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" media="screen"/>
     <link rel="stylesheet" href="./css/stampa.css" media="print"/>
     <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
@@ -40,10 +40,10 @@
     </div>
     <abort />
     <div id="content" class="container-amministration margin-5">
-        <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
+        <form enctype="multipart/form-data"  id="form" method="post" action="<action />" onsubmit="return validate()">
             <fieldset class="align">
                 <div class="title-amministration">
-                    <img src="./db/img/deco.svg" alt="">
+                    <img src="./db/img/deco.svg" alt=""/>
                     <label for="Titolo">Titolo*: </label>
                 </div>
                 <div class="text-box">
@@ -55,7 +55,7 @@
             </fieldset>
             <fieldset> 
                 <div class="title-amministration">
-                    <img src="./db/img/deco.svg" alt="">
+                    <img src="./db/img/deco.svg" alt=""/>
                     <label for="Immagine">Immagine*: </label>
                 </div>
                 <div class="immagini-box">
@@ -76,7 +76,7 @@
             </fieldset>
             <fieldset>
                 <div class="title-amministration">
-                    <img src="./db/img/deco.svg" alt="">
+                    <img src="./db/img/deco.svg" alt=""/>
                     <label for="Testo">Testo*: </label>
                 </div>
                 <div class="text-box">
@@ -91,15 +91,15 @@
             </fieldset>
         </form>
     </div>
-    <a class="TornaSu" href="Home.php">Torna su</a>
+    <p><a class="TornaSu" href="Home.php">Torna su</a></p>
     <div id="TornaSu" class="d-none">
         <i class="fas fa-angle-double-up"></i>
     </div>
-    <script>
+    <script type="">
         $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
         $('#annulla-operazione').click(function(){window.location.href="Admin.php";})
     </script>
-</body>
+
 
 <div id="footer">
     <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
@@ -122,6 +122,6 @@
     </div>
     <img id="img_validCSS" class="padding-05" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
 </div>
-
+</body>
 </html>
 
