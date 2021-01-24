@@ -2,7 +2,6 @@
    box-sizing: border-box;
 	 margin:0 0;
 }
-
 body{
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 100%;
@@ -14,6 +13,29 @@ body::-webkit-scrollbar-thumb{
 
 .margin-5 {
 	margin: 0 5% 0 5%;
+}
+
+.content-search {
+	margin: 0 5% 0 5%;
+}
+.content-search dt {
+	padding: 0 0 0 3em;
+}
+.content-search dd {
+	padding: 0 0 1em 5em;
+}
+.content-search h2 {
+	padding: 0.5em 0 0.5em 1em;
+}
+.content-search a{
+	color: black;
+	width: 100%;
+}
+.content-search a:hover{
+	color: rgb(0, 155, 159);
+}
+.content-search p {
+	padding: 0 0 0 3em;
 }
 
 .evidenzia{
@@ -38,6 +60,9 @@ a {
 	display: none;
 }
 
+.hiddenHelp {
+	display: none;
+}
 #convento-button-scroll.d-none {
 	display: none;
 }
@@ -108,7 +133,6 @@ a {
 /* =======MENU======== */
 /* =================== */
 #menu{
-	padding: 0.5em;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -133,7 +157,6 @@ a {
 	-o-border-radius: 15px;
 }
 .links {
-	/* display: flex; */
 	width: 100%;
 }
 .links li {
@@ -151,7 +174,6 @@ a {
 .links a {
 	
 	color: #ccc;
-	/* text-decoration: none; */
 	letter-spacing: 3px;
 	font-weight: bold;
 
@@ -160,7 +182,6 @@ a {
 	background-color: #c65852;
 } 
 .links a:visited{
-	/* text-decoration:underline; */
 	color:rgb(97, 178, 245);
 }
 
@@ -181,8 +202,13 @@ fieldset.form{
 	align-items: center;
 	
 }
+.textbutton{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 input[type="text"]#cerca{
-	width: 15em;
+	min-width: 3em;
 	float: left;
 	background-color: white;
 	margin: 0;
@@ -204,7 +230,9 @@ input[type="submit"].cerca{
 	-o-border-radius: 5px;
 }
 #percorso{
-	width: 30%;
+	font-size: 1.1em;
+	width: 100%;
+  padding-top: 2em;
 	height: 3em;
 	display: flex;
 	align-items: center;
@@ -212,6 +240,7 @@ input[type="submit"].cerca{
 }
 #space {
 	padding-left: 2em;
+	width:100%
 } 
 
 /* =================== */
@@ -221,7 +250,14 @@ input[type="submit"].cerca{
 	margin: 70px 0 20px 0;
 	display: flex;
 	vertical-align: middle;
+	align-items: center;
 
+}
+.title h1{
+	font-weight: bold;
+   font-size: 2.6em;
+	display: inline-block;
+	margin-left: 0.5em;
 }
 
 .title h2 {
@@ -258,22 +294,12 @@ ul li{
 /* =========HOME======= */
 /* ====================== */
 
-/* .title-convento{
-	display: flex;
-   vertical-align: middle;
-   text-align: center;
-   justify-content: center;
-   margin-bottom: 1em;
-    margin-top: 3em;
-} */
 .title-convento h1 {
 	font-weight: bold;
 	text-align: center;
 	display: inline-block;
    font-size: 1.8em;
 }
-
-
 .ultimo-container-lista p {
 	font-size: 1.1em;
 	padding: 1em;
@@ -286,12 +312,12 @@ ul li{
 /* ============================ */
 /* =========STORIA============= */
 /* ============================ */
-.contenutostoria h1{
+/* .contenutostoria h1{
 	text-align: center;
 	padding-top: 1em;
 	padding-bottom: 0.5em;
 	font-size: 2.3em;
-}
+} */
 
 .contenutostoria dd {
 	line-height: 1.5em;
@@ -318,16 +344,11 @@ ul li{
 /* ============================ */
 .card-container{
 	display: grid;
-	
-	/* grid-template-columns: 15em 15em 15em; */
 }
 
 .card {
-	/*margin: 15px 0 0 0;
-	width: 17rem;
-	*/transition: width 0.3s ease-in-out;
-	/*border: 1px solid grey;
-	*/width: 17em;
+	transition: width 0.3s ease-in-out;
+	width: 80%;
 	min-width: 230px;
 	margin-bottom: 2rem;
 	height: 18em;
@@ -346,8 +367,6 @@ ul li{
 }
 
 .card-title {
-	/* background-color: rgba(198, 88, 82, 0.1); */
-
 	border-radius: 5px 5px 0 0;
 	padding: 0.7rem;
 	height: 3em;
@@ -366,26 +385,17 @@ ul li{
 	text-decoration: none;
 }
 .card-img {
-	
-	height: 6em;
 	width: 100%;
+	height: 6em;
 	overflow: hidden;
-	
 }
 .card-img img {
-	/* width: 0em;
-	min-width: 100%;
-	object-fit: cover; */
-	height: 100%;
-	min-height: 100%;
-	min-width: 100%;
+	width: 100%;
 	object-fit: cover;
 	padding: 0 0.2em
 }
 .card-text {
-	/* background-color: rgba(198, 88, 82, 0.1); */
 	border-radius: 0 0 5px 5px;
-	/* padding: 0.5em; */
 	height: 50%;
 	width: 100%;
 	display: flex;
@@ -413,10 +423,10 @@ ul li{
 	flex-direction: column;
 	margin-top: 2em;
 	margin-bottom: 2em;
-	border: 1px solid #ccc;
+	border: 2px solid rgb(148, 148, 148);
 	padding: 1.5em;
 	border-radius: 5%;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(245, 245, 245);
 }
 
 #title{
@@ -435,54 +445,47 @@ ul li{
 #image img{
 	height: 100%;
 	width: 58%;
-	/* min-height: 1vh; */
 	height: 100%;
-	/* border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%; */
 }
 #text{
 	font-size: 1.3em;
 }
 
-.title {
-	margin: 70px 0 20px 0;
-	display: flex;
-	vertical-align: middle;
-}
 
-.title img {
-	width: auto;
-	height: 40px;
-}
 
-/* header#primary-header {
-	background: transparent;
-	padding: 0 5%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 10%;
-	min-height: 50px;
-	background-size: cover;
-	position: fixed;
-	width: 100%;
-	z-index: 99;
-}
 
-header#primary-header.scrolled {
-	background: rgba(221, 202, 201, 0.95);
-	transition: background 500ms;
-	-webkit-transition: background 1500ms;
-	-moz-transition: background 500ms;
-	-ms-transition: background 500ms;
-	-o-transition: background 500ms;
-} */
+
 /* ============================ */
 /* =========AMMINISTRATORE===== */
 /* ============================ */
 
+.abort{
+	position: absolute;
+	left: -9999px;
+}
+#annulla-operazione{
+	background-color: rgba(198, 88, 82, 0.6);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	position: relative;
+	left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: white;
+	line-height: 1.5rem;
+	cursor: pointer;
+	margin: 2em 0;
+}
+a#annulla-operazione{
+	text-decoration: none;
+}
 .container-home-amministratore{
 	display: flex;
 	flex-direction: column;
@@ -502,10 +505,9 @@ input[type=radio]{
 	margin-bottom: 2em;
 }
 button[type=submit]{
-	/* width: 8em;
-	height: 1.9em; */
-	width: 10em;
-	height: 2em;
+	min-width: 6em;
+	min-height: 2.2em;
+	padding: 0.5em 2em;
 	font-size: 1.2em;
 	letter-spacing: 0.1em;
 	margin: 0 1.2em;
@@ -523,7 +525,6 @@ button[type=submit]{
 .title-a{
    display: flex;
 	align-items: center;
-	/* margin: 15px 0 15px 0; */
 	padding: 12px 0 12px 0;
 	margin-bottom: 1.5em;
 }
@@ -560,9 +561,6 @@ button[type=submit]{
 .scelta-azione ul li{
 	padding: 1.3em;
 }
-/* .scelta-azione ul li:hover{
-	background-color: #ccc;
-} */
 .scelta-azione li:hover a{
 	color: rgb(0, 155, 159);
 }
@@ -598,7 +596,6 @@ button[type=submit]{
 .title-amministration{
 	display: flex;
 	width: 27%;
-	/* max-width: 250px; */
 	margin-bottom: 2em;
 }
 .title-amministration img{
@@ -647,6 +644,7 @@ input[type=file]{
 }
 input[type=text], input[type=blob], input[type=password] {
 	width: 100%;
+	min-width: 13em;
 	font-family: sans-serif;
 	padding: 12px 20px;
 	margin: 0.8em 0;
@@ -661,15 +659,16 @@ input[type=text], input[type=blob], input[type=password] {
 
 textarea#Testo {
 	font-family: sans-serif;
-	
+	min-width: 13em;
+   min-height: 18em;
 	width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1.2em; 
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 1.2em; 
 }
 textarea#Link{
 	height: 40vh;
@@ -686,11 +685,7 @@ textarea#Link{
 	display: block;
 	width: 100%;
 	text-align: center;
-	/* justify-content: center; */
 }
-/* .button-conferma button[type=submit]{
-	
-} */
 .aggiungi{
 	padding: 0.5rem 5rem;
    background-color: #c65852;
@@ -702,10 +697,6 @@ textarea#Link{
 	border: none;
 }
 
-
-
-
-
 /* ============================ */
 /* =========LOGIN============= */
 /* ============================ */
@@ -716,33 +707,24 @@ textarea#Link{
    border: 1px solid #ccc;
 }
 
-
-
 /* ====================== */
 /* =========FOOTER======= */
 /* ====================== */
 
 #footer {
-	/* posizionato in fondo tramite javascript (vedere pagina web salvatta traa preferiti) */
 	width: 100%;
 	margin-top: 3rem;
-	/* height: 20vh; */
 	background-color: rgb(0, 155, 159);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	color: white;
-	float: inline-end;
+	padding: 1em 0;
 }
-/* #contatti{
-	display: flex;
-	flex-direction: column;
-	width: 30%;
-} */
-/* #login{
-	align-items: center;
-	margin-top: 50%;
-} */
+.padding-05{
+	padding: 0.5em;
+}
+
 #login{
 	display: flex;
     width: 100%;
@@ -753,15 +735,14 @@ textarea#Link{
 }
 #login p{
 	width: 30%;
-	background-color: #c65852;
 	padding: 0.3em 2em;
+	
 	text-align: center;
 }
-/* .end-footer{
-	width: 100%;
-	text-align: center;
-	padding: 0.5em;
-} */
+#login p a{
+	color: white;
+	letter-spacing: 0.1em;
+}
 
 .container-text-footer{
 	padding: 1em;
@@ -780,8 +761,8 @@ textarea#Link{
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 3%;
+	right: 3%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -790,28 +771,12 @@ textarea#Link{
 	line-height: 1.5rem;
 	cursor: pointer;
 }
-/* 
-#header.scrolled {
-	background: rgba(221, 202, 201, 0.95);
-	transition: background 500ms;
-	-webkit-transition: background 1500ms;
-	-moz-transition: background 500ms;
-	-ms-transition: background 500ms;
-	-o-transition: background 500ms;
-} */
-/* .d-none {
-	display: none;
-}
 
-#sentieri-button-scroll.d-none {
-	display: none;
-} */
 /* ============================ */
 /* ============================ */
 /* =========MEDIA-QUERY========*/
 /* ============================ */
 /* ============================ */
-
 
 
 /* ============================ */
@@ -832,6 +797,9 @@ textarea#Link{
 		-ms-border-radius: 15px;
 		-o-border-radius: 15px;
 	 }
+	input[type="text"]#cerca {
+		width: 10em;
+	}
 	 fieldset.form{
 		margin-left: 0.5em;
 		margin-bottom: 0;
@@ -851,20 +819,26 @@ textarea#Link{
 
 	}
 	.links li{
-		/* border: 1px solid #ccc; */
    	padding: 0.4em;
    	font-size: 1.3em;
    	text-align: center;
 	}
 	.notlink li{
 		padding: 0.5em 1.5em 0.2em 1.5em;
-    /* color: rgb(226, 226, 226); */
-    color: #ccc;
-    text-decoration: underline;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 1.1em;
+		color: #ccc;
+		text-decoration: underline;
+		letter-spacing: 3px;
+		font-weight: bold;
+		font-size: 1.1em;
 	}
+
+	/* ================ */
+	/* ======CERCA===== */
+	/* ================ */
+	input[type="text"]#cerca{
+		width: 8em;
+	}
+
 	/* ================ */
 	/* ======HOME===== */
 	/* ================ */
@@ -915,16 +889,15 @@ textarea#Link{
 	.altimmagine-box{
 		width: 70%;
 		margin-left: 2em;
-	}
-	textarea#Testo{
-		width: 13em;
-	 	height: 18em;
-	}
+	}	
 	.container-percorso-search{
 		flex-direction: column;
 		align-items: flex-start;
+	} */
+	.textbutton{
+		display: flex;
+		align-items: center;
 	}
-
 	#footer{
 		flex-direction: column;
 	}
@@ -960,14 +933,16 @@ textarea#Link{
      -ms-border-radius:  30px ;
      -o-border-radius:  30px ;
 	}
+	input[type="text"]#cerca {
+		width: 15em;
+	}
+
 	fieldset.form{
 		margin-bottom: 0;
 		padding: 0;
 	}
    .convento{
-      /* display: block; */
       display: flex;
-      /* position: absolute; */
       justify-content: left;
       width: 16%;
    }
@@ -982,7 +957,6 @@ textarea#Link{
 }
    .title-convento{
 		display: flex;
-      /* align-items: end; */
 		width: 78%;
 		margin-left: 1em;
 		margin-right: 1em;
@@ -995,10 +969,18 @@ textarea#Link{
 	.links{
 		grid-template-columns: 10em 11em 15em 12em;
 	}
-   
+	
+	input[type="text"]#cerca{
+		width: 15em;
+	}
+
 	.card-container{
 		grid-template-columns: auto auto;
 		justify-content: space-evenly;
+	}
+	p.no-file{
+		font-size: 1.5em;
+    padding: 1em;
 	}
 	.container-percorso-search{
 		flex-direction: row;
@@ -1026,7 +1008,6 @@ textarea#Link{
 @media screen and (min-width:900px){
 	
 	.links{
-		/* grid-template-columns: auto auto auto auto auto auto; */
 		grid-template-columns: 7em 8em 13em 10em 7em 8em 7em;
 	}
 	.contenitore-body{
@@ -1058,9 +1039,6 @@ textarea#Link{
 		vertical-align: middle;
 		align-items: center;
 	}
-	textarea#Testo{
-		height: 30em;
-		width: 30em;
-	}
+	
 	
 }

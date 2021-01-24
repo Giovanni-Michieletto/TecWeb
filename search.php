@@ -3,7 +3,7 @@
     require_once "dbConnection.php";
     session_start();
     $cerca = $_POST['cerca'];
-    $page = file_get_contents('view.html');
+    $page = file_get_contents('search.html');
     $home= file_get_contents('Home.html'); 
     $storia=file_get_contents('storia.html'); 
     $dbAccess = new DBAccess();          
@@ -13,17 +13,17 @@
         $definition = '<div id="list">';
         foreach ($tabelle as $table){
             $find=false;
-            $definition .= '<h3>'.$table.'</h3>';
+            $definition .= '<h2>'.$table.'</h2>';
             $list = $dbAccess->getFile($table); 
             if($list) {
                 foreach($list as $cell){
-                    if(strpos($cell['Titolo'],$cerca)!=false){
+                    if(strpos(strtolower($cell['Titolo']),strtolower($cerca))!=false){
                         $find=true; 
-                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl>';
+                        $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl></a>';
                     } 
-                    else if(strpos($cell['Testo'],$cerca)!=false){
+                    else if(strpos(strtolower($cell['Testo']),strtolower($cerca))!=false){
                         $find=true;
-                        $definition .= '<dl> <dt>'.$cell['Titolo'].'</dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl>';
+                        $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl> </a>';
                     }
                 } 
             }
@@ -31,26 +31,30 @@
                 $definition .= '<p>Nessuna ricorrenza trovata</p>'; 
             }
         } 
-        if(strpos($home,$cerca)!=false){
-            $definition .= '<h3>Home</h3>';
-            $definition .= '<p>'.substr($cell['Testo'],strpos($home,$cerca),100).'</p>';
+        if(strpos(strtolower($home),strtolower($cerca))!=false){
+            $definition .= '<a href="Home.php">';
+            $definition .= '<h2>Home</h2>';
+            $definition .= '<p>...'.substr($cell['Testo'],strpos($home,$cerca),100).'...</p>';
+            $definition .= '</a>';
         }
         else {
-            $definition .= '<h3>Home</h3>';
+            $definition .= '<h2>Home</h2>';
             $definition .= '<p>Nessuna ricorrenza trovata</p>';
         }
-        if(strpos($storia,$cerca)!=false){
-            $definition .= '<h3>Storia</h3>';
-            $definition .= '<p>'.substr($cell['Testo'],strpos($home,$cerca),100).'</p>'; 
+        if(strpos(strtolower($storia),strtolower($cerca))!=false){
+            $definition .= '<a href="Storia.php">';
+            $definition .= '<h2>Storia</h2>';
+            $definition .= '<p>...'.substr($cell['Testo'],strpos($home,$cerca),150).'...</p>';
+            $definition .= '</a>'; 
         }
         else {
-            $definition .= '<h3>Storia</h3>';
+            $definition .= '<h2>Storia</h2>';
             $definition .= '<p>Nessuna ricorrenza trovata</p>';
         }
+        $definition .='</div>';
     } 
     $page=str_replace('<list />',$definition,$page);
     $page=buildHTML($page, "", $_SESSION['logged']);
-    $page =  str_replace("<percorso />",'Pagina di ricerca',$page);
-    $page =  str_replace("<titolo />",'Risultati ricerca',$page); 
+    $page =  str_replace("<titolo />",'<h1>Risultati della ricerca per: "'.$cerca.'"</h1>',$page); 
     echo $page;
 ?>

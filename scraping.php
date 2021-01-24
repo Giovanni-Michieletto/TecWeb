@@ -31,7 +31,7 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
-    $message = '<strong class="successo">Inserimento andato a buon fine!</strong>';
+    $message = '<strong class="successo" tabindex="1">Inserimento andato a buon fine!</strong>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
@@ -145,7 +145,7 @@ function footer($page,$session) {
 
 //COSTRUISCE IL MENU
 function menu($page,$table,$session) {
-    $menu='';
+    $menu='<ul class="links">';
     $tabelle=['Home','Articoli','Associazioni','Vangeli','Eventi','Storia'];
     foreach($tabelle as $li) {
         if($li == $table) {
@@ -166,6 +166,7 @@ function menu($page,$table,$session) {
             $menu .= '<li><a href="Admin.php">Admin</a></li>';
         }
     }
+    $menu .= '</ul>';
     $page =  str_replace("<menu />",$menu,$page);
     return $page;
 }
