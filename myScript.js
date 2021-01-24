@@ -72,7 +72,7 @@ function validate() {
         }
     }
 
-    if(validation==false) {
+    /*if(validation==false) {
         var input = document.getElementById("Bottone");
         var parent = input.parentNode;
 
@@ -83,7 +83,7 @@ function validate() {
         var errormsg = "Inserimento errato!";
         showError(input, errormsg);
         return validation;
-    }
+    }*/
 
     return validation;
 }

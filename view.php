@@ -63,12 +63,11 @@
     }
     else {
         $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
-        $page =  str_replace("<abort />",'<a class="hide" href="Admin.php">Annulla operazione</a>',$page);
     }  
     $page =  str_replace("<tornasu />","view.php?table=$title",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
-        $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
+        $page =  str_replace("<abort />",'<a class="hide" href="Admin.php">Annulla operazione</a>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
         $page = footer($page,$_SESSION['logged']);
     }
