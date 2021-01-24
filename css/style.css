@@ -282,7 +282,7 @@ input[type="submit"].cerca{
 /* ======TITOLI======= */
 /* =================== */
 .title {
-	margin: 70px 0 20px 0;
+	margin: 1.5em 0;
 	display: flex;
 	vertical-align: middle;
 	align-items: center;
@@ -354,8 +354,8 @@ ul li{
 	font-size: 2.3em;
 } */
 
-.contenutostoria dd {
-	line-height: 1.5em;
+.storia-contenuto p{
+	line-height: 1.5em ;
 	font-size: 1.1em;
 	text-align: justify;
 }
