@@ -72,7 +72,7 @@
     $page =  str_replace("<tornasu />","view.php?table=$title",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
-        $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+        $page =  str_replace("<abort />",'<div id="annulla-operazione"  tabindex="0"> <p>Annulla operazione</p> </div>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
         $page = footer($page,$_SESSION['logged']);
     }
