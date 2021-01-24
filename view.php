@@ -2,7 +2,12 @@
     include 'scraping.php';
     require_once "dbConnection.php";
     session_start();
-    $table = $_GET['table'];
+    if(empty($_GET['table'])) {
+        header('Location: Admin.php?message=false',TRUE);
+    }
+    else {
+        $table = $_GET['table'];
+    }
     $page = file_get_contents('view.html');
     if(empty($_SESSION['action'])) {
         $_SESSION['action'] = "";
@@ -67,7 +72,7 @@
     $page =  str_replace("<tornasu />","view.php?table=$title",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
-        $page =  str_replace("<abort />",'<a class="hide" href="Admin.php">Annulla operazione</a>',$page);
+        $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
         $page = footer($page,$_SESSION['logged']);
     }

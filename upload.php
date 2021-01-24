@@ -17,7 +17,6 @@
     }
     $Titolo = $_POST['Titolo'];
     $AltImmagine = $_POST['AltImmagine'];
-    $file = $_FILES['Immagine']['name'];
     $Testo = $_POST['Testo'];
     $page = file_get_contents('blankForm.html');
     $tableArray = ['Articoli','Associazioni','Vangeli','Eventi'];
@@ -38,12 +37,18 @@
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();
     if($connection) {    
-        $list = $dbAccess->getFile($table);
+        if(!empty($_FILES['Immagine']['name'])) {
+            $Immagine = $_SESSION['image'];
+        }
+        else {
+            $file = $_FILES['Immagine']['name'];
+            $list = $dbAccess->getFile($table);
         $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
         $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
         $dir = './upload/' . $table . '/';
         $ImmagineUpload = $directory . $file;
         $Immagine = $dir . $file;
+        }
         $error = true;
         if($list) {
             foreach ($list as $cell) {
@@ -68,7 +73,7 @@
                 }
             else {
                 $message = '<strong class="errori">Errore nell\'inserimento</strong>';
-                $page =  str_replace("<abort />",'<a href="Admin.php">Annulla operazione</a>',$page);
+                $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }
