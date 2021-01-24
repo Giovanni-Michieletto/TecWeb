@@ -182,7 +182,7 @@ a.successo {
 }
 
 .bordo{
-	border: 1px solid white;
+	border: 1px solid #ccc;
 	padding: 1em;
 	border-radius: 15px;
 	margin-bottom: 1em;
@@ -208,7 +208,7 @@ a.successo {
 }
 .links a {
 	
-	color: white;
+	color: #ccc;
 	letter-spacing: 3px;
 	font-weight: bold;
 
@@ -387,7 +387,7 @@ ul li{
 	min-width: 230px;
 	margin-bottom: 2rem;
 	height: 18em;
-	border: 2px solid white;
+	border: 2px solid #ccc;
 	border-radius: 5px;
 	overflow: hidden;
 	-webkit-border-radius: 5px;
@@ -702,7 +702,7 @@ input[type=text], input[type=blob], input[type=password] {
 	padding: 12px 20px;
 	margin: 0.8em 0;
 	display: inline-block;
-	border: 1px solid white;
+	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 1.2em;
@@ -718,7 +718,7 @@ textarea#Testo {
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid white;
+	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 1.2em; 
@@ -729,7 +729,7 @@ textarea#Link{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1.2em; 
@@ -757,7 +757,7 @@ textarea#Link{
    margin-top: 2%;
 	margin-left: 9%;
 	padding: 1em;
-   border: 1px solid white;
+   border: 1px solid #ccc;
 }
 
 /* ====================== */
@@ -844,7 +844,7 @@ textarea#Link{
 		display: flex;
 		align-items: center;
 		width: 100%;
-		border: 1px solid white;
+		border: 1px solid #ccc;
 		padding: 0.5em;
 		border-radius: 15px;
 		-webkit-border-radius: 15px;
