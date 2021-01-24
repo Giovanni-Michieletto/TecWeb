@@ -1,7 +1,7 @@
 <?php
 //INSERISCE TITOLO, ALT E TEST
 function sostitute($page,$end,$message,$Titolo,$AltImmagine,$Testo) {
-    $page = str_replace('<message />', $message, $page);
+    $page = str_replace('<message id="message"/>', $message, $page);
     $page = str_replace('name="Titolo"', 'name="Titolo" ' . $end .' value="'.$Titolo.'"', $page);
     $page = str_replace('name="AltImmagine"', 'name="AltImmagine" ' . $end .' value="'.$AltImmagine.'"', $page);
     $page = str_replace('name="Testo">', 'name="Testo" ' . $end . '>' .$Testo, $page);
