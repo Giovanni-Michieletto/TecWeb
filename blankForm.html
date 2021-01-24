@@ -49,6 +49,12 @@
     <div class="abort">
         <abort />
     </div>
+    <div id="annulla-operazione" class="d-none">
+        <tornadietro />
+    </div>
+    <div>
+        <message />
+    </div>
     <div id="content" class="container-amministration margin-5">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
             <fieldset class="align">
@@ -110,11 +116,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
+        $('#annulla-operazione').click(function(){window.location.href="Admin.php";})
     </script>
 </body>
 
 <div id="footer">
-    <img id="img_validCode" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
+    <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
     <div class="container-text-footer margin-5">
         <p>
             Contatti utili
@@ -132,7 +139,8 @@
             S.Maria del Cengio - Comunità dei Servi di Maria
         </p>
     </div>
-    <img id="img_validCSS" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
+    <img id="img_validCSS" class="padding-05" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
 </div>
 
 </html>
+
