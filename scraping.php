@@ -34,7 +34,7 @@ function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $message = '<strong class="successo" tabindex="1">Inserimento andato a buon fine!</strong>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
-    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine"/>';
+    $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';
     $newString = '<img style="width:80%; height:80%;" src="' . $Immagine . '"/>';
     $page = str_replace($stringToreplace,$newString,$page);
     $page = str_replace('<action />','Admin.php',$page);
@@ -171,10 +171,25 @@ function menu($page,$table,$session) {
     return $page;
 }
 
+//COSTRUISCE SEARCH
+function search($page) {
+    $search = '<form name="ricerca" method="post" action="search.php">';
+        $search .= '<fieldset class="form">';
+            $search .= '<div class="textbutton">';
+                $search .= '<input type="text" id="cerca" name="cerca" title="Cosa cerchi?">';
+                $search .= '<input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">';
+            $search .= '</div>';
+        $search .= '</fieldset>';
+    $search .= '</form>';
+    $page =  str_replace("<search />",$search,$page);
+    return $page;
+}
+
 //USATA PER CHIAMARE MENU E FOOTER
 function buildHTML($page,$table,$session) {
     $page = menu($page,$table,$session);
     $page = footer($page,$session);
+    $page = search($page);
     return $page;
 }
 ?>

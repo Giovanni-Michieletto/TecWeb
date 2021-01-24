@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/faf93335fe.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="myScript.js"></script>
     <link rel="stylesheet" href="./css/style.css" media="screen">
     <link rel="stylesheet" href="./css/stampa.css" media="print"/>
@@ -22,14 +23,7 @@
             <menu />
         </div>    
         <div id="search">
-            <form name="ricerca" method="post" action="search.php">
-                <fieldset class="form">
-                    <div class="textbutton">
-                        <input type="text" id="cerca" name="cerca" title="Cosa cerchi?"> 
-                        <input type="submit" class="cerca" name="submit" value="Cerca" title="Cerca">
-                    </div>
-                </fieldset>
-            </form>  
+            <search />
         </div>
     </div>
     <div id="percorso">
@@ -38,23 +32,15 @@
         </span>
     </div>
     <div id="spacer-top"></div>
-    <div>
-        <message />
-    </div>
     <div class="Titolo-aggiungi align">
-        <h1 tabindex="0">
+        <h1 tabindex="2">
             <titlePage />
         </h1>
     </div>
-    <div class="abort">
-        <abort />
+    <div id="message">
+        <message />
     </div>
-    <div id="annulla-operazione" class="d-none">
-        <tornadietro />
-    </div>
-    <div>
-        <message id="message"/>
-    </div>
+    <abort />
     <div id="content" class="container-amministration margin-5">
         <form enctype="multipart/form-data" name="form" id="form" method="post" action="<action />" onsubmit="return validate()">
             <fieldset class="align">
@@ -102,9 +88,7 @@
                     </span>
                 </div>
             </fieldset>
-
             <fieldset class="button-conferma">
-
                 <button id="bottone" type="submit" name="submit" ><buttonName /></button>
             </fieldset>
         </form>
@@ -113,7 +97,6 @@
     <div id="TornaSu" class="d-none">
         <i class="fas fa-angle-double-up"></i>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
         $('#annulla-operazione').click(function(){window.location.href="Admin.php";})

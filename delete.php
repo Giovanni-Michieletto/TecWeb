@@ -33,7 +33,7 @@
             $message = '<strong class="errori">Errore nell\'eliminazione</strong>';
             $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
-        $page = str_replace('<message />',$message,$page);
+        $page = str_replace('<message id="message"/> ',$message,$page);
     }
     $page = footer($page,$_SESSION['logged']);
     $page = str_replace('<titlePage />', 'Eliminazione '.$table, $page);

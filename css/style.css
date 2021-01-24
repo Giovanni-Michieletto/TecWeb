@@ -117,14 +117,15 @@ a {
 /* =================== */
 
 .errori {
+	width: 100%;
 	color: #ff0000;
 	float: left;
 	font-size: 1.5em;
 }
 
 .successo {
+	margin: 0 0 3em 5%;
 	color: #00d221;
-	float: right;
 	font-size: 2em;
 }
 
@@ -459,14 +460,11 @@ ul li{
 /* =========AMMINISTRATORE===== */
 /* ============================ */
 
-.abort{
-	position: absolute;
-	left: -9999px;
-}
+
 #annulla-operazione{
-	background-color: rgba(198, 88, 82, 0.6);
-	width: 50px;
-	height: 50px;
+	/*background-color: rgba(198, 88, 82, 0.6);
+	width: 2em;
+	height: 2em;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -481,10 +479,36 @@ ul li{
 	color: white;
 	line-height: 1.5rem;
 	cursor: pointer;
-	margin: 2em 0;
+	margin: 2em 0;*/
+	background-color: #94080b;;
+	width: 10em;
+	height: 2em;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	position: relative;
+	left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	color: white;
+	line-height: 1.5rem;
+	cursor: pointer;
+	margin: 1.5em 0;
+	
 }
-a#annulla-operazione{
-	text-decoration: none;
+#abort{
+	/*color: rgba(198, 88, 82, 0.6);
+	position: relative;
+	left: 8%;
+	padding: 0 0 1em 3.5em;
+	display: inline;*/
+}
+#abort a:hover {
+	color: rgb(0, 155, 159);
 }
 .container-home-amministratore{
 	display: flex;
@@ -566,10 +590,9 @@ button[type=submit]{
 }
 .Titolo-aggiungi{
 	width: 100%;
-	max-width: 300px;
 	display: flex;
 	flex-direction: row;
-	margin: 5% 5%;
+	margin: 3% 5%;
 }
 .Titolo-aggiungi img{
 	width: auto;
