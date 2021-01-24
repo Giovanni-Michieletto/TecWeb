@@ -17,14 +17,14 @@ body::-webkit-scrollbar {
 		width: 4px;
 		}
 		body::-webkit-scrollbar-thumb {
-		background: rgb(0, 155, 159);
+		background: #035659;
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-ms-border-radius: 3px;
 		-o-border-radius: 3px;
 	}
 		body::-webkit-scrollbar-corner {
-			background:rgb(0, 155, 159);
+			background:#035659;
 		}
 
 .margin-5 {
@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 	width: 100%;
 }
 .content-search a:hover{
-	color: rgb(0, 155, 159);
+	color: #035659;
 }
 .content-search p {
 	padding: 0 0 0 3em;
@@ -84,7 +84,7 @@ a {
 }
 
 #convento-button-scroll {
-	background-color: rgb(0, 155, 159);
+	background-color: #035659;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -545,7 +545,7 @@ ul li{
 	display: inline;*/
 }
 #abort a:hover {
-	color: rgb(0, 155, 159);
+	color: #035659;
 }
 .container-home-amministratore{
 	display: flex;
@@ -621,7 +621,7 @@ button[type=submit]{
 	padding: 1.3em;
 }
 .scelta-azione li:hover a{
-	color: rgb(0, 155, 159);
+	color: #035659;
 }
 .Titolo-aggiungi{
 	display: flex;
@@ -650,7 +650,6 @@ button[type=submit]{
 	display: flex;
 	width: 27%;
 	margin-bottom: 2em;
-	width: 100%;
 }
 .title-amministration img{
 	width: auto;
@@ -768,7 +767,7 @@ textarea#Link{
 #footer {
 	width: 100%;
 	margin-top: 3rem;
-	background-color: rgb(0, 155, 159);
+	background-color: #035659; 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
