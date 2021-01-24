@@ -31,7 +31,7 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
 
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
-    $message = '<a class="errori" href="#bottone" tabindex="1">Inserimento andato a buon fine!</a>';
+    $message = '<a class="successo" href="#bottone" tabindex="1">Inserimento andato a buon fine!</a>';
     $page = str_replace('<titlePage />', 'Inserimento '.$table, $page);
     $end = 'readonly';
     $stringToreplace = '<input type="file" id="Immagine" accept="image/*" name="Immagine" title="Immagine" />';
