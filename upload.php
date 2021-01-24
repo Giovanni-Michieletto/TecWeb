@@ -37,17 +37,17 @@
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();
     if($connection) {    
-        if(!empty($_FILES['Immagine']['name'])) {
+        if(empty($_FILES['Immagine']['name']) && $_SESSION['action']=="Modifica") {
             $Immagine = $_SESSION['image'];
         }
         else {
             $file = $_FILES['Immagine']['name'];
             $list = $dbAccess->getFile($table);
-        $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
-        $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
-        $dir = './upload/' . $table . '/';
-        $ImmagineUpload = $directory . $file;
-        $Immagine = $dir . $file;
+            $file = preg_replace("/[^A-Za-z0-9.]/", '', $file);
+            $directory = $_SERVER['DOCUMENT_ROOT'] . '/TecWeb/upload/' . $table . '/';
+            $dir = './upload/' . $table . '/';
+            $ImmagineUpload = $directory . $file;
+            $Immagine = $dir . $file;
         }
         $error = true;
         if($list) {
