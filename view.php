@@ -31,28 +31,23 @@
         if ($list) {        
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
+                $definition .= '<div class="card">';
                 if($_SESSION['logged']==true) {
                     if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
-                        $definition .= '<div class="card" onclick="location.href=\'buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '\';">';
+                        
+                        $definition .= '<h3 class="card-title"><a href="buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '">' . $cell['Titolo'] . '</a></h3>';
                     }
                     else {
-                        $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                        $definition .= '<h3 class="card-title"><a href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'">' . $cell['Titolo'] . '</a></h3>';
                     }
                 }
                 else {
-                    $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                    $definition .= '<h3 class="card-title"><a href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'">' . $cell['Titolo'] . '</a></h3>';
                 }
-                        //$definition .= '<span class="card-title">';
-                    $definition .= '<h3 class="card-title">' . $cell['Titolo'] . '</h3>';
-                        //$definition .= '</span>';
-                        //$definition .= '<span class="card-img">';
-                    $definition .= '<div class="card-img">';
-                    $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
-                    $definition .=  '</div>';
-                        //$definition .= '</span>';
-                        //$definition .= '<span class="card-text">';
-                    $definition .= '<p class="card-text">' . $anteprima . '</p>';
-                        //$definition .= '</span>';
+                $definition .= '<div class="card-img">';
+                $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
+                $definition .=  '</div>';
+                $definition .= '<p class="card-text">' . $anteprima . '</p>';
                 $definition .= '</div>';
             }
         }
@@ -69,10 +64,9 @@
     else {
         $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
     }  
-    $page =  str_replace("<tornasu />","view.php?table=$title",$page);  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
-        $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+        $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
         $page = str_replace("<menu />",'',$page);
         $page = str_replace("<search />",'',$page);

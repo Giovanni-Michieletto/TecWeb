@@ -81,7 +81,7 @@
                 }
             else {
                 $message = '<strong class="errori">Errore nell\'inserimento</strong>';
-                $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+                $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
                 $page = sostitute($page,'',$message,$Titolo,$AltImmagine,$Testo);
                 $page = buildForm($page,$table,$ID,$_SESSION['action']);
             }

@@ -37,6 +37,5 @@
     $page = str_replace("<titolo />", $Titolo, $page);
     $page = str_replace("<immagine />", $Immagine, $page);
     $page = str_replace("<testo />", $Testo, $page);
-    $page =  str_replace("<tornasu />",'singolo.php?table=' . $table . '&ID=' . $ID,$page);  
     echo $page;
 ?>
