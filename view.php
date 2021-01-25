@@ -79,6 +79,7 @@
     else {
         $page = str_replace("<titlePage />",$title,$page);
         $page = buildHTML($page,$table,$_SESSION['logged']);
+        $page =  str_replace("<abort />",'',$page);
     }
     echo $page;
 ?>
