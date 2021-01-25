@@ -1,7 +1,7 @@
 <?php 
     include 'scraping.php';
     session_start();
-    $page = file_get_contents('Home.html');
+    $page = file_get_contents('home.html');
     if(empty($_SESSION['logged'])) {
         $_SESSION['logged'] = false;
     }
