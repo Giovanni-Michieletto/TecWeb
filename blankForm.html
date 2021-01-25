@@ -5,18 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400; display=swap" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/faf93335fe.js" type=""></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type=""></script>
+    <script src="https://kit.fontawesome.com/faf93335fe.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="myScript.js"></script>
     <link rel="stylesheet" href="./css/style.css" media="screen"/>
     <link rel="stylesheet" href="./css/stampa.css" media="print"/>
     <title>S.Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
 
-<body onload="placeholderSearch()" onscroll="removeHeader()">
+<body onload="placeholderSearch()">
     <div id="header">
         <link />
-        <img id="image-header" src="./db/img/logo-small.png" alt="">
+        <img id="image-header" src="./db/img/logo-small.png" alt=""/>
         <div id="menu"> 
             <menu />
         </div>    
@@ -25,13 +25,13 @@
         </div>
     </div>
     <div id="percorso">
-        <span id="space">
-            <p >Ti trovi in: <span xml:lang="en"><percorso /></span></p>
-        </span>
+        <div id="space">
+            <p>Ti trovi in: <span xml:lang="en"><percorso /></span></p>
+        </div>
     </div>
     <div id="spacer-top"></div>
     <div class="Titolo-aggiungi align">
-        <h1 >
+        <h1>
             <titlePage />
         </h1>
     </div>
@@ -40,7 +40,7 @@
     </div>
     <abort />
     <div id="content" class="container-amministration margin-5">
-        <form enctype="multipart/form-data"  id="form" method="post" action="<action />" onsubmit="return validate()">
+        <form enctype="multipart/form-data" id="form" method="post" action="<action />" onsubmit="return validate()">
             <fieldset class="align">
                 <div class="title-amministration">
                     <img src="./db/img/deco.svg" alt=""/>
@@ -95,7 +95,7 @@
     <div id="TornaSu" class="d-none">
         <i class="fas fa-angle-double-up"></i>
     </div>
-    <script type="">
+    <script type="text/javascript">
         $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
         $('#annulla-operazione').click(function(){window.location.href="Admin.php";})
     </script>
@@ -104,7 +104,7 @@
 <div id="footer">
     <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
     <div class="container-text-footer margin-5">
-        <p >
+        <p>
             Contatti utili
         </p>
         <ul>

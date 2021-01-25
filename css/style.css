@@ -6,6 +6,7 @@ body{
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 100%;
 	height: 100%;
+	
 }
 body::-webkit-scrollbar {
 	height: 11px;
@@ -17,14 +18,14 @@ body::-webkit-scrollbar {
 		width: 4px;
 		}
 		body::-webkit-scrollbar-thumb {
-		background: rgb(0, 155, 159);
+		background:#01B8BD;
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-ms-border-radius: 3px;
 		-o-border-radius: 3px;
 	}
 		body::-webkit-scrollbar-corner {
-			background:rgb(0, 155, 159);
+			background:#035659;
 		}
 
 .margin-5 {
@@ -48,7 +49,7 @@ body::-webkit-scrollbar {
 	width: 100%;
 }
 .content-search a:hover{
-	color: rgb(0, 155, 159);
+	color:#01B8BD;
 }
 .content-search p {
 	padding: 0 0 0 3em;
@@ -84,7 +85,7 @@ a {
 }
 
 #convento-button-scroll {
-	background-color: rgb(0, 155, 159);
+	background-color:#01B8BD;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -131,7 +132,13 @@ a {
 /* =================== */
 /* ==ERRORI/SUCCESSO== */
 /* =================== */
-
+strong {
+	text-align: center;
+	width: 100%;
+	float: left;
+	font-size: 1.5em;
+	max-height: 2em;
+}
 .errori {
 	width: 100%;
 	color: #ff0000;
@@ -175,10 +182,6 @@ a.successo {
 	align-items: center;
 	vertical-align: middle;
 	background-color: #94080b;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	z-index: 1;
 }
 
 .bordo{
@@ -198,8 +201,8 @@ a.successo {
 	list-style: none;
 }
 .notlink{
-	background-color:#c65852;
-	color: gainsboro;
+	background-color:#A92322;
+	color: white;
 
 	text-decoration: none;
 	letter-spacing: 3px;
@@ -208,13 +211,13 @@ a.successo {
 }
 .links a {
 	
-	color: #ccc;
+	color: white;
 	letter-spacing: 3px;
 	font-weight: bold;
 
 }
 .links li:hover{
-	background-color: #c65852;
+	background-color: #A92322;
 } 
 .links a:visited{
 	color:rgb(97, 178, 245);
@@ -355,7 +358,7 @@ ul li{
 } */
 
 .storia-contenuto p{
-	line-height: 1.5em;
+	line-height: 1.5em ;
 	font-size: 1.1em;
 	text-align: justify;
 }
@@ -545,7 +548,7 @@ ul li{
 	display: inline;*/
 }
 #abort a:hover {
-	color: rgb(0, 155, 159);
+	color:#01B8BD;
 }
 .container-home-amministratore{
 	display: flex;
@@ -570,7 +573,7 @@ button[type=submit]{
 	font-size: 1.2em;
 	letter-spacing: 0.1em;
 	margin: 0 1.2em;
-	background-color: burlywood;
+	background-color: #94080b;
 	border: 1px solid white;
 	border-style: outset;
 	border-radius: 5px;
@@ -578,7 +581,7 @@ button[type=submit]{
 	-moz-border-radius: 5px;
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
-
+	color: white;
 }
 
 .title-a{
@@ -606,9 +609,9 @@ button[type=submit]{
 }
 .scelta-azione ul li a{
 	text-decoration: none;
-	color: #ccc;
+	color: white;
 	font-size: 1.1em;
-	background-color: #c65852;
+	background-color: #A92322;
 	padding: 0.3em 2em;
     width: 10em;
     text-align: center;
@@ -621,7 +624,7 @@ button[type=submit]{
 	padding: 1.3em;
 }
 .scelta-azione li:hover a{
-	color: rgb(0, 155, 159);
+	color:#01B8BD;
 }
 .Titolo-aggiungi{
 	display: flex;
@@ -650,7 +653,6 @@ button[type=submit]{
 	display: flex;
 	width: 27%;
 	margin-bottom: 2em;
-	width: 100%;
 }
 .title-amministration img{
 	width: auto;
@@ -742,7 +744,7 @@ textarea#Link{
 }
 .aggiungi{
 	padding: 0.5rem 5rem;
-   background-color: #c65852;
+   background-color: #A92322;
    height: auto;
    margin: 0 auto;
    text-decoration: none;
@@ -768,11 +770,11 @@ textarea#Link{
 #footer {
 	width: 100%;
 	margin-top: 3rem;
-	background-color: rgb(0, 155, 159);
+	background-color:#01B8BD; 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	color: white;
+	color: black;
 	padding: 1em 0;
 	clear: both;
 }
@@ -795,7 +797,7 @@ textarea#Link{
 	text-align: center;
 }
 #login p a{
-	color: white;
+	color: black;
 	letter-spacing: 0.1em;
 }
 
@@ -865,7 +867,7 @@ textarea#Link{
 		width: 100%;
 		height: 100%;
 		display: flex;
-		position: stickys;
+		
 		top: 0;
 	}
 	.links {
@@ -881,7 +883,7 @@ textarea#Link{
 	}
 	.notlink li{
 		padding: 0.5em 1.5em 0.2em 1.5em;
-		color: #ccc;
+		color: white;
 		text-decoration: underline;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -949,7 +951,7 @@ textarea#Link{
 	.container-percorso-search{
 		flex-direction: column;
 		align-items: flex-start;
-	} */
+	} 
 	.textbutton{
 		display: flex;
 		align-items: center;
