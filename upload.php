@@ -59,9 +59,14 @@
         if($list) {
             foreach ($list as $cell) {
                 if($ID != $cell['ID']) {
-                    $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
+                    $array = noText($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
                     $error = $array[0];
-                    $page = $array[1];    
+                    $page = $array[1]; 
+                    if($error==true) {
+                        $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
+                        $error = $array[0];
+                        $page = $array[1]; 
+                    }
                 }
             }
         }

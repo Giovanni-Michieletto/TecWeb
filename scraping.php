@@ -19,11 +19,32 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
         $error = false;
     }
     if($AltImmagine == $cell['AltImmagine']) {
-        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" >AltImmagine già esistente!</a>', $page);
+        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" >Descirizione immagine già esistente!</a>', $page);
         $error = false;
     }
     if($Testo == $cell['Testo']) {
         $page = str_replace('<errorText />','<a class="errori" href="#Testo" >Testo già esistente!</a>', $page);
+        $error = false;
+    }
+    return array($error,$page);
+}
+
+//CONTROLLA TESTO SE NON C'È JAVASCRIPT
+function noText($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
+    if(strlen($Titolo)==0) {
+        $page = str_replace('<errorTitle />','<a class="errori" href="#Titolo" >Inserire titolo</a>', $page);
+        $error = false;
+    }
+    if(strlen($imgContent)==0) {
+        $page = str_replace('<errorImage />', '<a class="errori" href="#Immagine" >Inserire immgaine</a>', $page);
+        $error = false;
+    }
+    if(strlen($AltImmagine)==0) {
+        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" >Inserire descirizione immagine</a>', $page);
+        $error = false;
+    }
+    if(strlen($Testo)==0) {
+        $page = str_replace('<errorText />','<a class="errori" href="#Testo" >Inserire testo</a>', $page);
         $error = false;
     }
     return array($error,$page);

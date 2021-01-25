@@ -13,20 +13,20 @@ body::-webkit-scrollbar {
 	width: 6px;
 	}
 
-	body::-webkit-scrollbar {
-		height: 4px;
-		width: 4px;
-		}
-		body::-webkit-scrollbar-thumb {
-		background:#01B8BD;
-		border-radius: 3px;
-		-moz-border-radius: 3px;
-		-ms-border-radius: 3px;
-		-o-border-radius: 3px;
+body::-webkit-scrollbar {
+	height: 4px;
+	width: 4px;
 	}
-		body::-webkit-scrollbar-corner {
-			background:#035659;
-		}
+	body::-webkit-scrollbar-thumb {
+	background:#01B8BD;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+body::-webkit-scrollbar-corner {
+	background:#035659;
+}
 
 .margin-5 {
 	margin: 0 5% 0 5%;
@@ -65,7 +65,6 @@ body::-webkit-scrollbar {
 
 a {
 	display: inline-block;
-	/* height: 100%; */
 }
 
 .spacer-top{
@@ -118,8 +117,6 @@ a {
 	margin-left: 1em;
 }
 
-
-
 #starter{
 	margin-top: 1em;
 }
@@ -145,6 +142,7 @@ strong.erroresingolo {
 	font-size: 2em;
 	max-height: 2em;
 	color: #ff0000;
+	margin: 0 0 3em 5%;
 }
 
 .errori {
@@ -349,12 +347,6 @@ ul li{
 /* ============================ */
 /* =========STORIA============= */
 /* ============================ */
-/* .contenutostoria h1{
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-	font-size: 2.3em;
-} */
 
 .storia-contenuto p{
 	line-height: 1.5em ;
@@ -487,9 +479,7 @@ ul li{
     align-items: center;
 }
 #image img{
-	/* height: 100%; */
 	width: 86%;
-	/* height: 100%; */
 	max-width: 500px;
 }
 #text{
@@ -501,7 +491,6 @@ ul li{
 /* ============================ */
 /* =========AMMINISTRATORE===== */
 /* ============================ */
-
 
 #annulla-operazione{
 	background-color: #94080b;;
