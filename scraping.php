@@ -157,7 +157,7 @@ function menu($page,$table,$session) {
             if($li == 'Home'){
                 $menu .= '<li><a href="index.php">Home</a></li>';
             }else{
-            $menu .= '<li><a href="'.$li.'.php">'.$li.'</a></li>';
+                $menu .= '<li><a href="'.$li.'.php">'.$li.'</a></li>';
             }
         }
         else {
