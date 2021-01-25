@@ -19,11 +19,11 @@
                 foreach($list as $cell){
                     if(strpos(strtolower($cell['Titolo']),strtolower($cerca))!=false){
                         $find=true; 
-                        $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl></a>';
+                        $definition .= '<a href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],0,100).'...</dd> </dl></a>';
                     } 
                     else if(strpos(strtolower($cell['Testo']),strtolower($cerca))!=false){
                         $find=true;
-                        $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl> </a>';
+                        $definition .= '<a href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'"><dl> <dt> <h3>'.$cell['Titolo'].'</h3> </dt> <dd>'.substr($cell['Testo'],strpos($cell['Testo'],$cerca),100).'...</dd> </dl> </a>';
                     }
                 } 
             }
