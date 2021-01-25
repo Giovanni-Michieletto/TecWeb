@@ -11,33 +11,20 @@ function placeholderSearch() {
     };
 }
 
-function removeHeader() {
-    var header = document.getElementById("header");
-    var height = document.getElementById("image-header").offsetHeight;
-    if(window.pageYOffset>=height) {
-        header.style.display='unset';
-    }
-    if(window.pageYOffset<=height) {
-        header.style.display='';
-    }
-}
-
 function validate() {
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
     var validation = true;
     for(var i = 0; i < Id.length; i++) {
         var input = document.getElementById(Id[i]);
         var parent = input.parentNode;
-        if(parent.children.length == 2) { 
-            parent.removeChild(parent.children[1]); 
+        if(parent.children.length == 3) { 
+            parent.removeChild(parent.children[0]); 
         } 
         if(Id[i] == "Titolo") {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showErrorLink(input, errormsg);
-               // parent.children[1].setAttribute("tabindex", "2");
-               // parent.children[0].setAttribute("tabindex", "3");
-                parent.children[1].setAttribute("href", "#Titolo");
+                parent.children[0].setAttribute("href", "#Titolo");
                 validation = false;
             }
         }
@@ -45,9 +32,7 @@ function validate() {
             if(input.files.length == 0) {
                 var errormsg = "Inserire un'immagine!";
                 showErrorLink(input, errormsg);
-               // parent.children[1].setAttribute("tabindex", "4");
-               // parent.children[0].setAttribute("tabindex", "5");
-                parent.children[1].setAttribute("href", "#Immagine");
+                parent.children[0].setAttribute("href", "#Immagine");
                 validation = false;
             }
         }
@@ -55,9 +40,7 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showErrorLink(input, errormsg);
-              //  parent.children[1].setAttribute("tabindex", "6");
-              //  parent.children[0].setAttribute("tabindex", "7");
-                parent.children[1].setAttribute("href", "#AltImmagine");
+                parent.children[0].setAttribute("href", "#AltImmagine");
                 validation = false;
             }
         }
@@ -65,9 +48,7 @@ function validate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showErrorLink(input, errormsg);
-              //  parent.children[1].setAttribute("tabindex", "8");
-              //  parent.children[0].setAttribute("tabindex", "9");
-                parent.children[1].setAttribute("href", "#Testo");
+                parent.children[0].setAttribute("href", "#Testo");
                 validation =  false;
             }
         }
@@ -77,11 +58,9 @@ function validate() {
         var message = document.getElementById("message");
         var parent = message.parentNode;
         if(parent.children.length == 2) { 
-            parent.removeChild(parent.children[1]); 
+            parent.removeChild(parent.children[0]); 
         }
-        showErrorLink(message, errore);
-     //   parent.children[1].setAttribute("tabindex", "1");  
-        parent.children[1].setAttribute("class", "erroresingolo");    
+        showErrorStrong(message, errore);    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -97,20 +76,19 @@ function validate() {
 }
 
 function validateUpdate() {
-    var Id = ["Titolo", "AltImmagine", "Testo"];
+    var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
     var validation = true;
     for(var i = 0; i < Id.length; i++) {
         var input = document.getElementById(Id[i]);
         var parent = input.parentNode;
-        if(parent.children.length == 2) { 
-            parent.removeChild(parent.children[1]); 
+        if(parent.children.length == 3) { 
+            parent.removeChild(parent.children[0]); 
         } 
         if(Id[i] == "Titolo") {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showErrorLink(input, errormsg);
-            //    parent.children[1].setAttribute("tabindex", "2");
-             //   parent.children[0].setAttribute("tabindex", "3");
+                parent.children[0].setAttribute("href", "#Titolo");
                 validation = false;
             }
         }
@@ -118,8 +96,7 @@ function validateUpdate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showErrorLink(input, errormsg);
-            //    parent.children[1].setAttribute("tabindex", "4");
-            //    parent.children[0].setAttribute("tabindex", "5");
+                parent.children[0].setAttribute("href", "#AltImmagine");
                 validation = false;
             }
         }
@@ -127,8 +104,7 @@ function validateUpdate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showErrorLink(input, errormsg);
-            //    parent.children[1].setAttribute("tabindex", "6");
-             //   parent.children[0].setAttribute("tabindex", "7");
+                parent.children[0].setAttribute("href", "#Testo");
                 validation =  false;
             }
         }
@@ -138,11 +114,9 @@ function validateUpdate() {
         var message = document.getElementById("message");
         var parent = message.parentNode;
         if(parent.children.length == 2) { 
-            parent.removeChild(parent.children[1]); 
+            parent.removeChild(parent.children[0]); 
         }
-        showErrorLink(message, errore);
-    //    parent.children[1].setAttribute("tabindex", "1");
-        parent.children[1].setAttribute("class", "erroresingolo");    
+        showErrorStrong(message, errore);    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -165,7 +139,23 @@ function showErrorLinkNascosti(input, errormsg) {
     p.appendChild(elemento);
 }
 
+function showErrorStrong(input, errormsg) {
+    var p = input.parentNode;
+    var elemento = document.createElement("strong");
+    elemento.className = "errori";
+    elemento.appendChild(document.createTextNode(errormsg));
+    p.insertBefore(elemento, input);
+}
+
 function showErrorLink(input, errormsg) {
+    var p = input.parentNode;
+    var elemento = document.createElement("a");
+    elemento.className = "errori";
+    elemento.appendChild(document.createTextNode(errormsg));
+    p.insertBefore(elemento, input);
+}
+
+function showErrorAdmin(input, errormsg) {
     var p = input.parentNode;
     var elemento = document.createElement("a");
     elemento.className = "errori";
@@ -182,7 +172,7 @@ function validateAdmin() {
             parent.removeChild(parent.children[1]);
         }
         var errormsg = "Errore, selezionare un'opzione!";
-        showErrorLink(input, errormsg);
+        showErrorAdmin(input, errormsg);
         parent.children[1].setAttribute("href", "#Evento");
         parent.children[1].focus();
         validation = false;
