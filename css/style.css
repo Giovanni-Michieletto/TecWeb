@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
 
 a {
 	display: inline-block;
-	height: 100%;
+	/* height: 100%; */
 }
 
 .spacer-top{
@@ -542,7 +542,7 @@ input[type=radio]{
 	margin-bottom: 2em;
 }
 button[type=submit]{
-	min-width: 6em;
+	min-width: 8.5em;
 	min-height: 2.2em;
 	padding: 0.5em 2em;
 	font-size: 1.2em;
@@ -943,6 +943,7 @@ textarea#Link{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		align-items: center;
 	}
 }
 

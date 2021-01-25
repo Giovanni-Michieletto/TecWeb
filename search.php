@@ -32,7 +32,7 @@
             }
         } 
         if(strpos(strtolower($home),strtolower($cerca))!=false){
-            $definition .= '<a href="Home.php">';
+            $definition .= '<a href="index.php">';
             $definition .= '<h2>Home</h2>';
             $definition .= '<p>...'.substr($cell['Testo'],strpos($home,$cerca),100).'...</p>';
             $definition .= '</a>';

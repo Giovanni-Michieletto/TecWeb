@@ -154,7 +154,11 @@ function menu($page,$table,$session) {
             $menu .= '<li class="notlink">'.$li.'</li>';
         }
         else if($li == 'Home' || $li == 'Storia') {
-            $menu .= '<li><a href="'.$li.'.php">'.$li.'</a></li>';
+            if($li == 'Home'){
+                $menu .= '<li><a href="index.php">Home</a></li>';
+            }else{
+                $menu .= '<li><a href="'.$li.'.php">'.$li.'</a></li>';
+            }
         }
         else {
             $menu .= '<li><a href="view.php?table='.$li.'">'.$li.'</a></li>';
