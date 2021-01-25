@@ -2,5 +2,5 @@
     include "scraping.php";
     session_start();
     $_SESSION['logged']=false;
-    header("Location: Home.php",TRUE);
+    header("Location: index.php",TRUE);
 ?>
