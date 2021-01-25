@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="./css/stampa.css" media="print"/>
    <title>Santa Maria del Cengio - Comunità dei Servi di Maria</title>
 </head>
-<body onload="placeholderSearch()" onscroll="removeHeader()"> 
+<body onload="placeholderSearch()"> 
    <div id="header">
       <a class="hiddenHelp" href="#menu">Vai al menù</a>
       <a class="hiddenHelp" href="#search">Vai alla barra di ricerca</a>
@@ -22,7 +22,7 @@
       </div>
       <div id="search">
          <search />
-     </div>
+   </div>
    </div>   
    <div id="percorso">
       <div id="space">
@@ -57,10 +57,7 @@
    <script type="">
       $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
       $('#annulla-operazione').click(function(){window.location.href="Admin.php";})
-  </script>
-
-
-
+   </script>
 
 <div id="footer">
    <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
