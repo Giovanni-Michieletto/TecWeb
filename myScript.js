@@ -60,7 +60,8 @@ function validate() {
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[0]); 
         }
-        showErrorStrong(message, errore);    
+        showErrorStrong(message, errore);
+        parent.children[0].setAttribute("class", "erroresingolo");    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -117,6 +118,7 @@ function validateUpdate() {
             parent.removeChild(parent.children[0]); 
         }
         showErrorStrong(message, errore);    
+        parent.children[0].setAttribute("class", "erroresingolo");
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
