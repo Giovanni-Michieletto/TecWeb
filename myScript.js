@@ -11,6 +11,17 @@ function placeholderSearch() {
     };
 }
 
+function removeHeader() {
+    var header = document.getElementById("header");
+    var height = document.getElementById("image-header").offsetHeight;
+    if(window.pageYOffset>=height) {
+        header.style.display='unset';
+    }
+    if(window.pageYOffset<=height) {
+        header.style.display='';
+    }
+}
+
 function validate() {
     var Id = ["Titolo", "Immagine", "AltImmagine", "Testo"];
     var validation = true;
@@ -24,8 +35,8 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "2");
-                parent.children[0].setAttribute("tabindex", "3");
+               // parent.children[1].setAttribute("tabindex", "2");
+               // parent.children[0].setAttribute("tabindex", "3");
                 parent.children[1].setAttribute("href", "#Titolo");
                 validation = false;
             }
@@ -34,8 +45,8 @@ function validate() {
             if(input.files.length == 0) {
                 var errormsg = "Inserire un'immagine!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "4");
-                parent.children[0].setAttribute("tabindex", "5");
+               // parent.children[1].setAttribute("tabindex", "4");
+               // parent.children[0].setAttribute("tabindex", "5");
                 parent.children[1].setAttribute("href", "#Immagine");
                 validation = false;
             }
@@ -44,8 +55,8 @@ function validate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "6");
-                parent.children[0].setAttribute("tabindex", "7");
+              //  parent.children[1].setAttribute("tabindex", "6");
+              //  parent.children[0].setAttribute("tabindex", "7");
                 parent.children[1].setAttribute("href", "#AltImmagine");
                 validation = false;
             }
@@ -54,8 +65,8 @@ function validate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "8");
-                parent.children[0].setAttribute("tabindex", "9");
+              //  parent.children[1].setAttribute("tabindex", "8");
+              //  parent.children[0].setAttribute("tabindex", "9");
                 parent.children[1].setAttribute("href", "#Testo");
                 validation =  false;
             }
@@ -69,7 +80,7 @@ function validate() {
             parent.removeChild(parent.children[1]); 
         }
         showErrorLink(message, errore);
-        parent.children[1].setAttribute("tabindex", "1");  
+     //   parent.children[1].setAttribute("tabindex", "1");  
         parent.children[1].setAttribute("class", "erroresingolo");    
     } 
     if(validation==false) {
@@ -98,8 +109,8 @@ function validateUpdate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un titolo!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "2");
-                parent.children[0].setAttribute("tabindex", "3");
+            //    parent.children[1].setAttribute("tabindex", "2");
+             //   parent.children[0].setAttribute("tabindex", "3");
                 validation = false;
             }
         }
@@ -107,8 +118,8 @@ function validateUpdate() {
             if(input.value.search(/\w{1,50}/) != 0) {
                 var errormsg = "Inserire un AltImmagine!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "4");
-                parent.children[0].setAttribute("tabindex", "5");
+            //    parent.children[1].setAttribute("tabindex", "4");
+            //    parent.children[0].setAttribute("tabindex", "5");
                 validation = false;
             }
         }
@@ -116,8 +127,8 @@ function validateUpdate() {
             if(input.value.search(/\w+/) != 0) {
                 var errormsg = "Inserire un testo!";
                 showErrorLink(input, errormsg);
-                parent.children[1].setAttribute("tabindex", "6");
-                parent.children[0].setAttribute("tabindex", "7");
+            //    parent.children[1].setAttribute("tabindex", "6");
+             //   parent.children[0].setAttribute("tabindex", "7");
                 validation =  false;
             }
         }
@@ -130,7 +141,7 @@ function validateUpdate() {
             parent.removeChild(parent.children[1]); 
         }
         showErrorLink(message, errore);
-        parent.children[1].setAttribute("tabindex", "1");
+    //    parent.children[1].setAttribute("tabindex", "1");
         parent.children[1].setAttribute("class", "erroresingolo");    
     } 
     if(validation==false) {

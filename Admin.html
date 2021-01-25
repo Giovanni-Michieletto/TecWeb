@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it"  onscroll="removeHeader()">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,7 +35,7 @@
    </div> 
    <div id="percorso">
       <div id="space">
-         <p>Ti trovi in: <span xml:lang="en">Admin</span></p>
+         <p >Ti trovi in: <span xml:lang="en">Admin</span></p>
       </div>
    </div>
    <div id="starter" class="container margin-5">
@@ -45,7 +46,7 @@
                   <div id="admin-home" class="title-amministration">
 
                      <img src="./db/img/deco.svg" alt=""/>
-                     <label for="Titolo">Scegli la sezione*: </label>
+                     <label for="Titolo" >Scegli la sezione*: </label>
                   </div>
                   <div class="radio">
                      <span id="js">
@@ -59,18 +60,24 @@
                         <label for="Associazione">Associazione</label><br/>
                      </span>
                   </div>
-                  <message />
                </fieldset> 
                <fieldset class="admin">
                   <div id="Titolo" class="title-amministration">
                      <img src="./db/img/deco.svg" alt=""/>
-                     <label for="Titolo">Cosa vuoi fare: </label>
+                     <label for="Titolo" >Cosa vuoi fare: </label>
                   </div>
                   <div class="option-admin">
-                     <button type="submit" name="Nuovo" id="bottone">Nuovo</button>   
-                     <button type="submit" name="Modifica">Modifica</button>
-                     <button type="submit" name="Elimina">Elimina</button>
+                     <div >
+                        <button type="submit" name="Nuovo" id="bottone">Nuovo</button>  
+                     </div>
+                     <div > 
+                        <button type="submit" name="Modifica">Modifica</button>
+                     </div>
+                     <div>
+                        <button type="submit" name="Elimina">Elimina</button>
+                     </div>
                   </div>
+                  
                </fieldset> 
             </form>
          </div>
@@ -81,7 +88,7 @@
 <div id="footer">
    <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
    <div class="container-text-footer margin-5">
-      <p>
+      <p >
          Contatti utili
       </p>
       <ul>

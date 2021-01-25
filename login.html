@@ -28,16 +28,6 @@
             <li><a href="Storia.php">Storia</a></li>
          </ul> 
       </div>
-      <div id="search">
-         <form method="post" action="search.php">
-            <fieldset class="form">
-               <div class="textbutton">
-                  <input type="text" id="cerca" title="Cosa cerchi?"/> 
-                  <input type="submit" class="cerca"  value="Cerca" title="Cerca"/>
-               </div>
-            </fieldset>
-         </form>  
-      </div>
    </div>   
    <div id="percorso">
       <div id="space">
@@ -46,6 +36,7 @@
    </div>
    <div class="spacer-top"></div>
    <div id="container-login" class="container-amministration margin-5">
+      <strong>Inserire utente e password</strong>
       <form enctype="multipart/form-data" method="post" action="login.php">
          <fieldset class="align">
             <div class="title-amministration">
@@ -55,7 +46,6 @@
             <div class="text-box">
                <span>
                   <input type="text" id="Username" name="Username"/>
-                  <errorUser />
                </span>
             </div>
          </fieldset>
@@ -67,11 +57,9 @@
             <div class="text-box">
                <span>
                   <input type="password" name="Password" id="Password"/>
-                  <errorPass />
                </span>
             </div>
          </fieldset>
-         <message />
          <fieldset class="button-aggiungi">
             <button class="aggiungi" type="submit" name="submit">Invia</button>
          </fieldset>

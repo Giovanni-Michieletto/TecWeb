@@ -63,7 +63,7 @@ function deleted($page) {
     $page = str_replace('<action />','Admin.php',$page);
     $page = str_replace('name="submit"','name="admin"',$page);
     $page = str_replace('<buttonName />','Torna alla home amministratore',$page);
-    $page = str_replace('<img src="./db/img/deco.svg" alt="">','',$page);
+    $page = str_replace('<img src="./db/img/deco.svg" alt=""/>','',$page);
     $page = str_replace('<label for="Titolo">Titolo*: </label>','',$page);
     $page = str_replace('<input type="text" id="Titolo" name="Titolo" />','',$page);
     $page = str_replace('<label for="Immagine">Immagine*: </label>','',$page);
