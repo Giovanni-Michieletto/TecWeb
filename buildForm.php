@@ -23,11 +23,7 @@
     else {
         $page = buildForm($page,$table,'',$_SESSION['action']);
     }
-
-    if($_SESSION['js']=="false") {
-        $page = str_replace('onsubmit="return validate()"','',$page);
-    }
-    else if($_SESSION['action']=="Modifica") {
+    if($_SESSION['action']=="Modifica") {
         $page = str_replace('validate()','validateUpdate()',$page);
     }
     $page =  str_replace("<abort />",'<a id="annulla-operazione" href="Admin.php">Annulla operazione</a>',$page);

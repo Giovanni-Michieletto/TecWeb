@@ -29,27 +29,6 @@ function exists($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo,$cell) {
     return array($error,$page);
 }
 
-//CONTROLLA TESTO SE NON C'È JAVASCRIPT
-function noText($page,$error,$Titolo,$imgContent,$AltImmagine,$Testo) {
-    if(strlen($Titolo)==0) {
-        $page = str_replace('<errorTitle />','<a class="errori" href="#Titolo" >Inserire titolo</a>', $page);
-        $error = false;
-    }
-    if(strlen($imgContent)==0) {
-        $page = str_replace('<errorImage />', '<a class="errori" href="#Immagine" >Inserire immagine</a>', $page);
-        $error = false;
-    }
-    if(strlen($AltImmagine)==0) {
-        $page = str_replace('<errorAlt />','<a class="errori" href="#AltImmagine" >Inserire alt immagine</a>', $page);
-        $error = false;
-    }
-    if(strlen($Testo)==0) {
-        $page = str_replace('<errorText />','<a class="errori" href="#Testo" >Inserire testo</a>', $page);
-        $error = false;
-    }
-    return array($error,$page);
-}
-
 //INSERISCE IMMAGINE IN CASO DI NUOVO INSERIMENTO E POI CHIAMA SOSTITUTE()
 function insertForm($page,$Titolo,$Immagine,$AltImmagine,$Testo,$table) {
     $message = '<a class="successo" href="#bottone" >Inserimento andato a buon fine!</a>';
@@ -161,7 +140,7 @@ function footer($page,$session) {
         $page = str_replace('<admin />','<a href="logout.php">Logout</a>',$page);
     }
     else {
-        $page = str_replace('<admin />','<noscript><a href="js.php?bool=false">Login Amministratore</a></noscript><script><a href="js.php?bool=true">Login Amministratore</a></script>',$page);
+        $page = str_replace('<admin />','<a hred="login.html">Login Amministratore</a>',$page);
     }
     return $page;
 }

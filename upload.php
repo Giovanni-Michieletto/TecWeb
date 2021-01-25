@@ -40,11 +40,6 @@
         $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
     }
     $error = true;
-    if($_SESSION['js']=="false") {
-        $array = noText($page,$error,$Titolo,$file,$AltImmagine,$Testo);
-        $error = $array[0];
-        $page = $array[1];
-    }
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();
     if($connection) {    
