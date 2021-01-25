@@ -26,7 +26,7 @@
     if($_SESSION['action']=="Modifica") {
         $page = str_replace('validate()','validateUpdate()',$page);
     }
-    $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+    $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
     $page =  str_replace("<tornadietro />",'<i class="fas fa-angle-double-left"></i>',$page);
     $page = footer($page,$_SESSION['logged']);    
     echo $page;
