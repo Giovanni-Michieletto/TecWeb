@@ -60,8 +60,7 @@ function validate() {
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[0]); 
         }
-        showErrorLink(message, errore); 
-        parent.children[0].setAttribute("class", "erroresingolo");    
+        showErrorStrong(message, errore);    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -117,8 +116,7 @@ function validateUpdate() {
         if(parent.children.length == 2) { 
             parent.removeChild(parent.children[0]); 
         }
-        showErrorLink(message, errore); 
-        parent.children[0].setAttribute("class", "erroresingolo");    
+        showErrorStrong(message, errore);    
     } 
     if(validation==false) {
         var input = document.getElementById("bottone");
@@ -139,6 +137,14 @@ function showErrorLinkNascosti(input, errormsg) {
     elemento.className = "hiddenHelp";
     elemento.appendChild(document.createTextNode(errormsg));
     p.appendChild(elemento);
+}
+
+function showErrorStrong(input, errormsg) {
+    var p = input.parentNode;
+    var elemento = document.createElement("strong");
+    elemento.className = "errori";
+    elemento.appendChild(document.createTextNode(errormsg));
+    p.insertBefore(elemento, input);
 }
 
 function showErrorLink(input, errormsg) {
