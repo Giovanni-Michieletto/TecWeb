@@ -183,17 +183,9 @@ function validateAdmin() {
         }
         var errormsg = "Errore, selezionare un'opzione!";
         showErrorLink(input, errormsg);
+        parent.children[1].setAttribute("href", "#Evento");
+        parent.children[1].focus();
         validation = false;
-    }
-    if(validation==false) { 
-        var button = document.getElementById("bottone");
-        var errormsg = "Errore, selezionare un'opzione!";
-        var parent = button.parentNode;
-        if(parent.children.length == 4) { 
-            parent.removeChild(parent.children[3]); 
-        } 
-        showErrorLinkNascosti(button, errormsg);
-        parent.children[3].setAttribute("href", "#Evento");
     }
     return validation;
 }

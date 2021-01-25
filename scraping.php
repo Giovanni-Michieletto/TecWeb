@@ -72,7 +72,7 @@ function deleted($page) {
     $page = str_replace('<input type="text" name="AltImmagine" id="AltImmagine" />','',$page);
     $page = str_replace('<label for="Testo">Testo*: </label>','',$page);
     $page = str_replace('<textarea id="Testo" rows="30" cols="100" name="Testo"></textarea>','',$page);
-    $page = str_replace ('<message id="message"/>','<strong class="successo" >Eliminazione andata a buon fine!</strong>',$page);
+    $page = str_replace ('<message id="message"/>','<a class="successo" href="#bottone">Eliminazione andata a buon fine!</a>',$page);
     return $page;
 }
 
