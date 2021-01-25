@@ -502,24 +502,6 @@ ul li{
 
 
 #annulla-operazione{
-	/*background-color: rgba(198, 88, 82, 0.6);
-	width: 2em;
-	height: 2em;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
-	position: relative;
-	left: 5%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5rem;
-	color: white;
-	line-height: 1.5rem;
-	cursor: pointer;
-	margin: 2em 0;*/
 	background-color: #94080b;;
 	width: 10em;
 	height: 2em;
@@ -539,13 +521,6 @@ ul li{
 	cursor: pointer;
 	margin: 1.5em 0;
 	
-}
-#abort{
-	/*color: rgba(198, 88, 82, 0.6);
-	position: relative;
-	left: 8%;
-	padding: 0 0 1em 3.5em;
-	display: inline;*/
 }
 #abort a:hover {
 	color:#01B8BD;

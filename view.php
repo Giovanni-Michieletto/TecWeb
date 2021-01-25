@@ -31,28 +31,28 @@
         if ($list) {        
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
-                $definition .= '<div class="card">';
-                        if($_SESSION['logged']==true) {
-                            if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
-                                $definition .= '<a href="buildForm.php?table=' . $title . '&ID=' . $cell['ID'] . '">';
-                            }else {
-                                $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
-                            }
-                        }
-                        else {
-                            $definition .= '<a href="singolo.php?table=' . $table . '&ID=' . $cell['ID'].'">';
-                        }
-                        $definition .= '<div class="card-title">';
-                            $definition .= '<h3>' . $cell['Titolo'] . '</h3>';
-                        $definition .= '</div>';
-                        $definition .= '<div class="card-img">';
-                            $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
-                        $definition .= '</div>';
-                        $definition .= '<div class="card-text">';
-                            $definition .= '<p>' . $anteprima . '</p>';
-                            // class="card-text"
-                        $definition .= '</div>';
-                    $definition .= '</a>'; 
+                if($_SESSION['logged']==true) {
+                    if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
+                        $definition .= '<div class="card" onclick="location.href=\'buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '\';">';
+                    }
+                    else {
+                        $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                    }
+                }
+                else {
+                    $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                }
+                        //$definition .= '<span class="card-title">';
+                    $definition .= '<h3 class="card-title">' . $cell['Titolo'] . '</h3>';
+                        //$definition .= '</span>';
+                        //$definition .= '<span class="card-img">';
+                    $definition .= '<div class="card-img">';
+                    $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
+                    $definition .=  '</div>';
+                        //$definition .= '</span>';
+                        //$definition .= '<span class="card-text">';
+                    $definition .= '<p class="card-text">' . $anteprima . '</p>';
+                        //$definition .= '</span>';
                 $definition .= '</div>';
             }
         }
@@ -77,6 +77,7 @@
         $page = footer($page,$_SESSION['logged']);
     }
     else {
+        $page =  str_replace("<abort />",'',$page);
         $page = str_replace("<titlePage />",$title,$page);
         $page = buildHTML($page,$table,$_SESSION['logged']);
         $page =  str_replace("<abort />",'',$page);
