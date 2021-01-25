@@ -74,9 +74,12 @@
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
         $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
+        $page = str_replace("<menu />",'',$page);
+        $page = str_replace("<search />",'',$page);
         $page = footer($page,$_SESSION['logged']);
     }
     else {
+        
         $page =  str_replace("<abort />",'',$page);
         $page = str_replace("<titlePage />",$title,$page);
         $page = buildHTML($page,$table,$_SESSION['logged']);
