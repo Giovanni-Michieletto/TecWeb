@@ -522,8 +522,11 @@ ul li{
 	line-height: 1.5rem;
 	cursor: pointer;
 	margin: 1.5em 0;
-	
 }
+#annulla-operazione a {
+	text-decoration: none;
+}
+
 #abort a:hover {
 	color:#01B8BD;
 }

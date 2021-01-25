@@ -1,9 +1,9 @@
 <?php
     class DBAccess {
         private const HOST = "localhost";
-        private const USERNAME = "fpantale";
-        private const PASSWORD = "kooKi1Ash4kuKei2";
-        private const NAME = "fpantale";
+        private const USERNAME = "root";
+        private const PASSWORD = "";
+        private const NAME = "convento";
         private $connection;
 
         //Funzione di connessione

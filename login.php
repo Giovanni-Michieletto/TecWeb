@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once "dbConnection.php"; 
     $page = file_get_contents('login.html');            
     $message = '';
@@ -12,7 +13,6 @@
             $Password = md5($Password); 
             $Login = $dbAccess->getLogin();                 
             if($Login['Username']==$Username && $Login['Password']==$Password) {
-                session_start();
                 $_SESSION['logged'] = true;
                 header('Location: Admin.php',TRUE);
             }

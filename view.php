@@ -66,7 +66,7 @@
     }  
     $page =  str_replace("<list />",$definition,$page);
     if($_SESSION['action']=="Modifica" || $_SESSION['action']=="Elimina") {
-        $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
+        $page =  str_replace("<abort />",'<a id="annulla-operazione" href="Admin.php">Annulla operazione</a>',$page);
         $page = str_replace("<titlePage />",'Seleziona '.$title,$page);
         $page = str_replace("<menu />",'',$page);
         $page = str_replace("<search />",'',$page);

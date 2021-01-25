@@ -23,10 +23,14 @@
     else {
         $page = buildForm($page,$table,'',$_SESSION['action']);
     }
-    if($_SESSION['action']=="Modifica") {
+
+    if($_SESSION['js']=="false") {
+        $page = str_replace('onsubmit="return validate()"','',$page);
+    }
+    else if($_SESSION['action']=="Modifica") {
         $page = str_replace('validate()','validateUpdate()',$page);
     }
-    $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
+    $page =  str_replace("<abort />",'<a id="annulla-operazione" href="Admin.php">Annulla operazione</a>',$page);
     $page =  str_replace("<tornadietro />",'<i class="fas fa-angle-double-left"></i>',$page);
     $page = footer($page,$_SESSION['logged']);
     $page = str_replace('<link />','',$page);   

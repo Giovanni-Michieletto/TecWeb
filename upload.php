@@ -13,7 +13,7 @@
         $ID = $_GET['ID'];
     }
     else {
-        $ID = "";
+        $ID = '';
     }
     $Titolo = $_POST['Titolo'];
     $AltImmagine = $_POST['AltImmagine'];
@@ -45,6 +45,7 @@
         if(empty($_FILES['Immagine']['name']) && $_SESSION['action']=="Modifica") {
             $Immagine = $_SESSION['image'];
             $_SESSION['image'] == '';
+            $file = $Immagine;
         }
         else {
             $file = $_FILES['Immagine']['name'];
@@ -56,17 +57,15 @@
         }
         $list = $dbAccess->getFile($table);
         $error = true;
+        $array = noText($page,$error,$Titolo,$file,$AltImmagine,$Testo);
+        $error = $array[0];
+        $page = $array[1];
         if($list) {
             foreach ($list as $cell) {
                 if($ID != $cell['ID']) {
-                    $array = noText($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
+                    $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
                     $error = $array[0];
                     $page = $array[1]; 
-                    if($error==true) {
-                        $array = exists($page,$error,$Titolo,$Immagine,$AltImmagine,$Testo,$cell);
-                        $error = $array[0];
-                        $page = $array[1]; 
-                    }
                 }
             }
         }
@@ -92,6 +91,7 @@
             }
         }
         else {
+            $page =  str_replace("<abort />",'<a id="annulla-operazione" href="Admin.php">Annulla operazione</a>',$page);
             $page = sostitute($page,'', '',$Titolo,$AltImmagine,$Testo);
             $page = buildForm($page,$table,$ID,$_SESSION['action']);
         }
