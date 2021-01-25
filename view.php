@@ -31,8 +31,17 @@
         if ($list) {        
             foreach ($list as $cell) {
                 $anteprima = substr($cell['Testo'],0,150) . " ...";
-                $definition .= '<div class="card">';
-                    $definition .= '<div id="'.$cell['ID'].'">';
+                if($_SESSION['logged']==true) {
+                    if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
+                        $definition .= '<div class="card" onclick="location.href=\'buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '\';">';
+                    }
+                    else {
+                        $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                    }
+                }
+                else {
+                    $definition .= '<div class="card" onclick="location.href=\'singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'\';">';
+                }
                         //$definition .= '<span class="card-title">';
                     $definition .= '<h3 class="card-title">' . $cell['Titolo'] . '</h3>';
                         //$definition .= '</span>';
@@ -43,19 +52,6 @@
                     $definition .= '<p class="card-text">' . $anteprima . '</p>';
                         //$definition .= '</span>';
                 $definition .= '</div>';
-                $definition .= '</div>';
-                if($_SESSION['logged']==true) {
-                    if($_SESSION['action']=="Elimina" || $_SESSION['action']=="Modifica") {
-                        //$definition .= '<div href="buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '">';
-                        $definition .= '<script type="text/javascript"> $(\'#'.$cell['ID'].'\').click(function(){window.location.href="buildForm.php?table=' . $title . '&amp;ID=' . $cell['ID'] . '";})</script>';
-                    }
-                    else {
-                        $definition .= '<div href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'">';
-                    }
-                }
-                else {
-                    $definition .= '<div href="singolo.php?table=' . $table . '&amp;ID=' . $cell['ID'].'">';
-                }
             }
         }
         else {
