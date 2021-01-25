@@ -118,13 +118,13 @@ function buildForm($page,$title,$ID,$session) {
         $page = str_replace('<buttonName />','Modifica',$page);
         $page = str_replace('<titlePage />', 'Modifica '.$title, $page);
         $page = compile($page,$table,$ID,$session);
-        $page = str_replace('<action />','upload.php?table='.$title.'&ID='.$ID,$page);
+        $page = str_replace('<action />','upload.php?table='.$title.'&amp;ID='.$ID,$page);
     }
     else if($session =="Elimina") {
         $page = str_replace('<buttonName />','Elimina',$page);
         $page = str_replace('<titlePage />', 'Elimina '.$title, $page);
         $page = compile($page,$table,$ID,$session);
-        $page = str_replace('<action />','delete.php?table='.$title.'&ID='.$ID,$page);
+        $page = str_replace('<action />','delete.php?table='.$title.'&amp;ID='.$ID,$page);
     }
     else {
         $page = str_replace('<titlePage />', 'Inserimento '.$title, $page);

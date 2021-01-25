@@ -26,9 +26,15 @@
     if($_SESSION['action']=="Modifica") {
         $page = str_replace('validate()','validateUpdate()',$page);
     }
-    $page =  str_replace("<abort />",'<div id="annulla-operazione"> <p>Annulla operazione</p> </div>',$page);
+    $page =  str_replace("<abort />",'<div id="annulla-operazione"> <a>Annulla operazione</a> </div>',$page);
     $page =  str_replace("<tornadietro />",'<i class="fas fa-angle-double-left"></i>',$page);
-    $page = footer($page,$_SESSION['logged']);    
+    $page = footer($page,$_SESSION['logged']);
+    $page = str_replace('<link />','',$page);   
+    $page = str_replace('<menu />','',$page);  
+    $page = str_replace('<search />','',$page); 
+    $page = str_replace('<errorTitle />','',$page); 
+    $page = str_replace('<errorAlt />','',$page); 
+    $page = str_replace('<errorText />','',$page); 
     echo $page;
     
 ?>
