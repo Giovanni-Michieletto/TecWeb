@@ -39,6 +39,12 @@
     else {
         $page =  str_replace("<percorso />",' Admin » ' .$_SESSION['action'].' '.$title,$page);
     }
+    $error = true;
+    if($_SESSION['js']=="false") {
+        $array = noText($page,$error,$Titolo,$file,$AltImmagine,$Testo);
+        $error = $array[0];
+        $page = $array[1];
+    }
     $dbAccess = new DBAccess();
     $connection = $dbAccess->openDBConnection();
     if($connection) {    
@@ -56,10 +62,6 @@
             $Immagine = $dir . $file;
         }
         $list = $dbAccess->getFile($table);
-        $error = true;
-        $array = noText($page,$error,$Titolo,$file,$AltImmagine,$Testo);
-        $error = $array[0];
-        $page = $array[1];
         if($list) {
             foreach ($list as $cell) {
                 if($ID != $cell['ID']) {
