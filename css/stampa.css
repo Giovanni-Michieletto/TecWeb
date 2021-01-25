@@ -32,3 +32,15 @@ img {
 #text {
     padding-left: 1em;
 }
+#TornaSu{
+    display: none;
+}
+/* .fa, .fas-angle-double-up{
+    display: none;
+} */
+a{
+    color: black;
+}
+#annulla-operazione{
+    display: none;
+}
