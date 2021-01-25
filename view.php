@@ -71,6 +71,8 @@
         $page = str_replace("<menu />",'',$page);
         $page = str_replace("<search />",'',$page);
         $page = footer($page,$_SESSION['logged']);
+        $page = str_replace('<menu />','',$page);
+        $page = str_replace('<search />','',$page);
     }
     else {
         
