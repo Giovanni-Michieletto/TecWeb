@@ -46,7 +46,9 @@
                     $definition .= '<h3 class="card-title">' . $cell['Titolo'] . '</h3>';
                         //$definition .= '</span>';
                         //$definition .= '<span class="card-img">';
-                    $definition .= '<img class="card-img" src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
+                    $definition .= '<div class="card-img">';
+                    $definition .= '<img src="' . $cell['Immagine'] . '" alt="' . $cell['AltImmagine'] . '"/>';
+                    $definition .=  '</div>';
                         //$definition .= '</span>';
                         //$definition .= '<span class="card-text">';
                     $definition .= '<p class="card-text">' . $anteprima . '</p>';
