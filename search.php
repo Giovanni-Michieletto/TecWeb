@@ -4,7 +4,7 @@
     session_start();
     $cerca = $_POST['cerca'];
     $page = file_get_contents('search.html');
-    $home= file_get_contents('index.html'); 
+    $home= file_get_contents('home.html'); 
     $storia=file_get_contents('storia.html'); 
     $dbAccess = new DBAccess();          
     $connection = $dbAccess->openDBConnection();
