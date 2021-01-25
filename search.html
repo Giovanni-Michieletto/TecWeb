@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400; display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/faf93335fe.js" type=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type=""></script>
     <script type="text/javascript" src="myScript.js"></script>
     <link rel="stylesheet" href="./css/style.css" media="screen"/>
     <link rel="stylesheet" href="./css/stampa.css" media="print"/>
@@ -47,9 +48,9 @@
             <i class="fas fa-angle-double-up"></i>
         </div>
     </div>
-   
-    
-
+    <script type="text/javascript"> 
+        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
+    </script>
     <div id="footer">
         <img id="img_validCode" class="padding-05" src="./db/img/valid-xhtml10.png" alt="Logo di validità Html" />
         <div class="container-text-footer margin-5">
@@ -65,18 +66,11 @@
                     <admin />
                 </p>
             </div>
-            <p  class="end-footer">
+            <p class="end-footer">
                 S.Maria del Cengio - Comunità dei Servi di Maria
             </p>
         </div>
         <img id="img_validCSS" class="padding-05" src="./db/img/vcss-blue.gif" alt="Logo di validità Css" />
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type=""></script>
-    <script type="text/javascript"> 
-        $('#TornaSu').click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");})
-    </script>
 </body>
-
-
-
 </html>
